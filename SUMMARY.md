@@ -68,13 +68,17 @@
 ## Using API Data
 
 * [Introduction](todo.md)
-* use
+* Core Concept: Using Third-Party Data APIs
+* Requesting Data from an API
 
 ----
 
 ## Application Architecture
 
 * [Introduction](todo.md)
+* Core Concept: Organizing Applications
+* Identifying Application Components for Improvement
+* Tips for Refactoring
 
 ----
 
