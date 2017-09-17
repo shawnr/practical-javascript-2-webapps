@@ -33,19 +33,23 @@
 * Creating Templates
 ----
 
-* [Debugging Applications](todo.md)
+## Debugging the App
+
+* [Introduction](todo.md)
 * Core Concept: Debugging Techniques
 * General Debugging Tools
 * Using Vue Devtools
 ----
+## Deploying the App
 
-* [Deploying the App](todo.md)
+* [Introduction](todo.md)
 * Core Concept: Deployment Tooling
 * Configuring Deployment for Github Pages
 * Building and Deploying the App
 ----
+## Working with Templates
 
-* [Working with Templates](todo.md)
+* [Introduction](todo.md)
 * Core Concept: Template Fundamentals
 * Looping in Templates
 * Conditionals in Templates
@@ -53,19 +57,28 @@
 * Using Multiple Components
 ----
 
-* [Routing and URLs](todo.md)
+## Routing and URLs
+
+* [Introduction](todo.md)
+----
+## Using API Data
+
+* [Introduction](todo.md)
 ----
 
-* [Using API Data](todo.md)
+## Application Architecture
+
+* [Introduction](todo.md)
 ----
 
-* [Application Architecture](todo.md)
+## Visual Feedback
+
+* [Introduction](todo.md)
 ----
 
-* [Visual Feedback](todo.md)
-----
+## Caching Data
 
-* [Caching Data](todo.md)
+* [Introduction](todo.md)
 ----
 
 * [Conclusion](todo.md)
