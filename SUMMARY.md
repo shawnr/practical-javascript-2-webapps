@@ -104,12 +104,12 @@
 * [Conclusion](todo.md)
 ----
 
+* [Glossary](GLOSSARY.md)
 
 ----
 
-## End Pages
+## Appendices
 
-* [Glossary](GLOSSARY.md)
 * [Appendix A: Additional Resources for Learning](todo.md)
 * [Appendix B: API Suggestions](todo.md)
 
