@@ -13,7 +13,7 @@
 11. [Visual Feedback](todo.md)
 12. [Caching Data](todo.md)
 13. [Conclusion](todo.md)
-14. [Glossary](glossary.md)
+14. [Glossary](GLOSSARY.md)
 15. [Appendix A: Additional Resources for Learning](todo.md)
 16. [Appendix B: API Suggestions](todo.md)
 
