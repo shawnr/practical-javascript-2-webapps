@@ -60,25 +60,34 @@
 ## Routing and URLs
 
 * [Introduction](todo.md)
+* Core Concept: State Management and Linking
+* Installing `vue-router`
+* Creating New Locations in the App
+
 ----
 ## Using API Data
 
 * [Introduction](todo.md)
+* 
+
 ----
 
 ## Application Architecture
 
 * [Introduction](todo.md)
+
 ----
 
 ## Visual Feedback
 
 * [Introduction](todo.md)
+
 ----
 
 ## Caching Data
 
 * [Introduction](todo.md)
+
 ----
 
 * [Conclusion](todo.md)
