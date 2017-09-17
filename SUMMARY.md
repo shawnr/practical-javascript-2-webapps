@@ -5,9 +5,19 @@
 ----
 
 * [How We Build Web Apps](todo.md)
+    * Core Concept: Software Architecture
+    * Overview of Web Applications Landscape
+    * Frontend vs. Backend
+    * Popular Frontend Frameworks
 ----
 
 * [Setting Up the Workspace](todo.md)
+    * Core Concept: Development Environments
+    * What is Node.js?
+    * Other Necessary Tools
+    * Notes for Mac Users
+    * Notes for Windows Users
+    * Notes for Linux Users
 ----
 
 * [Bootstrapping a New App](todo.md)
