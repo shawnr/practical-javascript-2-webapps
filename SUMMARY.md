@@ -110,6 +110,6 @@
 
 ## Appendices
 
-* [Appendix A: Additional Resources for Learning](todo.md)
+* [Appendix A: Additional Resources for Learning](appendices/appendix-a-resources.md)
 * [Appendix B: API Suggestions](todo.md)
 
