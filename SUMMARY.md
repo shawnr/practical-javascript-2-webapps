@@ -6,7 +6,7 @@
 
 ## How Web Build Web Apps
 
-* [Introduction](todo.md)
+* [Introduction](how-we-build/README.md)
 * Core Concept: Software Architecture
 * Overview of Web Applications Landscape
 * Frontend vs. Backend
@@ -15,7 +15,7 @@
 
 ## Setting Up the Workspace
 
-* [Introduction](todo.md)
+* [Introduction](setting-up-workspace/README.md)
 * Core Concept: Development Environments
 * What is Node.js?
 * Other Necessary Tools
@@ -26,7 +26,7 @@
 
 ## Bootstrapping a New App
 
-* [Introduction](todo.md)
+* [Introduction](bootstrap-new-app/README.md)
 * Core Concept: Project Skeletons
 * Creating a new Vue.js App
 * Creating Logic
@@ -35,21 +35,21 @@
 
 ## Debugging the App
 
-* [Introduction](todo.md)
+* [Introduction](debug-app/README.md)
 * Core Concept: Debugging Techniques
 * General Debugging Tools
 * Using Vue Devtools
 ----
 ## Deploying the App
 
-* [Introduction](todo.md)
+* [Introduction](deploy-app/README.md)
 * Core Concept: Deployment Tooling
 * Configuring Deployment for Github Pages
 * Building and Deploying the App
 ----
 ## Working with Templates
 
-* [Introduction](todo.md)
+* [Introduction](working-with-templates/README.md)
 * Core Concept: Template Fundamentals
 * Looping in Templates
 * Conditionals in Templates
@@ -59,7 +59,7 @@
 
 ## Routing and URLs
 
-* [Introduction](todo.md)
+* [Introduction](routing-urls/README.md)
 * Core Concept: State Management and Linking
 * Installing `vue-router`
 * Creating New Locations in the App
@@ -67,7 +67,7 @@
 ----
 ## Using API Data
 
-* [Introduction](todo.md)
+* [Introduction](using-api-data/README.md)
 * Core Concept: Using Third-Party Data APIs
 * Requesting Data from an API
 
@@ -75,7 +75,7 @@
 
 ## Application Architecture
 
-* [Introduction](todo.md)
+* [Introduction](application-architecture/README.md)
 * Core Concept: Organizing Applications
 * Identifying Application Components for Improvement
 * Tips for Refactoring
@@ -84,7 +84,7 @@
 
 ## Visual Feedback
 
-* [Introduction](todo.md)
+* [Introduction](visual-feedback/README.md)
 * Core Concept: Conventional Feedback
 * Dynamic Classes
 * Binding Inline Styles
@@ -94,7 +94,7 @@
 
 ## Caching Data
 
-* [Introduction](todo.md)
+* [Introduction](caching-data/README.md)
 * Core Concept: Methods of Storing User Data
 * Saving User-Generated Data
 * Caching Data from APIs
