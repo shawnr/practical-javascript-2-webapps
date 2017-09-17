@@ -34,10 +34,17 @@
 ----
 
 * [Deploying the App](todo.md)
-    
+    * Core Concept: Deployment Tooling
+    * Configuring Deployment for Github Pages
+    * Building and Deploying the App
 ----
 
 * [Working with Templates](todo.md)
+    * Core Concept: Template Fundamentals
+    * Looping in Templates
+    * Conditionals in Templates
+    * Template Filters
+    * Using Multiple Components
 ----
 
 * [Routing and URLs](todo.md)
