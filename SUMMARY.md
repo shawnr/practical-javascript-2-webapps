@@ -4,7 +4,7 @@
 
 ----
 
-## How Web Build Web Apps
+## How We Build Web Apps
 
 * [Introduction](how-we-build/README.md)
 * Core Concept: Software Architecture
