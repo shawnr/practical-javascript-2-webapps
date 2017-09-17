@@ -4,12 +4,16 @@
 
 ----
 
+## Some Title Here
+
 * [How We Build Web Apps](todo.md)
     * Core Concept: Software Architecture
     * Overview of Web Applications Landscape
     * Frontend vs. Backend
     * Popular Frontend Frameworks
 ----
+
+## Some Title Here
 
 * [Setting Up the Workspace](todo.md)
     * Core Concept: Development Environments
