@@ -34,7 +34,7 @@
 ----
 
 * [Deploying the App](todo.md)
-    * 
+    
 ----
 
 * [Working with Templates](todo.md)
