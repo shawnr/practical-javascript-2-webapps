@@ -85,12 +85,19 @@
 ## Visual Feedback
 
 * [Introduction](todo.md)
+* Core Concept: Conventional Feedback
+* Dynamic Classes
+* Binding Inline Styles
+* Creating and Using Transitions
 
 ----
 
 ## Caching Data
 
 * [Introduction](todo.md)
+* Core Concept: Methods of Storing User Data
+* Saving User-Generated Data
+* Caching Data from APIs
 
 ----
 
