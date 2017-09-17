@@ -21,12 +21,20 @@
 ----
 
 * [Bootstrapping a New App](todo.md)
+    * Core Concept: Project Skeletons
+    * Creating a new Vue.js App
+    * Creating Logic
+    * Creating Templates
 ----
 
 * [Debugging Applications](todo.md)
+    * Core Concept: Debugging Techniques
+    * General Debugging Tools
+    * Using Vue Devtools
 ----
 
 * [Deploying the App](todo.md)
+    * 
 ----
 
 * [Working with Templates](todo.md)
