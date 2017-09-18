@@ -17,7 +17,17 @@ Once Node.js is available to us, we can use a whole array of tools for helping u
 Since we are building apps that can be delivered using a static web server, we can deploy our apps using [Github Pages](https://pages.github.com/). Because this form of deployment is so simple, we do not require robust deployment tools. But if we needed, we could also install Node.js modules that would help us deploy to whatever server we wish.
 
 ## Application Components
+On top of the Development Tooling box in the image above is the Application box (the blue box). This area shows the components involved in a sample web application.
 
-## File Processing/Packaging
+The primary component is the Vue module, which allows us to declare a new application and begin working with code. For the most simple Vue apps, this might be the only component we have at the application level. However, in our example we imagine that we are using a few commonly-used third-party components: `vue-router`, `vue-resource`, and `vuex`. These components each provide features we will explore in more detail later. The important thing to remember now is that we will often use third-party components in our apps, meaning that we will use functionality that we did not create ourselves, but which we want to leverage in our applications.
 
-## Deployment
+On the right side of the Application box is a list of three "custom components." These components are not named, but they would correspond to features in our webapp. They might be "profile", "favorite", "post", "article", "video", "image" or whatever other content/function our webapp provides. 
+
+Although we have not specified exactly what features the custom components would add in this example, what is important to know is that these items represent components that we would write ourselves, and which would be unique to our application and its features. This is the heart of the code that we write.
+
+## File Processing/Packaging and Deployment
+As mentioned above, our development tooling is concerned with processing files and packaging them for deployment, then actually getting the files to a deployed location. In the case of the most basic projects, this might simply mean pushing your repository to a specific remote server or merging a specific branch. In more complex projects, this could involve a lengthy sequence of events spanning multiple servers and services.
+
+The needs for file processing and deployment will also change significantly depending on the technologies we are using in our web applications. It is often worthwhile to begin with a more simple approach to deploying our apps, but it's crucial to deploy as soon as possible so we can continuously test our applications in their real-world environment.
+
+
