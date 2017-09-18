@@ -68,20 +68,18 @@ Please enjoy this self-check quiz to help you identify key concepts, points, and
         <explanation>XHR stands for "XMLHTTPRequest", which is the method used to make asynchronous requests to a server.</explanation>
     </question>
     <question>
-        <p>What data type is commonly used to contain text in a programming language?</p>
-        <answer>Dictionary</answer>
-        <answer>Integer</answer>
-        <answer correct>String</answer>
-        <answer>Boolean</answer>
-        <explanation>Most programming languages have a notion of a "String" data type that is meant to contain text.</explanation>
+        <p>A dynamic website uses backend technology to create the HTML that is sent to the user.</p>
+        <answer correct>True</answer>
+        <answer>False</answer>
+        <explanation>Some dynamic websites even customize the CSS and/or JavaScript that is sent to the user.</explanation>
     </question>
     <question multiple>
-        <p>What data types are commonly used with numbers?</p>
-        <answer>String</answer>
-        <answer correct>Integer</answer>
-        <answer>Boolean</answer>
-        <answer correct>Float</answer>
-        <explanation>Integers and Floats (or Decimals) are used in many programming languages to store numeric data.</explanation>
+        <p>Which are JavaScript Single Page Application Frameworks?</p>
+        <answer correct>Angular</answer>
+        <answer correct>Meteor JS</answer>
+        <answer>Mayo</answer>
+        <answer correct>Vue.js</answer>
+        <explanation>Mayo is not (yet) the name of an SPAF.</explanation>
     </question>    
     <question>
         <p>What data type is used for storing `true` and `false` values?</p>
