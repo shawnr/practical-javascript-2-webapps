@@ -11,6 +11,7 @@
 * [Core Concept: Software Architecture](how-we-build/core-concept-software-architecture.md)
 * [Overview of Web Applications Landscape](how-we-build/overview-of-web-applications-landscape.md)
 * [Frontend vs. Backend](how-we-build/frontend-vs-backend.md)
+* [Evolving Approaches to Web Application Development](how-we-build/evolving-approaches-to-web-application-development.md)
 * [Popular Frontend Frameworks](how-we-build/popular-frontend-frameworks.md)
 
 ## Setting Up the Workspace
