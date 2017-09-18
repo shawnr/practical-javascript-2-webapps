@@ -37,7 +37,7 @@ In order to build a dynamic website it's necessary to combine several different 
 
 <ul>
 <li><strong>The web server</strong> still handles receiving and sending requests from clients, but now it hands those requests off to an application that determines how to respond to the user.</li>
-<li><strong>The application</strong> is written in some programming language (such as Python, Ruby, PHP, Java, etc.), and each application will have it's own software architecture it uses to parse the request and create a response.</li>
+<li><strong>The application</strong> is written in some backend programming language (such as Python, Ruby, PHP, Java, etc.), and each application will have it's own software architecture it uses to parse the request and create a response.</li>
 <li><strong>The database</strong> is where the application stores persistent data such as user profiles, lists of favorites, comments on articles, etc. The application pulls data from the database in order to process the user's request.</li>
 <li><strong>The templates</strong> provide a standardized formatting for the response. They are typically processed by the application to generate files that contain HTML, CSS and Javascript, which is sent to the user in the form of an HTTP Response.</li>
 <li><strong>The static media</strong> includes all the images, supporting Javascript libraries, videos, audio and other binary files that do not get parsed by the application before being sent to the user.&nbsp;</li>
