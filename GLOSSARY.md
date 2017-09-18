@@ -2,6 +2,12 @@
 
 The terms listed here will be highlighted throughout the text. Hover over them to see the definition as you are reading.
 
+## backend
+Having to do with the server-side of a web-based project. Often used in phrases such as "backend programming languages", which would be languages that are executed on the server (Python, Java, Ruby, PHP, etc.). The opposite of *frontend*.
+
+## frontend
+Having to do with the web browser. Frontend technologies include HTML, CSS, and JavaScript. The opposite of *backend*.
+
 ## router
 The component of an application that determines what view the user should see based on the URL they request.
 
