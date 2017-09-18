@@ -10,6 +10,12 @@ For many other developers, the development environment is something that should 
 
 It's good to know a little bit about what sort of developer you think you are: Do you like to fiddle with the pieces? Or do you want to focus on the code? This is related to another decision we must make very quickly: Do you want to work in a hosted environment? Or would you prefer to work "local"?
 
+Regardless of what the answer to that question is, there are a few things we usually look for in a development environment:
+
+* **Development Server** We generally need to use a server to see the site we're working on. Since we don't want to trigger JavaScript security restrictions, we need to serve our files properly (as opposed to using the "file>open" dialog in the web browser). We also often want a development server to refresh when it detects a change. Modern development servers like [Browser Sync](https://www.browsersync.io/) do much more than just serving and refreshing.
+* **Dynamic Compilation of Files** We usually want to edit smaller, shorter files that are then combined when served. The development environment should make that happen for us so we don't have to do it manually.
+* **Providing Guard Rails** We often use tools like linters, validators, and test suites to make sure that we have not created any bugs or broken any features. We usually like to have these tools wired into our development environments so we can be sure to deliver higher quality code.
+
 ## Hosted vs. Local
 
 When setting up your development environment, you first have to choose whether you wish to work on your local machine (your laptop or desktop computer) or in a hosted environment (usually accessed through a web browser).
