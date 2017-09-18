@@ -21,7 +21,7 @@
 * [Development Tooling](setting-up-workspace/what-is-nodejs.md)
 * [Installing Node.js](setting-up-workspace/installing-nodejs.md)
 * [Installing Git](setting-up-workspace/installing-git.md)
-* Notes for Windows Users
+* [Notes for Windows Users](setting-up-workspace/notes-for-windows-users.md)
 
 ## Bootstrapping a New App
 
