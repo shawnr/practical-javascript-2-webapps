@@ -4,20 +4,20 @@ Please enjoy this self-check quiz to help you identify key concepts, points, and
 
 <quiz name="">
     <question>
-        <p>The process of conceiving, creating, and improving software is called what?</p>
-        <answer>Software Design Pattern</answer>
-        <answer>Application Build Cycle</answer>
-        <answer correct>Software Development Life Cycle</answer>
-        <answer>Software Engineering Process</answer>
-        <explanation>The "Software Development Life Cycle" refers to the ongoing process of creating and improving software.</explanation>
+        <p>The "high level structures of a software system, the discipline of creating such structures, and the documentation of these structures" is known as what?</p>
+        <answer>Software Construction</answer>
+        <answer>Application Design</answer>
+        <answer correct>Software Architecture</answer>
+        <answer>Refactoring</answer>
+        <explanation>Software architecture is the "high level structures of a software system, the discipline of creating such structures, and the documentation of these structures."</explanation>
     </question>
     <question>
-        <p>Who proposed the World Wide Web?</p>
-        <answer>Brendan Eich</answer>
-        <answer>Katherine Johnson</answer>
-        <answer>Vannevar Bush</answer>
-        <answer correct>Tim Berners-Lee</answer>
-        <explanation>Tim Berners-Lee first proposed the World Wide Web in 1991 while he was working as a researcher at CERN.</explanation>
+        <p>What kinds of technologies are HTML, CSS, and JavaScript?</p>
+        <answer>backend</answer>
+        <answer correct>frontend</answer>
+        <answer>dynamic</answer>
+        <answer>difficult</answer>
+        <explanation>HTML, CSS, and JavaScript are all frontend technologies.</explanation>
     </question>
     <question>
         <p>What was the name Vannevar Bush gave the device he envisioned to allow us to browse vast repositories of information and media?</p>
