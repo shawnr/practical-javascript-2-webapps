@@ -24,7 +24,7 @@ In fact, serving static content is so popular that there are several solutions, 
 
 Even in this modern era of web development, static media websites are more vibrant than ever, and there is more than can be done with them than ever before. They have also remained popular with a large group of web developers, which has insured a vibrant community.
 
-<p><img style="display: block; margin-left: auto; margin-right: auto; width: 90%; height: auto;" src="img/dynamic-site.png" alt="Dynamic Website Architecture.png" /></p>
+<p><img style="display: block; margin-left: auto; margin-right: auto; width: 90%; height: auto;" src="../img/dynamic-site.png" alt="Dynamic Website Architecture.png" /></p>
 
 ### Dynamic Website Architecture
 Most modern websites react to the user in some persistent way. By default, the web is "stateless"--web servers, for example, do not remember previous requests you made. They respond only to the data sent in the current request. However, we have become used to websites that allow us to login and customize content, save our favorites, share with friends, or comment on what we see. All of these features, and many others, require the addition of several functions that are not supplied by the web server, such as databases, logical processing of code, etc.
@@ -43,7 +43,7 @@ In order to build a dynamic website it's necessary to combine several different 
 
 These are the basic components of a dynamic website, but keep in mind that many dynamic websites and applications have many more components. Sometimes in order to bring your unique product to the user, it may be necessary to invent a whole new component. In other situations, you might make use of additional components to help improve website performance or to facilitate entirely new kinds of features.
 
-<p><img style="width: 90%; height: auto; display: block; margin-left: auto; margin-right: auto;" src="img/soa.png" alt="Service Oriented Architecture.png" /></p>
+<p><img style="width: 90%; height: auto; display: block; margin-left: auto; margin-right: auto;" src="../img/soa.png" alt="Service Oriented Architecture.png" /></p>
 
 ### Service-Oriented Architecture
 Although dynamic websites have the great advantage of being friendly to all sorts of development, they have the tendency to become very unique to their operational environment and it tends to become difficult to leverage the valuable functions in the website and application across different platforms. As the desire has grown to support as many different platforms as possible, and as web technology has spread to all sorts of devices, it has become more and more important for us to deliver unique "frontend" components to each client and reuse the functional "backend" components across all the different platforms.
