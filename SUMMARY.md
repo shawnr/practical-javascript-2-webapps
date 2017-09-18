@@ -8,9 +8,9 @@
 ## How We Build Web Applications
 
 * [Introduction](how-we-build/README.md)
-* Core Concept: Software Architecture
-* Overview of Web Applications Landscape
-* Frontend vs. Backend
+* [Core Concept: Software Architecture](how-we-build/core-concept-software-architecture.md)
+* [Overview of Web Applications Landscape](how-we-build/overview-of-web-applications-landscape.md)
+* [Frontend vs. Backend](how-we-build/frontend-vs-backend.md)
 * [Popular Frontend Frameworks](how-we-build/popular-frontend-frameworks.md)
 
 ## Setting Up the Workspace
