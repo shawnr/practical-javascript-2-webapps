@@ -1,5 +1,5 @@
 # Evolving Approaches to Web Development
-Over the years, web development has evolved. As a teacher, I feel like watching students learn HTML, CSS and JavaScript looks a lot like reviewing the history of the Web. As a world, we have learned how to build websites and webapps together, over the past 25 years.
+As a teacher, I feel like watching students learn HTML, CSS and JavaScript looks a lot like reviewing the evolution of the Web. Over the past 25 years, we have learned how to build websites and webapps together.
 
 Along the way we've come up with ideas that have helped us build better websites and webapps at the time. However, it's important as developers that we do not become complacent. There is always a new challenge, a new approach, and a new role to serve. How we are working in this book is the result of this continued evolution of web development.
 
