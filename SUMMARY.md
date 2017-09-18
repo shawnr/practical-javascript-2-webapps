@@ -18,8 +18,7 @@
 
 * [Introduction](setting-up-workspace/README.md)
 * [Core Concept: Development Environments](setting-up-workspace/core-concept-development-environments.md)
-* What is Node.js?
-* Other Necessary Tools
+* [Development Tooling](setting-up-workspace/what-is-nodejs.md)
 * Notes for Mac Users
 * Notes for Windows Users
 * Notes for Linux Users
