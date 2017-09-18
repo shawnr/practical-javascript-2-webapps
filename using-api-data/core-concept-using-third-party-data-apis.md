@@ -55,7 +55,7 @@ Accept-Language: en-US,en;q=0.8
 
 You can easily see the request is using the GET method, and you can probably figure out quite a few more details about the request (language, browser, etc.). You can view the headers used in any request made by your web browser by looking at the `Network` tab in the Chrome developer tools:
 
-![Network Tab in Chrome Developer Tools](img/network-tab.png)
+![Network Tab in Chrome Developer Tools](../img/network-tab.png)
 
 Click any of those requests and you'll see a summary of the request and response including all headers and data. (Please note: Being able to look at what your browser is doing like this can be very helpful when trying to figure out why your API-dependent app is not working properly.)
 
