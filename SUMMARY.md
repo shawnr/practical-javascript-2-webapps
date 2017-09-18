@@ -22,6 +22,7 @@
 * [Installing Node.js](setting-up-workspace/installing-nodejs.md)
 * [Installing Git](setting-up-workspace/installing-git.md)
 * [Notes for Windows Users](setting-up-workspace/notes-for-windows-users.md)
+* [Quiz: Setting Up the Workspace](setting-up-workspace/quiz-setting-up-the-workspace.md)
 
 ## Bootstrapping a New App
 
