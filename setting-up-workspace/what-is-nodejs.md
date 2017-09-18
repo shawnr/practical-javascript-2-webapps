@@ -11,6 +11,8 @@ The specific Javascript engine Node.js uses is called V8, and it is the engine t
 
 Node allows developers to create tiny Javascript applications called "modules", and then to string those modules together into larger and more complex applications. There are thousands of "Node modules", as they are known. Developers manage modules with a tool called [NPM](https://www.npmjs.com/) (Node Package Manager), which is installed when you install Node.js. 
 
+We will use a variety of extra modules to add functionality to our website, and to do so we will use NPM. NPM is akin to `apt-get`, `homebrew`, or other tools you may have encountered working on Linux or Unix systems.
+
 ## About Vue-CLI
 We will use the [Vue.js](https://vuejs.org) SPAF as the example platform for this entire book. That means examples will be given in the context of Vue.js, and we will be looking at a lot of Vue.js-specific techniques and tools. This will allow us to learn both more general concepts and pragmatic skills we can use in day-to-day work.
 
