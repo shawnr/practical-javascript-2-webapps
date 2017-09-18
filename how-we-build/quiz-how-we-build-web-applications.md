@@ -20,50 +20,52 @@ Please enjoy this self-check quiz to help you identify key concepts, points, and
         <explanation>HTML, CSS, and JavaScript are all frontend technologies.</explanation>
     </question>
     <question>
-        <p>What was the name Vannevar Bush gave the device he envisioned to allow us to browse vast repositories of information and media?</p>
-        <answer>The Browser</answer>
-        <answer correct>The Memex</answer>
-        <answer>Jacquard's Loom</answer>
-        <answer>Computer</answer>
-        <explanation>Vannevar Bush described the "Memex" as a desk that could browse through and display information.</explanation>
+        <p>A website that delivers the exact files uploaded by the developer directly to the user, with no manipulation of those files, is called what?</p>
+        <answer>a dynamic website</answer>
+        <answer correct>a static website</answer>
+        <answer>a service-oriented website</answer>
+        <answer>a broken website</answer>
+        <explanation>Static websites deliver the exact same files uploaded by the developer to the user without manipulation on the server.</explanation>
     </question>
     <question>
-        <p>In a "typed" programming language, developers do not need to declare the data type of a variable.</p>
-        <answer>True</answer>
-        <answer correct>False</answer>
-        <explanation>In a "typed" programming language, developers must always specify the type of a variable when they declare it.</explanation>
+        <p>When a website makes use of discrete components accessible via API to provide core features of the site, what do we call that architecture?</p>
+        <answer>dynamic architecture</answer>
+        <answer>static architecture</answer>
+        <answer correct>service oriented architecture</answer>
+        <answer>API architecture</answer>
+        <explanation>A service-oriented architecture uses multiple components connected by APIs to provide functionality.</explanation>
     </question>
     <question multiple>
-        <p>Which of the following programming languages are compiled?</p>
-        <answer correct>C++</answer>
-        <answer correct>COBOL</answer>
-        <answer>Python</answer>
-        <answer>PHP</answer>
-        <explanation>C++ and COBOL both use compilers to generate binary files that can be executed by a computer.</explanation>
+        <p>What features are commonly offered through SPAFs?</p>
+        <answer correct>routing</answer>
+        <answer correct>data binding</answer>
+        <answer correct>templating</answer>
+        <answer correct>control logic</answer>
+        <explanation>Most SPAFs provide some form of all of these features.</explanation>
     </question>
     <question>
-        <p>The lowest-level programming language is called:</p>
-        <answer>Basic</answer>
-        <answer correct>Assembly</answer>
-        <answer>Binary</answer>
-        <answer>C</answer>
-        <explanation>Assembly is the lowest-level programming language.</explanation>
+        <p>The method of applying JavaScript improvements to a page after it has been loaded is called:</p>
+        <answer correct>Progressive Enhancement</answer>
+        <answer>Templating</answer>
+        <answer>Event Handling</answer>
+        <answer>Dynamization</answer>
+        <explanation>The method of applying JavaScript improvements to a page after it has been loaded is called "progressive enhancement."</explanation>
     </question>
     <question>
-        <p>What do we call a "self-contained sequence of actions to be performed" in a program?</p>
-        <answer>instructions</answer>
-        <answer>function</answer>
-        <answer correct>algorithm</answer>
-        <answer>proces</answer>
-        <explanation>An "algorithm" is a self-contained sequence of actions.</explanation>
+        <p>Which of the following would not be part of the development tooling for a Vue.js application?</p>
+        <answer>Node.js</answer>
+        <answer>Webpack</answer>
+        <answer correct>Vue.js</answer>
+        <answer>ESLint</answer>
+        <explanation>Vue.js is the SPAF that runs in the client browser, so it is a part of the web application and not the development tooling.</explanation>
     </question>
     <question>
-        <p>What do we call words that developers cannot use to name variables, functions, etc. in their code?</p>
-        <answer correct>reserved words</answer>
-        <answer>keywords</answer>
-        <answer>special words</answer>
-        <answer>singletons</answer>
-        <explanation>"Reserved words" are used by the programming language and cannot be used to name variables, functions, etc.</explanation>
+        <p>What does XHR stand for?</p>
+        <answer>eXtra Hot Records</answer>
+        <answer>Excess Host Resource</answer>
+        <answer correct>XMLHTTPRequest</answer>
+        <answer>X-Ray Heat Router</answer>
+        <explanation>XHR stands for "XMLHTTPRequest", which is the method used to make asynchronous requests to a server.</explanation>
     </question>
     <question>
         <p>What data type is commonly used to contain text in a programming language?</p>
