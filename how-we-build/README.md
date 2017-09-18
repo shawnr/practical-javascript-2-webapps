@@ -12,6 +12,8 @@ The ability to receive new data from the server without refreshing the page mean
 
 The adoption of this technique caused interest in JavaScript to grow rapidly, and it led to the development of major helper libraries like jQuery. All of this effort around using JavaScript to enhance web pages was rolled into a trend and labelled "Web 2.0." The Web 2.0 era ushered saw a significant rise in the adoption of web technology by the general public and the creation of major new players online including Facebook and Twitter.
 
+So much has changed that it's useful to take a close look at how we build web applications today, and why we've adopted these tools and techniques.
+
 
 
 
