@@ -2,7 +2,7 @@
 
 This book includes several sections dedicated to using third-party APIs in order to have access to dynamic data that is useful to a user. There are many APIs in the world, but not all of them are easy to use or friendly towards JavaScript applications. Some APIs require complex authentication in order to use them which is beyond the scope of this book. Other APIs are designed only to be used by certain types of systems and might cause issues when used with a JavaScript application in the browser.
 
-The following APIs have been reviewed for use in the kinds of code we cover in this book. They should provide decent fodder for experimentation.
+The following APIs have been reviewed for use with the kinds of code we cover in this book. They should provide decent fodder for experimentation and minimal barriers to entry.
 
 <h3>No API Key Required</h3>
 <ul>
