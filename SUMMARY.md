@@ -1,8 +1,11 @@
 # Summary
 
-* [Introduction](README.md)
+## Welcome to the Book
 
-## How We Build Web Apps
+* [Introduction](README.md)
+* [Prerequisites and Assumptions](prerequisites-and-assumptions.md)
+
+## How We Build Web Applications
 
 * [Introduction](how-we-build/README.md)
 * Core Concept: Software Architecture
