@@ -4,83 +4,53 @@ Please enjoy this self-check quiz to help you identify key concepts, points, and
 
 <quiz name="">
     <question>
-        <p>The "high level structures of a software system, the discipline of creating such structures, and the documentation of these structures" is known as what?</p>
-        <answer>Software Construction</answer>
-        <answer>Application Design</answer>
-        <answer correct>Software Architecture</answer>
-        <answer>Refactoring</answer>
-        <explanation>Software architecture is the "high level structures of a software system, the discipline of creating such structures, and the documentation of these structures."</explanation>
+        <p>The local setup for building a software project is called what?</p>
+        <answer correct>development environment</answer>
+        <answer>app platform</answer>
+        <answer>system config</answer>
+        <answer>system setup</answer>
+        <explanation>The local setup for building a software project is typically called a "development environment."</explanation>
     </question>
     <question>
-        <p>What kinds of technologies are HTML, CSS, and JavaScript?</p>
-        <answer>backend</answer>
-        <answer correct>frontend</answer>
-        <answer>dynamic</answer>
-        <answer>difficult</answer>
-        <explanation>HTML, CSS, and JavaScript are all frontend technologies.</explanation>
-    </question>
-    <question>
-        <p>A website that delivers the exact files uploaded by the developer directly to the user, with no manipulation of those files, is called what?</p>
-        <answer>a dynamic website</answer>
-        <answer correct>a static website</answer>
-        <answer>a service-oriented website</answer>
-        <answer>a broken website</answer>
-        <explanation>Static websites deliver the exact same files uploaded by the developer to the user without manipulation on the server.</explanation>
-    </question>
-    <question>
-        <p>When a website makes use of discrete components accessible via API to provide core features of the site, what do we call that architecture?</p>
-        <answer>dynamic architecture</answer>
-        <answer>static architecture</answer>
-        <answer correct>service oriented architecture</answer>
-        <answer>API architecture</answer>
-        <explanation>A service-oriented architecture uses multiple components connected by APIs to provide functionality.</explanation>
-    </question>
-    <question multiple>
-        <p>What features are commonly offered through SPAFs?</p>
-        <answer correct>routing</answer>
-        <answer correct>data binding</answer>
-        <answer correct>templating</answer>
-        <answer correct>control logic</answer>
-        <explanation>Most SPAFs provide some form of all of these features.</explanation>
-    </question>
-    <question>
-        <p>The method of applying JavaScript improvements to a page after it has been loaded is called:</p>
-        <answer correct>Progressive Enhancement</answer>
-        <answer>Templating</answer>
-        <answer>Event Handling</answer>
-        <answer>Dynamization</answer>
-        <explanation>The method of applying JavaScript improvements to a page after it has been loaded is called "progressive enhancement."</explanation>
-    </question>
-    <question>
-        <p>Which of the following would not be part of the development tooling for a Vue.js application?</p>
-        <answer>Node.js</answer>
+        <p>Which of the following is a platform for running JavaScript applications outside of the browser?</p>
         <answer>Webpack</answer>
-        <answer correct>Vue.js</answer>
-        <answer>ESLint</answer>
-        <explanation>Vue.js is the SPAF that runs in the client browser, so it is a part of the web application and not the development tooling.</explanation>
+        <answer>Vue.js</answer>
+        <answer correct>Node.js</answer>
+        <answer>NPM</answer>
+        <explanation>Node.js is a platform for running JavaScript applications outside of the browser.</explanation>
     </question>
     <question>
-        <p>What does XHR stand for?</p>
-        <answer>eXtra Hot Records</answer>
-        <answer>Excess Host Resource</answer>
-        <answer correct>XMLHTTPRequest</answer>
-        <answer>X-Ray Heat Router</answer>
-        <explanation>XHR stands for "XMLHTTPRequest", which is the method used to make asynchronous requests to a server.</explanation>
+        <p>The tool we use to create project skeletons of Vue.js applications is called what?</p>
+        <answer>VUE-builder</answer>
+        <answer>vue-Skeleton</answer>
+        <answer>Webpack</answer>
+        <answer correct>vue-CLI</answer>
+        <explanation>Vue-CLI is the command line interface for creating Vue.js application projects.</explanation>
     </question>
     <question>
-        <p>A dynamic website uses backend technology to create the HTML that is sent to the user.</p>
-        <answer correct>True</answer>
-        <answer>False</answer>
-        <explanation>Some dynamic websites even customize the CSS and/or JavaScript that is sent to the user.</explanation>
+        <p>What tool do we use for version control in this book?</p>
+        <answer correct>Git</answer>
+        <answer>Subversion</answer>
+        <answer>Perforce</answer>
+        <answer>Mercurial</answer>
+        <explanation>This book assumes you are using Git and Github.</explanation>
     </question>
     <question multiple>
-        <p>Which are JavaScript Single Page Application Frameworks?</p>
-        <answer correct>Angular</answer>
-        <answer correct>Meteor JS</answer>
-        <answer>Mayo</answer>
-        <answer correct>Vue.js</answer>
-        <explanation>Mayo is not (yet) the name of an SPAF.</explanation>
-    </question>    
+        <p>What features do we usually hope to gain in a development environment?</p>
+        <answer correct>development server</answer>
+        <answer correct>file combining/processing</answer>
+        <answer correct>tools for improving code quality</answer>
+        <answer>ordering pizza</answer>
+        <explanation>Most development environments deliver a server, file combining, and code quality features..</explanation>
+    </question>
+    <question>
+        <p>Windows 10 users should consider what tool to provide a more Unix-like command line environment?</p>
+        <answer>Ubuntu</answer>
+        <answer correct>Windows Subsystem for Linux</answer>
+        <answer>Command Console</answer>
+        <answer>Nixer</answer>
+        <explanation>The Windows Subsystem for Linux allows Windows users to enjoy the benefits of a true Linux shell.</explanation>
+    </question>   
 </quiz>
 
 <div class="no-quiz">
