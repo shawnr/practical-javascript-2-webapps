@@ -11,7 +11,7 @@
 * Core Concept: Software Architecture
 * Overview of Web Applications Landscape
 * Frontend vs. Backend
-* Popular Frontend Frameworks
+* [Popular Frontend Frameworks](how-we-build/popular-frontend-frameworks.md)
 
 ## Setting Up the Workspace
 
