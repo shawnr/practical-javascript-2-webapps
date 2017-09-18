@@ -19,7 +19,7 @@
 * [Introduction](setting-up-workspace/README.md)
 * [Core Concept: Development Environments](setting-up-workspace/core-concept-development-environments.md)
 * [Development Tooling](setting-up-workspace/what-is-nodejs.md)
-* Installing Node.js
+* [Installing Node.js](setting-up-workspace/installing-nodejs.md)
 * [Installing Git](setting-up-workspace/installing-git.md)
 * Notes for Windows Users
 
