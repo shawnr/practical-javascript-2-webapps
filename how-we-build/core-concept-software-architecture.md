@@ -10,6 +10,8 @@ Software architecture is something that we can drill down into. We can talk abou
 
 Throughout most of this book, we will discuss the architecture of a web application: What parts are involved in making the functionality we desire? But before we get into the specifics of an application, it's useful to look at how websites are architected at a broader level. 
 
+The summary [definition of software architecture from Wikipedia](https://en.wikipedia.org/wiki/Software_architecture) is a good one: Software architecture is "the high level structures of a software system, the discipline of creating such structures, and the documentation of these structures." When we think of this in relation to building websites, we often talk about "website architecture."
+
 ## Types of Website Architectures
 There are many ways to build a website or webapp. For convenience, we will group architectures into three major styles of website architecture.
 
