@@ -43,4 +43,28 @@ As we mentioned earlier, the goal of using development environments is that we c
 
 This command builds and compiles all the code in our project and puts it in a directory called `dist` in the root of the project. The `--report` flag also produces a report about what parts of our project take up the most space for downloading/serving to our users.
 
+![Webpack Build Report Web View](/img/build-report-web.png)
+<br>Web View of the Webpack Build Report
 
+Webpack provides us with a handy visual representation of the parts of our deployment package. We can see that the bulk of the package is actually the core dependencies we have in `node_modules`, and the tiny purple bar on the side represents the code we have in our custom app.
+
+Click around and check out this view, then go back to your terminal to read the text report.
+
+![Webpack Build Report in Terminal](/img/build-report-terminal.png)
+<br>Webpack Build Report in Terminal
+
+In the terminal view of the Webpack Build Report we can more easily see that webpack has combined files and organized them by "chunks". We can see the file size and the file name that has resulted from the processing of these files.
+
+If we look inside the `dist/` folder, which was created inside our repository by the build process, we can see that those files have been saved under `dist/static/` (as well as the other files that make up our site.
+
+![Files in dist folder](/img/dist-folder.png)
+<br>Files in the `dist/` Folder
+
+These files are the results of combining many source files into just a few files for delivery to our users. This cuts down on the number of request a user makes to the server in order to download our application. We also see that the files have been "versioned" with the addition of "hashes" that represent a unique version of that file. These hashes are updated when the contents of the files that are being combined changes. Changing the names of these files when the contents change helps us avoid issues of browsers and networks caching files and serving users old code. (We never want to tell a user to "clear the cache" in their browser again!)
+
+## Continue Exploring
+It's worthwhile to continue exploring the code to get a better understanding of what parts we're dealing with. Think of this as moving into a new neighborhood: There are already buildings and streets here, so we don't need to build everything from scratch. But we do need to find our ways and get comfortable in this new environment.
+
+Much of the rest of this book will serve like a GPS as we learn about building applications. We will get details that should make all of this doable at a fundamental level. But please take detours and try things outside what is prescribed in this book.
+
+If we don't take some ambling walks around our new neighborhood we will never find the better paths, interesting scenery, or potential for enjoyment that exists.
