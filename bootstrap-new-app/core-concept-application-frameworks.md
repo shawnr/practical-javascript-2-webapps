@@ -36,8 +36,27 @@ A "project skeleton" is what we have after we "run" or "bootstrap" a project tem
 </div>
 
 
+## Choosing a Framework
 
+It can be difficult to pick a framework, especially when we face the kinds of lists we saw in the [Popular Single Page Application Frameworks](/../how-we-build/popular-frontend-frameworks.html) section of this book. It's well worth the research effort to try to pick a more suitable framework for our projects. Consider these questions when reviewing information about frameworks:
 
+* What languages are we interested in using? (Or, if that's not clear, what languages are used for building these kinds of applications?)
+* What frameworks are used to build similar applications?
+* What frameworks are developers that we know using? (Being close to a user community can really help learning and speed development.)
+* How big is the online and local communities for the framework we're considering?
+* How many resources are available to help us learn the framework?
+
+Notice that there are a couple of questions left out of here that others might bring up. Specifically, we are not concerned with "performance" and we are not concerned (too much) with "feature set." These are consciously left out of our consideration.
+
+For the most part, popular frameworks perform at similar levels. Different frameworks may require different types of optimization, and there may indeed be some cases where a specific framework will outperform the rest, but our decisions about which tools we use should be made based on how effective those tools will make us. Using a highly performant, but very confusing, framework will slow us down more than using a less speedy but much more understandable framework. It will also make it more possible to get help from collaborators and teach others what we've done.
+
+Similarly, the feature set of any given framework is likely to cover most of the basics, just like the other frameworks in the space. It's unlikely that our decision will be swayed because one framework is much more feature rich than others (and if we find that unique case, then it might be an indicator of which framework we should use). We expect that a framework will allow us to extend functionality, and we anticipate that we will be writing functionality. So we are not restricted to the features the framework offers, and we can build whatever else we need.
+
+Vue.js was chosen for use in this book using similar reasoning to the above. It is a framework that generally functions like the other major frameworks popular today (React and Angular), and it has been gaining in popularity for a couple of years. It is used to build some impressive web applications, and it contains many of the features we expect out of the box. It is just as performant as React and Angular, too, making it a good choice for delivering quick web applications.
+
+The feature that pushed Vue.js over the top was primarily its accessibility for new developers. This book is meant to teach people with very little web development experience. We need something that contains a good amount of "batteries included" (meaning, we do not have to add in every feature and component we want to use individually), and we need something that strikes a nice balance between introducing tooling (such as Webpack and development servers) without going too far. React and Angular each strive for a modularity that is desirable for advanced developers, but which can be confusing for new developers. They both also assume very large, complex projects, and, again, a great degree of developer expertise to put together components to serve a project. 
+
+For these reasons, we are using Vue.js in this book. Most of the concepts used by Vue.js are the same as those used in React and Angular. Learning how to use Vue.js will make it easier to learn React and/or Angular in the future, should we choose to do so. In the meantime, we will build some amazing projects. 
 
 
 
