@@ -28,7 +28,7 @@
 ## Bootstrapping a New App
 
 * [Introduction](bootstrap-new-app/README.md)
-* Core Concept: Application Frameworks
+* [Core Concept: Application Frameworks](bootstrap-new-app/core-concept-application-frameworks.md)
 * Creating a new Vue.js App
 * Creating Logic
 * Creating Templates
@@ -72,7 +72,7 @@
 ## Application Architecture
 
 * [Introduction](application-architecture/README.md)
-* Core Concept: Organizing Applications
+* Core Concept: Web Components
 * Identifying Application Components for Improvement
 * Tips for Refactoring
 
