@@ -31,7 +31,7 @@
 * [Core Concept: Application Frameworks](bootstrap-new-app/core-concept-application-frameworks.md)
 * [Creating a new Vue.js App](bootstrap-new-app/creating-a-new-vuejs-app.md)
 * [Application Logic](bootstrap-new-app/application-logic.md)
-* Using Templates
+* [Using Templates](bootstrap-new-app/using-templates.md)
 
 ## Debugging the App
 
