@@ -29,7 +29,7 @@
 
 * [Introduction](bootstrap-new-app/README.md)
 * [Core Concept: Application Frameworks](bootstrap-new-app/core-concept-application-frameworks.md)
-* Creating a new Vue.js App
+* [Creating a new Vue.js App](bootstrap-new-app/creating-a-new-vuejs-app.md)
 * Creating Logic
 * Creating Templates
 
