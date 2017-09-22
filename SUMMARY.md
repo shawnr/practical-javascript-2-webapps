@@ -28,7 +28,7 @@
 ## Bootstrapping a New App
 
 * [Introduction](bootstrap-new-app/README.md)
-* Core Concept: Project Skeletons
+* Core Concept: Application Frameworks
 * Creating a new Vue.js App
 * Creating Logic
 * Creating Templates
