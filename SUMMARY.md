@@ -38,6 +38,7 @@
 * [Introduction](debug-app/README.md)
 * [Core Concept: Debugging Techniques](debug-app/core-concept-debugging-techniques.md)
 * [Using Vue Devtools](debug-app/using-vue-devtools.md)
+* [Quiz: Debugging the App](debug-app/quiz-debugging-the-app.md)
 
 ## Deploying the App
 
