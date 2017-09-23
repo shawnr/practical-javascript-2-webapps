@@ -6,7 +6,7 @@ The process (and art) of debugging is enough to fill an entire book on its own, 
 
 <div class="tip-box">
     <h2>Always Look at the Console</h2>
-    <p>Whenever something isn't working properly in your JavaScript, always open up the developer tools in whatever browser you're using and check out the JavaScript console. The console will usually show what errors have been triggered by the page, and they will often give you a specific filename and line number where the error has been found. The console is an incredibly useful tool for developing JavaScript, so don't forget to consult the console (and your other developer tools) whenever something goes wrong.</p>
+    <p>Whenever something isn't working properly in our JavaScript, we should always open up the developer tools in whatever browser we're using and check out the JavaScript console. The console will usually show what errors have been triggered by the page, and they will often give us a specific filename and line number where the error has been found. The console is an incredibly useful tool for developing JavaScript, so don't forget to consult the console (and our other developer tools) whenever something goes wrong.</p>
 </div>
 
 ## Syntax Errors
@@ -25,7 +25,7 @@ if (x < 12) {
 These errors are annoying, but they tend to be the easiest to fix. 
 
 ### Check the Console
-Like the tip above says, we always begin by checking the console. In the case of syntax errors the console will usually lead you to the specific file and line number, often with a helpful link. Sometimes syntax errors actually exist on the line before the one that triggers the error, so be sure to look around the line noted in the console if you don't find the error right away. Here are some tips for where to look to resolve syntax errors:
+Like the tip above says, we always begin by checking the console. In the case of syntax errors the console will usually lead us to the specific file and line number, often with a helpful link. Sometimes syntax errors actually exist on the line before the one that triggers the error, so be sure to look around the line noted in the console if we don't find the error right away. Here are some tips for where to look to resolve syntax errors:
 
 * Look on the line (or lines) before the one indicated in the console. For many syntax errors they register on the line after the missing quote, semicolon, etc.
 * When the console indicates the last line of the file, look closely at the curly braces and how we've closed all of the code blocks. 
@@ -41,14 +41,14 @@ The first step to fixing any bug of this sort is to **reproduce the error**. It 
 
 When working to reproduce a bug, try to follow these steps:
 
-* Note exactly what you did to cause the bug.
+* Note exactly what happened to cause the bug.
 * Come up with a set of inputs or steps that lead to the bug and write them down.
-* Work with a colleague to have them reproduce the bug on their own using your steps.
-* If you cannot figure out how to reproduce a bug, be sure to capture as much information about your system and actions whenever you do manage to make the bug happen.
+* Work with a colleague to have them reproduce the bug on their own using the steps outlined above.
+* If it is impossible to reproduce the bug, be sure to capture as much information about the system and actions whenever the bug does occur.
 
-Remember: **If you cannot reproduce a bug then you cannot fix the bug.**
+Remember: **If we cannot reproduce a bug then we cannot fix the bug.**
 
-Once you can make a bug happen again, you can begin to track down a fix.
+Once we can make a bug happen again, we can begin to track down a fix.
 
 ## Console Logging
 Throughout the code in this book we have used the `console.log()` command to output information to the JavaScript console. This is a valuable tool that can allow us to emit messages to the JavaScript console to track the movement of information and logic in our programs. We can use `console.log()` to help verify that things we can't otherwise "see" are happening. Here is an example:
@@ -105,9 +105,9 @@ In the image above we can see that the debugger has stopped at the line with the
 In the "scope" panel we can see the values of the variables available at the moment that the `debugger` line has been executed. We could alter these values using the JavaScript console and we can use the big "play" button at the top of the debugger window to continue executing code. Since our `debugger` command is in a `for` loop, it will pause the program each time it executes. In this way, we can watch the values change on each iteration of the `for` loop.
 
 <div class="tip-box">
-    <h2>Learn Your Dev Tools</h2>
+    <h2>Learn About Dev Tools</h2>
     <p>Although we can use the <code>debugger</code> command in pretty much any browser, there is always a danger that we could forget to remove that line from our code after we've figured out the problem. This is fairly common, and, as a result, developers tend not to use the `debugger` command to set a breakpoint.</p>
-    <p>Every major browser provides developer tools of some kind, and these all allow you to set breakpoints by clicking on the line number in the code view within the developer tools. Setting breakpoints using the interface in our browser's developer tools is safer because we avoid making any changes directly to our code. It allows us to quickly set and remove breakpoints as we try to find and fix bugs. Consult the resources listed below for more information about how to get the most from our debugging tools.</p>
+    <p>Every major browser provides developer tools of some kind, and these all allow us to set breakpoints by clicking on the line number in the code view within the developer tools. Setting breakpoints using the interface in our browser's developer tools is safer because we avoid making any changes directly to our code. It allows us to quickly set and remove breakpoints as we try to find and fix bugs. Consult the resources listed below for more information about how to get the most from our debugging tools.</p>
 </div>
 
 ## Additional Resources
@@ -118,7 +118,7 @@ The amazing developers and community of people who make and use different tools 
 **Chrome**
 * [Chrome Devtools Overview](https://developers.google.com/web/tools/chrome-devtools/)
 * [Get Started Debugging JavaScript with Chrome Developer Tools](https://developers.google.com/web/tools/chrome-devtools/javascript/)
-* [Pausing Your Code With Breakpoints](https://developers.google.com/web/tools/chrome-devtools/javascript/breakpoints)
+* [Pausing Code Execution With Breakpoints](https://developers.google.com/web/tools/chrome-devtools/javascript/breakpoints)
 
 **Firefox**
 * [Firefox Debugger Overview](https://developer.mozilla.org/en-US/docs/Tools/Debugger)
