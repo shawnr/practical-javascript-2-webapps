@@ -26,12 +26,12 @@ Please enjoy this self-check quiz to help you identify key concepts, points, and
         <explanation>False. The core framework code should not be modified by the developers of applications using the framework.</explanation>
     </question>
     <question>
-        <p>What tool do we use for version control in this book?</p>
-        <answer correct>Git</answer>
-        <answer>Subversion</answer>
-        <answer>Perforce</answer>
-        <answer>Mercurial</answer>
-        <explanation>This book assumes you are using Git and Github.</explanation>
+        <p>"Bootstrapping" an app means what?</p>
+        <answer>Styling the app like a modern website.</answer>
+        <answer correct>Getting an empty project skeleton up and running.</answer>
+        <answer>Building a new framework.</answer>
+        <answer>Writing a new application from scratch.</answer>
+        <explanation>Bootstrapping an application refers to getting a new project skeleton up and running quickly.</explanation>
     </question>
     <question multiple>
         <p>What features do we usually hope to gain in a development environment?</p>
