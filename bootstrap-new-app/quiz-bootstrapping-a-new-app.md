@@ -20,12 +20,10 @@ Please enjoy this self-check quiz to help you identify key concepts, points, and
         <explanation>"Extensibility" is best summarized by the idea that developers can extend the functionality of the framework through overriding or adding custom code modules.</explanation>
     </question>
     <question>
-        <p>The tool we use to create project skeletons of Vue.js applications is called what?</p>
-        <answer>VUE-builder</answer>
-        <answer>vue-Skeleton</answer>
-        <answer>Webpack</answer>
-        <answer correct>vue-CLI</answer>
-        <explanation>Vue-CLI is the command line interface for creating Vue.js application projects.</explanation>
+        <p>The code of the core framework is meant to be modified by developers of applications using the framework.</p>
+        <answer>True</answer>
+        <answer correct>False</answer>
+        <explanation>False. The core framework code should not be modified by the developers of applications using the framework.</explanation>
     </question>
     <question>
         <p>What tool do we use for version control in this book?</p>
