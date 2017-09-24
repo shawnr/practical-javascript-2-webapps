@@ -39,7 +39,7 @@ Once initiated, we will be asked some questions. At this point, it doesn't matte
 ![vue init results](/img/vue-init.png)
 <br>The results of the `vue init` command.
 
-This process will create a new directory called `test-project/` (we can call your project whatever we'd like). We can also see that directions for getting going with development are printed after the command finishes. Change directory into the `test-project/` directory and we should be able to see all the files created for us. 
+This process will create a new directory called `test-project/` (we can call our projects whatever we'd like). We can also see that directions for getting going with development are printed after the command finishes. Change directory into the `test-project/` directory and we should be able to see all the files created for us. 
 
 Inside the repository, we should see the following files and directories:
 
