@@ -34,12 +34,12 @@ Please enjoy this self-check quiz to help you identify key concepts, points, and
         <explanation>Bootstrapping an application refers to getting a new project skeleton up and running quickly.</explanation>
     </question>
     <question multiple>
-        <p>What features do we usually hope to gain in a development environment?</p>
-        <answer correct>development server</answer>
-        <answer correct>file combining/processing</answer>
-        <answer correct>tools for improving code quality</answer>
-        <answer>ordering pizza</answer>
-        <explanation>Most development environments deliver a server, file combining, and code quality features..</explanation>
+        <p>What questions do we ask as we consider frameworks to use for our applications?</p>
+        <answer correct>Which language does it use?</answer>
+        <answer correct>What kinds of applications is it designed to build?</answer>
+        <answer correct>How big is the community of users and developers?</answer>
+        <answer correct>What resources are available to learn the framework?</answer>
+        <explanation>All of these questions should be asked when considering an application framework.</explanation>
     </question>
     <question>
         <p>Windows 10 users should consider what tool to provide a more Unix-like command line environment?</p>
