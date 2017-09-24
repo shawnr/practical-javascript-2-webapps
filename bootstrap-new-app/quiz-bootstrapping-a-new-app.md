@@ -42,13 +42,37 @@ Please enjoy this self-check quiz to help you identify key concepts, points, and
         <explanation>All of these questions should be asked when considering an application framework.</explanation>
     </question>
     <question>
-        <p>Windows 10 users should consider what tool to provide a more Unix-like command line environment?</p>
-        <answer>Ubuntu</answer>
-        <answer correct>Windows Subsystem for Linux</answer>
-        <answer>Command Console</answer>
-        <answer>Nixer</answer>
-        <explanation>The Windows Subsystem for Linux allows Windows users to enjoy the benefits of a true Linux shell.</explanation>
+        <p>What tool will we use to bootstrap our Vue.js applications?</p>
+        <answer correct>Vue-CLI</answer>
+        <answer>Bootstrap</answer>
+        <answer>Yeoman</answer>
+        <answer>Webpack</answer>
+        <explanation>The tool we will use to bootstrap our Vue.js applications is Vue-CLI.</explanation>
+    </question> 
+    <question>
+        <p>Which official template includes a full Webpack configuration, linting, development server with reloading, and test integration?</p>
+        <answer>webpack-simple</answer>
+        <answer>pwa</answer>
+        <answer>browserify</answer>
+        <answer correct>webpack</answer>
+        <explanation>The "webpack" template contains all those features.</explanation>
     </question>   
+    <question>
+        <p>What command must we run after we bootstrap or clone a Vue.js application in order to load all of our dependencies?</p>
+        <answer correct><code>npm install</code></answer>
+        <answer><code>npm run</code></answer>
+        <answer><code>webpack go</code></answer>
+        <answer><code>bower install</code></answer>
+        <explanation>The <code>npm install</code> command will install of our developer and client-side dependencies.</explanation>
+    </question> 
+    <question>
+        <p>What command runs the development server for our projects?</p>
+        <answer><code>npm server</code></answer>
+        <answer correct><code>npm run dev</code></answer>
+        <answer><code>webpack serve</code></answer>
+        <answer><code>npm run build</code></answer>
+        <explanation>The <code>npm run dev</code> command runs the development server for our projects.</explanation>
+    </question> 
 </quiz>
 
 <div class="no-quiz">
