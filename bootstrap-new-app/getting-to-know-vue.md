@@ -94,8 +94,7 @@ In addition to directives that allow looping and conditionals within a template,
 
 In the example above, we have a button that will execute the `refreshData` method defined in our component whenever the button is clicked. (Again, this is a lot to understand without additional information, but the goal here is just to begin recognizing what these parts do. We will learn more about them soon.)
 
-
-
+Using all of these core template features, plus some of the other features provided by the Vue.js framework, we have the ability to create dynamic interfaces and useful functionality that our users will appreciate.
 
 
 
