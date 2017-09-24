@@ -12,7 +12,7 @@ As we can see in the illustration above, everything we see in the interface of o
 
 This is probably the correct place to bring up a metaphor based on a favorite modular toy. If we imagine that a framework is like a box of Legos, for example, then each block type would be a Component. We could build a Lego person by combining a head block, body block, and legs block. With Legos we even have modular hair blocks that we can customize to get the character we want. 
 
-Our Vue.js applications are sets of special blocks that we create (or which others have created and we simply make use of). We put them together to create the unique experience we want.
+Our Vue.js applications are sets of special blocks that we can put together to create the unique experience we need. We can create our own Components, or we can use Components created by others. Just like with the Lego figures, we can achieve a vast array of different effects by varying the elements that build our entire application.
 
 It can be tricky to really understand how components in Vue.js applications work together. So let's take a closer look at the code we just generated in the project skeleton.
 
@@ -30,7 +30,22 @@ drwxr-xr-x   3 shawnr  staff   102B Sep 24 13:09 components
 ```
 Looking at this listing, we can see a `main.js` file and an `App.vue` file. The other two items listed are directories: `assets` and `components`. Inside `main.js` is the code that instantiates a Vue.js application. It imports the `App.vue` file, as well as the core Vue.js framework. The result of this code is that the `App` component is inserted into the `index.html` file (in the root of our project repository) and then executed.
 
-When the `App` component is executed, it runs the code contained in `App.vue`. This code defines a `<template>` tag, a `<script>` tag, and a `<style>` tag. When working with Vue.js components, we keep our HTML, JavaScript, and CSS in one location. Our CSS is automatically scoped so it will only affect the specific component, which helps prevent issues of CSS overlapping between components. The logic that makes the component function
+When the `App` component is executed, it runs the code contained in `App.vue`. This code defines a `<template>` tag, a `<script>` tag, and a `<style>` tag. When working with Vue.js components, we keep our HTML, JavaScript, and CSS in one location. Our CSS is automatically scoped so it will only affect the specific component, which helps prevent issues of CSS overlapping between components. The logic that makes the component function is included between the `<script>` tags, and that logic is applied to the template defined in the `<template>` tag.
+
+![Code for App and Hello Components](/img/vue-app-component-code.png)
+<br>Code for App and Hello Components
+
+Inside the `components/` directory is the `hello.vue` file, which contains the `Hello` component. This component is referenced inside of the `App` component. As we can see in the illustration above, the `App` components lists the child components it's using in the `components` property of the `App` object. `Hello` is the only component listed. We can also see that in `App.vue` there is an import statement:
+
+```js
+import Hello from './components/Hello'
+```
+
+The import statement is how we can let modern JavaScript files know about other files we are working with. Notice that this import statement gives a name to the object being imported (`Hello`), and it specifies the file that is to be imported (`./components/Hello`). The `.vue` extension on the file name is not needed in the import statement, although it is needed on the file itself. The import statement understands to fill in the extension.
+
+We can see, based on the highlights in the image above, that the `Hello` component is referenced in the template for the `App` component. The `<hello></hello>` line indicates where the content for the `Hello` component should be shown. It can be difficult to imagine what this looks like when it is displayed to the user. This next screenshot should help.
+
+
 
 
 
