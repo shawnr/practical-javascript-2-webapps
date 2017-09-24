@@ -9,15 +9,15 @@ Please enjoy this self-check quiz to help you identify key concepts, points, and
         <answer>The program requires background loading.</answer>
         <answer>The software creates new developers.</answer>
         <answer correct>The overall program's flow of control is not dictated by the caller, but by the framework.</answer>
-        <explanation>Inversion of control means that the overall program's flow of control is not dictated by the caller, but by the framework.</explanation>
+        <explanation>"Inversion of control" means that the overall program's flow of control is not dictated by the caller, but by the framework.</explanation>
     </question>
     <question>
-        <p>Which of the following is a platform for running JavaScript applications outside of the browser?</p>
-        <answer>Webpack</answer>
-        <answer>Vue.js</answer>
-        <answer correct>Node.js</answer>
-        <answer>NPM</answer>
-        <explanation>Node.js is a platform for running JavaScript applications outside of the browser.</explanation>
+        <p>Which of the following phrases best summarized "extensibility" with regards to frameworks?</p>
+        <answer>Users can use the app for whatever they want.</answer>
+        <answer correct>Developers can extend the functionality of the framework through overriding or adding custom code modules.</answer>
+        <answer>The database can handle a lot of entries.</answer>
+        <answer>New components are based on old components.</answer>
+        <explanation>"Extensibility" is best summarized by the idea that developers can extend the functionality of the framework through overriding or adding custom code modules.</explanation>
     </question>
     <question>
         <p>The tool we use to create project skeletons of Vue.js applications is called what?</p>
