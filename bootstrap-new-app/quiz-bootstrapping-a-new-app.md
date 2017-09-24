@@ -4,12 +4,12 @@ Please enjoy this self-check quiz to help you identify key concepts, points, and
 
 <quiz name="">
     <question>
-        <p>The local setup for building a software project is called what?</p>
-        <answer correct>development environment</answer>
-        <answer>app platform</answer>
-        <answer>system config</answer>
-        <answer>system setup</answer>
-        <explanation>The local setup for building a software project is typically called a "development environment."</explanation>
+        <p>In an application framework, "inversion of control" means what?</p>
+        <answer>The program executes from the bottom up.</answer>
+        <answer>The program requires background loading.</answer>
+        <answer>The software creates new developers.</answer>
+        <answer correct>The overall program's flow of control is not dictated by the caller, but by the framework.</answer>
+        <explanation>Inversion of control means that the overall program's flow of control is not dictated by the caller, but by the framework.</explanation>
     </question>
     <question>
         <p>Which of the following is a platform for running JavaScript applications outside of the browser?</p>
