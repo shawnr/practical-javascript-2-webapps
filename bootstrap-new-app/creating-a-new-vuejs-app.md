@@ -59,8 +59,27 @@ drwxr-xr-x   6 shawnr  staff   204B Sep 24 13:09 src
 drwxr-xr-x   3 shawnr  staff   102B Sep 24 13:09 static
 ```
 
-We can see that we have some configuration files, including a `.babelrc` that sets up how the Babel linter will work for us. We also have a `package.json` file that lists all the Node.js modules our application depends upon. there is a `build` folder, which contains files that control how the site is built and packaged for deployment. There is also a `config` folder, which contains several configuration files that affect how the app is built and also how the development server and other components of the system work. Inside the `src` folder is the actual content of our application. There is also a `static` directory that will contain static media files that need to be packaged with the site, but which do not require post-processing by the build tools.
+We can see that we have some configuration files, including a `.babelrc` that sets up how the Babel linter will work for us. We also have a `package.json` file that lists all the Node.js modules our application depends upon. there is a `build` directory, which contains files that control how the site is built and packaged for deployment. There is also a `config` directory, which contains several configuration files that affect how the app is built and also how the development server and other components of the system work. Inside the `src` directory is the actual content of our application. There is also a `static` directory that will contain static media files that need to be packaged with the site, but which do not require post-processing by the build tools.
 
+Over the next several sections we will look at many parts of this project skeleton and examine the features of this project template. For now, it's important to follow the remaining steps to get the project ready for development.
+
+Run the following command to install all of the Node.js modules our site depends upon:
+
+```
+npm install
+```
+
+Once that command finishes, we should see an additional `node_modules/` directory in the root of our project repository. This directory will contain all of the dependencies we have in our system. There will be a lot of these. Some are used for our development tools, and others are packaged up with our site and delivered to our users.
+
+Now that we have everything installed to run our project, we can test it out by running the development server with this command:
+
+```
+npm run dev
+```
+
+We will want to keep that command handy, because that is how we will run the development server whenever we want to do work. The development server will run while we are working and will automatically refresh the page when we make changes to our files. It will also alert us to many issues that might come up in our code as we develop.
+
+Once we have the site up and running on the development server, we can poke around and get to know our Vue.js app a little better.
 
 
 
