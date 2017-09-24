@@ -36,13 +36,30 @@ vue init webpack test-project
 
 Once initiated, we will be asked some questions. At this point, it doesn't matter very much which answers we give, since we are just using this project to poke around and see what we get. Here is a screenshot of what the process looks like when completed, and we can see a set of answers that will create a minimal project with no test frameworks or extras.
 
+![vue init results](/img/vue-init.png)
+<br>The results of the `vue init` command.
 
+This process will create a new directory called `test-project/` (we can call your project whatever we'd like). We can also see that directions for getting going with development are printed after the command finishes. Change directory into the `test-project/` directory and we should be able to see all the files created for us. 
 
-This process will create a new directory called `test-project/` (you can call your project whatever you'd like). Change directory into the `test-project/` directory and we should be able to see all the files created for us. 
+Inside the repository, we should see the following files and directories:
 
-Inside the 
+```bash
+drwxr-xr-x  13 shawnr  staff   442B Sep 24 13:09 .
+drwxr-xr-x  51 shawnr  staff   1.7K Sep 24 13:09 ..
+-rw-r--r--   1 shawnr  staff   312B Sep 24 13:09 .babelrc
+-rw-r--r--   1 shawnr  staff   147B Sep 24 13:09 .editorconfig
+-rw-r--r--   1 shawnr  staff   145B Sep 24 13:09 .gitignore
+-rw-r--r--   1 shawnr  staff   197B Sep 24 13:09 .postcssrc.js
+-rw-r--r--   1 shawnr  staff   466B Sep 24 13:09 README.md
+drwxr-xr-x  11 shawnr  staff   374B Sep 24 13:09 build
+drwxr-xr-x   5 shawnr  staff   170B Sep 24 13:09 config
+-rw-r--r--   1 shawnr  staff   200B Sep 24 13:09 index.html
+-rw-r--r--   1 shawnr  staff   1.6K Sep 24 13:09 package.json
+drwxr-xr-x   6 shawnr  staff   204B Sep 24 13:09 src
+drwxr-xr-x   3 shawnr  staff   102B Sep 24 13:09 static
+```
 
-
+We can see that we have some configuration files, including a `.babelrc` that sets up how the Babel linter will work for us. We also have a `package.json` file that lists all the Node.js modules our application depends upon. there is a `build` folder, which contains files that control how the site is built and packaged for deployment. There is also a `config` folder, which contains several configuration files that affect how the app is built and also how the development server and other components of the system work. Inside the `src` folder is the actual content of our application. There is also a `static` directory that will contain static media files that need to be packaged with the site, but which do not require post-processing by the build tools.
 
 
 
