@@ -31,6 +31,7 @@
 * [Core Concept: Application Frameworks](bootstrap-new-app/core-concept-application-frameworks.md)
 * [Creating a new Vue.js App](bootstrap-new-app/creating-a-new-vuejs-app.md)
 * [Getting to Know Vue](bootstrap-new-app/getting-to-know-vue.md)
+* [Quiz: Bootstrapping a New App](bootstrap-new-app/quiz-bootstrapping-a-new-app.md)
 
 ## Debugging the App
 
