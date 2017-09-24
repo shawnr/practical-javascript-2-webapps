@@ -45,7 +45,10 @@ The import statement is how we can let modern JavaScript files know about other 
 
 We can see, based on the highlights in the image above, that the `Hello` component is referenced in the template for the `App` component. The `<hello></hello>` line indicates where the content for the `Hello` component should be shown. It can be difficult to imagine what this looks like when it is displayed to the user. This next screenshot should help.
 
+![Vue.js App Components](/img/vue-app-component-web2.png)
+<br>Vue.js App Components
 
+The image above shows the default page rendered when running the project skeleton. The green area represents the part of the page taken over by the `App` component. The `Hello` component is inserted inside of the `App` component. The blue area represents the part of the page that is generated and controlled by the `Hello` component.
 
 
 
