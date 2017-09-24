@@ -16,7 +16,7 @@ Our Vue.js applications are sets of special blocks that we can put together to c
 
 It can be tricky to really understand how components in Vue.js applications work together. So let's take a closer look at the code we just generated in the project skeleton.
 
-## Touring the Project
+## Project Components
 
 Inside the `src/` directory of our project is where all of the code that makes our project unique lives. If we look inside, we see the following:
 
@@ -50,11 +50,49 @@ We can see, based on the highlights in the image above, that the `Hello` compone
 
 The image above shows the default page rendered when running the project skeleton. The green area represents the part of the page taken over by the `App` component. The `Hello` component is inserted inside of the `App` component. The blue area represents the part of the page that is generated and controlled by the `Hello` component.
 
+## Templates and Data (and Methods)
 
+In each Vue.js Component, we will probably provide some HTML for a template. Within templates we can invoke different kinds of logic from within the script controller of the template and we can output data values to display to the user. There is a lot of power within templates, and we will explore the power of templates in greater detail soon. For now, here are a few things to keep in mind as you're looking at and playing with this new project skeleton.
 
+### Output Data Values
 
+In a Vue.js template, we can output data values using the "double curly brace" syntax. This is often called "mustache" templates (because curly braces look like sideways mustaches). Here is an example from the `Hello.vue` file:
 
+```
+<h1>{{ msg }}</h1>
+```
 
+This example will output the value of the `msg` property defined in the `data` function. Most components will define some properties in their `data` function. Managing data and binding data properly to template elements is key to using templates effectively.
+
+### Directives
+
+In addition to just displaying data, templates can contain some logic. This logic is made available through the concept of "directives". Directives in Vue.js look like HTML attributes. They are written in the same style as HTML attributes in HTML tags. Here is an example:
+
+```
+<ol>
+  <li v-for="todo in todos">
+    {{ todo.text }}
+  </li>
+</ol>
+```
+
+We can see that the `v-for` directive is being used to create a loop. The loop will duplicate the list item for each `todo` in the `todos` Array. (Don't worry if this seems confusing now. We will look more closely at using loops and other directives in an upcoming section of the book.)
+
+Another important directive is `v-if`, which allows us to write a conditional statement like this:
+
+```
+<div v-if="showResults">
+  ... show some information ...
+</div>
+```
+
+In addition to directives that allow looping and conditionals within a template, there are also directives that allow us to respond to events. The `v-on` directive allows us to specify an event and the "method" (function) that will be invoked when the event occurs. Here is an example:
+
+```
+<button v-on:click="refreshData">Refresh Results</button>
+```
+
+In the example above, we have a button that will execute the `refreshData` method defined in our component whenever the button is clicked. (Again, this is a lot to understand without additional information, but the goal here is just to begin recognizing what these parts do. We will learn more about them soon.)
 
 
 
