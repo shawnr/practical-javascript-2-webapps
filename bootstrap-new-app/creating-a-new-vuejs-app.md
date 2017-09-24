@@ -26,8 +26,21 @@ The Vue-CLI tool allows us to quickly bootstrap projects using project templates
 
 Throughout this book it is recommended to use the `webpack` template, which defines a project with all the features we will explore throughout the rest of this book. Webpack is a popular application bundling and build tool, and it is used with many technologies (including React and Angular). Webpack handles dependency management (making sure all our third-party modules are available to our application when we deploy) and build process (all the tasks that must happen to package our application for deployment). Webpack is advantageous because it handles things that other tools (such as Browserify) rely on external helpers (like Gulp or Grunt) to handle. 
 
-In short, Webpack keeps the burden on us, as developers, very low, and the way that the official Vue.js template for a Webpack-based application is configured is comfortable to use.
+In short, Webpack keeps the burden on us, as developers, very low, and the way that the official Vue.js template for a Webpack-based application is configured is comfortable to use. We will be investigating how this template is put together and how we can use it more throughout the rest of this book, but for now it might be interesting to look through [the documentation of the Vue.js Webpack Template](https://vuejs-templates.github.io/webpack/) to get an idea of all the things that are in there. Keep in mind that we don't need to understand or master all of this stuff right now. As we work through building apps and making them available to the public, we will touch on many of these things.
 
+In order to create a new app with the Vue-CLI, change directory into your Projects area and run this command:
+
+```
+vue init webpack test-project
+```
+
+Once initiated, we will be asked some questions. At this point, it doesn't matter very much which answers we give, since we are just using this project to poke around and see what we get. Here is a screenshot of what the process looks like when completed, and we can see a set of answers that will create a minimal project with no test frameworks or extras.
+
+
+
+This process will create a new directory called `test-project/` (you can call your project whatever you'd like). Change directory into the `test-project/` directory and we should be able to see all the files created for us. 
+
+Inside the 
 
 
 
