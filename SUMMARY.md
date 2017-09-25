@@ -44,7 +44,7 @@
 
 * [Introduction](deploy-app/README.md)
 * [Core Concept: Deployment Tooling](deploy-app/core-concept-deployment-tooling.md)
-* Configuring Deployment 
+* [Configuring Deployment ](deploy-app/configuring-deployment.md)
 * Building and Deploying the App
 
 ## Working with Templates
