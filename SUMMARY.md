@@ -32,6 +32,7 @@
 * [Creating a new Vue.js App](bootstrap-new-app/creating-a-new-vuejs-app.md)
 * [Getting to Know Vue](bootstrap-new-app/getting-to-know-vue.md)
 * [Quiz: Bootstrapping a New App](bootstrap-new-app/quiz-bootstrapping-a-new-app.md)
+* [Project: Bootstrap an App](bootstrap-new-app/project-bootstrap-an-app.md)
 
 ## Debugging the App
 
