@@ -281,12 +281,16 @@ export default {
 </script>
 ```
 
-As we can see, we have added another property to the data object for `product`. This will allow us to refer to that value in our templates and our logic. We have also added another property called `methods` to our component definition. The `methods` property contains an object that is populated by named methods. These methods can be executed from within component logic or templates. In this case, we are defining a method called `calculateProduct`, which multiplies the `num1` and `num2` values together. Note that within methods we use the `this.variableName` syntax similar to the syntax used in ES6 Class methods.
+As we can see, we have added another property to the data object for `product`. This will allow us to refer to that value in our templates and our logic. We will initialize it to `null` since that will evaluate to a "false" in the `v-if` conditional. 
+
+We have also added another property called `methods` to our component definition. The `methods` property contains an object that is populated by named methods. These methods can be executed from within component logic or templates. In this case, we are defining a method called `calculateProduct`, which multiplies the `num1` and `num2` values together. Note that within methods we use the `this.variableName` syntax similar to the syntax used in ES6 Class methods.
 
 Once we put this script in place, we can try our page in the browser and see the result:
 
+![Calculation Performed](/img/project-bootstrap7-calculate.png)
+<br>Calculation performed
 
-
+We can see that the calculation has been successfully performed in the screenshot. We should be able to see no product when the page loads, and then have the product populated when we click the button. If all of this is working then we have successfully altered our first Vue.js project skeleton, and we are ready to move on to learn methods for debugging and deploying our apps.
 
 
 
