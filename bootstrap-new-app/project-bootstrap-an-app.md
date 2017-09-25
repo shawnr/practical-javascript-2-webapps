@@ -16,3 +16,43 @@ Once we have Vue-CLI properly installed, we can bootstrap our project skeleton. 
 vue init webpack test-project
 ```
 
+Answer the questions like we see in the screenshot below:
+
+![vue init results](/img/vue-init.png)
+<br>The results of the `vue init` command.
+
+Once the project skeleton is available, `cd` into the directory where your project was created.
+
+## Install Dependencies
+After creating the project skeleton, we still need to install the Node modules that the project depends upon. We do this with the command:
+
+```
+npm install
+```
+
+Once the installation is complete, we can test the project by running:
+
+```
+npm run dev
+```
+
+We should see the development server start up and a new tab should open in the default web browser with our project loaded.
+
+![Default screen from webpack project template](/img/vue-default-web.png) 
+<br>Default screen from Webpack project template
+
+If we see a screen that looks like the one above, then we have successfully installed our dependencies and our project is up and running.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
