@@ -46,6 +46,7 @@
 * [Core Concept: Deployment Tooling](deploy-app/core-concept-deployment-tooling.md)
 * [Configuring Deployment ](deploy-app/configuring-deployment.md)
 * [Building and Deploying the App](deploy-app/building-and-deploying-the-app.md)
+* [Quiz: Deploying the App](deploy-app/quiz-deploying-the-app.md)
 
 ## Working with Templates
 
