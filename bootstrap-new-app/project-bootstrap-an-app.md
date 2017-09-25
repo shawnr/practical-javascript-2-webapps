@@ -89,10 +89,109 @@ We can see from the page in the browser that this code is creating most of the c
 </template>
 ```
 
+These changes result in the following changes in the browser:
 
+![After changes to template](/img/project-bootstrap2.png)
+<br>After changes to the template
 
+Vue.js component templates can have any HTML in them. We can create whatever structures we need, and they can even include other component tags (as with the `src/App.vue` file, which uses the `Hello` component in its template). Any HTML that shows up between the `<template>` tags will be inserted into the app when this component is executed.
 
+### The Styles
+Inside each Vue.js component is also a style block, defined by the `<style>` tags. We can see in the screenshot above that the list items are not numbered and they are laid out horizontally. Let's replace the numbers and make them go vertical again. 
 
+Here is the original code:
+
+```
+<style scoped>
+h1, h2 {
+  font-weight: normal;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+a {
+  color: #42b983;
+}
+</style>
+```
+The `scoped` attribute on the `<style>` tag insures that these styles will not apply to anything outside of the component itself. This is very handy on large projects where overlapping styles can be problematic. Because of this tight scoping, we can approach each component on its own terms, name the parts of the component in a way that makes sense, and generally pursue a more modular approach to styles.
+
+In order to change the list the way we want, let's make these changes:
+
+```
+<style scoped>
+h1, h2 {
+  font-weight: normal;
+}
+
+ol {
+  list-style-type: decimal;
+  width: 40%;
+  margin: auto;
+}
+
+li {
+  display: list-item;
+  margin: 0 10px;
+}
+
+a {
+  color: #42b983;
+}
+</style>
+```
+
+There is nothing special about these styles, but it's interesting to note that if we inspect our styles in our developer tools, we can see how the styles are scoped to the specific component:
+
+![Scoped styles in developer tools](/img/project-bootstrap3-scoped-styles.png)
+<br>Viewing the scoped styles in developer tools
+
+By using the attribute selector these style definitions are sure to never apply to any other elements on the page. So if we write a style for `p` or `div` or `ul` it will only apply to those elements when they show up inside this specific component template.
+
+### The Logic
+The last part of the component that we have to explore is the logic itself. For the most part, this logic is pretty simple when it is generated in the project skeleton. The script tags in the default `Hello` component contain the following code:
+
+```
+<script>
+export default {
+  name: 'hello',
+  data () {
+    return {
+      msg: 'Welcome to Your Vue.js App'
+    }
+  }
+}
+</script>
+```
+
+This logic does not do too much except define the `data` function with an object that contains the `msg` property. The `data` object is what gets revealed to the template for processing. Any property of the `data` object is accessible as a variable inside the template. The `msg` property is used in the `Hello` component template to create the content of the `<h1>` tag:
+
+```
+<h1>{{ msg }}</h1>
+```
+
+We can change the message of that tag by altering the definition of the `msg` property in the script:
+
+```
+<script>
+export default {
+  name: 'hello',
+  data () {
+    return {
+      msg: 'This Data Has Been Altered'
+    }
+  }
+}
+</script>
+```
 
 
 
