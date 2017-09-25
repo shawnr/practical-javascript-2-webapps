@@ -4,12 +4,12 @@ Please enjoy this self-check quiz to help you identify key concepts, points, and
 
 <quiz name="">
     <question>
-        <p>When debugging a JavaScript application, where should we look first?</p>
-        <answer>a book</answer>
-        <answer>the URL</answer>
-        <answer correct>the browser's JavaScript console</answer>
-        <answer>our config files</answer>
-        <explanation>The browser's JavaScript console will usually provide a clue to what has gone wrong.</explanation>
+        <p>What tool are we using to build and process our source files for deployment?</p>
+        <answer>Browserify</answer>
+        <answer>Gulp</answer>
+        <answer>NPM</answer>
+        <answer correct>Webpack</answer>
+        <explanation>We are using Webpack to configure the build and processing of our site files.</explanation>
     </question>
     <question multiple>
         <p>What are the two major types of bugs?</p>
