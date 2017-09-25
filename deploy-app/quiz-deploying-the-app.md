@@ -20,12 +20,12 @@ Please enjoy this self-check quiz to help you identify key concepts, points, and
         <explanation>Minification and ugilification are two processes used to shrink JS and CSS.</explanation>
     </question>
     <question>
-        <p>The custom tool for debugging Vue.js applications is called what?</p>
-        <answer>Vue Bugzilla</answer>
-        <answer>console</answer>
-        <answer>bugtracker</answer>
-        <answer correct>Vue Devtools</answer>
-        <explanation>Vue Devtools is the custom tool for debugging Vue.js applications.</explanation>
+        <p>File versioning (adding a timestamp to the filename) helps with what problem?</p>
+        <answer correct>User's browsers caching files that we've changed.</answer>
+        <answer>Servers having old data.</answer>
+        <answer>Math errors.</answer>
+        <answer>Syncing API calls.</answer>
+        <explanation>File versioning keeps filenames unique when they are changed in order to prevent user's browsers from caching files that we have altered.</explanation>
     </question>
     <question>
         <p>What do we generally call a tool we use to inspect the values and states of parts of our application?</p>
