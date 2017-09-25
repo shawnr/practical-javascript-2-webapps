@@ -79,7 +79,6 @@ We can see from the page in the browser that this code is creating most of the c
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <button v-on:click="reverseMessage">Reverse Message</button>
     <h2>2 Things that are difficult in JavaScript</h2>
     <ol>
       <li>naming things</li>
