@@ -22,13 +22,13 @@ It is very common to set up our version control systems to handle deployments in
 
 There is no way to properly summarize all of the ways in which deployment can be managed. The world of web operations and infrastructure management continues to grow rapidly, so it would not be unusual to have other systems such as containers, [Docker](https://www.docker.com/), or [Kubernetes](https://kubernetes.io/) involved in deployments. Tools ranging from [Ansible](https://www.ansible.com/) to [Salt Stack](https://saltstack.com/) to [Fabric](http://www.fabfile.org/), [Chef](https://www.chef.io/chef/), and [Puppet](https://puppet.com/) have all been popular options for controlling the movement of files to a server (and the provisioning of those servers). 
 
-
+The rule of thumb that we will cleave to in this book is that we want to keep deployment simple and reliable so we can deploy our code repeatedly through the development process. We should be able to set up deployment of our static websites (that's what we're building in this book) as easily as possible, and we want to be able to deploy anytime we make changes.
 
 ## Aprés Deployment
 
+Many systems have tools that kick off after deployment. It's not unusual to have a continuous integration that will run tests against the newly deployed code. It might be desirable to have a system that will notify team members that a deployment has happened. Some organizations want to gather a full set of performance benchmarks every time new changes hit production. 
 
-
-
+There are many reasons why we would need to run something after deployment, and it is common to do so. In our case here, we will be deploying to Github Pages, which is a popular static website hosting service. (It is also free, so it's a great place for new developers to build a portfolio.) Github Pages will provide us with a status message on our project's settings page where we can see if there is an error deploying our code and how our site is configured. We could easily leverage Github's tools to add even more post-deployment tests or functions.
 
 
 
