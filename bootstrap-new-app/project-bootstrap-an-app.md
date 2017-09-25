@@ -156,6 +156,13 @@ There is nothing special about these styles, but it's interesting to note that i
 
 By using the attribute selector these style definitions are sure to never apply to any other elements on the page. So if we write a style for `p` or `div` or `ul` it will only apply to those elements when they show up inside this specific component template.
 
+Here is what our page looks like after we make these style changes:
+
+![List after style changes](/img/project-bootstrap4-list.png)
+<br>The list after style changes
+
+These are not the most amazing styles, but hopefully they help bring how things work into focus.
+
 ### The Logic
 The last part of the component that we have to explore is the logic itself. For the most part, this logic is pretty simple when it is generated in the project skeleton. The script tags in the default `Hello` component contain the following code:
 
@@ -172,11 +179,13 @@ export default {
 </script>
 ```
 
-This logic does not do too much except define the `data` function with an object that contains the `msg` property. The `data` object is what gets revealed to the template for processing. Any property of the `data` object is accessible as a variable inside the template. The `msg` property is used in the `Hello` component template to create the content of the `<h1>` tag:
+This logic does not do too much except define the `data` function with an object that contains the `msg` property. The `data` object is what gets revealed to the template context for processing. Any property of the `data` object is accessible as a variable inside the template. The `msg` property is used in the `Hello` component template to create the content of the `<h1>` tag:
 
 ```
 <h1>{{ msg }}</h1>
 ```
+
+Notice how we use the double curly braces (`{{ variableName }}`)to output the value of a variable in a template. This is a common convention among templating languages, especially in JavaScript frameworks.
 
 We can change the message of that tag by altering the definition of the `msg` property in the script:
 
@@ -192,6 +201,90 @@ export default {
 }
 </script>
 ```
+
+Once we have made that change to the data being piped into our application, we can see the change in the browser:
+
+![Altered H1 content](/img/project-bootstrap4-h1.png)
+<br>Altered H1 content
+
+We can even add additional data to the object and then refer to those variables in our template. First, we update the script:
+
+<script>
+export default {
+  name: 'hello',
+  data () {
+    return {
+      msg: 'This Data Has Been Altered',
+      num1: 42,
+      num2: 78
+    }
+  }
+}
+</script>
+```
+
+Then we update the template:
+
+```
+<template>
+  <div class="hello">
+  <h1>{{ msg }}</h1>
+  <p>What is {{ num1 }} times {{ num2 }}?</p>
+  <h2>2 Things that are difficult in JavaScript</h2>
+    <ol>
+      <li>naming things</li>
+      <li>recursion</li>
+      <li>off-by-one errors</li>
+    </ol>
+  </div>
+</template>
+```
+
+This results in the following display in the browser:
+
+![New variables in template](/img/project-bootstrap6-newvars.png)
+<br>New variable in the template
+
+Of course, now that we have those new variables in the template, we can try doing even more.
+
+## Event Handling
+Let's finish out exploring this application by going the extra mile and adding a button to calculate `42` times `78`. To do this, we will define an event listener on a button. We will do that in the template. Modify your template code to match this:
+
+```
+<p>What is {{ num1 }} times {{ num2 }}?<span v-if="product">{{ product }}</span></p>
+<button v-on:click="calculateProduct">Calculate</button>
+```
+We have used a couple of new things here. First, we have added a `<button>` element to the template. This button uses the `v-on` directive to define a `click` event handler. There are many other events we could handle, but we will begin with this simple click. The `v-on` directive then specifies the name of the method that will be executed when this event is detected. So when the user clicks the button, the `calculateProduct` method will be executed.
+
+We have also added a `<span>` tag that contains the "product" (the result of multiplying `42` times `78`). The `<span>` contains the `v-if` directive, which is a conditional statement. If the `v-if` evaluates to `true`, then the `<span>` and its contents are shown. If not, then the `<span>` and its contents are hidden. This will allow us to not show anything until the answer is populated by our application.
+
+Now that we've added that code to the template, we must update the script logic. Here is the updated script logic:
+
+```
+<script>
+export default {
+  name: 'hello',
+  data () {
+    return {
+      msg: 'This Data Has Been Altered',
+      num1: 42,
+      num2: 78,
+      product: null
+    }
+  },
+  methods: {
+    calculateProduct: function(){
+      this.product = this.num1 * this.num2;
+    }
+  }
+}
+</script>
+```
+
+As we can see, we have added another property to the data object for `product`. This will allow us to refer to that value in our templates and our logic. We have also added another property called `methods` to our component definition. The `methods` property contains an object that is populated by named methods. These methods can be executed from within component logic or templates. In this case, we are defining a method called `calculateProduct`, which multiplies the `num1` and `num2` values together. Note that within methods we use the `this.variableName` syntax similar to the syntax used in ES6 Class methods.
+
+Once we put this script in place, we can try our page in the browser and see the result:
+
 
 
 
