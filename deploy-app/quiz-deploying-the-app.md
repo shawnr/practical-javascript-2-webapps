@@ -12,12 +12,12 @@ Please enjoy this self-check quiz to help you identify key concepts, points, and
         <explanation>We are using Webpack to configure the build and processing of our site files.</explanation>
     </question>
     <question multiple>
-        <p>What are the two major types of bugs?</p>
-        <answer correct>syntax</answer>
-        <answer>research</answer>
-        <answer correct>logical</answer>
-        <answer>epistimological</answer>
-        <explanation>Most bugs are either syntax or logical.</explanation>
+        <p>Which are processes that CSS and JS undergo to become smaller?</p>
+        <answer>shrinkage</answer>
+        <answer correct>minification</answer>
+        <answer correct>uglification</answer>
+        <answer>compacting</answer>
+        <explanation>Minification and ugilification are two processes used to shrink JS and CSS.</explanation>
     </question>
     <question>
         <p>The custom tool for debugging Vue.js applications is called what?</p>
