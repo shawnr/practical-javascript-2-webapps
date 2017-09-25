@@ -38,6 +38,13 @@ It's often necessary to work on a feature for awhile before we want to deploy th
 
 Remember that the only way to update the site code is to run the `npm run build` command. If we do work elsewhere in the app, but we do NOT run the build command, then we can safely commit and push our code to Github without changing the site that is deployed to the public.
 
+### Pro Tip: Advertise Your Link
+
+![Github Description Link](/img/github-description-link.png)
+<br>Github Description Link
+
+When we have a repository on Github, we can add a link that will show at the top of the repo homepage. This is very handy for putting the link to the deployed version of our code. Adding a link here also helps our repositories work better as portfolio pieces when we're looking for jobs.
+
 
 
 
