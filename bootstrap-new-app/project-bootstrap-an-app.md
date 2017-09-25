@@ -10,4 +10,9 @@ npm install -g vue-cli
 ```
 
 ## Bootstrap the Application
-Once we have Vue-CLI properly installed, we can bootstrap our project skeleton. This will create all the files we need to get started writing our application. 
+Once we have Vue-CLI properly installed, we can bootstrap our project skeleton. This will create all the files we need to get started writing our application. Create a new app using the `webpack` template:
+
+```
+vue init webpack test-project
+```
+
