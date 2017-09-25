@@ -41,7 +41,54 @@ We should see the development server start up and a new tab should open in the d
 ![Default screen from webpack project template](/img/vue-default-web.png) 
 <br>Default screen from Webpack project template
 
-If we see a screen that looks like the one above, then we have successfully installed our dependencies and our project is up and running.
+If we see a screen that looks like the one above, then we have successfully installed our dependencies and our project is up and running. Now that we have a working project, we can begin to explore some of the parts of the application and see how they work together. The next steps are meant to expose us to different aspects of the software, but rest assured that we will cover these concepts and techniques in more depth in future sections.
+
+## Modify Hello
+In the default application, there are two Components at play: `App` and `Hello`. In order to experiment with the application, we will modify the `Hello` component. Open the file `src/components/Hello.vue` and look at the parts. Each `.vue` file is broken into three main areas: The template, the scripts, and the styles. These are denoted by corresponding tags.
+
+### The Template
+Let's modify the template code to reflect our own content. Here is the original template code from `src/components/Hello.vue`:
+
+```html
+<template>
+  <div class="hello">
+    <h1>{{ msg }}</h1>
+    <h2>Essential Links</h2>
+    <ul>
+      <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
+      <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
+      <li><a href="https://chat.vuejs.org" target="_blank">Community Chat</a></li>
+      <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
+      <br>
+      <li><a href="http://vuejs-templates.github.io/webpack/" target="_blank">Docs for This Template</a></li>
+    </ul>
+    <h2>Ecosystem</h2>
+    <ul>
+      <li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
+      <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
+      <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
+      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
+    </ul>
+  </div>
+</template>
+```
+
+We can see from the page in the browser that this code is creating most of the content on the page. Let's alter that content:
+
+```html
+<template>
+  <div class="hello">
+    <h1>{{ msg }}</h1>
+    <button v-on:click="reverseMessage">Reverse Message</button>
+    <h2>2 Things that are difficult in JavaScript</h2>
+    <ol>
+      <li>naming things</li>
+      <li>recursion</li>
+      <li>off-by-one errors</li>
+    </ol>
+  </div>
+</template>
+```
 
 
 
