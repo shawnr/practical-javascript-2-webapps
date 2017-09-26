@@ -40,6 +40,7 @@
 * [Core Concept: Debugging Techniques](debug-app/core-concept-debugging-techniques.md)
 * [Using Vue Devtools](debug-app/using-vue-devtools.md)
 * [Quiz: Debugging the App](debug-app/quiz-debugging-the-app.md)
+* [Project: Practice Debugging](debug-app/project-practice-debugging.md)
 
 ## Deploying the App
 
