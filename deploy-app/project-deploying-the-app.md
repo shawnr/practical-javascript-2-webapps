@@ -66,7 +66,13 @@ In order to deploy our site to Github Pages, we must alter the settings on our r
 ![GitHub Pages configuration](/img/project-deployment1-ghpages.png)
 <br>GitHub Pages configuration
 
-The Source setting should be "master branch /docs folder". This will allow our users to view our project at a URL that matches the pattern `https://username.github.io/project-name/`. When we click "Save" next to the GitHub Pages Source setting, the Settings page will refresh and it will show you the URL where our site has been deployed. Give it a few moments and the bar should turn from blue to green, indicating that the site is ready to be viewed.
+The Source setting should be "master branch /docs folder". This will allow our users to view our project at a URL that matches the pattern `https://username.github.io/project-name/`. When we click "Save" next to the GitHub Pages Source setting, the Settings page will refresh and it will show you the URL where our site has been deployed. Give it a few moments and the bar should turn from blue to green, indicating that the site is ready to be viewed. 
+
+Click the link and witness the awesomeness of our first deployed Vue.js application!
+
+## Full Repository
+
+If you need to review a working repository with full code, look at [this working repository](https://github.com/suwebdev/bootstrap-vuejs-app) to see all of the edits we made in this project.
 
 
 
