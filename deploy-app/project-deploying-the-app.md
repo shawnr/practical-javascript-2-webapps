@@ -1,0 +1,31 @@
+# Project: Deploying the App
+
+In order to practice deploying apps, we can update the configuration in the project skeleton we created for the past two sections. We will deploy our site to the Github Pages server, which is a popular, and free, static website server. Since all of our files are compiled and built by Webpack, we can deliver them as static files to our end users.
+
+In order to make all of this happen, we will need to alter the Webpack configuration as described earlier in this section, then set up Github to server our pages from the `docs/` directory. Once we set all of that up, then we need only to commit and push our code to deploy our updated build.
+
+## Create a Repository
+If we have not already created a Github repository, let's do so. On github, click the big green "New" button that shows up on our profile page. This should bring you to the Create New Repository page.
+
+![Create New Repository screen](/img/project-deployment2-newrepo.png)
+<br>Create New Repository screen
+
+Give the repository a name, and then select private or public. We do not need to add a README.me or any LICENSE.md files because we already have a bunch of files.
+
+Once the repository is created, follow the directions to create the new repository from files on the command line:
+
+![New repository instructions](/img/project-deployment3-repoinstructions.png)
+<br>New repository instructions
+
+The only thing we should do different is instead of doing the command `git add README.md` we should add everything with `git add -A`. Once we have followed these directions, we should be able to see our repository on Github.com. Verify that all of our files are there, and then move on to the next step of configuring Webpack.
+
+
+
+
+
+
+
+
+
+
+

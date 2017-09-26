@@ -49,6 +49,7 @@
 * [Configuring Deployment ](deploy-app/configuring-deployment.md)
 * [Building and Deploying the App](deploy-app/building-and-deploying-the-app.md)
 * [Quiz: Deploying the App](deploy-app/quiz-deploying-the-app.md)
+* [Project: Deploying the App](deploy-app/project-deploying-the-app.md)
 
 ## Working with Templates
 
