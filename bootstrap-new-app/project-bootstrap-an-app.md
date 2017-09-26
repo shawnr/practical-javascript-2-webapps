@@ -209,6 +209,7 @@ Once we have made that change to the data being piped into our application, we c
 
 We can even add additional data to the object and then refer to those variables in our template. First, we update the script:
 
+```
 <script>
 export default {
   name: 'hello',
