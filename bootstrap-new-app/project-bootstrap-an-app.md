@@ -292,6 +292,10 @@ Once we put this script in place, we can try our page in the browser and see the
 
 We can see that the calculation has been successfully performed in the screenshot. We should be able to see no product when the page loads, and then have the product populated when we click the button. If all of this is working then we have successfully altered our first Vue.js project skeleton, and we are ready to move on to learn methods for debugging and deploying our apps.
 
+## Changes Repository
+
+If you need to look at a full set of code to see how all the changes described above can go together, please review [this project repository on Github](https://github.com/suwebdev/bootstrap-vuejs-app).
+
 
 
 
