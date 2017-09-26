@@ -55,10 +55,12 @@
 
 * [Introduction](working-with-templates/README.md)
 * [Core Concept: Template Fundamentals](working-with-templates/core-concept-template-fundamentals.md)
-* Looping in Templates
-* Conditionals in Templates
 * Accessing Data Objects
-* Using Multiple Components
+* Conditionals in Templates
+* Looping in Templates
+* Computed Values and Filters
+* Quiz: Working with Templates
+* Project: Data Templating
 
 ## Routing and URLs
 
