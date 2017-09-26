@@ -20,5 +20,8 @@ A JavaScript application that does not refresh the browser in order to show diff
 ## software architecture
 According to [Wikipedia](https://en.wikipedia.org/wiki/Software_architecture): Software architecture is "the high level structures of a software system, the discipline of creating such structures, and the documentation of these structures."
 
+## syntax
+The "grammar" of a programming language: A set of rules that dictate the way symbols are used to construct the logic that will be interpreted to run a program.
+
 ## website architecture
 When considering the way a website is built and functions, we often use the term "website architecture" to describe the way these structures go together.
