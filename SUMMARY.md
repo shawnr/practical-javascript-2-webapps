@@ -57,7 +57,7 @@
 * Core Concept: Template Fundamentals
 * Looping in Templates
 * Conditionals in Templates
-* Template Filters
+* Accessing Data Objects
 * Using Multiple Components
 
 ## Routing and URLs
