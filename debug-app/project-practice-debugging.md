@@ -13,8 +13,8 @@ In the Vue-Devtools main tab we should see the components of our application. Wh
 
 If we keep the Vue-Devtools panel open, we can watch the value change when we click the `Calculate` button:
 
-![App values ater product calculation](/img/project-debugging2-valuesafter.png)
-<br>App values ater product calculation
+![App values after product calculation](/img/project-debugging2-valuesafter.png)
+<br>App values after product calculation
 
 As we can see, the values that are exposed to our templates are always shown to us and updated in real-time. This allows us to watch those values change as we interact with our applications. This an immensely helpful feature as we develop new components and functions.
 
