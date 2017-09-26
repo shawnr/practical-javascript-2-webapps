@@ -1,0 +1,3 @@
+# Working with Templates
+
+As we may have learned when we were first exposed to JavaScript, we can use JS to add, remove, and modify elements from the DOM. This is a very powerful capability, but it quickly becomes tedious to write all of those `document.createElement()` statements and properly combine multiple levels of HTML tag hierarchy. In addition to the repetitive strain of creating elements individually, it's possible to hurt the performance of our applications with DOM manipulation.
