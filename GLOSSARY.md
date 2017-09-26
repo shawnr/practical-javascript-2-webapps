@@ -5,6 +5,9 @@ The terms listed here will be highlighted throughout the text. Hover over them t
 ## backend
 Having to do with the server-side of a web-based project. Often used in phrases such as "backend programming languages", which would be languages that are executed on the server (Python, Java, Ruby, PHP, etc.). The opposite of *frontend*.
 
+## breakpoint
+An intentional stopping or pausing place in a program used for debugging purposes.
+
 ## DOM
 The [Document Object Model ](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model)(DOM) is the JavaScript representation of the HTML structure and status in the browser software.
 
