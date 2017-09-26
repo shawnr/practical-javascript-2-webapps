@@ -19,6 +19,54 @@ Once the repository is created, follow the directions to create the new reposito
 
 The only thing we should do different is instead of doing the command `git add README.md` we should add everything with `git add -A`. Once we have followed these directions, we should be able to see our repository on Github.com. Verify that all of our files are there, and then move on to the next step of configuring Webpack.
 
+## Configuring Webpack
+
+Once we have created our repository on Github, we must configure Webpack to build our files into the `docs/` directory. This requires us to make changes to the `config/index.js` file. In short, we need to change the paths from `dist` to `docs` and then we also need to set the `assetsPublicPath` to `''`.
+
+Here is what the `config/index.js` file looks like after we make these changes:
+
+```js
+var path = require('path')
+
+module.exports = {
+  build: {
+    env: require('./prod.env'),
+    index: path.resolve(__dirname, '../docs/index.html'),
+    assetsRoot: path.resolve(__dirname, '../docs'),
+    assetsSubDirectory: 'static',
+    assetsPublicPath: '',
+    productionSourceMap: true,
+    productionGzip: false,
+    productionGzipExtensions: ['js', 'css'],
+    bundleAnalyzerReport: process.env.npm_config_report
+  },
+  dev: {
+    env: require('./dev.env'),
+    port: 8080,
+    autoOpenBrowser: true,
+    assetsSubDirectory: 'static',
+    assetsPublicPath: '/',
+    proxyTable: {},
+    cssSourceMap: false
+  }
+}
+```
+Save those changes and then run the build command:
+
+```
+npm run build
+```
+
+We should see a build report in the console (but not the web browser). Take a moment to confirm that no errors occurred. If everything looks good, then commit and push our changes to Github.
+
+## Configure Github Pages
+
+In order to deploy our site to Github Pages, we must alter the settings on our repository. From the repository homepage, click "Settings". Scroll down on the main page of the Settings until you find the Github Pages area:
+
+![GitHub Pages configuration](/img/project-deployment1-ghpages.png)
+<br>GitHub Pages configuration
+
+The Source setting should be "master branch /docs folder". This will allow our users to view our project at a URL that matches the pattern `https://username.github.io/project-name/`. When we click "Save" next to the GitHub Pages Source setting, the Settings page will refresh and it will show you the URL where our site has been deployed. Give it a few moments and the bar should turn from blue to green, indicating that the site is ready to be viewed.
 
 
 
