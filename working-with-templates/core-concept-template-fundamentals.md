@@ -192,6 +192,18 @@ This name is determined by us. We could write `v-for="item in items"` or `v-for=
 
 ## Conditionals
 
+Conditionals are used within templates to "turn on and off" elements. We often use them to modulate between states, or to show/hide things like administrative or editing controls. Consider, for example, the common situation where we wish to show a user a login link when they are not logged in and an account link when they are logged in. It is not unusual to have a template snippet like this in a web application:
+
+```html
+<ul id="identity">
+    <li v-if="username">
+        <a href="/account/">{{ username }}</a>
+    </li>
+    <li v=if="!username">
+        <a href="/login/">Login</a> or <a href="/signup/">Sign Up</a>
+    </li>
+</ul>
+```
 
 
 
