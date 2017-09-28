@@ -205,6 +205,16 @@ Conditionals are used within templates to "turn on and off" elements. We often u
 </ul>
 ```
 
+In this example, we assume that when a user logs in to our site the variable `username` is made available to the template context. This is a common approach for many websites, and it allows us to use conditional directives to determine whether we should show a personalized link to the account management page, or if we should show links to login or make an account. 
+
+We can also use conditional elements to accomplish show/hide features, to help manage tabbed information displays, and all sorts of other interface customizations. The speed of template rendering in JavaScript application frameworks tends to be very fast, so it is usually reliable to use these conditionals in combination with visual effects and other processing to create highly interactive and responsive interfaces.
+
+## And More
+
+Templating engines are each unique, and most of them give developers a way to extend their functionality. In Vue.js, developers are given easy ways to implement template filters, which allow us to create reusable data formatting or presentation functions that can easily be applied within the template. In other templating engines the methods might be different but there is usually a way to add more to the abilities of the engine.
+
+It's worthwhile to dig into the features of our templating engine to be sure we are using all of the power in our tools. These simple features provide a huge range of capability and once we master these concepts we can accomplish a lot through our use of templates.
+
 
 
 
