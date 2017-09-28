@@ -61,6 +61,14 @@ The output of both of these template snippets would be something like this:
 
 The specific content of the list would depend on the data in the system, but assuming we were searching for famous female software developers, this is a possible set of returned results.
 
+Each time we wish to output the value of a variable in the template context, we use the double curly braces syntax:
+
+```
+<a href="/item/{{item.id}}/">{{ item.name }}</a>
+```
+
+This syntax indicates that the value of variable named between the double curly braces should be output into the template. This double curly braces syntax is often called "mustache" syntax because the curly braces look like mustaches. Some templating languages use other syntax to output individual variables, but this syntax is very common in templating engines today.
+
 When we process the data in the template context against the template, we call that "template rendering," or just "rendering" for short. We render a template that is injected into the browser (or, in the case of Django templates, which is then served to the user as an entire HTML page).
 
 It is important to learn the syntax of the specific templating engine we are using, but most engines allow for the same basic kinds of features.
@@ -71,7 +79,7 @@ The data used to render a template is called the "template context" or "context"
 
 Data can be referred to in templates in any location to provide dynamic HTML generation. These can be used to add classes to elements, construct URLs, loop through data structures, or create virtually any HTML structure we need. Standard dot-notation referencing can be used within most templating engines to refer to properties of data in the context.
 
-Here is an example where we have a few different values in the context. (This example, and the rest of the examples on this page, use Vue.js template engine syntax.)
+Here is an example where we have a few different values in the context. (This example, and the rest of the examples on this page, use Vue.js template engine syntax.) This example imagines a page listing weather and events for Seattle, WA.
 
 **Data in the Template Context**
 ```js
@@ -108,12 +116,92 @@ Here is an example where we have a few different values in the context. (This ex
 }
 ```
 
-## Displaying Data
+**Template Code**
+```html
+<h1>Events for {{ city }}, {{ state }}</h1>
+<aside class="weather">
+    <p class="summary">{{ forecast.summary }}</p>
+    <ul class="temps">
+        <li class="high">{{ forecast.temps.high }}</li>
+        <li class="low">{{ forecast.temps.low }}</li>
+    </ul>
+</aside>
+<ul class="events">
+    <li v-for="event in events">
+        <h2>{{ event.name }}</h2>
+        <p class="times"><span class="start">{{ event.start }}</span><span class="end">{{ event.end }}</span></p>
+        <p class="location">{{ event.location }}</p>
+    </li>
+</ul>
+```
+
+The results of this code would be the output of all of the data in the data context described above. We can see that the data object is revealed to the template, and the root properties of the object (`city`, `state`, `forecast`, and `events`) are accessible using their names. To access the properties of those objects, we use the same dot-notation references that we use in our JavaScript: `forecast.temps.high` or `forecast.summary`.
+
+Because `events` is an Array, we can loop through it. We should discuss loops in more detail.
+
+## Looping
+Looping is a core feature in pretty much any templating language. Part of the huge benefit of templates is that we can loop through our data and output many copies of the same HTML structure. This allows us to save time not writing all of that code by hand, and it also allows us to make sure we are consistent with how each item in an Array is presented to the user.
+
+Creating loops in templates is usually syntactically sparse: We usually don't have to write a lot to make a loop happen. From the example above, assuming we have an Array called `events` in the template context, we could write this:
+
+```html
+<ul class="events">
+    <li v-for="event in events">
+        <h2>{{ event.name }}</h2>
+        <p class="times"><span class="start">{{ event.start }}</span><span class="end">{{ event.end }}</span></p>
+        <p class="location">{{ event.location }}</p>
+    </li>
+</ul>
+```
+
+In this example we see a `<ul>` element with a class attribute. The "events" class does not affect anything in the template and would be used by the CSS to style the element. The for loop is attached to the `<li>` element because that is the element that we actually want to copy for each item in the `events` Array. The loop is invoked with the `v-for` directive, which is written like an attribute on the HTML element that we want to duplicate for each item in the loop. 
+
+Loops in templates generally repeat a specific set of HTML for each item in the Array they are looping through. The elements that are children of the HTML element with the loop attached will also be duplicated. So in this example, the result would be an unordered list with three list items:
+
+```html
+<ul class="events">
+    <li>
+        <h2>Film Festival</h2>
+        <p class="times"><span class="start">8:00pm</span><span class="end">10:00pm</span></p>
+        <p class="location">12th Ave Arts</p>
+    </li>
+    <li>
+        <h2>Art Opening</h2>
+        <p class="times"><span class="start">7:00pm</span><span class="end">10:00pm</span></p>
+        <p class="location">Seattle Art Museum</p>
+    </li>
+    <li>
+        <h2>Community Town Hall</h2>
+        <p class="times"><span class="start">6:00pm</span><span class="end">7:30pm</span></p>
+        <p class="location">City Hall</p>
+    </li>
+</ul>
+```
+
+We can see that all of the elements that were within the `<li>` elements are also duplicated. This allows us to do much more work fine-tuning the presentation of an individual instance of our repetitive HTML structures, so we are able to write better code that can be more useful to our users.
+
+Within the loop it's important to realize how we are accessing the data in each item. As the template engine iterates through the loop, each item in the Array is handled. On each iteration one item from the Array is assigned the name we have specified in our code. 
+
+In this example, we have used a common convention. We have an Array named with a plural noun (`events`), so we set up our loop to use the singular form of that noun to reference each item as it comes through the loop:
+
+```html
+<li v-for="event in events">
+```
+
+This name is determined by us. We could write `v-for="item in items"` or `v-for="posts in blogPosts"` or any other combination of terms that makes sense in the context of our application. What is important is that we consistently use whatever name we assign to the item as it moves through the loop code. If we call it `event` then we must reference `event.name` and `event.location`. If we wrote `<li v-for="oneEvent in Events">` then we would need to reference `oneEvent.name` and `oneEvent.location`.
 
 ## Conditionals
 
-## Looping
 
-## Computed Values
 
-## Filters
+
+
+
+
+
+
+
+
+
+
+
