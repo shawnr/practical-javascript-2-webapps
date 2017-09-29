@@ -64,7 +64,7 @@ The specific content of the list would depend on the data in the system, but ass
 Each time we wish to output the value of a variable in the template context, we use the double curly braces syntax:
 
 ```
-<a href="/item/{{item.id}}/">{{ item.name }}</a>
+<a>{{ item.name }} - ID: {{ item.id }}</a>
 ```
 
 This syntax indicates that the value of variable named between the double curly braces should be output into the template. This double curly braces syntax is often called "mustache" syntax because the curly braces look like mustaches. Some templating languages use other syntax to output individual variables, but this syntax is very common in templating engines today.
