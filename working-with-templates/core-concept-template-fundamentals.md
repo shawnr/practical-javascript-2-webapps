@@ -18,7 +18,7 @@ To get an idea of how template syntax might vary, here are examples from Vue.js 
 <ul id="search-results">
     {% for item in items %}
         <li class="result">
-            <a href="/item/{{item.id}}/">{{ item.name }}</a>
+            <a>{{ item.name }} - ID: {{ item.id }}</a>
         <li>
     {% endfor %}
 </ul>
@@ -28,7 +28,7 @@ To get an idea of how template syntax might vary, here are examples from Vue.js 
 ```html
 <ul id="search-results">
     <li class="result" v-for="item in items">
-        <a href="/item/{{item.id}}/">{{ item.name }}</a>
+        <a>{{ item.name }} - ID: {{ item.id }}</a>
     </li>
 </ul>
 ```
@@ -42,19 +42,19 @@ The output of both of these template snippets would be something like this:
 ```html
 <ul id="search-results>
     <li class="result">
-        <a href="/item/12/">Betty Holberton</a>
+        <a>Betty Holberton - ID 12</a>
     </li>
     <li class="result">
-        <a href="/item/9/">Anita Borg</a>
+        <a>Anita Borg - ID 9</a>
     </li>
     <li class="result">
-        <a href="/item/17/">Frances Spence</a>
+        <a>Frances Spence - ID 17</a>
     </li>
     <li class="result">
-        <a href="/item/51/">Grace Hopper</a>
+        <a>Grace Hopper - ID 51</a>
     </li>
     <li class="result">
-        <a href="/item/42/">Leah Culver</a>
+        <a>Leah Culver - ID 42</a>
     </li>
 </ul>
 ```
