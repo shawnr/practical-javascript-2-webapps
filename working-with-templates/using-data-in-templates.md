@@ -75,7 +75,7 @@ As we can see in this example, the `message` data property contains a string wit
 
 ## Data in HTML Attributes
 
-It's often the case that we want to 
+It's often the case that we want to use data from the template context to augment HTML attributes. For example, we may want to construct a URL that includes a user's username. Or we may need to build a details link that includes the item's ID. 
 
 ## Binding Data
 
