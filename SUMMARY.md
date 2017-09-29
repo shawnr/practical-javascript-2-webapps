@@ -59,9 +59,10 @@
 * [Conditionals in Templates](working-with-templates/conditionals-in-templates.md)
 * [Looping in Templates](working-with-templates/looping-in-templates.md)
 * [Computed Values and Filters](working-with-templates/computed-values-and-filters.md)
+* Form Data
 * [Handling Events](working-with-templates/handling-events.md)
 * Quiz: Working with Templates
-* Project: Data Templating
+* Form Data
 
 ## Routing and URLs
 
