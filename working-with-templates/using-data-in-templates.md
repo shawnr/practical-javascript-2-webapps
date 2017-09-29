@@ -29,6 +29,8 @@ export default {
 ```
 The object returned by the `data()` function is revealed to the template context. The "root" properties of the object are accessible as named variables. In the example above, `msg` and `item` are the "root" properties of the data object, so they can be referenced as `{{ msg }}` and `{{ item }}` in the templates. Of course, the `item` property references another object, and those properties can be accessed as `{{ item.id }}` and `{{ item.name }}` (as seen in the other example above).
 
+Interpolating variables from the template context like this sets up a two-way binding: The data is rendered in the HTML for the user to see, and it will update if the system updates the value. So if the user performs some action our code can update the values of any data being rendered on the page and the user will see that information be updated. This process of connecting our application logic and template output is called "binding."
+
 These methods work fine for outputting text data between HTML tags. But there are some additional considerations when the situation gets a little more complex.
 
 ## HTML Data
@@ -75,9 +77,22 @@ As we can see in this example, the `message` data property contains a string wit
 
 ## Data in HTML Attributes
 
-It's often the case that we want to use data from the template context to augment HTML attributes. For example, we may want to construct a URL that includes a user's username. Or we may need to build a details link that includes the item's ID. 
+It's often the case that we want to use data from the template context to augment HTML attributes. For example, we may want to construct a URL that includes a user's username. Or we may need to build a details link that includes the item's ID:
 
-## Binding Data
+```html
+<a href="item/12">View Details</a>
+```
+
+Since we cannot use the mustache syntax in HTML attributes, we must use the `v-bind` directive to insert the data from the template context. This creates a data binding between the information inserted in the attribute and the logic of our application, so if the values change the HTML will be updated accordingly.
+
+Assuming we have a data object similar to the one used in the example above, we could write our link like this:
+
+```html
+<a v-bind:href="'item/' + item.id">View Details</a>
+```
+
+We can see that the `v-bind` attribute uses the Vue.js method of adding parameters to a directive. In this case, we need to tell the `v-bind` directive *which* attribute we want to bind. We are binding the `href` attribute. As with all directives, we provide arguments between quotes after an equals sign. In this case, we are using a JavaScript expression to concatenate the String `'item/'` with the value of `item.id`.
+
 
 
 
