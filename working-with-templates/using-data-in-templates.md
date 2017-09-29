@@ -101,7 +101,7 @@ Assuming we have a data object similar to the one used in the example above, we 
 <a v-bind:href="'item/' + item.id">View Details</a>
 ```
 
-We can see that the `v-bind` attribute uses the Vue.js method of adding parameters to a directive. In this case, we need to tell the `v-bind` directive *which* attribute we want to bind. We are binding the `href` attribute. As with all directives, we provide arguments between quotes after an equals sign. In this case, we are using a JavaScript expression to concatenate the String `'item/'` with the value of `item.id`.
+We can see that the `v-bind` attribute uses the Vue.js method of adding parameters to a directive. In this case, we need to tell the `v-bind` directive *which* attribute we want to bind. We are binding the `href` attribute. As with all directives, we provide arguments between quotes after an equals sign. In this case, we are using a JavaScript expression to concatenate the String `'item/'` with the value of `item.id`. asdfsdf
 
 Another common example is when we have image URLs provided in our data, and we want to put the images into an HTML structure for display:
 
