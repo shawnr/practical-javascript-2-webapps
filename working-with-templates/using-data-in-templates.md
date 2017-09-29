@@ -54,11 +54,19 @@ export default {
 
 **template code**
 ```html
-<div v-html="message">
+<div v-html="message"></div>
+```
+
+**rendered template**
+```html
+<div>
   <p>Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede. In dui magna, posuere eget, vestibulum et, tempor auctor, justo.</p>
   <p>Fusce commodo aliquam arcu. Fusce fermentum odio nec arcu.</p>
 </div>
 ```
+
+
+
 
 
 ## Data in HTML Attributes
