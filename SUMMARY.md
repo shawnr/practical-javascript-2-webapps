@@ -57,7 +57,7 @@
 * [Core Concept: Template Fundamentals](working-with-templates/core-concept-template-fundamentals.md)
 * [Using Data in Templates](working-with-templates/using-data-in-templates.md)
 * [Conditionals in Templates](working-with-templates/conditionals-in-templates.md)
-* Looping in Templates
+* [Looping in Templates](working-with-templates/looping-in-templates.md)
 * Computed Values and Filters
 * Quiz: Working with Templates
 * Project: Data Templating
