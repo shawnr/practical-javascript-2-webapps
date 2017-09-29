@@ -65,9 +65,7 @@ export default {
 </div>
 ```
 
-
-
-
+As we can see in this example, the `message` data property contains a string with HTML formatting. In order to properly render this HTML in the template, we use the `v-html` attribute. Anytime we use a directive we use the equals sign and then put the argument in quotes, so they look like normal HTML attributes. In this case, the variable `message` will be used for the content of this HTML element.
 
 ## Data in HTML Attributes
 
