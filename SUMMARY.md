@@ -55,7 +55,7 @@
 
 * [Introduction](working-with-templates/README.md)
 * [Core Concept: Template Fundamentals](working-with-templates/core-concept-template-fundamentals.md)
-* Binding Data Objects
+* [Using Data in Templates](working-with-templates/using-data-in-templates.md)
 * Conditionals in Templates
 * Looping in Templates
 * Computed Values and Filters
