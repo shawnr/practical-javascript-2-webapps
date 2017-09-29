@@ -67,7 +67,15 @@ export default {
 
 As we can see in this example, the `message` data property contains a string with HTML formatting. In order to properly render this HTML in the template, we use the `v-html` attribute. Anytime we use a directive we use the equals sign and then put the argument in quotes, so they look like normal HTML attributes. In this case, the variable `message` will be used for the content of this HTML element.
 
+<div class="tip-box">
+  <h3>Use Caution with HTML Content</h3>
+  <p>It is possible to introduce security vulnerabilities in our projects by outputting user-provided HTML with the <code>v-html</code> directive. Malicious users could insert scripts into comments or other user-generated text and those could attack our other users. This is why most commenting or review systems either disallow all HTML formatting, only allow a small set of safe tags that are validated upon submission of the content, or use an alternative markup formatting to do basic text enhancement.</p>
+  <p>Using <code>v-html</code> should be reserved for content we create and verify is safe before use. And, where possible, we should avoid HTML formatting in our internal content</p>
+</div>
+
 ## Data in HTML Attributes
+
+It's often the case that we want to 
 
 ## Binding Data
 
