@@ -45,7 +45,7 @@ export default {
   data () {
     return {
       message: `<p>Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede. In dui magna, posuere eget, vestibulum et, tempor auctor, justo.</p>
-  <p>Fusce commodo aliquam arcu. Fusce fermentum odio nec arcu.</p>`
+                <p>Fusce commodo aliquam arcu. Fusce fermentum odio nec arcu.</p>`
     }
   }
 }
