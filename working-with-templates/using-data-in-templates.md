@@ -103,7 +103,39 @@ Assuming we have a data object similar to the one used in the example above, we 
 
 We can see that the `v-bind` attribute uses the Vue.js method of adding parameters to a directive. In this case, we need to tell the `v-bind` directive *which* attribute we want to bind. We are binding the `href` attribute. As with all directives, we provide arguments between quotes after an equals sign. In this case, we are using a JavaScript expression to concatenate the String `'item/'` with the value of `item.id`. 
 
+Another common example is when we have image URLs provided in our data, and we want to put the images into an HTML structure for display:
 
+**data**
+```html
+<script>
+export default {
+  name: 'hello',
+  data () {
+    return {
+      image: {
+        src: "images/mypicture.jpg",
+        title: "Placeholder Image"
+      }
+    }
+  }
+</script>
+```
+
+**template**
+```html
+<div class="image">
+  <img v-bind:src="image.src" v-bind:alt="image.title">
+</div>
+```
+
+**rendered template**
+```html
+<div class="image">
+  <img src="images/mypicture.jpg" alt="Placeholder Image">
+</div>
+```
+
+In this example we can see how we can use the `v-bind` directive to populate the image `src` and `alt` attributes. These substitutions don't require any JavaScript concatenation of the text and data. This kind of manual binding is common as we work with images and other elements in our templates.
 
 
 
