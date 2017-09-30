@@ -138,16 +138,16 @@ export default {
 
 In this example we can see how we can use the `v-bind` directive to populate the image `src` and `alt` attributes. These substitutions don't require any JavaScript concatenation of the text and data. This kind of manual binding is common as we work with images and other elements in our templates.
 
-<div class="tip-box">
-  <h3>Shorthand for <code>v-bind</code></h3>
-  <p>Although using the `v-bind` directive is fairly straightforward, we might do it often in our templates, and we might want to stop typing `v-bind` so often. Vue.js provides us with a shorthand we can use to set a manual binding on an attribute. The following code is equivalent:</p>
-  <p><code><img v-bind:src="image.src"></code></p>
-  <p><code><img :src="image.src"></code></p>
-  <p>We can abbreviate `v-bind:attributeName` to simply `:attributeName` in order to save a few keystrokes. This shorthand does not change anything about how the directive functions, and there is no positive or negative effect beyond removing the need to type `v-bind`.</p>
-</div>
+## Shorthand for `v-bind`
+Although using the `v-bind` directive is fairly straightforward, we might do it often in our templates, and we might want to stop typing `v-bind` so often. Vue.js provides us with a shorthand we can use to set a manual binding on an attribute. The following code is equivalent:
 
+```html
+<img v-bind:src="image.src">
 
+<img :src="image.src">
+```
 
+We can abbreviate `v-bind:attributeName` to simply `:attributeName` in order to save a few keystrokes. This shorthand does not change anything about how the directive functions, and there is no positive or negative effect beyond removing the need to type `v-bind`.
 
 
 
