@@ -104,7 +104,13 @@ In this example, we have several computed values. The first is the `tax` value, 
 Since `tax` and `total` are based on reactive values, when the `subtotal` and/or `taxRate` values change the computed `tax` and `total` values would also be updated. However, since the `timestamp` value is based on the non-reactive `Date.now()` value, the value of `timestamp` would not be updated when data is changed.
 
 ## Computed Strategies
-Computed values are powerful tools we can use to help our templates be more easily readable and to give us exactly the output we want. 
+Computed values are powerful tools we can use to help our templates be more easily readable and to give us exactly the output we want. Here are some common use cases for when computed values might be a good idea:
+
+* Annotating data with additional information (such as an "umbrella tip" or other advisory)
+* Formatting data to match specific HTML or textual patterns (such as adding a "&deg;F" to the temperature)
+* Combining data points into more useful labels (such as showing names in a "Last Name, First Name" display)
+
+There are probably lots of other use cases we will discover as we work through the challenges of building applications. We will continue to learn more ways to affect the data we display to the user in upcoming sections, too. But for now, computed values gives us a way to do a lot of interesting data manipulation.
 
 
 
