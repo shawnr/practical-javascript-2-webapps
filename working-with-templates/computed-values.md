@@ -82,21 +82,29 @@ export default {
 **template**
 ```html
 <ul>
-  <li>Subtotal: {{ subtotal }}</li>
-  <li>Tax: {{ tax }}</li>
-  <li>Total: {{ total }}</li>
+  <li>Time: {{ timestamp }}</li>
+  <li>Subtotal: ${{ subtotal }}</li>
+  <li>Tax: ${{ tax }}</li>
+  <li>Total: ${{ total }}</li>
 </ul>
 ```
 
 **rendered template**
 ```html
 <ul>
-  <li>Hello, world!</li>
-  <li>42 is the meaning of life.</li>
-  <li>Question authority.</li>
+  <li>Time: 1506979771129</li>
+  <li>Subtotal: $45</li>
+  <li>Tax: $1.80</li>
+  <li>Total: $46.80</li>
 </ul>
 ```
 
+In this example, we have several computed values. The first is the `tax` value, which calculates the amount of tax using `this.subtotal` and `this.taxRate`. The second computed value is `total`, which adds the `this.tax` amount to the `this.subtotal`. Finally, we have the `timestamp`, which is based on the built-in JavaScript function `Date.now()`. 
+
+Since `tax` and `total` are based on reactive values, when the `subtotal` and/or `taxRate` values change the computed `tax` and `total` values would also be updated. However, since the `timestamp` value is based on the non-reactive `Date.now()` value, the value of `timestamp` would not be updated when data is changed.
+
+## Computed Strategies
+Computed values are powerful tools we can use to help our templates be more easily readable and to give us exactly the output we want. 
 
 
 
