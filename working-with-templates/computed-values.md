@@ -54,6 +54,48 @@ If the value of `forecast.rainChance` were to change, the value of `umbrellaTip`
 
 Here is another example where we use computed values to calculate the tax and total for a customer:
 
+**logic**
+```html
+<script>
+export default {
+  name: 'checkout',
+  data () {
+    return {
+      subtotal: 45,
+      taxRate: 0.04
+    },
+  computed: {
+    tax: function(){
+      return (this.subtotal * this.taxRate).toFixed(2);
+    },
+    total: function(){
+      return this.subtotal + this.tax;
+    },
+    timestamp: function(){
+      return Date.now();
+    }
+  }
+}
+</script>
+```
+
+**template**
+```html
+<ul>
+  <li>Subtotal: {{ subtotal }}</li>
+  <li>Tax: {{ tax }}</li>
+  <li>Total: {{ total }}</li>
+</ul>
+```
+
+**rendered template**
+```html
+<ul>
+  <li>Hello, world!</li>
+  <li>42 is the meaning of life.</li>
+  <li>Question authority.</li>
+</ul>
+```
 
 
 
