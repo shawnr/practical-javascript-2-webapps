@@ -59,13 +59,12 @@ Please enjoy this self-check quiz to help you identify key concepts, points, and
         <answer correct><code>v-show</code></answer>
         <explanation>The <code>v-if</code> and <code>v-show</code> directives can be used to show/hide content in a template.</explanation>
     </question>
-    <question>
-        <p>How do we actually deploy our code?</p>
-        <answer>Run <code>npm run deploy</code>.</answer>
-        <answer correct>Commit the <code>docs/</code> directory and push to <code>origin</code>.</answer>
-        <answer>Copy to a flash drive and mail to server.</answer>
-        <answer>Run <code>webpack go</code>.</answer>
-        <explanation>To deploy our project to Github Pages we only need to commit the updated <code>docs/</code> directory and then push the changes to Github.</explanation>
+    <question multiple>
+        <p>Which of the following are reasons why we might use a computed value in our templates?</p>
+        <answer correct>Annotate data with additional information.</answer>
+        <answer correct>Format data to match our requirements.</answer>
+        <answer correct>Combine data points into more useful labels</answer>
+        <explanation>All of the above are reasons we might use a computed value in our template.</explanation>
     </question>   
 </quiz>
 
