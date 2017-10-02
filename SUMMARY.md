@@ -59,7 +59,7 @@
 * [Conditionals in Templates](working-with-templates/conditionals-in-templates.md)
 * [Looping in Templates](working-with-templates/looping-in-templates.md)
 * [Computed Values](working-with-templates/computed-values.md)
-* Quiz: Working with Templates
+* [Quiz: Working with Templates](working-with-templates/quiz-working-with-templates.md)
 * Project: Templating Data Output
 
 ## Handling User Input
