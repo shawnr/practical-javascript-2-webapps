@@ -58,11 +58,18 @@
 * [Using Data in Templates](working-with-templates/using-data-in-templates.md)
 * [Conditionals in Templates](working-with-templates/conditionals-in-templates.md)
 * [Looping in Templates](working-with-templates/looping-in-templates.md)
-* Form Data
-* [Handling Events](working-with-templates/handling-events.md)
 * [Computed Values and Filters](working-with-templates/computed-values-and-filters.md)
 * Quiz: Working with Templates
-* Form Data
+* Project: Templating Data Output
+
+## Handling User Input
+
+* [Introduction](handling-user-input/README.md)
+* Core Concept: User Input
+* Events
+* Forms
+* Quiz: Handling User Input
+* Project: Responding to User Input Part One
 
 ## Routing and URLs
 
@@ -70,6 +77,8 @@
 * Core Concept: State Management and Linking
 * Installing vue-router
 * Creating New Locations in the App
+* Quiz: Routing and URLs
+* Project: Responding to User Input Part Two
 
 ## Using API Data
 
