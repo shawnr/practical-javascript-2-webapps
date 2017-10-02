@@ -58,7 +58,7 @@
 * [Using Data in Templates](working-with-templates/using-data-in-templates.md)
 * [Conditionals in Templates](working-with-templates/conditionals-in-templates.md)
 * [Looping in Templates](working-with-templates/looping-in-templates.md)
-* [Computed Values and Filters](working-with-templates/computed-values-and-filters.md)
+* [Computed Values](working-with-templates/computed-values.md)
 * Quiz: Working with Templates
 * Project: Templating Data Output
 
