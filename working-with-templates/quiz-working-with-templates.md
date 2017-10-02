@@ -36,12 +36,12 @@ Please enjoy this self-check quiz to help you identify key concepts, points, and
         <explanation>Looping, data interpolation, and conditionals are three core technologies provided by virtually all templating engines.</explanation>
     </question>
     <question>
-        <p>What command do we use to build our Vue.js applications for deployment?</p>
-        <answer><code>build site</code></answer>
-        <answer correct><code>npm run build</code></answer>
-        <answer><code>npm run dev</code></answer>
-        <answer><code>webpack go</code></answer>
-        <explanation>We use the <code>npm run build</code> command to build our Vue.js applications for deployment.</explanation>
+        <p>What is the result of "two-way data binding" in Vue.js templates?</p>
+        <answer>The data is constrained into a small area.</answer>
+        <answer correct>The data is updated in the template when it is updated by the logic of the system.</answer>
+        <answer>The data must be manually updated to update the template display.</answer>
+        <answer>The data cannot go anywhere after it is output to the template.</answer>
+        <explanation>Two-way data binding refers to the way the data is updated in the template when it is updated by the logic of the system.</explanation>
     </question>
     <question>
         <p>How do we actually deploy our code?</p>
