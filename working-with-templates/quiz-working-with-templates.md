@@ -44,6 +44,22 @@ Please enjoy this self-check quiz to help you identify key concepts, points, and
         <explanation>Two-way data binding refers to the way the data is updated in the template when it is updated by the logic of the system.</explanation>
     </question>
     <question>
+        <p>What do Vue.js Directives look like when used in a template?</p>
+        <answer correct>HTML attributes</answer>
+        <answer>data output</answer>
+        <answer>form fields</answer>
+        <answer>bunnies</answer>
+        <explanation>Vue.js Directives look like HTML attributes when used in a template.</explanation>
+    </question>
+    <question multiple>
+        <p>Which directives would be useful if we needed to show/hide content on a page?</p>
+        <answer correct><code>v-if</code></answer>
+        <answer><code>v-hide</code></answer>
+        <answer><code>v-bind</code></answer>
+        <answer correct><code>v-show</code></answer>
+        <explanation>The <code>v-if</code> and <code>v-show</code> directives can be used to show/hide content in a template.</explanation>
+    </question>
+    <question>
         <p>How do we actually deploy our code?</p>
         <answer>Run <code>npm run deploy</code>.</answer>
         <answer correct>Commit the <code>docs/</code> directory and push to <code>origin</code>.</answer>
