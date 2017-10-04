@@ -8,7 +8,7 @@ In a web application framework, we expect to have features that allow us to crea
 
 ## Difference Between a Framework and a Library
 
-Sometimes it becomes murky to see the difference between a library (like jQUery) and a framework (like Vue.js). It often feels like libraries are "smaller" than frameworks, although some libraries (again, like jQuery) are extremely large, and some frameworks (like Backbone.js) are tiny. In fact, there are three primary characteristics that make a body of code a framework as opposed to a library. Quoting from [Wikipedia](https://en.wikipedia.org/wiki/Software_framework), these characteristics are:
+Sometimes it becomes murky to see the difference between a library (like jQuery) and a framework (like Vue.js). It often feels like libraries are "smaller" than frameworks, although some libraries (again, like jQuery) are extremely large, and some frameworks (like Backbone.js) are tiny. In fact, there are three primary characteristics that make a body of code a framework as opposed to a library. Quoting from [Wikipedia](https://en.wikipedia.org/wiki/Software_framework), these characteristics are:
 
 * **inversion of control:** In a framework, unlike in libraries or in standard user applications, the overall program's flow of control is not dictated by the caller, but by the framework.
 * **extensibility:** A user can extend the framework - usually by selective overriding; or programmers can add specialized user code to provide specific functionality.
