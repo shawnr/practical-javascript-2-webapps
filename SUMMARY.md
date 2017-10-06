@@ -60,7 +60,7 @@
 * [Looping in Templates](working-with-templates/looping-in-templates.md)
 * [Computed Values](working-with-templates/computed-values.md)
 * [Quiz: Working with Templates](working-with-templates/quiz-working-with-templates.md)
-* Project: Templating Data Output
+* [Project: Templating Data Output](working-with-templates/project-templating-data-output.md)
 
 ## Handling User Input
 
