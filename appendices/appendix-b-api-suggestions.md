@@ -11,7 +11,6 @@ The following APIs have been reviewed for use with the kinds of code we cover in
 <li><a href="http://www.pokeapi.co/">Pok&eacute;mon API</a></li>
 <li><a href="https://yesno.wtf/">Yes/No API</a></li>
 <li><a href="https://affiliate.itunes.apple.com/resources/documentation/itunes-store-web-service-search-api/">iTunes Search API</a></li>
-<li><a href="http://open-notify.org/">Open Space API</a></li>
 <li><a href="https://sunrise-sunset.org/api">Sunrise/Sunset API</a></li>
 <li><a href="https://randomuser.me/">Random (fake) User Data API</a></li>
 <li><a href="https://anapioficeandfire.com/">Game of Thrones API</a></li>
@@ -26,6 +25,7 @@ The following APIs have been reviewed for use with the kinds of code we cover in
 <li><a href="https://www.omdbapi.com/">Open Movie Database API</a></li>
 <li><a href="https://developers.google.com/books/docs/v1/getting_started">Google Books API</a></li>
 <li><a href="https://developer.spotify.com/web-api/user-guide/">Spotify API</a></li>
+<li><a href="http://www.omdbapi.com/">Open Movie Database (OMDB)</a></li>
 </ul>
 
 The list of APIs above was largely drawn from [Terence Eden's list here](https://shkspr.mobi/blog/2016/05/easy-apis-without-authentication/).
