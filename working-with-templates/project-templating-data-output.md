@@ -99,7 +99,17 @@ The overall structure of each movie item is this:
 </li>
 ```
 
-The first thing we need to do is set up the loop that will 
+#### Loop Through the Movies
+The first thing we need to do is set up the loop that will loop through all of the movie objects in the `results` array. To accomplish this, we will use the `v-for` directive. We will apply this directive to the `<li>` tag so the `<li>` and all the elements contained within it will be duplicated for each item in the array. Here is how that `v-for` directive is written:
+
+```html
+<li class="movie-item" v-for="result in results">
+```
+
+On each iteration of the for loop, an item from the `results` array will be made available as `result`. This pattern of naming is very common in software development, but it's not the only way to handle it. We could, for example, choose to call each item `movie` and write: `v-for="movie in results"`. This would be fine from a stylistic point of view, but the important thing to remember is that we are choosing the name we will use to reference the item within the loop, and we must be consistent. For the purposes of this walkthrough, we will use `result` to reference each item, and we will write our `v-for` directive as shown above.
+
+#### Poster Images
+The next element we encounter in the template is the `<img>` tag. This element places an image on the page, and we w
 
 
 ## Wrapping it Up
@@ -118,7 +128,7 @@ The final result of all this work is the following finished template:
 
     <ul>
       <li class="movie-item" v-for="result in results">
-        <img v-bind:src="'https://image.tmdb.org/t/p/w150_and_h225_bestv2'+ result.poster_path" alt="Title of Movie Poster" class="poster-image">
+        <img v-bind:src="'https://image.tmdb.org/t/p/w150_and_h225_bestv2'+ result.poster_path" v-bind:alt="result.title + 'Poster'" class="poster-image">
         <h2 class="title"><a v-bind:href="'https://www.themoviedb.org/movie/'+result.id">{{ result.title }}</a></h2>
         <div class="ratings">
           <span class="rating-category critics-choice" v-if="result.vote_average > 8">Critic's Choice</span>
