@@ -77,11 +77,67 @@ This is the basic way we interpolate data into our templates. Since these proper
 
 The meat of the page is really the movie items themselves. The HTML structure for the movie items has been provided for you: These will be formed by list items (`<li>` elements) within an unordered list. This is a convenient way to format these elements, and we can add all sorts of HTML elements within each `<li>` in order to achieve our desired effect.
 
+The overall structure of each movie item is this:
+
+```html
+<li class="movie-item">
+  <img src="https://image.tmdb.org/t/p/w150_and_h225_bestv2/p64TtbZGCElxQHpAMWmDHkWJlH2.jpg" alt="Title of Movie Poster" class="poster-image">
+  <h2 class="title"><a href="https://www.themoviedb.org/movie/78">Movie Title Goes Here</a></h2>
+  <div class="ratings">
+    <span class="rating-category critics-choice">Critic's Choice</span>
+    <span class="rating-category well-liked">Well Liked</span>
+    <span class="rating-category stinker">Stinker</span>
+    <span class="vote-average">8.4</span> with <span class="vote-count">3676</span> votes 
+  </div>
+  <p class="overview">
+    Movie overivew goes here. Aenean tellus metus, bibendum sed, posuere ac, mattis non, nunc. Cras dapibus. Praesent porttitor, nulla vitae posuere iaculis, arcu nisl dignissim dolor, a pretium mi sem ut ipsum.
+  </p>
+  <p class="release-date">Original Release: 1999-12-31</p>
+  <ul class="genre-list">
+    <li>genre</li>
+  </ul>
+</li>
+```
+
+The first thing we need to do is set up the loop that will 
 
 
+## Wrapping it Up
 
+The final result of all this work is the following finished template:
 
+```html
+<template>
+  <div class="results">
+    <h1>Top Movies from the 20<sup>th</sup> Century</h1>
+    <p class="search-meta">
+      <span class="current-page"><b>Current Page:</b> {{page}}</span>
+      <span class="total-pages"><b>Pages:</b> {{total_pages}}</span>
+      <span class="total-results"><b>Count:</b> {{total_results}}</span>
+    </p>
 
+    <ul>
+      <li class="movie-item" v-for="result in results">
+        <img v-bind:src="'https://image.tmdb.org/t/p/w150_and_h225_bestv2'+ result.poster_path" alt="Title of Movie Poster" class="poster-image">
+        <h2 class="title"><a v-bind:href="'https://www.themoviedb.org/movie/'+result.id">{{ result.title }}</a></h2>
+        <div class="ratings">
+          <span class="rating-category critics-choice" v-if="result.vote_average > 8">Critic's Choice</span>
+          <span class="rating-category well-liked" v-if="(result.vote_average > 7) && (result.vote_average <= 8)">Well Liked</span>
+          <span class="rating-category stinker" v-if="result.vote_average <= 7">Stinker</span>
+          <span class="vote-average">{{ result.vote_average }}</span> with <span class="vote-count">{{ result.vote_count }}</span> votes
+        </div>
+        <p class="overview">
+          {{ result.overview }}
+        </p>
+        <p class="release-date">Original Release: {{ result.release_date }}</p>
+        <ul class="genre-list">
+          <li v-for="genre in result.genres">{{genre}}</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</template>
+```
 
 
 
