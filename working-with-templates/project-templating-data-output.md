@@ -38,9 +38,54 @@ When we loop through each of the results in our template, each of these data obj
 ## Working the Project
 First, be sure we have run `npm install` in the project repository to install the application dependencies. When that finishes, we can run `npm run dev` to run the development server. We should see the beginning template provided in the repository:
 
+![Starter template](/img/project-7-starter_repo.png)
+<br>Starter template
+
+To begin working the project, we should open up the `src/components/Results.vue` file. This file contains the template that we need to alter in order to display our work. When we first open the file, we can see that the template is full of static information, and it only shows one movie result. Our goal is to enhance this template to make it dynamic so it can show the full set of data we have in the `src/apiresults.js` file. This data is revealed to the template context. We will access this data in our template in order to fill in the proper information.
+
+### Search Metadata
+Most search interfaces provide us with "metadata" about the search itself: How many items were found, how many pages there are, and what page we are currently viewing. This information is present at the top of the JSON object returned by TMDb. We must output the data into the proper area of the template:
+
+```html
+<p class="search-meta">
+  <span class="current-page"><b>Current Page:</b> 1</span>
+  <span class="total-pages"><b>Pages:</b> 777</span>
+  <span class="total-results"><b>Count:</b> 3232</span>
+</p>
+```
+
+The relevant values in the root of the JSON object are:
+
+```js
+"page":1,
+"total_results":147445,
+"total_pages":7373,
+```
+
+So we can add those values to our template by using basic data interpolation and their property names:
+
+```html
+<p class="search-meta">
+  <span class="current-page"><b>Current Page:</b> {{ page }}</span>
+  <span class="total-pages"><b>Pages:</b> {{ total_pages }}</span>
+  <span class="total-results"><b>Count:</b> {{ total_results }}</span>
+</p>
+```
+This is the basic way we interpolate data into our templates. Since these properties all exist at the root (main level) of the JSON object, we can just use their names to reference them.
+
+### Movie Items
+
+The meat of the page is really the movie items themselves. The HTML structure for the movie items has been provided for you: These will be formed by list items (`<li>` elements) within an unordered list. This is a convenient way to format these elements, and we can add all sorts of HTML elements within each `<li>` in order to achieve our desired effect.
 
 
-To begin working the project, we should open up the `src/components/Results.vue` file. This file contains the template that we need to alter in order to display our work. 
+
+
+
+
+
+
+
+
 
 
 
