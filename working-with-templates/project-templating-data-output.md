@@ -242,9 +242,9 @@ There are many more fun things we can do with this project. The `README.md` file
 * Enhance some of the styles to give this project a nicer visual appeal
 * Modify the template to make the ratings information be displayed as a percentage bar (or as a circle diagram, or something else) using a computed value
 
-Much of the information we would need to accomplish these goals is presented in the previous sections of this book. You are encouraged to also explore [the Vue.js Guide](https://vuejs.org/v2/guide/) and other resources to fill in details and discover ideas for accomplishing these goals.
+Much of the information we would need to accomplish these goals is presented in the previous sections of this book. We should feel empowered to explore [the Vue.js Guide](https://vuejs.org/v2/guide/) and other resources to fill in details and discover ideas for accomplishing these goals.
 
-Good luck exploring and have fun pushing this as far as you can! 
+Good luck exploring and have fun pushing this as far as we can! 
 
 
 
