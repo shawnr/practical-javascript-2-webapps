@@ -25,7 +25,7 @@ The following APIs have been reviewed for use with the kinds of code we cover in
 <li><a href="https://www.omdbapi.com/">Open Movie Database API</a></li>
 <li><a href="https://developers.google.com/books/docs/v1/getting_started">Google Books API</a></li>
 <li><a href="https://developer.spotify.com/web-api/user-guide/">Spotify API</a></li>
-<li><a href="http://www.omdbapi.com/">Open Movie Database (OMDB)</a></li>
+<li><a href="https://www.themoviedb.org/documentation/api">The Movie Database API</a></li>
 </ul>
 
 The list of APIs above was largely drawn from [Terence Eden's list here](https://shkspr.mobi/blog/2016/05/easy-apis-without-authentication/).
