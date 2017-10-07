@@ -54,8 +54,23 @@ Here is an example of a fieldset:
 
 The HTML above produces the following form (with default HTML styles):
 
-![Fieldsets](/img/form-fieldsets.png)
-<br>Fieldsets
+<form action="/profile/update/" method="post">
+    <fieldset>
+        <legend>Personal Information</legend>
+        <p><label>Salutation <input type="text" name="salutation" tabindex="0"></label></p>
+        <p><label>First Name <input type="text" name="firstname" tabindex="0"></label></p>
+        <p><label>Family Name <input type="text" name="familyname" tabindex="0"></label></p>
+    </fieldset>
+    <fieldset>
+        <legend>Address</legend>
+        <p><label>Street 1 <input type="text" name="street1" tabindex="0"></label></p>
+        <p><label>Street 2 <input type="text" name="street2" tabindex="0"></label></p>
+        <p><label>City <input type="text" name="city" tabindex="0"></label></p>
+        <p><label>State <input type="text" name="state" tabindex="0"></label></p>
+        <p><label>Postal Code <input type="text" name="postcode" tabindex="0"></label></p>
+    </fieldset>
+</form>
+
 
 As we can see, the fieldsets provide some visual definition for the form, and the legends allow the user to quickly understand what is being requested in each section of the form. We often deal with complex forms that benefit from this sort of structuring, and we can apply any styles we wish to these elements to make them match our visual design.
 
@@ -84,6 +99,7 @@ By using the `for` attribute, we get the same effect as wrapping the `<input>` w
 
 
 ## The `<input>` Element
+The real workhorse of form field elements in HTML is the `<input>` element. This is the element that handles most of the data input from users. The input element is relatively simple to write, but it allows for a lot of types. It's useful to know about the available types of input in order to 
 
 ## Textareas
 
