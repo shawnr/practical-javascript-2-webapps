@@ -174,13 +174,13 @@ There are a couple of exceptional fields we use often in web development. These 
 The [`<textarea>` tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea) is seen almost anywhere we can write any significant amount of text. This field shows up anywhere we type a message, write a review, create a post, etc. The `<textarea>` tag is a little strange because it does not use a `value` attribute to store its starting data. Rather, it wraps its value between the opening and closing `<textarea>` tags. Here's an example:
 
 ```html
-<textarea name="mlkquote">
+<textarea name="mlkquote" cols="80" lines="4">
 Darkness cannot drive out darkness; only light can do that. Hate cannot drive out hate; only love can do that.
 </textarea>
 ```
 And here's the rendered field:
 
-<textarea name="mlkquote">
+<textarea name="mlkquote" cols="80" lines="4">
 Darkness cannot drive out darkness; only light can do that. Hate cannot drive out hate; only love can do that.
 </textarea>
 
