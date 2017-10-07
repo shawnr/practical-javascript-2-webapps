@@ -99,17 +99,73 @@ By using the `for` attribute, we get the same effect as wrapping the `<input>` w
 
 
 ## The `<input>` Element
-The real workhorse of form field elements in HTML is the `<input>` element. This is the element that handles most of the data input from users. The input element is relatively simple to write, but it allows for a lot of types. It's useful to know about the available types of input in order to build much more useful interfaces for our users. At this point browsers and HTML support many helpful interfaces for data input.
+The real workhorse of form field elements in HTML is [the `<input>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input). This is the element that handles most of the data input from users. The input element is relatively simple to write, but it allows for a lot of types. It's useful to know about the available types of input in order to build much more useful interfaces for our users. At this point browsers and HTML support many helpful interfaces for data input.
 
 The basic `<input>` element is written with a few common attributes:
 
 ```html
-<label for="username">Username</label> <input type="text" name="username" placeholder="Enter your username">
+<label for="username">Username</label> <input type="text" name="username" placeholder="you@domain.com">
 ```
 This HTML would be displayed like this:
-<label>Username <input type="text" name="username" placeholder="Enter your username"></label>
+<label>Username <input type="text" name="username" placeholder="you@domain.com"></label>
 
-We can see the most common attributes for a form field in this example. The `type` attribute determines which input interface is shown. Since this example specifies `"text"` the one-line text box is displayed. The `name` attribute specifies the name that will be used for this field in the form data payload. The form data contains values for every form field submitted, and they are referenced according to their respective names. The `name` attribute also defines the name that must be used 
+We can see the most common attributes for a form field in this example. The `type` attribute determines which input interface is shown. Since this example specifies `"text"` the one-line text box is displayed. The `name` attribute specifies the name that will be used for this field in the form data payload. The form data contains values for every form field submitted, and they are referenced according to their respective names. The `name` attribute also defines the name that must be used when setting the `for` attribute of the corresponding `<label>` tag. Finally, the `placeholder` attribute defines the text that will be shown inside the field. In this case, the placeholder text attempts to let users know they should type in their email address as their username.
+
+### Common `<input>` Attributes
+There are many attributes that can be used with [the `<input>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) to accomplish whatever goals we have, but there are a few attributes that we use often. These attributes are worth memorizing:
+
+* `type` &mdash; This attribute determines the type of input interface that will be shown. It should always be set on every input.
+* `value` &mdash; This attribute contains the initial value of the field. If the user does not alter the value of the field, this value is used when the form is submitted.
+* `required` &mdash; The required attribute makes an input field required. The form will not submit until it is populated with data.
+* `disabled` &mdash; Sometimes we want to show an input as disabled until some event occurs. This attribute prevents the user from modifying or entering information in an input.
+* `autocomplete` &mdash; This attribute allows developers to control whether or not fields should allow the browser to autocomplete them with saved information from the user (e.g. name, address, email, etc.). Developers can also label which type of data should be used to autocomplete the field, allowing for a better user experience.
+* `spellcheck` &mdash; Indicates to the browser if it should do spelling and grammar checks on the content of an input.
+* `checked` &mdash; Used with checkboxes, this attribute indicates the box is checked. 
+* `maxlength` &amp; `minlength` &mdash; These two attributes allow the developer to specify maximum and minimum lengths for the data submitted (usually used with `text` fields).
+
+### Types of Inputs
+The `type` attribute on an `<input>` tag determines the input interface the browser presents to the user. This can be varied according to what kind of information we expect the user to submit. It's useful to specify the proper type of input interface, especially for users on a variety of devices. Although there's not much difference between using a keyboard to enter an email and a phone number on a laptop, on a mobile device it's much more useful to present the user with either an alphabetic keyboard or a numeric keyboard according to the input type.
+
+The following types of inputs are useful to know about:
+
+* `button` &mdash; A push button with no default behavior.
+* `checkbox` &mdash; A check box allowing single values to be selected/deselected.
+* `color` &mdash;  A control for specifying a color. A color picker's UI has no required features other than * `accepting simple colors as text (more info).
+* `date` &mdash;  A control for entering a date (year, month, and day, with no time).
+* `datetime-local` &mdash;  A control for entering a date and time, with no time zone.
+* `email` &mdash;  A field for editing an e-mail address.
+* `file` &mdash; A control that lets the user select a file. Use the accept attribute to define the types of files that the control can select.
+* `hidden` &mdash; A control that is not displayed but whose value is submitted to the server.
+* `image` &mdash; A graphical submit button. You must use the src attribute to define the source of the image and the alt attribute to define alternative text. You can use the height and width attributes to define the size of the image in pixels.
+* `month` &mdash;  A control for entering a month and year, with no time zone.
+* `number` &mdash;  A control for entering a number.
+* `password` &mdash; A single-line text field whose value is obscured. Use the maxlength attribute to specify the * `maximum length of the value that can be entered.
+* `radio` &mdash; A radio button, allowing a single value to be selected out of multiple choices.
+* `range` &mdash;  A control for entering a number whose exact value is not important.
+* `reset` &mdash; A button that resets the contents of the form to default values.
+* `search` &mdash;  A single-line text field for entering search strings. Line-breaks are automatically removed from the input value.
+* `submit` &mdash; A button that submits the form.
+* `tel` &mdash;  A control for entering a telephone number.
+* `text` &mdash; A single-line text field. Line-breaks are automatically removed from the input value.
+* `time` &mdash;  A control for entering a time value with no time zone.
+* `url` &mdash;  A field for entering a URL.
+* `week` &mdash;  A control for entering a date consisting of a week-year number and a week number with no time zone.
+
+By using the appropriate type of input, we can make sure the user sees the correct interface. Here is a quick example:
+
+```html
+<p><label>Color <input type="color"></label></p>
+<p><label>Telephone Nubmer <input type="tel"></label></p>
+<p><label>Month <input type="month"></label></p>
+<p><label>Range <input type="range"></label></p>
+```
+This is what those fields look like on the page. Click them to see the interfaces they bring up (especially if you are viewing this on a mobile device).
+
+<p><label>Color <input type="color"></label></p>
+<p><label>Telephone Nubmer <input type="tel"></label></p>
+<p><label>Month <input type="month"></label></p>
+<p><label>Range <input type="range"></label></p>
+
 
 ## Textareas
 
