@@ -191,9 +191,9 @@ Darkness cannot drive out darkness; only light can do that. Hate cannot drive ou
 In this example we see the quirky way that `<textarea>` wraps the value in its tags. We also see that it does not use `width` and `height` like most fields. It uses `cols` (the number of vertical columns) and `rows` (the number of horizontal rows) to determine the height. For a long time now browsers have supported resizing textareas, which is a feature that can be controlled via CSS.
 
 ### `<select>`
-Another input type that does not stem from an `<input>` tag is the `<select>` input. We see select inputs as either "drop down lists" or "multi-select lists" on websites, and it is a very common interface. In order to create a full select input, we must define some options. In applications and websites we often populate these options from our system data. Here is the structure of a typical `<select>` input:
+Another input type that does not stem from an `<input>` tag is [the `<select>` input](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select). We see select inputs as either "drop down lists" or "multi-select lists" on websites, and it is a very common interface. In order to create a full select input, we must define some [`<option>` elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option). In applications and websites we often populate these options from our system data. Here is the structure of a typical `<select>` input:
 
-```
+```html
 <label for="petType">Type of Pet:</label>
 <select name="petType">
     <option value="dog">Dog</option>
@@ -214,7 +214,7 @@ The code above would produce the following:
 
 This is a typical "drop-down list" style of selection. We could turn it into a mutli-select interface by adding the `multiple` attribute to the `<select>` tag like this:
 
-```
+```html
 <label for="petType">Type of Pet:</label>
 <select name="petType" multiple>
     <option value="dog">Dog</option>
@@ -229,6 +229,27 @@ The code above would produce the following:
 <select name="petType" multiple>
 <option value="dog">Dog</option>
 <option value="cat">Cat</option>
+<option value="pig">Pig</option>
+</select>
+</p>
+
+Select inputs can use many of the same input attributes such as `required`. Option elements are denoted with the `selected` attribute (similar to how checkbox inputs use the `checked` attribute). We can specify a default value for a select list by using the `selected` attribute:
+
+```html
+<label for="petType">Type of Pet:</label>
+<select name="petType">
+    <option value="dog">Dog</option>
+    <option value="cat" selected>Cat</option>
+    <option value="pig">Pig</option>
+</select>
+```
+The code above would produce the following:
+
+<p>
+<label for="petType">Type of Pet:</label>
+<select name="petType">
+<option value="dog">Dog</option>
+<option value="cat" selected>Cat</option>
 <option value="pig">Pig</option>
 </select>
 </p>
