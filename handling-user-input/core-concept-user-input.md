@@ -171,7 +171,19 @@ This is what those fields look like on the page. Click them to see the interface
 There are a couple of exceptional fields we use often in web development. These input fields are not created with an `<input>` element, but they share many of the same attributes and basic usage. We still use labels with them, although usually with a `for` attribute, and they still get folded into the form data alongside the other inputs.
 
 ### `<textarea>`
-The [`<textarea>` tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea) is seen almost anywhere we can write any significant amount of text. This 
+The [`<textarea>` tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea) is seen almost anywhere we can write any significant amount of text. This field shows up anywhere we type a message, write a review, create a post, etc. The `<textarea>` tag is a little strange because it does not use a `value` attribute to store its starting data. Rather, it wraps its value between the opening and closing `<textarea>` tags. Here's an example:
+
+```html
+<textarea name="mlkquote">
+Darkness cannot drive out darkness; only light can do that. Hate cannot drive out hate; only love can do that.
+</textarea>
+```
+And here's the rendered field:
+
+<textarea name="mlkquote">
+Darkness cannot drive out darkness; only light can do that. Hate cannot drive out hate; only love can do that.
+</textarea>
+
 
 ### `<select>`
 
