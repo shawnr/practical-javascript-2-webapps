@@ -99,7 +99,17 @@ By using the `for` attribute, we get the same effect as wrapping the `<input>` w
 
 
 ## The `<input>` Element
-The real workhorse of form field elements in HTML is the `<input>` element. This is the element that handles most of the data input from users. The input element is relatively simple to write, but it allows for a lot of types. It's useful to know about the available types of input in order to 
+The real workhorse of form field elements in HTML is the `<input>` element. This is the element that handles most of the data input from users. The input element is relatively simple to write, but it allows for a lot of types. It's useful to know about the available types of input in order to build much more useful interfaces for our users. At this point browsers and HTML support many helpful interfaces for data input.
+
+The basic `<input>` element is written with a few common attributes:
+
+```html
+<label for="username">Username</label> <input type="text" name="username" placeholder="Enter your username">
+```
+This HTML would be displayed like this:
+<label>Username <input type="text" name="username" placeholder="Enter your username"></label>
+
+We can see the most common attributes for a form field in this example. The `type` attribute determines which input interface is shown. Since this example specifies `"text"` the one-line text box is displayed. The `name` attribute specifies the name that will be used for this field in the form data payload. The form data contains values for every form field submitted, and they are referenced according to their respective names. The `name` attribute also defines the name that must be used 
 
 ## Textareas
 
