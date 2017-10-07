@@ -188,6 +188,7 @@ And here's the rendered field:
 Darkness cannot drive out darkness; only light can do that. Hate cannot drive out hate; only love can do that. -- Dr. Martin Luther King, Jr.
 </textarea>
 </p>
+
 In this example we see the quirky way that `<textarea>` wraps the value in its tags. We also see that it does not use `width` and `height` like most fields. It uses `cols` (the number of vertical columns) and `rows` (the number of horizontal rows) to determine the height. For a long time now browsers have supported resizing textareas, which is a feature that can be controlled via CSS.
 
 ### `<select>`
