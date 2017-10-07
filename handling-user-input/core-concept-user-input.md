@@ -254,10 +254,6 @@ The code above would produce the following:
 </select>
 </p>
 
-
-
-### `type="checkbox"`
-
 ## Form and Input Events
 
 ### Submit
