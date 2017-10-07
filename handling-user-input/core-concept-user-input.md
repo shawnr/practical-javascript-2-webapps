@@ -182,7 +182,7 @@ Darkness cannot drive out darkness; only light can do that. Hate cannot drive ou
 And here's the rendered field:
 
 <label for="mlkquote">Quote:</label>
-<textarea name="mlkquote" cols="80" lines="4">
+<textarea name="mlkquote" cols="80" rows="4">
 Darkness cannot drive out darkness; only light can do that. Hate cannot drive out hate; only love can do that.
 </textarea>
 
