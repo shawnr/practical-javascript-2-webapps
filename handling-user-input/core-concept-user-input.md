@@ -255,12 +255,21 @@ The code above would produce the following:
 </p>
 
 ## Form and Input Events
+Although we've reviewed the basics of form creation, presenting the form to the user is only half the challenge. We must also respond to events prompted by the user entering data into the form. When working with forms we care most about the form submission event (`submit`), the field `change` event, and the field `input` event. Let's take a closer look at each of these events.
 
-### Submit
+### `submit`
+The [`submit` event](https://developer.mozilla.org/en-US/docs/Web/Events/submit) is fired whenever a form is submitted. This event is handled by the browser by requesting the URL specified in the form's `action` attribute. The browser packages the form data into a payload that is included in the request. The structure of the data payload depends on the `method` attribute specified on the `<form>` tag. 
 
-### Change
+In JavaScript applications we generally intercept the form submission, and we often never specify another URL in the `action` attribute. Most frameworks, including Vue.js, provide tools to easily prevent the default behavior of the browser and handle the form data with our custom logic.
 
-### Input
+### `input`
+The [`input` event](https://developer.mozilla.org/en-US/docs/Web/Events/input) is signaled when the user modifies any information in a form field. This would apply to every letter the user types into a `text` input, or any selection the user makes in a `select` input. Sometimes this behavior is very useful, such as when a system autocompletes search results or email addresses based on the text a user is typing. Other times, this event happens too often, and it can lead to strange results.
+
+### `change`
+The [`change` event](https://developer.mozilla.org/en-US/docs/Web/Events/change) is emitted when the user commits a change to a field. This is interpreted differently for different input type and situations. In the case of selecting an option from a list, it works similar to the `input` event: The `change` event will fire after the user makes a selection. However, in the case of the `text` input, the `change` event is only fired after the `text` input field loses focus. This prevents the event from being fired for each character the user types. The `change` event can be a more useful way to handle some interface situations, so it's worthwhile to try varying between `input` and `change` events to note the differences.
+
+
+
 
 
 
