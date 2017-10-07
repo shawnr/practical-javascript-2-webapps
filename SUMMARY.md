@@ -65,9 +65,10 @@
 ## Handling User Input
 
 * [Introduction](handling-user-input/README.md)
-* Core Concept: User Input
-* Events
-* Forms
+* [Core Concept: Forms and User Input](handling-user-input/core-concept-user-input.md)
+* Using Forms in Vue.js
+* Handling Events in Vue.js
+* Component Methods
 * Quiz: Handling User Input
 * Project: Responding to User Input Part One
 
