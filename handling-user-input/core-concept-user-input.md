@@ -105,9 +105,11 @@ The basic `<input>` element is written with a few common attributes:
 
 ```html
 <label for="username">Username</label> <input type="text" name="username" placeholder="you@domain.com">
-```
+``` 
+
 This HTML would be displayed like this:
-<label>Username <input type="text" name="username" placeholder="you@domain.com"></label>
+<p><label>Username <input type="text" name="username" placeholder="you@domain.com"></label></p>
+
 
 We can see the most common attributes for a form field in this example. The `type` attribute determines which input interface is shown. Since this example specifies `"text"` the one-line text box is displayed. The `name` attribute specifies the name that will be used for this field in the form data payload. The form data contains values for every form field submitted, and they are referenced according to their respective names. The `name` attribute also defines the name that must be used when setting the `for` attribute of the corresponding `<label>` tag. Finally, the `placeholder` attribute defines the text that will be shown inside the field. In this case, the placeholder text attempts to let users know they should type in their email address as their username.
 
@@ -180,15 +182,60 @@ Darkness cannot drive out darkness; only light can do that. Hate cannot drive ou
 </textarea>
 ```
 And here's the rendered field:
-
+<p>
 <label for="mlkquote">Quote:</label>
 <textarea name="mlkquote" cols="80" rows="4">
 Darkness cannot drive out darkness; only light can do that. Hate cannot drive out hate; only love can do that.
 </textarea>
-
-
+</p>
+In this example we see the quirky way that `<textarea>` wraps the value in its tags. We also see that it does not use `width` and `height` like most fields. It uses `cols` (the number of vertical columns) and `rows` (the number of horizontal rows) to determine the height. For a long time now browsers have supported resizing textareas, which is a feature that can be controlled via CSS.
 
 ### `<select>`
+Another input type that does not stem from an `<input>` tag is the `<select>` input. We see select inputs as either "drop down lists" or "multi-select lists" on websites, and it is a very common interface. In order to create a full select input, we must define some options. In applications and websites we often populate these options from our system data. Here is the structure of a typical `<select>` input:
+
+```
+<label for="petType">Type of Pet:</label>
+<select name="petType">
+    <option value="dog">Dog</option>
+    <option value="cat">Cat</option>
+    <option value="pig">Pig</option>
+</select>
+```
+The code above would produce the following:
+
+<p>
+<label for="petType">Type of Pet:</label>
+<select name="petType">
+<option value="dog">Dog</option>
+<option value="cat">Cat</option>
+<option value="pig">Pig</option>
+</select>
+</p>
+
+This is a typical "drop-down list" style of selection. We could turn it into a mutli-select interface by adding the `multiple` attribute to the `<select>` tag like this:
+
+```
+<label for="petType">Type of Pet:</label>
+<select name="petType" multiple>
+    <option value="dog">Dog</option>
+    <option value="cat">Cat</option>
+    <option value="pig">Pig</option>
+</select>
+```
+The code above would produce the following:
+
+<p>
+<label for="petType">Type of Pet:</label>
+<select name="petType">
+<option value="dog">Dog</option>
+<option value="cat">Cat</option>
+<option value="pig">Pig</option>
+</select>
+</p>
+
+
+
+### `type="checkbox"`
 
 ## Form and Input Events
 
