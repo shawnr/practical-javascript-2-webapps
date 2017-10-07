@@ -155,24 +155,33 @@ By using the appropriate type of input, we can make sure the user sees the corre
 
 ```html
 <p><label>Color <input type="color"></label></p>
-<p><label>Telephone Nubmer <input type="tel"></label></p>
+<p><label>Telephone Number <input type="tel"></label></p>
 <p><label>Month <input type="month"></label></p>
 <p><label>Range <input type="range"></label></p>
 ```
 This is what those fields look like on the page. Click them to see the interfaces they bring up (especially if you are viewing this on a mobile device).
 
 <p><label>Color <input type="color"></label></p>
-<p><label>Telephone Nubmer <input type="tel"></label></p>
+<p><label>Telephone Number <input type="tel"></label></p>
 <p><label>Month <input type="month"></label></p>
 <p><label>Range <input type="range"></label></p>
 
 
-## Textareas
+## Exceptional Fields
+There are a couple of exceptional fields we use often in web development. These input fields are not created with an `<input>` element, but they share many of the same attributes and basic usage. We still use labels with them, although usually with a `for` attribute, and they still get folded into the form data alongside the other inputs.
 
-## Select Elements
+### `<textarea>`
+The [`<textarea>` tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea) is seen almost anywhere we can write any significant amount of text. This 
 
-## Form Events
+### `<select>`
 
+## Form and Input Events
+
+### Submit
+
+### Change
+
+### Input
 
 
 
