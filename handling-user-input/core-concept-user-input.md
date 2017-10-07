@@ -226,7 +226,7 @@ The code above would produce the following:
 
 <p>
 <label for="petType">Type of Pet:</label>
-<select name="petType">
+<select name="petType" multiple>
 <option value="dog">Dog</option>
 <option value="cat">Cat</option>
 <option value="pig">Pig</option>
