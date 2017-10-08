@@ -64,7 +64,7 @@ Here is what this code looks like when displayed to the user:
 We can see that when the user clicks the buttons the message is changed instantly. This demonstrates the fundamental ability to use methods to respond to events. With this tool, we can make all sorts of things happen in our interfaces.
 
 ## Preventing Default Event Handling
-Although we can now respond to events, there are situations when we will find ourselves fighting against the default event handling provided by the web browser. Vue.js provides us with several modifiers we can use alongside the `v-on` directive to 
+Although we can now respond to events, there are situations when we will find ourselves fighting against the default event handling provided by the web browser. Vue.js provides us with several modifiers we can use alongside the `v-on` directive to prevent the default actions from taking place.
 
 ## Detecting Keyboard Input
 
