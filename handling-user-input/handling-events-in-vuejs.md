@@ -61,14 +61,27 @@ Here is what this code looks like when displayed to the user:
 ![Event handler using component method](/img/event-handler-method1.gif)
 <br>Event handler using component method
 
-
+We can see that when the user clicks the buttons the message is changed instantly. This demonstrates the fundamental ability to use methods to respond to events. With this tool, we can make all sorts of things happen in our interfaces.
 
 ## Preventing Default Event Handling
+Although we can now respond to events, there are situations when we will find ourselves fighting against the default event handling provided by the web browser. Vue.js provides us with several modifiers we can use alongside the `v-on` directive to 
 
 ## Detecting Keyboard Input
 
 ## Other Event Modifiers
 
+## `v-on` Shorthand
+If we get sick of writing `v-on:click`, we can alter our templates to use the shorthand version: `@click`. Here is an example of what one of our previous templates would look like using the shorthand.
+
+```html
+<template>
+  <div class="events">
+    <h2>Message: {{ message }}</h2>
+    <p><button @click="setMessage('Danger! Danger!')">Show Danger Message.</button></p>
+    <p><button @click="setMessage('All Clear!')">Show All Clear Message.</button></p>
+  </div>
+</template>
+```
 
 
 
