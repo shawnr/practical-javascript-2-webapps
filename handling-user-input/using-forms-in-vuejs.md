@@ -86,6 +86,38 @@ In this example, we have a component that defines a `petList` Array and a String
 
 The selection list is automatically initialized with the current value of the `pet` value specified in the `v-model` attribute. When the value is updated, the output is correspondingly updated. Similarly, we can look at an example of a checkbox group to get an idea of how that works.
 
+```html
+<template>
+  <div class="forms">
+    <h2>Selected: {{ petSelection }}</h2>
+    <label v-for="pet in petList">
+      {{ pet }}
+      <input type="checkbox" v-model="petSelection" v-bind:value="pet">
+    </label>
+
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'FormsPractice',
+  data () {
+    return {
+      petList: [
+        'dog',
+        'cat',
+        'pig'
+      ],
+      petSelection: ['pig']
+    }
+  }
+}
+</script>
+```
+In this slightly modified version of the previous example, we have altered the `petSelection` value to be an Array. We have initialized its value with one item: `['pig']`. In the template, rather than looping the `<input>` tag, we have applied the `v-for` loop to the `<label>` tag so we can get proper wrapping of our checkbox inputs. The `v-model` attribute for each checkbox input is set to the same value, so all the values the user clicks will be added to the `petSelection` Array. Finally, the value of each item in the `petList` Array is bound to the `value` attribute using the `v-bind:value="pet"` directive.
+
+Here is what it looks like in action:
+
 
 
 ## Generating Options with `v-for`
