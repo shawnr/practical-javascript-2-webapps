@@ -17,15 +17,15 @@ Please enjoy this self-check quiz to help you identify key concepts, points, and
         <answer correct>post</answer>
         <answer correct>get</answer>
         <answer>receive</answer>
-        <explanation>The post and get methods are used to submit forms online.</explanation>
+        <explanation>The <code>post</code> and <code>get</code> methods are used to submit forms online.</explanation>
     </question>
     <question>
-        <p>What do we call the double curly brace syntax used to output data in the Vue.js templating engine?</p>
-        <answer>handlebars syntax</answer>
-        <answer>ripple syntax</answer>
-        <answer correct>mustache syntax</answer>
-        <answer>braces syntax</answer>
-        <explanation>The double curly brace syntax is also known as "mustache syntax."</explanation>
+        <p>Which directive do we use to connect an input field and a value in the component's data?</p>
+        <answer><code>v-bind</code></answer>
+        <answer correct><code>v-model</code></answer>
+        <answer><code>v-if</code></answer>
+        <answer><code>v-on</code></answer>
+        <explanation>The <code>v-model</code> directive is used to bind an input field and the value in the component's data.</explanation>
     </question>
     <question multiple>
         <p>Which of the following are features commonly found in templating engines?</p>
