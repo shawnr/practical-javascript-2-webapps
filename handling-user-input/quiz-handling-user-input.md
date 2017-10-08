@@ -44,12 +44,12 @@ Please enjoy this self-check quiz to help you identify key concepts, points, and
         <explanation>The <code>v-html</code> directive will output safe HTML tags in a template maintaining the HTML formatting of the data.</explanation>
     </question>
     <question>
-        <p>What is the result of "two-way data binding" in Vue.js templates?</p>
-        <answer>The data is constrained into a small area.</answer>
-        <answer correct>The data is updated in the template when it is updated by the logic of the system.</answer>
-        <answer>The data must be manually updated to update the template display.</answer>
-        <answer>The data cannot go anywhere after it is output to the template.</answer>
-        <explanation>Two-way data binding refers to the way the data is updated in the template when it is updated by the logic of the system.</explanation>
+        <p>What should we always include in at the beginning of set of <code><option></code> elements in a <code><select></code> tag?</p>
+        <answer>A welcome statement.</answer>
+        <answer>A comment explaining what we're selecting.</answer>
+        <answer correct>A dummy choice that is disabled so the user is forced to select a different option.</answer>
+        <answer>The default option.</answer>
+        <explanation>Providing a dummy choice as the default option in a <code><select></code> element insures data will be bound and synced properly.</explanation>
     </question>
     <question>
         <p>Which directive would be used to bind an HTML attribute to a variable in the template context?</p>
