@@ -131,9 +131,66 @@ It is possible that we have an event we only wish to trigger once. For example, 
 
 We can see that we can also chain the `.once` modifier with the `.prevent` modifier to fully handle the form with our custom component method.
 
-## Detecting Keyboard Input
+There are additional modifiers available, but these are the most commonly used. Refer to [the Vue.js Events Guide](https://vuejs.org/v2/guide/events.html) for more details about modifiers.
 
-## Other Event Modifiers
+## Detecting Keyboard Input
+Keyboard events are helpful for building an interface that is both efficient for users prefer keyboard navigation and accessible to users who are forced to use keyboard navigation. Adding hotkeys, keyboard shortcuts, and general navigational support via keyboard can be a great enhancement to any user experience. Detecting keyboard and device events is straightforward with Vue.js.
+
+The [events associated with keyboards](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent) are: 
+* `keydown` &mdash; When the key is first pressed down by the user.
+* `keypress` &mdash; If the key is not a modifier (`alt`, `opt`, `ctrl`, `cmd`, etc.), this event is fired.
+* `keyup` &mdash; When the key is released by the user.
+
+Users are accustomed to these events being used in different ways. The `keydown` event is somewhat "instrumental": We expect to hear a sound when we press the key down on the piano, for example. This is also how we expect game controls to work much of the time. The `keypress` event is often used to filter out modifier keys, which is helpful for page shortcuts, and this is the way we expect keyboard combinations to work. The `keyup` is the event that we most associate with single-key keyboard commands: A command executes when we release the key, not when we first press it. It's worthwhile to experiment with these different events to get a better feel for how keyboard interfaces work.
+
+### Responding to Specific Keys
+We often do not want to just randomly respond to every keyboard event. Usually, we want to set specific events  for specific keys or key combinations. Keyboard events include a `keyCode` that can be used to identify the key being pressed. We can find the `keyCode` for any key using a tool like [keycode.info](http://keycode.info/).
+
+Luckily, Vue.js provides quite a few aliases for these codes that make it easier to define an event listener for a specific key. For example, if we wanted our users to submit a form by pressing the `enter` key, we could use this directive:
+
+```html
+<form v-on:keyup.enter="handleMyForm" v-on:submit.prevent="handleMyForm">
+```
+In this example, the user would be able to either click a `submit` button or press the `enter` key to submit the form. In both cases, the form will be handled by the `handleMyForm` component method. (Also note that we can have multiple event listeners defined on a single element.)
+
+Here is the full list of `keyCode` modifier aliases provided by Vue.js:
+
+* .enter
+* .tab
+* .delete (captures both “Delete” and “Backspace” keys)
+* .esc
+* .space
+* .up
+* .down
+* .left
+* .right
+
+If the key we need to respond to is not in this list of modifier aliases, we can still refer to it by the numeric code:
+
+```html
+<a v-on:keyup.78="createNewItem">New</a>
+```
+
+In this example, we have mapped the key `78` (which corresponds to the `n` key) to a component method that will create a new item. We can pair this reference to a `keyCode` with a modifier key using one of the modifiers listed here:
+
+* .ctrl
+* .alt
+* .shift
+* .meta
+
+We often pair keyboard shortcuts with modifier keys such as `ctrl` or `alt`. It has become increasingly common to let users do more significant actions by pressing `shift + enter`, too. We could accomplish a feature like that with a simple `v-on` directive:
+
+```html
+<form v-on:keypress.shift.enter="handleMyForm">
+```
+In this example we have used the combination of `shift` and `enter` to handle the form submission. We could apply other keyboard shortcuts in more conventional ways, too. Here is a new item shortcut that uses the `ctrl + n` keyboard combination:
+
+```html
+<a v-on:keypress.ctrl.78="createNewItem">New</a>
+```
+
+With all of the tools Vue.js gives us for handling keyboard input, it's incredibly easy to add keyboard navigation and robust keyboard features to our websites and applications. This can help us present better, more accessible experiences to our users.
+
 
 ## `v-on` Shorthand
 If we get sick of writing `v-on:click`, we can alter our templates to use the shorthand version: `@click`. Here is an example of what one of our previous templates would look like using the shorthand.
