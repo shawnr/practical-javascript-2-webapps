@@ -5,13 +5,85 @@ In Vue.js we can use forms to gather data from the user, and the form fields and
 ## Basic Input Data Binding with `v-model`
 The `v-model` directive associates a form input element with a variable in our component's data. This variable can be referenced within the component logic (in computed values, methods, or filters), or it can be referenced within the template for display to the user. The `v-model` directive creates a two-way binding between the value in the component logic and the value in the template, just like other variables we define in the component's `data()` function.
 
-START HERE NEXT
+We can create an association like the one in this example component:
 
-## Select and Checkbox Arrays
+```html
+<template>
+  <div class="forms">
+    <h2>{{ message }}</h2>
+    <label>Message: <input type="text" v-model="message" v-bind:value="message"></label>
+    <p>Computed reversed message: {{ reversedMessage }}</p>
+  </div>
+</template>
 
-## Generating Options with `v-for`
+<script>
+export default {
+  name: 'FormsPractice',
+  data () {
+    return {
+      message: 'Type in the input to change the message.'
+    }
+  },
+  computed: {
+    reversedMessage: function () {
+      return this.message.split('').reverse().join('')
+    }
+  }
+}
+</script>
+```
+We can see here that we have a simple Vue.js component called `FormsPractice`. This component uses a data object that includes the `message` property. The `message` property is used in the template, where it is interpolated between the `<h1>` tags. The `message` property is defined in the component logic as part of the object returned by the `data()` function. There is also a computed value defined called `reversedMessage`, which also uses the `message` value. 
+
+All of these values are properly bound so that when the content of the text field is altered those changes are reflected in the HTML so the user can see them. Here is an example:
+
+![Animation of form field model binding](/img/form-model-bind1.gif)
+<br>Animation of form field model binding
+
+Since the default binding is updated whenever the form field is altered, we see immediate reaction to the user's input in the HTML. (If immediate reflection of the changed value is not desirable, we can use the `.lazy` modifier below to update the bound values only on the `change` event instead of the `input` event. See below for further explanation.)
 
 ## Providing Default Values with `v-bind:value`
+The example above also shows how we can use the `v-bind` directive to populate a form field with saved data. In this case, we provide an instructive message that the user can then alter to create a custom message. As with any other HTML element attribute, we can use `v-bind` to create a binding between some value or computation and the attribute itself. This is a common case that we encounter regularly in developing forms for our applications, so it's worth noting that we can easily use `v-bind` with the `value` attribute.
+
+We can also use `v-bind:value` with the `<option>` elements in a `<select>` input or the grouped `<input>` elements in a checkbox or radio button group. In each of these cases there is often a need to populate values dynamically, usually through some form of looping.
+
+## Select Lists, Checkbox Groups, and Radio Buttons
+There are a few kinds of form field inputs that rely upon or provide grouped information. Options for selects, checkbox groups, and radio buttons are often generated from an Array of data. Multiple selects and checkbox groups can also return an array of data for processing. Luckily, these input fields are well-connected in the Vue.js framework, and we can work with their data like any other data in the system.
+
+Here is an example of a simple `<select>` field setup:
+
+```html
+<template>
+  <div class="forms">
+    <h2>Selected: {{ petSelection }}</h2>
+    <label for="petChooser">Pick a pet:</label>
+    <select v-model="petSelection">
+      <option disabled value="">Please select one</option>
+      <option v-for="pet in petList" v-bind:value="pet">{{ pet }}</option>
+    </select>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'FormsPractice',
+  data () {
+    return {
+      petList: [
+        'dog',
+        'cat',
+        'pig'
+      ],
+      petSelection: ''
+    }
+  }
+}
+</script>
+```
+In this example, we have a component that defines a `petList` Array and a String called `petSelection`. The template displays the current selection as text, and the `<select>` element is bound to the `petSelection` value. The `<option>` elements are generated using a `v-for` loop. (Note that the `v-bind:value` directive can access the item in each iteration of the loop.) The result is an interface that works like this:
+
+
+
+## Generating Options with `v-for`
 
 ## Model Modifiers
 Sometimes we need to modify the data, or how we collect the data, in a predictable way. Vue.js provides three modifiers we can use with the `v-model` directive to change the way data is bound. These allow us to provide a better user experience in many situations. 
