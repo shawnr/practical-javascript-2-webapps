@@ -4,5 +4,9 @@ In Vue.js we can use forms to gather data from the user, and the form fields and
 
 ## Basic Input Data Binding with `v-model`
 
-## 
+## Generating Options with `v-for`
+
+## Providing Default Values with `v-bind:value`
+
+## Data Modifiers
 
