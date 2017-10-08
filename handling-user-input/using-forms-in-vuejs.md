@@ -3,6 +3,11 @@
 In Vue.js we can use forms to gather data from the user, and the form fields and events can easily be connected to our component logic. To accomplish this, we create bindings between the form fields and our component data. The `v-model` directive is how we assign these relationships. By binding fields to data values, we can do a lot directly in templates, or we can create event listeners and use component methods to perform actions when the form is submitted or when another event occurs.
 
 ## Basic Input Data Binding with `v-model`
+The `v-model` directive associates a form input element with a variable in our component's data. This variable can be referenced within the component logic (in computed values, methods, or filters), or it can be referenced within the template for display to the user. The `v-model` directive creates a two-way binding between the value in the component logic and the value in the template, just like other variables we define in the component's `data()` function.
+
+START HERE NEXT
+
+## Select and Checkbox Arrays
 
 ## Generating Options with `v-for`
 
