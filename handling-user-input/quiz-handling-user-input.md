@@ -75,13 +75,35 @@ Please enjoy this self-check quiz to help you identify key concepts, points, and
         <answer correct><code>.once</code></answer>
         <explanation>The <code>.stop</code>, <code>.prevent</code> and <code>.once</code> directives can be used to control which handlers execute when an event is triggered.</explanation>
     </question>
-    <question multiple>
-        <p>Which of the following are reasons why we might use a computed value in our templates?</p>
-        <answer correct>Annotate data with additional information.</answer>
-        <answer correct>Format data to match our requirements.</answer>
-        <answer correct>Combine data points into more useful labels</answer>
-        <explanation>All of the above are reasons we might use a computed value in our template.</explanation>
-    </question>   
+    <question>
+        <p>What do the modifiers <code>.enter</code>, <code>.ctrl</code>, and <code>.tab</code> do?</p>
+        <answer correct>They filter keyboard events so the handler executes only when the corresponding key is pressed</answer>
+        <answer>They indicate the method used to handle an event</answer>
+        <answer>They exclude the key from any event listener</answer>
+        <explanation>Those modifiers filter keyboard events so the handler executes only when the corresponding key is pressed.</explanation>
+    </question> 
+    <question>
+        <p>Which keyboard event would you use if you wanted to make a "new file" keyboard shortcut?</p>
+        <answer><code>keydown</code></answer>
+        <answer correct><code>keypress</code></answer>
+        <answer><code>keyup</code></answer>
+        <explanation>The <code>keypress</code> event would be best for making a keyboard shortcut.</explanation>
+    </question>
+    <question>
+        <p>Which keyboard event would you use if you were adding hotkeys to an app?</p>
+        <answer><code>keydown</code></answer>
+        <answer><code>keypress</code></answer>
+        <answer correct><code>keyup</code></answer>
+        <explanation>The <code>keyup</code> event would be best for adding hotkeys to an app.</explanation>
+    </question>
+    <question>
+        <p>Which keyboard event would you use if you were building a virtual game direction pad?</p>
+        <answer correct><code>keydown</code></answer>
+        <answer><code>keypress</code></answer>
+        <answer><code>keyup</code></answer>
+        <explanation>The <code>keydown</code> event would be best for making a responsive virtual game direction pad.</explanation>
+    </question>
+  
 </quiz>
 
 <div class="no-quiz">
