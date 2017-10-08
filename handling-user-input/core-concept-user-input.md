@@ -110,7 +110,7 @@ The real workhorse of form field elements in HTML is [the `<input>` element](htt
 The basic `<input>` element is written with a few common attributes:
 
 ```html
-<label for="username">Username</label> <input type="text" name="username" placeholder="you@domain.com">
+<label for="username">Username</label> <input type="text" id="username" name="username" placeholder="you@domain.com">
 ``` 
 
 This HTML would be displayed like this:
@@ -182,15 +182,15 @@ There are a couple of exceptional fields we use often in web development. These 
 The [`<textarea>` tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea) is seen almost anywhere we can write any significant amount of text. This field shows up anywhere we type a message, write a review, create a post, etc. The `<textarea>` tag is a little strange because it does not use a `value` attribute to store its starting data. Rather, it wraps its value between the opening and closing `<textarea>` tags. Here's an example:
 
 ```html
-<label for="mlkquote">Quote:</label>
-<textarea name="mlkquote" cols="80" rows="4">
+<label for="quote">Quote:</label>
+<textarea name="mlkquote" id="quote" cols="80" rows="4">
 Darkness cannot drive out darkness; only light can do that. Hate cannot drive out hate; only love can do that. -- Dr. Martin Luther King, Jr.
 </textarea>
 ```
 And here's the rendered field:
 <p>
-<label for="mlkquote">Quote:</label>
-<textarea name="mlkquote" cols="80" rows="4">
+<label for="quote">Quote:</label>
+<textarea name="mlkquote" id="quote" cols="80" rows="4">
 Darkness cannot drive out darkness; only light can do that. Hate cannot drive out hate; only love can do that. -- Dr. Martin Luther King, Jr.
 </textarea>
 </p>
