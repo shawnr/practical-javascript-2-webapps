@@ -73,7 +73,7 @@ export default {
         'cat',
         'pig'
       ],
-      petSelection: ''
+      petSelection: 'pig'
     }
   }
 }
