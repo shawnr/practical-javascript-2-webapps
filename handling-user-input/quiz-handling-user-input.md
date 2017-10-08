@@ -28,12 +28,12 @@ Please enjoy this self-check quiz to help you identify key concepts, points, and
         <explanation>The <code>v-model</code> directive is used to bind an input field and the value in the component's data.</explanation>
     </question>
     <question multiple>
-        <p>Which of the following are features commonly found in templating engines?</p>
-        <answer correct>looping</answer>
-        <answer correct>data interpolation</answer>
-        <answer>automatic accessibility checking</answer>
-        <answer correct>conditionals</answer>
-        <explanation>Looping, data interpolation, and conditionals are three core technologies provided by virtually all templating engines.</explanation>
+        <p>Which of the following modifiers are provided to help handle data in form fields?</p>
+        <answer><code>.active</code></answer>
+        <answer correct><code>.lazy</code></answer>
+        <answer correct><code>.number</code></answer>
+        <answer correct><code>.trim</code></answer>
+        <explanation>The <code>.lazy</code>, <code>.number</code>, and <code>.trim</code> modifiers are provided to help handle data in form fields.</explanation>
     </question>
     <question>
         <p>Which directive should we use to output HTML from a variable in our template context?</p>
