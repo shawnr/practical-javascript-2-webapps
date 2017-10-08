@@ -52,12 +52,12 @@ Please enjoy this self-check quiz to help you identify key concepts, points, and
         <explanation>Providing a dummy choice as the default option in a <code><select></code> element insures data will be bound and synced properly.</explanation>
     </question>
     <question>
-        <p>Which directive would be used to bind an HTML attribute to a variable in the template context?</p>
+        <p>Which directive defines an event listener in Vue.js templates?</p>
         <answer><code>v-if</code></answer>
         <answer><code>v-for</code></answer>
-        <answer correct><code>v-bind</code></answer>
-        <answer><code>v-html</code></answer>
-        <explanation>The <code>v-bind</code> directive is used to bind an HTML attribute to a variable in the template context.</explanation>
+        <answer correct><code>v-on</code></answer>
+        <answer><code>v-model</code></answer>
+        <explanation>The <code>v-on</code> directive is used to define an event listener in a Vue.js template.</explanation>
     </question>
     <question>
         <p>What do Vue.js Directives look like when used in a template?</p>
