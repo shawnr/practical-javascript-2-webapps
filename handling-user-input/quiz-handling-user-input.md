@@ -83,21 +83,21 @@ Please enjoy this self-check quiz to help you identify key concepts, points, and
         <explanation>Those modifiers filter keyboard events so the handler executes only when the corresponding key is pressed.</explanation>
     </question> 
     <question>
-        <p>Which keyboard event would you use if you wanted to make a "new file" keyboard shortcut?</p>
+        <p>Which keyboard event would we use if we wanted to make a "new file" keyboard shortcut?</p>
         <answer><code>keydown</code></answer>
         <answer correct><code>keypress</code></answer>
         <answer><code>keyup</code></answer>
         <explanation>The <code>keypress</code> event would be best for making a keyboard shortcut.</explanation>
     </question>
     <question>
-        <p>Which keyboard event would you use if you were adding hotkeys to an app?</p>
+        <p>Which keyboard event would we use if we were adding hotkeys to an app?</p>
         <answer><code>keydown</code></answer>
         <answer><code>keypress</code></answer>
         <answer correct><code>keyup</code></answer>
         <explanation>The <code>keyup</code> event would be best for adding hotkeys to an app.</explanation>
     </question>
     <question>
-        <p>Which keyboard event would you use if you were building a virtual game direction pad?</p>
+        <p>Which keyboard event would we use if we were building a virtual game direction pad?</p>
         <answer correct><code>keydown</code></answer>
         <answer><code>keypress</code></answer>
         <answer><code>keyup</code></answer>
