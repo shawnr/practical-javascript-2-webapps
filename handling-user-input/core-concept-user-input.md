@@ -202,7 +202,7 @@ Another input type that does not stem from an `<input>` tag is [the `<select>` i
 
 ```html
 <label for="petType">Type of Pet:</label>
-<select name="petType">
+<select id="petType" name="petType">
     <option value="dog">Dog</option>
     <option value="cat">Cat</option>
     <option value="pig">Pig</option>
@@ -212,7 +212,7 @@ The code above would produce the following:
 
 <p>
 <label for="petType">Type of Pet:</label>
-<select name="petType">
+<select id="petType" name="petType">
 <option value="dog">Dog</option>
 <option value="cat">Cat</option>
 <option value="pig">Pig</option>
@@ -223,7 +223,7 @@ This is a typical "drop-down list" style of selection. We could turn it into a m
 
 ```html
 <label for="petType">Type of Pet:</label>
-<select name="petType" multiple>
+<select id="petType" name="petType" multiple>
     <option value="dog">Dog</option>
     <option value="cat">Cat</option>
     <option value="pig">Pig</option>
@@ -233,7 +233,7 @@ The code above would produce the following:
 
 <p>
 <label for="petType">Type of Pet:</label>
-<select name="petType" multiple>
+<select id="petType" name="petType" multiple>
 <option value="dog">Dog</option>
 <option value="cat">Cat</option>
 <option value="pig">Pig</option>
@@ -244,7 +244,7 @@ Select inputs can use many of the same input attributes such as `required`. Opti
 
 ```html
 <label for="petType">Type of Pet:</label>
-<select name="petType">
+<select id="petType" name="petType">
     <option value="dog">Dog</option>
     <option value="cat" selected>Cat</option>
     <option value="pig">Pig</option>
@@ -254,7 +254,7 @@ The code above would produce the following:
 
 <p>
 <label for="petType">Type of Pet:</label>
-<select name="petType">
+<select id="petType" name="petType">
 <option value="dog">Dog</option>
 <option value="cat" selected>Cat</option>
 <option value="pig">Pig</option>
