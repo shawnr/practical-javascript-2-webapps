@@ -46,7 +46,7 @@ The example above also shows how we can use the `v-bind` directive to populate a
 
 We can also use `v-bind:value` with the `<option>` elements in a `<select>` input or the grouped `<input>` elements in a checkbox or radio button group. In each of these cases there is often a need to populate values dynamically, usually through some form of looping.
 
-## Select Lists, Checkbox Groups, and Radio Buttons
+## Generating Options and Binding Groups of Inputs
 There are a few kinds of form field inputs that rely upon or provide grouped information. Options for selects, checkbox groups, and radio buttons are often generated from an Array of data. Multiple selects and checkbox groups can also return an array of data for processing. Luckily, these input fields are well-connected in the Vue.js framework, and we can work with their data like any other data in the system.
 
 Here is an example of a simple `<select>` field setup:
@@ -118,9 +118,10 @@ In this slightly modified version of the previous example, we have altered the `
 
 Here is what it looks like in action:
 
+![Checkbox group example](/img/form-model-bind3-checkboxgroup.gif)
+<br>Checkbox group example
 
-
-## Generating Options with `v-for`
+Notice that the value the `petSelection` Array was initialized with is pre-checked when the input is displayed to the user. The Vue.js binding system keeps the checkboxes updated according to the value of the context variable each input is bound to in the template.
 
 ## Model Modifiers
 Sometimes we need to modify the data, or how we collect the data, in a predictable way. Vue.js provides three modifiers we can use with the `v-model` directive to change the way data is bound. These allow us to provide a better user experience in many situations. 
