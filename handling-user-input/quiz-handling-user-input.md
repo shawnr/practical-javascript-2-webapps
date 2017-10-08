@@ -36,14 +36,6 @@ Please enjoy this self-check quiz to help you identify key concepts, points, and
         <explanation>The <code>.lazy</code>, <code>.number</code>, and <code>.trim</code> modifiers are provided to help handle data in form fields.</explanation>
     </question>
     <question>
-        <p>Which directive should we use to output HTML from a variable in our template context?</p>
-        <answer><code>v-if</code></answer>
-        <answer><code>v-for</code></answer>
-        <answer><code>v-bind</code></answer>
-        <answer correct><code>v-html</code></answer>
-        <explanation>The <code>v-html</code> directive will output safe HTML tags in a template maintaining the HTML formatting of the data.</explanation>
-    </question>
-    <question>
         <p>What should we always include in at the beginning of set of <code><option></code> elements in a <code><select></code> tag?</p>
         <answer>A welcome statement.</answer>
         <answer>A comment explaining what we're selecting.</answer>
@@ -67,13 +59,21 @@ Please enjoy this self-check quiz to help you identify key concepts, points, and
         <answer>Cool concerts nearby</answer>
         <explanation>The <code>v-on</code> directive can listen for any event emitted by an HTML element or custom events created by developers.</explanation>
     </question>
+    <question>
+        <p>What do we often use to handle an event in our Vue.js components?</p>
+        <answer>component function</answer>
+        <answer correct>component method</answer>
+        <answer>JavaScript statements</answer>
+        <answer>HTML forms</answer>
+        <explanation>We often handle events using component methods we have defined as part of our Vue.js component.</explanation>
+    </question>
     <question multiple>
-        <p>Which directives would be useful if we needed to show/hide content on a page?</p>
-        <answer correct><code>v-if</code></answer>
-        <answer><code>v-hide</code></answer>
-        <answer><code>v-bind</code></answer>
-        <answer correct><code>v-show</code></answer>
-        <explanation>The <code>v-if</code> and <code>v-show</code> directives can be used to show/hide content in a template.</explanation>
+        <p>Which directives are useful for controlling which handlers execute when an event is triggered?</p>
+        <answer correct><code>.stop</code></answer>
+        <answer><code>.go</code></answer>
+        <answer correct><code>.prevent</code></answer>
+        <answer correct><code>.once</code></answer>
+        <explanation>The <code>.stop</code>, <code>.prevent</code> and <code>.once</code> directives can be used to control which handlers execute when an event is triggered.</explanation>
     </question>
     <question multiple>
         <p>Which of the following are reasons why we might use a computed value in our templates?</p>
