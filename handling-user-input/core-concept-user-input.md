@@ -80,13 +80,13 @@ As we see in the examples above, `<label>` elements are used to wrap the names o
 There are two ways to apply labels. In the examples above, the `<label>` tag wraps the input that it is paired with:
 
 ```html
-<label>Username <input type="text" name="username" tabindex="0"></label>
+<label>Username <input type="text" id="username" name="username" tabindex="0"></label>
 ```
 
-The other method for labeling a form field is to use the `for` attribute on the `<label>` tag:
+The other method for labeling a form field is to use the `for` attribute on the `<label>` tag. The `for` attribute should reference the `id` of the field the label is meant to be related to. Here is an example:
 
 ```html
-<label for="username">Username</label> <input type="text" name="username" tabindex="0">
+<label for="username">Username</label> <input type="text" id="username" name="username" tabindex="0">
 ```
 By using the `for` attribute, we get the same effect as wrapping the `<input>` with the `<label>` tags. Users can still click the label to activate the field, and screen readers can relate the label and field properly using the `for` attribute. This is also useful if we wish to achieve a visual design that does not have labels (for example, when we use the `placeholder` attribute to indicate what data should go into a form field). With the second structure we can visually hide the label but still make it available to screen readers and other assistive technology.
 
