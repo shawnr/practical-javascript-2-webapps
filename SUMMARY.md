@@ -75,8 +75,9 @@
 
 * [Introduction](routing-urls/README.md)
 * Core Concept: Routing and URLs
-* Installing vue-router
+* Setting Up vue-router
 * Creating New Locations in the App
+* Building Navigation
 * Quiz: Routing and URLs
 * Project: Responding to User Input Part Two
 
