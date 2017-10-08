@@ -59,13 +59,13 @@ Please enjoy this self-check quiz to help you identify key concepts, points, and
         <answer><code>v-model</code></answer>
         <explanation>The <code>v-on</code> directive is used to define an event listener in a Vue.js template.</explanation>
     </question>
-    <question>
-        <p>What do Vue.js Directives look like when used in a template?</p>
-        <answer correct>HTML attributes</answer>
-        <answer>data output</answer>
-        <answer>form fields</answer>
-        <answer>bunnies</answer>
-        <explanation>Vue.js Directives look like HTML attributes when used in a template.</explanation>
+    <question multiple>
+        <p>What events can be listened for in a Vue.js application?</p>
+        <answer correct><code>click</code> and <code>submit</code></answer>
+        <answer correct>Events emitted by an HTML element</answer>
+        <answer correct>Custom events defined by the developer</answer>
+        <answer>Cool concerts nearby</answer>
+        <explanation>The <code>v-on</code> directive can listen for any event emitted by an HTML element or custom events created by developers.</explanation>
     </question>
     <question multiple>
         <p>Which directives would be useful if we needed to show/hide content on a page?</p>
