@@ -108,9 +108,28 @@ Here is what this example looks like to the user:
 ### `.stop`
 In some situations there could be multiple event handlers that could be triggered when we perform a single action. It's common for HTML elements and their parent or child elements to each have events defined, and in those cases the event "bubbles" up the DOM from child to parent to grandparent and beyond. This could lead to multiple event handlers being executed in quick succession when a single event is triggered.
 
-In order to stop the bubbling of events through the DOM, JavaScript has a `stopPropagation` method that we use. In Vue.js, we can simply apply the `.stop` modifier to a `v-on` directive. This will stop the bubbling of the event through the DOM and prevent any other event handlers from firing.
+In order to stop the bubbling of events through the DOM, JavaScript has a `stopPropagation` method that we use. In Vue.js, we can simply apply the `.stop` modifier to a `v-on` directive. This will stop the bubbling of the event through the DOM and prevent any other event handlers from firing. Here is an example of how this looks:
 
-**Note:** This is different from `.prevent`, which only prevents the _default_ event handlers from firing. The `.stop` modifier will stop all other events handlers from being executed.
+```html
+<a v-on:click.stop="handleMyClick">Click me</a>
+```
+
+**Note:** This is different from `.prevent`, which only prevents the _default_ event handlers from firing. The `.stop` modifier will stop all other events handlers from being executed. It is sometimes desirable to both stop the event from propagating through the DOM and to prevent the default event handlers from executing. Luckily, directive modifiers can be chained in Vue.js:
+
+```html
+<a v-on:click.stop.prevent="handleMyClick">Click me</a>
+```
+
+It's important to keep in mind that chained modifiers are possible with any modifier, and that they are executed in the order they are chained. The order of chaining modifiers can dramatically alter their effect, so we must pay close attention to our ordering of modifiers.
+
+### `.once`
+It is possible that we have an event we only wish to trigger once. For example, submitting a payment form should only be done once, but it's common for users to double-click the submit button or click submit a second time after they wait for a moment. We might use the `.once` modifier to prevent that behavior:
+
+```html
+<form v-on:submit.prevent.once="handleMyForm">
+```
+
+We can see that we can also chain the `.once` modifier with the `.prevent` modifier to fully handle the form with our custom component method.
 
 ## Detecting Keyboard Input
 
