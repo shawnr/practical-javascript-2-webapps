@@ -64,7 +64,48 @@ Here is what this code looks like when displayed to the user:
 We can see that when the user clicks the buttons the message is changed instantly. This demonstrates the fundamental ability to use methods to respond to events. With this tool, we can make all sorts of things happen in our interfaces.
 
 ## Preventing Default Event Handling
-Although we can now respond to events, there are situations when we will find ourselves fighting against the default event handling provided by the web browser. Vue.js provides us with several modifiers we can use alongside the `v-on` directive to prevent the default actions from taking place.
+Although we can now respond to events, there are situations when we will find ourselves fighting against the default event handling provided by the web browser. Vue.js provides us with several modifiers we can use alongside the `v-on` directive to prevent the default actions from taking place. We should keep the following modifiers in mind as we work through trickier event handling situations.
+
+### `.prevent`
+The `.prevent` modifier will prevent the default event handlers from executing when an event is triggered. This is most commonly used to prevent form submissions. If no `action` property is supplied on a `<form>` element, the browser will still refresh the page. That refresh could be enough to really interrupt our well-planned user experience. Luckily, it's easy to prevent the default form submit event from happening thanks to `.prevent`.
+
+```html
+<template>
+  <div class="forms">
+    <h2>Message: {{ message }}</h2>
+    <form v-on:submit.prevent="handleMyForm">
+      <p><label>New Message: <input v-model="newMessage" type="text"></label></p>
+      <p><input type="submit"></p>
+    </form>
+
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'FormsPractice',
+  data () {
+    return {
+      message: 'Submit the form to change this text.',
+      newMessage: ''
+    }
+  },
+  methods: {
+    handleMyForm: function () {
+      this.message = this.newMessage
+    }
+  }
+}
+</script>
+```
+Rather than directly binding the `message` value to the form input, this example uses a component method to handle the form submission. The method is called `handleMyForm` and it changes the value of the `message` variable. Note the use of `.prevent` on the `<form>` element's event listener: This is used to prevent the browser from refreshing to submit the form. 
+
+Here is what this example looks like to the user:
+
+
+
+### `.stop`
+
 
 ## Detecting Keyboard Input
 
