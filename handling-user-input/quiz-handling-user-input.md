@@ -4,20 +4,20 @@ Please enjoy this self-check quiz to help you identify key concepts, points, and
 
 <quiz name="">
     <question>
-        <p>What is the <code>action</code>?</p>
-        <answer>template processor</answer>
-        <answer>HTML factory</answer>
-        <answer correct>template engine</answer>
-        <answer>code generator</answer>
-        <explanation>We use template engines to process and render template files in application frameworks.</explanation>
+        <p>What is the <code>action</code> property of a form provide?</p>
+        <answer>the name of the method used to handle the form</answer>
+        <answer correct>the URL where the form should be submitted (and browser redirected)</answer>
+        <answer>the name of the variable used</answer>
+        <answer>the time the form was generated</answer>
+        <explanation>The <code>action</code> property refers to the URL where the form should be submitted (and browser redirected).</explanation>
     </question>
-    <question>
-        <p>What do we call the set of variables, objects, methods, and other information available to a template when it is being rendered?</p>
-        <answer>template data</answer>
-        <answer correct>template context</answer>
-        <answer>template scope</answer>
-        <answer>template worldview</answer>
-        <explanation>The "template context" describes all of the information available to a template when it is being rendered.</explanation>
+    <question multiple>
+        <p>What <code>methods</code> can be used to submit a form online?</p>
+        <answer>snailmail</answer>
+        <answer correct>post</answer>
+        <answer correct>get</answer>
+        <answer>receive</answer>
+        <explanation>The post and get methods are used to submit forms online.</explanation>
     </question>
     <question>
         <p>What do we call the double curly brace syntax used to output data in the Vue.js templating engine?</p>

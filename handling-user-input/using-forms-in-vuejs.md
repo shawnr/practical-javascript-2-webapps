@@ -11,7 +11,7 @@ We can create an association like the one in this example component:
 <template>
   <div class="forms">
     <h2>{{ message }}</h2>
-    <label>Message: <input type="text" v-model="message" v-bind:value="message"></label>
+    <label>Message: <input type="text" v-model="message"></label>
     <p>Computed reversed message: {{ reversedMessage }}</p>
   </div>
 </template>
