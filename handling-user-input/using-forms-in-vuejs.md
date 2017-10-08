@@ -81,6 +81,11 @@ export default {
 ```
 In this example, we have a component that defines a `petList` Array and a String called `petSelection`. The template displays the current selection as text, and the `<select>` element is bound to the `petSelection` value. The `<option>` elements are generated using a `v-for` loop. (Note that the `v-bind:value` directive can access the item in each iteration of the loop.) The result is an interface that works like this:
 
+![Bound select input](/img/form-model-bind2-select.gif)
+<br>Bound select input
+
+The selection list is automatically initialized with the current value of the `pet` value specified in the `v-model` attribute. When the value is updated, the output is correspondingly updated. Similarly, we can look at an example of a checkbox group to get an idea of how that works.
+
 
 
 ## Generating Options with `v-for`
