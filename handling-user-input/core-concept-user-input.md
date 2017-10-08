@@ -90,6 +90,12 @@ The other method for labeling a form field is to use the `for` attribute on the 
 ```
 By using the `for` attribute, we get the same effect as wrapping the `<input>` with the `<label>` tags. Users can still click the label to activate the field, and screen readers can relate the label and field properly using the `for` attribute. This is also useful if we wish to achieve a visual design that does not have labels (for example, when we use the `placeholder` attribute to indicate what data should go into a form field). With the second structure we can visually hide the label but still make it available to screen readers and other assistive technology.
 
+We can see that the end result of both approaches is the same:
+
+<p><label>Username <input type="text" id="username1" name="username" tabindex="0"></label></p>
+<p><label for="username2">Username</label> <input type="text" id="username2" name="username" tabindex="0"></p>
+
+
 <div class="tip-box">
     <h3>Accessibility Tip: <code>tabindex="0"</code></h3>
     <p>Whenever we want to make sure users can navigate our sites and apps via keyboard, we can add the attribute <code>tabindex</code> to our HTML elements. This is usually added to form fields, buttons, links, and other interactive elements. When we are coding applications in JavaScript we might use elements in unorthodox ways, which makes it more important for us to pay attention to adding <code>tabindex="0"</code> to our tags.</p>
