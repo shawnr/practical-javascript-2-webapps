@@ -120,6 +120,12 @@ Here is what it looks like in action:
 
 Notice that the value the `petSelection` Array was initialized with is pre-checked when the input is displayed to the user. The Vue.js binding system keeps the checkboxes updated according to the value of the context variable each input is bound to in the template.
 
+<div class="tip-box">
+  <h3>Include a Dummy Choice!</h3>
+  <p>Due to the way some devices handle events on `<select>` elements, it's considered best practice to include a "dummy choice" at the beginning of any list of selectable items. Note in the example above that we begin the list with a single, disabled option that instructs the user to "select a pet". The dummy choice will be selected by the browser as the default selection shown when the form loads. A user who encounters the form for the first time will have to select another choice, since the dummy choice is disabled.</p> 
+  <p>This technique insures that we will always receive a data update when the user makes a selection. Without the dummy choice, it's possible that the user would want to select the first item in the list, and the device or browser might not always trigger a data sync throughout our Vue.js application.</p>
+</div>
+
 ## Model Modifiers
 Sometimes we need to modify the data, or how we collect the data, in a predictable way. Vue.js provides three modifiers we can use with the `v-model` directive to change the way data is bound. These allow us to provide a better user experience in many situations. 
 
