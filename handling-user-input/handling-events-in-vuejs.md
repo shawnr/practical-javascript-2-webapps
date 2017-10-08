@@ -27,6 +27,38 @@ All of the logic that responds to this event is in the template here. As long as
 This is easy enough to set up, but usually we want to do something more with our event handlers. Typically, rather than executing a simple line of code when an event is detected, we execute a component method to handle the event. Component methods can be used in many ways, and they are straightforward to add to our components.
 
 ## Component Methods
+Component methods are functions that can be executed in various ways within a Vue.js component. Much of the time, these methods will be executed in response to some event that has been triggered in the system. The `v-on` directive can define a method call that will be executed in response to an event signal. Let's look at an example:
+
+```html
+<template>
+  <div class="events">
+    <h2>Message: {{ message }}</h2>
+    <p><button v-on:click="setMessage('Danger! Danger!')">Show Danger Message.</button></p>
+    <p><button v-on:click="setMessage('All Clear!')">Show All Clear Message.</button></p>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'EventDemos',
+  data () {
+    return {
+      message: 'Component loaded successfully.'
+    }
+  },
+  methods: {
+    setMessage: function (text) {
+      this.message = text
+    }
+  }
+}
+</script>
+```
+In this example, there is only one variable revealed to the template: `message`. The message is initialized to a load statement, but the user can click a button to change the message. Each button has a `click` event listener defined using the `v-on` directive. When the `click` event is detected on one of the buttons it will execute the `setMessage` method. This method is a function that expects to receive some text to change the value of the `message` variable. In this example, the text is set by hand, but this text could also be provided by referencing another variable or data point.
+
+Here is what this code looks like when displayed to the user:
+
+
 
 ## Preventing Default Event Handling
 
