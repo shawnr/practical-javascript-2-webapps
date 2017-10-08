@@ -58,6 +58,9 @@ In this example, there is only one variable revealed to the template: `message`.
 
 Here is what this code looks like when displayed to the user:
 
+![Event handler using component method](/img/event-handler-method1.gif)
+<br>Event handler using component method
+
 
 
 ## Preventing Default Event Handling
