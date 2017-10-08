@@ -102,10 +102,15 @@ Rather than directly binding the `message` value to the form input, this example
 
 Here is what this example looks like to the user:
 
-
+![Using .prevent on a form](/img/event-handler-prevent.gif)
+<br>Using .prevent on a form
 
 ### `.stop`
+In some situations there could be multiple event handlers that could be triggered when we perform a single action. It's common for HTML elements and their parent or child elements to each have events defined, and in those cases the event "bubbles" up the DOM from child to parent to grandparent and beyond. This could lead to multiple event handlers being executed in quick succession when a single event is triggered.
 
+In order to stop the bubbling of events through the DOM, JavaScript has a `stopPropagation` method that we use. In Vue.js, we can simply apply the `.stop` modifier to a `v-on` directive. This will stop the bubbling of the event through the DOM and prevent any other event handlers from firing.
+
+**Note:** This is different from `.prevent`, which only prevents the _default_ event handlers from firing. The `.stop` modifier will stop all other events handlers from being executed.
 
 ## Detecting Keyboard Input
 
