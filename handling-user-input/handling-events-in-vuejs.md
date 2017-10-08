@@ -149,7 +149,7 @@ We often do not want to just randomly respond to every keyboard event. Usually, 
 Luckily, Vue.js provides quite a few aliases for these codes that make it easier to define an event listener for a specific key. For example, if we wanted our users to submit a form by pressing the `enter` key, we could use this directive:
 
 ```html
-<form v-on:keyup.enter="handleMyForm" v-on:submit.prevent="handleMyForm">
+<form v-on:keyup.enter="handleMyForm" v-on:submit.prevent>
 ```
 In this example, the user would be able to either click a `submit` button or press the `enter` key to submit the form. In both cases, the form will be handled by the `handleMyForm` component method. (Also note that we can have multiple event listeners defined on a single element.)
 
