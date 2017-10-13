@@ -19,6 +19,43 @@ URLs provide a way for us to identify content online. They provide a way for us 
 ## Routing Views
 When we talk about routing the user, we will also talk about the "view" that each route leads to. This is akin to a "page" in traditional websites, but since we are working with a single page application framework we do not use traditional pageviews. Instead, our views are more representative of the "state" of the application: Where is the user right now? What are they doing here?
 
+Defining routes and the views they associate with looks different in different technologies, but they typically include a few key details:
+
+* The URL pattern that the application is trying to match
+* The view that should be rendered when the URL is matched
+* Additional information needed to render or use the view (this is probably optional and used in specific cases)
+
+In a backend technology like Django, the routing setup (which they call `urlpatterns`) looks like this:
+
+```python
+from django.conf.urls import url
+
+from . import views
+
+urlpatterns = [
+    url(r'^/$', views.home),
+    url(r'^login/$', views.login),
+    url(r'^register/$', views.register),
+    url(r'^user/(?P<username>\w+)/$', views.user_profile),
+]
+```
+In a Vue.js application, a routing setup looks like this:
+
+```js
+const router = new VueRouter({
+  routes: [
+    { path: '/', component: Home },
+    { path: '/login', component: Login },
+    { path: '/register', component: Register },
+    { path: '/user/:username', component: User }
+  ]
+})
+```
+
+We can compare these two route definitions and see that they essentially define the same navigational structure: There is a home view, a login view, an a registration view. Those URLs are defined so that they are not looking for any additional information. Then there is a user profile view that requires a route parameter: the user's username. The username is required so the profile view can make use of the logged-in user's profile data. It is common to use route parameters to allow a view to fetch the proper data. We see these when reading news articles, viewing videos, or interacting with almost any piece of content online.
+
+This kind of navigational structure is mirrored on millions of sites online. Each site, depending on what technology powers it, probably uses a similar system for routing requests. In a large site, the route configuration can become very large, so there are sometimes ways of breaking up route definitions or organizing them to be more efficient. 
+
 ## URLs in Modern JavaScript Applications
 
 
