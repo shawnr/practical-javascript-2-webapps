@@ -120,5 +120,7 @@ Require all granted
 ```
 In the case of a Django app, the WSGI standard is used. Each Django app contains a `wsgi.py` file that handles the requests that come in. When deploying a Django application, we configure Apache to hand off all requests to the `wsgi.py` file.
 
+Again, these examples are intended to illustrate the similarities of how we handle these problems across different technologies. Although the specifics vary, the core concepts are largely the same. In the next sections we will look more closely at how to set up routing in our Vue.js applications.
+
 
 
