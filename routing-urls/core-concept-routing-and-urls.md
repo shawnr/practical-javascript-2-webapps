@@ -58,7 +58,67 @@ This kind of navigational structure is mirrored on millions of sites online. Eac
 
 ## URLs in Modern JavaScript Applications
 
+In modern JavaScript applications, there is a bit of trickiness around managing URLs. The concept of the URL was designed to point to a specific piece of content online. But in most dynamic web applications (including single page applications written in JS), the URLs do not map directly to content on the server. Instead, the URL is actually telling the web application how to process the request. 
 
+In the examples above, the `/login` URL does not correspond to a directory named `login` on the server. The `/login` URL corresponds to a route definition that says, "When this route is hit, render the login view." The web application then processes that view, renders HTML custom for that user, and then shows that HTML to the user in the browser. Even in a Python or Ruby server-side web application, the URLs do not map to files on the server.
+
+### Hash Mode
+To make this work for single page JS applications, we use two major techniques. The first technique, which is the most common and requires no significant server support, is the "hash" approach. This writes all URLs using a hash mark:
+
+```html
+http://example.com/#/login
+```
+This works in all browsers because the `#` symbol is seen as an internal page reference. This is the same syntax we would traditionally use to reference a specific element in the page by ID:
+
+```html
+<a href="#map">Jump to the Map</a>
+
+... lots of HTML content ...
+
+<h2 id="map">Map</h2>
+... a map ...
+```
+
+In the example above, we see how the hash is traditionally used. To link directly to the map on this page, we could use the link: `http://example.com/#map`. 
+
+When working with a single page JS application, we abandon this technique for internal page links. Instead, we use the hash to denote a location in the application itself. This is a tradeoff we're willing to make, and we can still scroll users to internal page content using other approaches.
+
+### History Mode
+The alternative approach is to utilize the HTML5 History API, which allows us to create "normal" links:
+
+```html
+htp://example.com/login
+```
+
+This approach works fine in all modern browsers, and it produces a somewhat "cleaner" look to the URL (no hash mark or extra punctuation). In order to use this approach in a single page application, we must be deploying on a server that will ignore the paths after the domain and send all traffic to the same `index.html` file. We can configure any server software to allow for this, so it's a matter of setting up Apache or nginx or whatever other server we're using to, itself, properly route requests. Here is an example Apache configuration from the Vue-Router documentation:
+
+```bash
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
+</IfModule>
+```
+
+Although we won't dive into the details of configuring the server to support history mode in this book, we can appreciate that in the example above the Apache configuration has been set up so that all requests will be sent to `/index.html`. In the case of a single page application, this is the correct way to handle the requests.
+
+It's worthwhile to mention that this is also basically what server-side applications do when they are serving dynamic HTML content. The server is configured to hand off all user requests to the application itself, which then constructs the proper response based on analysis of the URL. In this example taken from the Django Project website, we can see that the same basic idea is at play:
+
+```bash
+WSGIScriptAlias / /path/to/mysite.com/mysite/wsgi.py
+WSGIPythonHome /path/to/venv
+WSGIPythonPath /path/to/mysite.com
+
+<Directory /path/to/mysite.com/mysite>
+<Files wsgi.py>
+Require all granted
+</Files>
+</Directory>
+```
+In the case of a Django app, the WSGI standard is used. Each Django app contains a `wsgi.py` file that handles the requests that come in. When deploying a Django application, we configure Apache to hand off all requests to the `wsgi.py` file.
 
 
 
