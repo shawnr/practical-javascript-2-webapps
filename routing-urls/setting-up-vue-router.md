@@ -165,7 +165,17 @@ Route parameters are powerful tools for coordinating information between differe
 
 ### Nested URLs
 
-It's possible to have more than one dynamic value in a route definition. This is accomplished by simply adding additional values to the 
+Sometimes we wish to define URLs as part of a "section" of our site. For example, in many sites we would have some kind of user profile page located at `/username`. However, we might also have the following URLs:
+
+* `/user/username/profile` &mdash; User profile page
+* `/user/username/profile/edit` &mdash; Edit user profile page
+* `/user/username/settings` &mdash; Site settings page for a specific user
+* `/user/username/posts` &mdash; Listing of all posts the user has made
+* `/user/username/post/12345` &mdash; View for a single post made by the user
+
+We see these kinds of related URLs all the time online, and they make sense: We like to group pages with similar functionality under similar URLs. It helps us as developers, and our users, understand our websites and applications better.
+
+
 
 
 
