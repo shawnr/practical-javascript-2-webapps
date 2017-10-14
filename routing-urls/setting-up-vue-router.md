@@ -54,13 +54,34 @@ In the `App` component, found in `src/App.vue`, we can see that the template now
 </template>
 ```
 
-That is the location in the App template where the router's view will be injected into the application. It replaces the use of the component tag in the template like we saw used in the previous Vue.js projects in this book.
+The `<router-view>` element is the location in the App template where the router's view will be injected into the application. It replaces the use of the component tag in the template like we saw used in the previous Vue.js projects in this book. This will inject whatever component we have defined in the routes into the HTML at that location. Of course, the next question is: How do we define routes?
 
 
 ## Defining Routes
+We define routes in the `routes/index.js` file as part of the `routes` Array. This definition looks something like this:
 
+```js
+export default new Router({
+  routes: [
+    {
+      path: '/',
+      name: 'Home',
+      component: Home
+    },
+    {
+      path: '/login',
+      name: 'Login',
+      component: Login
+    },
+    {
+      path: '/register',
+      name: 'Register',
+      component: Register
+    }
 
-START HERE
+  ]
+})
+```
 
 
 
