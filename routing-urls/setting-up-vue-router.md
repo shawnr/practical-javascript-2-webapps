@@ -152,10 +152,20 @@ In the example above, we can see that there is a computed value called `welcome`
 
 **Note:** If we are using more complex components (as we do later in this book) that define a `created` function or do other initialization work in the component, we may need to re-initialize the component when the `$route.params` object is changed. More information about making that happen can be found on [the Dynamic Matching documentation](https://router.vuejs.org/en/essentials/dynamic-matching.html) as part of the Vue Router docs.
 
+We could also add multiple values to a route definition. Here is a helpful table showing how route parameters get used in various URLs:
 
+| Route Definition | Actual URL | Route Parameters |
+|------------------|------------|------------------|
+| `/:username` | `/shawnr` | `{ 'username': 'shawnr' }` |
+| `/:username` | `/jdoe` | `{ 'username': 'jdoe' }` |
+| `/:username/posts/:postid` | `/shawnr/posts/12345` | `{ 'username': 'shawnr', 'postid': 12345 }` |
+| `/:username/posts/:postid` | `/jdoe/posts/9876` | `{ 'username': 'jdoe', 'postid': 9876 }` |
 
+Route parameters are powerful tools for coordinating information between different views in our applications, and we will explore many use cases for them throughout this book.
 
+### Nested URLs
 
+It's possible to have more than one dynamic value in a route definition. This is accomplished by simply adding additional values to the 
 
 
 
