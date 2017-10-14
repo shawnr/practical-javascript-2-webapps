@@ -114,6 +114,8 @@ In this example, we can imagine that we have some form being presented to the us
 
 In this second example, the same scenario applies, but this time we want to supply the `orderID` value to the `confirm` route. To do so, we construct an object very much like we did with the `<router-link>` tag, and we define our route parameters in a `params` object. Now, when the form is validated all of this data will be properly assembled into a route reference.
 
+All of these features combine to allow us to build a huge variety of navigational elements in our sites and applications. We can use whichever approach works to fulfill our requirements, and we can integrate this navigation at every level of our application.
+
 
 
 
