@@ -215,7 +215,7 @@ The `<router-view>` element in the `User` component template looks like this:
 The `UserProfile` and `UserPosts` components will be rendered inside the `<router-view>` tag within the `User` template. Each of these components can access the `$route.params.username` value in their templates or component logic. Note that the URLs of nested routes defined in the `children` property do not use absolute paths&mdash;they do _not_ begin with a forward slash ('/'). Rather, they are understood to continue from the `path` definition on the parent route.
 
 ## Moving On
-Now that we've got the basics of how routes work, let's move on and discuss creating new components as well as linking our URLs together using `<router-link>` tags.
+Now that we've got the basics of how routes work, let's move on and discuss creating new components as well as linking our URLs together using `<router-link>` tags. There are more features in `vue-router` that we have not covered here. Some of those will be touched on later in this book, but it's always worthwhile to visit [the official Vue Router documentation](https://router.vuejs.org/en/) to learn more.
 
 
 
