@@ -44,20 +44,20 @@ Please enjoy this self-check quiz to help you identify key concepts, points, and
         <explanation>The <code>@</code> symbol stands for <code>src/</code> in the path to a file.</explanation>
     </question>
     <question>
-        <p>Which directive defines an event listener in Vue.js templates?</p>
-        <answer><code>v-if</code></answer>
-        <answer><code>v-for</code></answer>
-        <answer correct><code>v-on</code></answer>
-        <answer><code>v-model</code></answer>
-        <explanation>The <code>v-on</code> directive is used to define an event listener in a Vue.js template.</explanation>
+        <p>Nested URLs are defined using which property of the route object?</p>
+        <answer><code>nested</code></answer>
+        <answer><code>babies</code></answer>
+        <answer correct><code>children</code></answer>
+        <answer><code>siblings</code></answer>
+        <explanation>The <code>children</code> property defines views nested in a parent view.</explanation>
     </question>
     <question multiple>
-        <p>What events can be listened for in a Vue.js application?</p>
-        <answer correct><code>click</code> and <code>submit</code></answer>
-        <answer correct>Events emitted by an HTML element</answer>
-        <answer correct>Custom events defined by the developer</answer>
-        <answer>Cool concerts nearby</answer>
-        <explanation>The <code>v-on</code> directive can listen for any event emitted by an HTML element or custom events created by developers.</explanation>
+        <p>Which parameters are defined in the following route path: <code>'/posts/:slug/page/:pageNum'</code></p>
+        <answer correct><code>slug</code></answer>
+        <answer><code>page</code></answer>
+        <answer correct><code>pageNum</code></answer>
+        <answer><code>posts</code></answer>
+        <explanation>The two route parameters defined in this path are <code>slug</code> and <code>pageNum</code>.</explanation>
     </question>
     <question>
         <p>What do we often use to handle an event in our Vue.js components?</p>
