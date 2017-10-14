@@ -59,51 +59,22 @@ Please enjoy this self-check quiz to help you identify key concepts, points, and
         <answer><code>posts</code></answer>
         <explanation>The two route parameters defined in this path are <code>slug</code> and <code>pageNum</code>.</explanation>
     </question>
-    <question>
-        <p>What do we often use to handle an event in our Vue.js components?</p>
-        <answer>component function</answer>
-        <answer correct>component method</answer>
-        <answer>JavaScript statements</answer>
-        <answer>HTML forms</answer>
-        <explanation>We often handle events using component methods we have defined as part of our Vue.js component.</explanation>
+    <question multiple>
+        <p>What do we need to do to add a new route to our application?</p>
+        <answer correct>Create the new component file.</answer>
+        <answer correct>Add the route to the routes Array.</answer>
+        <answer>Update all of the other component templates.</answer>
+        <answer correct>Provide links or logic to move users to the new location.</answer>
+        <explanation>To add a new route to our application we must create the component that will handle the route, add it to the route definition Array, and provide links or logic to allow our users to find the new location.</explanation>
     </question>
     <question multiple>
-        <p>Which directives are useful for controlling which handlers execute when an event is triggered?</p>
-        <answer correct><code>.stop</code></answer>
-        <answer><code>.go</code></answer>
-        <answer correct><code>.prevent</code></answer>
-        <answer correct><code>.once</code></answer>
-        <explanation>The <code>.stop</code>, <code>.prevent</code> and <code>.once</code> directives can be used to control which handlers execute when an event is triggered.</explanation>
-    </question>
-    <question>
-        <p>What do the modifiers <code>.enter</code>, <code>.ctrl</code>, and <code>.tab</code> do?</p>
-        <answer correct>They filter keyboard events so the handler executes only when the corresponding key is pressed</answer>
-        <answer>They indicate the method used to handle an event</answer>
-        <answer>They exclude the key from any event listener</answer>
-        <explanation>Those modifiers filter keyboard events so the handler executes only when the corresponding key is pressed.</explanation>
+        <p>What are the advantages of using named routes?</p>
+        <answer>Routes get sad without names.</answer>
+        <answer correct>We can alter the paths in our application without editing templates.</answer>
+        <answer correct>It's easier to remember names than convoluted paths.</answer>
+        <answer correct>It can be difficult to remember parameter ordering in the path.</answer>
+        <explanation>There are many reasons to use named routes over paths. These are just a few of them.</explanation>
     </question> 
-    <question>
-        <p>Which keyboard event would we use if we wanted to make a "new file" keyboard shortcut?</p>
-        <answer><code>keydown</code></answer>
-        <answer correct><code>keypress</code></answer>
-        <answer><code>keyup</code></answer>
-        <explanation>The <code>keypress</code> event would be best for making a keyboard shortcut.</explanation>
-    </question>
-    <question>
-        <p>Which keyboard event would we use if we were adding hotkeys to an app?</p>
-        <answer><code>keydown</code></answer>
-        <answer><code>keypress</code></answer>
-        <answer correct><code>keyup</code></answer>
-        <explanation>The <code>keyup</code> event would be best for adding hotkeys to an app.</explanation>
-    </question>
-    <question>
-        <p>Which keyboard event would we use if we were building a virtual game direction pad?</p>
-        <answer correct><code>keydown</code></answer>
-        <answer><code>keypress</code></answer>
-        <answer><code>keyup</code></answer>
-        <explanation>The <code>keydown</code> event would be best for making a responsive virtual game direction pad.</explanation>
-    </question>
-  
 </quiz>
 
 <div class="no-quiz">
