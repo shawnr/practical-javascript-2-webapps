@@ -20,20 +20,20 @@ Please enjoy this self-check quiz to help you identify key concepts, points, and
         <explanation>The two modes for routing supported in Vue.js are "history" and "hash" modes.</explanation>
     </question>
     <question>
-        <p>Which directive do we use to connect an input field and a value in the component's data?</p>
-        <answer><code>v-bind</code></answer>
-        <answer correct><code>v-model</code></answer>
-        <answer><code>v-if</code></answer>
-        <answer><code>v-on</code></answer>
-        <explanation>The <code>v-model</code> directive is used to bind an input field and the value in the component's data.</explanation>
+        <p>Where are the route definitions found in a standard Vue.js project created with the Vue CLI webpack template?</p>
+        <answer><code>/src/routes.js</code></answer>
+        <answer correct><code>/src/router/index.js</code></answer>
+        <answer><code>/src/App.vue</code></answer>
+        <answer><code>/router.js</code></answer>
+        <explanation>The <code>/src/router/index.js</code> file contains the route definitions.</explanation>
     </question>
     <question multiple>
-        <p>Which of the following modifiers are provided to help handle data in form fields?</p>
-        <answer><code>.active</code></answer>
-        <answer correct><code>.lazy</code></answer>
-        <answer correct><code>.number</code></answer>
-        <answer correct><code>.trim</code></answer>
-        <explanation>The <code>.lazy</code>, <code>.number</code>, and <code>.trim</code> modifiers are provided to help handle data in form fields.</explanation>
+        <p>Which of the following properties of a route can be used with <code><router-link></code> or <code>router.push()</code>?</p>
+        <answer correct><code>name</code></answer>
+        <answer><code>children</code></answer>
+        <answer><code>component</code></answer>
+        <answer correct><code>path</code></answer>
+        <explanation>The <code>path</code> and <code>name</code> properties can be used to create a link with <code><router-link></code> or <code>router.push()</code>.</explanation>
     </question>
     <question>
         <p>What should we always include in at the beginning of set of <code><option></code> elements in a <code><select></code> tag?</p>
