@@ -4,20 +4,20 @@ Please enjoy this self-check quiz to help you identify key concepts, points, and
 
 <quiz name="">
     <question>
-        <p>What is the <code>action</code> property of a form provide?</p>
-        <answer>the name of the method used to handle the form</answer>
-        <answer correct>the URL where the form should be submitted (and browser redirected)</answer>
-        <answer>the name of the variable used</answer>
-        <answer>the time the form was generated</answer>
-        <explanation>The <code>action</code> property refers to the URL where the form should be submitted (and browser redirected).</explanation>
+        <p>What does "routing" refer to?</p>
+        <answer correct>Associating URLs with the corresponding components in an application.</answer>
+        <answer>Determining the fastest path from point A to point B.</answer>
+        <answer>Navigating around the web.</answer>
+        <answer>Assigning IP addresses.</answer>
+        <explanation>Routing refers to associating URLs with the corresponding components in an application.</explanation>
     </question>
     <question multiple>
-        <p>What <code>methods</code> can be used to submit a form online?</p>
-        <answer>snailmail</answer>
-        <answer correct>post</answer>
-        <answer correct>get</answer>
-        <answer>receive</answer>
-        <explanation>The <code>post</code> and <code>get</code> methods are used to submit forms online.</explanation>
+        <p>What modes can be used to manage URLs in a Vue.js app?</p>
+        <answer>quirksmode</answer>
+        <answer>standard</answer>
+        <answer correct>history</answer>
+        <answer correct>hash</answer>
+        <explanation>The two modes for routing supported in Vue.js are "history" and "hash" modes.</explanation>
     </question>
     <question>
         <p>Which directive do we use to connect an input field and a value in the component's data?</p>
