@@ -175,6 +175,47 @@ Sometimes we wish to define URLs as part of a "section" of our site. For example
 
 We see these kinds of related URLs all the time online, and they make sense: We like to group pages with similar functionality under similar URLs. It helps us as developers, and our users, understand our websites and applications better.
 
+The route definition that would create some of these URLs would look like this:
+
+```js
+{
+  path: '/user/:username',
+  component: User,
+  children: [
+    {
+      // UserProfile will be rendered inside User's <router-view>
+      // when /user/:username/profile is matched
+      path: 'profile',
+      name: 'UserProfile',
+      component: UserProfile
+    },
+    {
+      // UserPosts will be rendered inside User's <router-view>
+      // when /user/:username/posts is matched
+      path: 'posts',
+      name: 'UserPosts',
+      component: UserPosts
+    }
+  ]
+}
+```
+
+In this case, we have a general `/user/:username` URL that loads the `User` component. The `User` component will inject an appropriate _nested_ route according to the `path` values we have defined. We define nested routes using the `children` property on a route definition. This property accepts an array of additional route definitions. 
+
+The `<router-view>` element in the `User` component template looks like this:
+
+```html
+<template>
+  <div class="user">
+    <h2>{{ welcome }}</h2>
+    <router-view></router-view>
+  </div>
+</template>
+```
+The `UserProfile` and `UserPosts` components will be rendered inside the `<router-view>` tag within the `User` template. Each of these components can access the `$route.params.username` value in their templates or component logic. Note that the URLs of nested routes defined in the `children` property do not use absolute paths&mdash;they do _not_ begin with a forward slash ('/'). Rather, they are understood to continue from the `path` definition on the parent route.
+
+## Moving On
+Now that we've got the basics of how routes work, let's move on and discuss creating new components as well as linking our URLs together using `<router-link>` tags.
 
 
 
