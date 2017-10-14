@@ -36,12 +36,12 @@ Please enjoy this self-check quiz to help you identify key concepts, points, and
         <explanation>The <code>path</code> and <code>name</code> properties can be used to create a link with <code><router-link></code> or <code>router.push()</code>.</explanation>
     </question>
     <question>
-        <p>What should we always include in at the beginning of set of <code><option></code> elements in a <code><select></code> tag?</p>
-        <answer>A welcome statement.</answer>
-        <answer>A comment explaining what we're selecting.</answer>
-        <answer correct>A dummy choice that is disabled so the user is forced to select a different option.</answer>
-        <answer>The default option.</answer>
-        <explanation>Providing a dummy choice as the default option in a <code><select></code> element insures data will be bound and synced properly.</explanation>
+        <p>In a module import statement using the default webpack configuration, what does the <code>@</code> symbol stand for?</p>
+        <answer><code>email</code></answer>
+        <answer><code>repository</code></answer>
+        <answer correct><code>src/</code></answer>
+        <answer><code>components</code></answer>
+        <explanation>The <code>@</code> symbol stands for <code>src/</code> in the path to a file.</explanation>
     </question>
     <question>
         <p>Which directive defines an event listener in Vue.js templates?</p>
