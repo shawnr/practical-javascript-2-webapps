@@ -78,7 +78,7 @@
 * [Setting Up vue-router](routing-urls/setting-up-vue-router.md)
 * [Creating New Locations in the App](routing-urls/creating-new-locations-in-the-app.md)
 * [Building Navigation](routing-urls/building-navigation.md)
-* Quiz: Routing and URLs
+* [Quiz: Routing and URLs](routing-urls/quiz-routing-and-urls.md)
 * Project: Responding to User Input Part Two
 
 ## Using API Data
