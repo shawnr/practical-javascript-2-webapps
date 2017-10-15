@@ -168,6 +168,7 @@ Once we have this, we can return to the home of our project (`http://localhost:8
 <br>Survey Link on Home View
 
 ### Creating the Secret View
+The next thing we need to do is create a brand new component to run the Secret view. This is a view that should convey some helpful tip about web development (or, really, you can put anything you want on this page). 
 
 ### Adding the Secret View to the Routes Array
 
