@@ -214,7 +214,10 @@ This time out, we want to verify the following:
 * `q1` is not blank
 * `q2` is an Array with the length greater than zero
 * `q3` is an Array with the length greater than zero
+* `q4` is not blank
+* `q5` is not blank
 
+We can, once again, validate the data using a conditional with a set of conditional statements:
 
 ```js
 methods: {
@@ -232,6 +235,7 @@ methods: {
   }
 }
 ```
+
 
 ## Wrapping Up
 Several files have been modified to complete this project. Here are the complete files so we can check our work against them.
