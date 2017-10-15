@@ -10,6 +10,27 @@ The Basic Requirements for this project are broken into requirements for each of
 
 ## Working the Project 
 
+## Wrapping it Up
+
+## Build and Deploy
+Once we've finished our work, we can build and deploy the project. This project has been configured to build to the `docs/` directory, so we can follow the same pattern we used before:
+
+1. Execute the `npm run build` command to build the files into the `docs/` directory.
+2. Commit all of our code.
+3. Push the code up to GitHub.
+4. Go into the repository settings and set the GH Pages section to publish from the `docs/` directory.
+
+The project should now be up and available to the public through GH Pages.
+
+## Stretch Goals
+
+There are many more fun things we can do with this project. The `README.md` file lists several possible stretch goals:
+
+* Enhance the sign up form to collect additional info, different info, or to use different input types to collect the data
+* Enhance the validation to be more specific (e.g. verify no numbers in the name, or there is an `@` and a `.` in the email address, etc.)
+* Enhance error messages to be more specific (e.g. build a message that mentions which field is causing the problem)
+
+There are many other ways we could push this forward. Feel free to explore and experiment with forms and methods to handle user input. Keep pushing, and have fun!
 
 
 
