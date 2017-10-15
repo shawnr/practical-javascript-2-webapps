@@ -9,6 +9,11 @@ In its entirety, this project asks us to create a couple of forms and move the u
 The Basic Requirements for this project are broken into requirements for each of the files. Stretch goals are provided that apply to all of the work in this project. We are encouraged to push this experiment as far as possible, so adding or altering form fields, adjusting validation logic, and providing more textured error messages are all fair game for stretching this project in this section. (But remember, to fully complete the project we must complete the second part in the Routing and URLs section.)
 
 ## Working the Project 
+To begin working on the file, it is necessary to install our dependencies (by running `npm install` inside the project repository), and then we will want to run our development server (by running `npm run dev` inside the project repository). Once we have the project running, we will see this in the browser:
+
+
+
+Work on this part of the project will happen in the `src/components/Hello.vue` file.
 
 ## Wrapping it Up
 
