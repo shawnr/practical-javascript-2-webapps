@@ -79,7 +79,7 @@
 * [Creating New Locations in the App](routing-urls/creating-new-locations-in-the-app.md)
 * [Building Navigation](routing-urls/building-navigation.md)
 * [Quiz: Routing and URLs](routing-urls/quiz-routing-and-urls.md)
-* Project: Responding to User Input Part Two
+* [Project: Responding to User Input Part Two](routing-urls/project-responding-to-user-input-part-two.md)
 
 ## Using API Data
 
