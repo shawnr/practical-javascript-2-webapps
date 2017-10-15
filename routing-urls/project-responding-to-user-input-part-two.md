@@ -41,6 +41,80 @@ As we begin work we will need to have the following files open:
 We will move between these files to complete all of the work for this project.
 
 ### Creating the Form in `Survey.vue`
+This form is partially there for us. We have to add the `v-on` directive to the `<form>` tag so we can properly handle the `submit` event. We will also need to use the `.prevent` modifier, just like we did with the sign up form on the `Home` component.
+
+We also need to set up an error message the same way we did on the `Home` component. We can see that the component `data` object already contains a `showError` value, so we can use the same method to make this error message appear and hide:
+
+```html
+<p class="error" v-show="showError">Please check the information you have entered. Be sure to fill in all fields.</p>
+```
+
+The next `TODO` asks us to set the model on the `q1` input. This is a pretty simple addition:
+
+```html
+<input type="text" id="q1" v-model="q1">
+```
+
+We will use the same kind of `v-model` directive just like we did with the `Home` component. The next question present us with a somewhat different challenge: We must create a loop on the `<input>` element and use it to populate the form with a set of checkboxes based on the information stored in the `languageOptions` array:
+
+```html
+<p>Q2: What languages interest you the most?<br>
+  <label v-for="language in languageOptions">
+    <input type="checkbox" v-model="q2" v-bind:value="language.value">
+    {{ language.text }}
+  </label>
+</p>
+```
+In this example we see that we have used `v-for` to set up the loop on the `<label>` tag. This will duplicate the label and all the children elements it contains for each item in the `languageOptions` Array, which is defined as part of the component's `data` object. The `languageOptions` Array contains objects that have two properties: `value` and `text`. These two properties are used in the appropriate places to output the right information into the template.
+
+Since all of these checkboxes are meant to be part of the same question (and we want to record which checkboxes are checked in the `q2` Array), we give each input field the same `v-model` name. However, we want to alter the `value` attribute according to the information in the Array. This is accomplished using the `v-bind` directive on the `value` attribute. We finish out by simply printing the `text` property for use as the label on our checkbox.
+
+Question 3 uses the same checkbox group setup that Question 2 used, so we will essentially create the same template structure, using the `topicOptions` Array instead of the `languageOptions` Array:
+
+```html
+<p>Q3: What other topics interest you?<br>
+  <label v-for="topic in topicOptions">
+    <input type="checkbox" v-model="q3" v-bind:value="topic.value">
+    {{ topic.text }}
+  </label>
+</p>
+```
+We can continue through the `TODO` notes adding the `v-model` directives to their respective input fields until the form is complete. Once we're done, we should have a form that looks like this:
+
+```html
+<form v-on:submit.prevent="validateForm">
+  <p class="error" v-show="showError">Please check the information you have entered. Be sure to fill in all fields.</p>
+  <p><label for="q1">Q1: How long have you been building websites?<br><input type="text" id="q1" v-model="q1"></label></p>
+  <p>Q2: What languages interest you the most?<br>
+    <label v-for="language in languageOptions">
+      <input type="checkbox" v-model="q2" v-bind:value="language.value">
+      {{ language.text }}
+    </label>
+  </p>
+  <p>Q3: What other topics interest you?<br>
+    <label v-for="topic in topicOptions">
+      <input type="checkbox" v-model="q3" v-bind:value="topic.value">
+      {{ topic.text }}
+    </label>
+  </p>
+  <p>
+    <label for="q4">Q4: What kinds of websites would you like to build someday?<br>
+      <textarea cols="70" rows="8" id="q4" placeholder="Type your response here." v-model="q4"></textarea>
+    </label>
+  </p>
+  <p>
+    <label for="q5">Q5: Spaces or Tabs?
+      <select id="q5" v-model="q5">
+        <option value="">Select your preference.</option>
+        <option value="spaces">Spaces</option>
+        <option value="tabs">Tabs</option>
+      </select>
+    </label>
+  </p>
+  <p><input type="submit" value="Submit"></p>
+</form>
+```
+Now we can see our completed form in action:
 
 ### Adding the Survey View to the Routes Array
 
