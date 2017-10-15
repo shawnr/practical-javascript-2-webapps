@@ -207,18 +207,98 @@ Adding the Secret view to the `routes` Array is pretty much the same as adding t
 Obviously we will each have a different secret tip, but feel free to use this one if you are stumped. Now we only need to finish the validation method for the `Survey` component, and then we will be completely finished with this project.
 
 ### Finishing the Validation Method for the Survey
+The last bit of work we must complete is to finish the validation method for the `Survey` component. This is mostly like the previous `validateForm` method we wrote in the `Home` component, except the rules are a little different.
 
+This time out, we want to verify the following:
+
+* `q1` is not blank
+* `q2` is an Array with the length greater than zero
+* `q3` is an Array with the length greater than zero
+
+
+```js
+methods: {
+  validateForm: function () {
+    if ((this.q1 != '') &&
+        (this.q2.length > 0) &&
+        (this.q3.length > 0) &&
+        (this.q4 != '') &&
+        (this.q5 != '')) {
+      // Form is valid
+      this.$router.push('Secret');
+    } else {
+      this.showError = true;
+    }
+  }
+}
+```
 
 ## Wrapping Up
 Several files have been modified to complete this project. Here are the complete files so we can check our work against them.
 
 ### `src/components/Home.vue`
+Full file contents:
 
 ### `src/components/Survey.vue`
+Full file contents:
 
 ### `src/components/Secret.vue`
+Full file contents:
+
+```html
+<template>
+    <div>
+        <h2>{{ message }}</h2>
+    </div>
+</template>
+
+<script>
+export default {
+    data () {
+        return {
+            message: 'Always look in the devtools.'
+        }
+    }
+}
+</script>
+
+<style scoped>
+  
+</style>
+```
 
 ### `router/index.js`
+Full file contents:
+
+```js
+import Vue from 'vue'
+import Router from 'vue-router'
+import Home from '@/components/Home'
+import Survey from '@/components/Survey'
+import Secret from '@/components/Secret'
+
+Vue.use(Router)
+
+export default new Router({
+  routes: [
+    {
+      path: '/',
+      name: 'Home',
+      component: Home
+    },
+    {
+        path: '/survey',
+        name: 'Survey',
+        component: Survey
+    },
+    {
+        path: '/secret',
+        name: 'Secret',
+        component: Secret
+    }
+  ]
+})
+```
 
 ## Build and Deploy
 Once we've finished our work, we can build and deploy the project. This project has been configured to build to the `docs/` directory, so we can follow the same pattern we used before:
