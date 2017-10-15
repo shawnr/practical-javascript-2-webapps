@@ -170,7 +170,41 @@ Once we have this, we can return to the home of our project (`http://localhost:8
 ### Creating the Secret View
 The next thing we need to do is create a brand new component to run the Secret view. This is a view that should convey some helpful tip about web development (or, really, you can put anything you want on this page). 
 
+To begin, create a new file in `src/components/` called `Secret.vue`. We can use the boilerplate component code included earlier in the Routing and URLs section to start us off:
+
+```html
+<template>
+  <div class="component">
+    <h2>{{ message }}</h2>
+  </div>
+</template>
+
+<script>
+  export default {
+    data () {
+      return {
+        message: 'This component works.'
+      }
+    }
+  }
+</script>
+
+<style scoped>
+  .component {
+    background: #e8e8e8;
+    min-height: 400px;
+  }
+</style>
+```
+We can modify the message to say whatever we would like. We can also alter the template in whatever way we prefer. And, of course, we can change the styles to fit our needs. Once we have created the basic component we can save this file and add the Secret view to our routes definition so we can preview our work.
+
 ### Adding the Secret View to the Routes Array
+Adding the Secret view to the `routes` Array is pretty much the same as adding the Survey view previously. Once we are done, we should be able to visit `http://localhost:8080/#/Secret` to see our new view:
+
+![Secret View](/img/project9_secret.png)
+<br>Secret View
+
+Obviously we will each have a different secret tip, but feel free to use this one if you are stumped. Now we only need to finish the validation method for the `Survey` component, and then we will be completely finished with this project.
 
 ### Finishing the Validation Method for the Survey
 
