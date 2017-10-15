@@ -11,9 +11,29 @@ The Basic Requirements for this project are broken into requirements for each of
 ## Working the Project 
 To begin working on the file, it is necessary to install our dependencies (by running `npm install` inside the project repository), and then we will want to run our development server (by running `npm run dev` inside the project repository). Once we have the project running, we will see this in the browser:
 
+![Home view](/img/project8_starterHello.png)
+<br>Home view
+
+Work on this part of the project will happen in the `src/components/Home.vue` file. This file contains the `Home` component, which controls the first page of our project website. In the initial state, the view contains no form input fields and it shows the success message right away. We must fill in the details to make this a functioning sign up form. 
+
+## Show/Hide Form and Thank-You Message
+We begin with a set of data defined in the component's `data` object. One of those data values is `showForm`, which is set to `true` by default. The first `TODO` in the file tells us to modulate the display of the form container (`<div class="form-container">`). If we glance down a little further, we can see that we also need to modulate the display of the `<div class="success-message">` element, which contains the success message the user should see after successfully submitting the form. We can tackle both of these `TODOs` at once.
+
+First, we can add a `v-show` directive to the `<div class="form-container">`:
+
+```html
+<div class="form-container" v-show="showForm">
+```
+If `showForm` is `true` (which it is at the beginning), this form container will be shown. Remember that `v-show` accepts a conditional statement, so we can use conditional operators with the `v-show` directive, too. We will do that to hide the success message until the right time. 
+
+In order to handle the show/hide of the success message, we can add another `v-show` directive to that element:
+
+```html
+<div class="success-message" v-show="!showForm">
+```
+In this case, we want to show the success message when the form is NOT showing. Essentially, the success message is the opposite of the form container. We use the `!showForm` syntax to specify that when `showForm` is `false`, this element should be shown. Once we implement these two `v-show` directives, we should see that the success message is hidden by default:
 
 
-Work on this part of the project will happen in the `src/components/Hello.vue` file.
 
 ## Wrapping it Up
 
