@@ -236,6 +236,9 @@ methods: {
 }
 ```
 
+When the form is valid, the validation method will execute `this.$router.push('Secret');`, which moves the user to the Secret view. This is the programmatic way of moving the user to different locations in the application (as opposed to just asking the user to click, like we did on the Home view).
+
+Now that we've added this code, we can test the Survey view and see that when we fill out the form successfully it moves us to the Secret view. Huzzah! We are done!
 
 ## Wrapping Up
 Several files have been modified to complete this project. Here are the complete files so we can check our work against them.
