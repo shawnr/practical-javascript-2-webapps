@@ -69,7 +69,7 @@
 * [Using Forms in Vue.js](handling-user-input/using-forms-in-vuejs.md)
 * [Handling Events in Vue.js](handling-user-input/handling-events-in-vuejs.md)
 * [Quiz: Handling User Input](handling-user-input/quiz-handling-user-input.md)
-* Project: Responding to User Input Part One
+* [Project: Responding to User Input Part One](handling-user-input/project-responding-to-user-input-part-one.md)
 
 ## Routing and URLs
 
