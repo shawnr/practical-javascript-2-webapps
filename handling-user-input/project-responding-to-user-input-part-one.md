@@ -49,6 +49,47 @@ By default, this warning will not show up. In order to complete our work here, w
 
 Now we can reset the initial value of `showError` to be `false` (we don't want to show the error when the user first arrives on the site), and we can alter the value in the `validateForm` method accordingly.
 
+### Form Submit Event Handler
+Next, we want to set up the event handler for the form submission event. To do this, we will modify the `<form>` tag and add a `v-on` directive. This will be very similar to the examples we saw earlier. Here is what the `<form>` tag looks like after we've added the handler:
+
+```html
+<form v-on:submit.prevent="validateForm">
+```
+
+Notice that we have used the `.prevent` modifier with the `v-on` directive. This modifier will prevent the default event handlers from firing in the browser when the form is submitted. If we fail to add this, the page would refresh each time the form is submitted and we would never be able to process any data. By using `.prevent` we tell the browser to stop processing the event, which allows us to handle the event with our `validateForm` method, which we will modify later on. For now, we can move on to populating our form with input fields.
+
+### Add Input Fields
+The next set of `TODOs` ask us to create inputs for each field in our form. These fields must be properly bound to a value in the component `data` object, and they should use appropriate labels. This is what things look like after we've made the edits:
+
+```html
+<p>
+    <label for="username">Username 
+        <input type="text" id="username" v-model="username">
+    </label>
+</p>
+<p>
+    <label for="email">Email 
+        <input type="email" id="email" v-model="email">
+    </label>
+</p>
+<p>
+    <label for="password">Password 
+        <input type="password" id="password" v-model="password">
+    </label>
+</p>
+<p>
+    <label for="passwordVerify">Verify Password 
+        <input type="password" id="passwordVerify" v-model="passwordVerify">
+    </label>
+</p>
+```
+Notice that each input in this form is has a specific value in the `type` attribute. The username is a `text` input. The email is an `email` input. And the password fields are `password` inputs. Properly labelling the `type` of input fields is crucial for providing a good user experience and for collecting valid data.
+
+Each input field uses the `v-model` directive to set up the data binding between the inputs and the component logic. These `v-model` attributes must match up with the values specified as part of the `data` object. Once we've got this set up, we are ready to move on to writing our validation.
+
+### Validating the Form
+Whenever a form is submitted by a user, it's essential to perform some sort of validation process. This is done to make sure the information that has been submitted meets our needs and that no required fields have been left blank. There are many ways to validate data, but for the purposes of this project we are just looking for a simple validation that makes sure there is information in every field and that the values of `password` and `passwordVerify` are equal. (Feel free to create more complex validation logic in pursuit of the stretch goals below.)
+
 
 
 ## Wrapping it Up
