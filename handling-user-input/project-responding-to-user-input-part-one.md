@@ -90,9 +90,121 @@ Each input field uses the `v-model` directive to set up the data binding between
 ### Validating the Form
 Whenever a form is submitted by a user, it's essential to perform some sort of validation process. This is done to make sure the information that has been submitted meets our needs and that no required fields have been left blank. There are many ways to validate data, but for the purposes of this project we are just looking for a simple validation that makes sure there is information in every field and that the values of `password` and `passwordVerify` are equal. (Feel free to create more complex validation logic in pursuit of the stretch goals below.)
 
+We already have a `validateForm` method defined in our component logic. In order to perform real validation, we must add code inside this method to access all of the input field values, analyze them, and then respond accordingly. This sounds complex, but really we are talking about some form of conditional. (Again, feel free to explore different approaches here, but what follows is one way of accomplishing this goal.)
 
+```js
+methods: {
+    validateForm: function () {
+      if ((this.username != '') &&
+          (this.email != '') &&
+          (this.password === this.passwordVerify)){
+        // Form data is valid, so turn off the form to show the success message.
+        this.showForm = false;
+      } else {
+        // Form data is NOT valid, so show the error message.
+        this.showError = true;
+      }
+    }
+}
+```
+The validation rules we must enforce are:
+
+* `username` is not blank
+* `email` is not blank
+* `password` and `passwordVerify` are equal
+
+The example above uses a simple series of conditional statements to check that all three conditions are met. If there is a problem with any of these fields, the validation method will cause the error message to show by setting `showError` to `true`. Here is what that looks like in the browser:
+
+![Error Message](/img/project8_errorMessage.png)
+<br>Error message
+
+If all of the conditions pass, then the form is hidden by setting `showForm` to `false`. This also has the effect of showing the success message, which looks like this:
+
+![Success message](/img/project8_successMessage.png)
+<br>Success message
+
+Currently, the success message contains a `TODO` asking us to add a `<router-link>` tag to link to another page in our application. We will continue this project in the next seciton and add that tag. For now, though, we have finished this project. We should be able to fill in the form with valid data and see the success message. When we submit invalid data (omit a field, or submit mismatched passwords), then we will see the error message.
 
 ## Wrapping it Up
+Once we have made all of our changes to the `src/components/Home.vue` file, it should look something like this:
+
+```html
+<template>
+  <div class="home">
+    <div class="form-container" v-show="showForm">
+      <h1>Join the Web Developers Club!</h1>
+      <p>Sign up to access our special, secret page. Just create an account and answer a brief survey.</p>
+      <p class="error" v-show="showError">Please check the information you have entered. Be sure to fill in all fields.</p>
+      <form v-on:submit.prevent="validateForm">
+        <p><label for="username">Username <input type="text" id="username" v-model="username"></label></p>
+        <p><label for="email">Email <input type="email" id="email" v-model="email"></label></p>
+        <p><label for="password">Password <input type="password" id="password" v-model="password"></label></p>
+        <p><label for="passwordVerify">Verify Password <input type="password" id="passwordVerify" v-model="passwordVerify"></label></p>
+
+        <p><input type="submit" value="Submit"></p>
+      </form>
+    </div>
+    <div class="success-message" v-show="!showForm">
+      <h1>Thank you for signing up!</h1>
+      <p>Please take our new member survey. Click here</p><!-- TODO: Link "Click here" to the survey page. -->
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'Home',
+  data () {
+    return {
+      username: '',
+      email: '',
+      password: '',
+      passwordVerify: '',
+      showForm: true,
+      showError: false
+    }
+  },
+  methods: {
+    validateForm: function () {
+      if ((this.username != '') &&
+          (this.email != '') &&
+          (this.password === this.passwordVerify)){
+        // Form data is valid, so turn off the form to show the success message.
+        this.showForm = false;
+      } else {
+        // Form data is NOT valid, so show the error message.
+        this.showError = true;
+      }
+    }
+  }
+}
+</script>
+
+<style scoped>
+h1, h2 {
+  font-weight: normal;
+}
+.error {
+  border: 1px solid #aa0000;
+  padding: 1rem;
+  color: #aa0000;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+a {
+  color: #42b983;
+}
+</style>
+```
 
 ## Build and Deploy
 Once we've finished our work, we can build and deploy the project. This project has been configured to build to the `docs/` directory, so we can follow the same pattern we used before:
