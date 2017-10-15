@@ -1,5 +1,9 @@
 # Project: Responding to User Input Part Two
 
+In the previous section, we worked on the first part of [the Multi-View Application project](https://github.com/suwebdev/wats4000-multi-view-app). For this final part of the project, we should continue working on the repository we cloned in the last section. We will work a bit more with forms and explore how to set up simple routes in our application to provide bookmarkable locations for our users.
+
+It's assumed that we've already forked, cloned, and set up our workspace. We should be able to continue from where we left off last time.
+
 ## Review the Requirements
 
 ## Working the Project
