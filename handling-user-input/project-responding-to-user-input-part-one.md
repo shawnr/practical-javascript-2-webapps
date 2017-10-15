@@ -8,6 +8,15 @@ In its entirety, this project asks us to create a couple of forms and move the u
 
 The Basic Requirements for this project are broken into requirements for each of the files. Stretch goals are provided that apply to all of the work in this project. We are encouraged to push this experiment as far as possible, so adding or altering form fields, adjusting validation logic, and providing more textured error messages are all fair game for stretching this project in this section. (But remember, to fully complete the project we must complete the second part in the Routing and URLs section.)
 
+Here are the Basic Requirements relevant to this first part of the project:
+
+**In the `src/components/Home.vue` file**
+* Create a form for the user to sign up to the site
+* Use `v-show` to toggle between the sign up form and the success text
+* Use the `submit` event to trigger the `validateForm` method on the component
+* Validate the form according to the rules in the `Home.vue` file
+* If the form is valid, show the success message; if not, show a warning message on the form
+
 ## Working the Project 
 To begin working on the file, it is necessary to install our dependencies (by running `npm install` inside the project repository), and then we will want to run our development server (by running `npm run dev` inside the project repository). Once we have the project running, we will see this in the browser:
 
