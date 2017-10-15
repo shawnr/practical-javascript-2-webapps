@@ -40,6 +40,41 @@ As we begin work we will need to have the following files open:
 
 We will move between these files to complete all of the work for this project.
 
+### Adding the Survey View to the Routes Array
+First of all, we should add the Survey view to the routes definition so we can preview our work as we complete the form and logic in that component. This is done by editing the `src/router/index.js` file. We find `TODO` notes in this file helping us know where we need to edit. First, we must import the `Survey` component, and then we must set up a route definition. Here is what that looks like:
+
+```js
+import Vue from 'vue'
+import Router from 'vue-router'
+import Home from '@/components/Home'
+import Survey from '@/components/Survey'
+// TODO: Import the Secret component
+
+Vue.use(Router)
+
+export default new Router({
+  routes: [
+    {
+      path: '/',
+      name: 'Home',
+      component: Home
+    },
+    {
+        path: '/survey',
+        name: 'Survey',
+        component: Survey
+    }
+    // Add the Secret route definition
+  ]
+})
+```
+As we can see, there are still some `TODO` notes left in here, but we will handle those later. For now, we have added the `import` statement for the `Survey` component and the route definition. The route definition specifies the URL for the view, so we can load up that URL to preview our site:
+
+![Starting Survey View](/img/project9_survey1.png)
+<br>Starting Survey View
+
+The image above shows what the starting Survey view looks like. It can be accessed at `http://localhost:8080/#/Survey`. Right now we must manually type in that URL, but we will eventually add a link in the success message on the `Home` component. Notice that although we see some form fields here, we do not actually have choices for the questions. Let's finish out the form in the `Survey` component so we can see the completed page.
+
 ### Creating the Form in `Survey.vue`
 This form is partially there for us. We have to add the `v-on` directive to the `<form>` tag so we can properly handle the `submit` event. We will also need to use the `.prevent` modifier, just like we did with the sign up form on the `Home` component.
 
@@ -116,9 +151,21 @@ We can continue through the `TODO` notes adding the `v-model` directives to thei
 ```
 Now we can see our completed form in action:
 
-### Adding the Survey View to the Routes Array
+![Completed Survey Form](/img/project9_survey2.png)
+<br>Completed Survey Form
+
+We have all of our choices available and everything should be all connected in the template. Let's take a moment to add that link on the `Home` component to get users to this view.
 
 ### Adding the Link to the Survey from the Home View
+Adding the link for a user to click is very easy. Since we have used name routes, we can reference the name of the route. We only need to open the `src/components/Home.vue` file and add a single `<router-link>` tag inside the success message:
+
+```html
+<p>Please take our new member survey. <router-link to="Survey">Click here</router-link></p>
+```
+Once we have this, we can return to the home of our project (`http://localhost:8080/#/`) and fill in the sign up form. When we have successfully submitted valid data, we should see the link show up. Clicking the link should take us back to the Survey view. Here is what it looks like:
+
+![Survey Link on Home View](/img/project9_surveyLink.png)
+<br>Survey Link on Home View
 
 ### Creating the Secret View
 
