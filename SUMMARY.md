@@ -124,5 +124,4 @@
 
 * [Appendix A: Additional Resources for Learning](appendices/appendix-a-resources.md)
 * [Appendix B: API Suggestions](appendices/appendix-b-api-suggestions.md)
-* [Appendix C: Exploring APIs](appendices/appendix-c-exploring-apis.md)
 
