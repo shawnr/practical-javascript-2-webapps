@@ -85,7 +85,9 @@
 
 * [Introduction](using-api-data/README.md)
 * [Core Concept: API Fundamentals](using-api-data/core-concept-using-third-party-data-apis.md)
-* Requesting Data from an API
+* [Requesting Data from an API](using-api-data/requesting-data-from-an-api.md)
+* Quiz: Using API Data
+* Project: Using API Data
 
 ## Application Architecture
 
