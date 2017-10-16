@@ -1,8 +1,6 @@
 # Exploring APIs
 Whenever we begin using a new data API, it's good to spend a little time exploring the API documentation and trying requests using an API browser tool like [Postman for Google's Chrome browser](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en).
 
-![Postman for Google Chrome Interface](img/postman1.png)
-
 Postman allows us to construct HTTP requests to any API. We can set necessary headers, query parameters, form data, and more. Results are clearly displayed so we can truly begin to understand the shape of the data that comes back from the API. Each API will deliver a different type of data object, and all the attributes contained in these responses become available to us inside our application once we set up our API calls correctly. 
 
 That means we can use an API browser tool to get a clear view of what information exists in the data coming back from your API service. Since the API data objects are translated directly into JSON objects in our application, we can easily see how to access the specific information we require for your purposes. 
