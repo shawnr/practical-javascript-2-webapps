@@ -180,7 +180,7 @@ If there user were to type in a different word, it would be appended to the URL 
 The same technique for appending parameters to a request can be used to append API keys, other static parameters that make results more useful for users, and much more. We can also use expanded configurations of the `axios` call to change the request method or add other elements like authorization headers to the API request.
 
 
-## Promises
+
 
 
 
