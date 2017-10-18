@@ -112,7 +112,72 @@ The `catch` clause executed when there is an error in the request. It also uses 
 We can see from this example code how the `posts` and `errors` values can be used in our templates to output useful information for our users. In this case, all of this code would combine to show the list of sample results provided by the JSON Placeholder API.
 
 ### Requests with Parameters
-Axios actually lets us do quite a few different things to make
+Axios actually lets us do quite a few different things to make our API requests more complex and functional. One case that comes up often is using user-submitted information to modify a request. We often want to have a `refreshResults` or a `search` method on our components that can be invoked to provide the user with better information.
+
+Let's take a look at an example request made to the Datamuse API, which can return all sorts of word data. In this case, we will use a query that returns synonyms for words or phrases:
+
+```html
+<template>
+  <div class="hello">
+    <h1>Example Data Request</h1>
+    <p>Find synonyms for <input v-model="phrase"> <button v-on:click="findSynonyms">Search</button></p>
+    <ul v-if="synonyms.length > 0">
+      <li v-for="synonym of synonyms">
+        <p><strong>{{synonym.word}}</strong></p>
+        <p>{{synonym.score}}</p>
+      </li>
+    </ul>
+
+    <ul v-if="errors.length > 0">
+      <li v-for="error of errors">
+        {{error.message}}
+      </li>
+    </ul>
+  </div>
+</template>
+
+<script>
+import axios from 'axios';
+
+export default {
+  name: 'HelloWorld',
+  data () {
+    return {
+      synonyms: [],
+      errors: [],
+      phrase: 'logic'
+    }
+  },
+  methods: {
+    findSynonyms: function(){
+      axios.get('https://api.datamuse.com/words', {
+        params: {
+          ml: this.phrase
+        }
+      })
+      .then(response => {
+        this.synonyms = response.data;
+      })
+      .catch(error => {
+        this.errors.push(error);
+      });
+    }
+  }
+}
+</script>
+```
+In this example, we can see the template and the logic for a component that allows the user to type in a word or phrase and then receive synonyms back. If we look at the template, we see that it generally matches what we saw in the previous example. The new template includes a text input field and a button to allow the user to type in their word or phrase and then trigger the `findSynonyms` method to execute by clicking the "Search" button.
+
+If we look at `findSynonyms`, we see that it executes an axios call similar to the previous example. The big difference is that this call includes a little extra configuration object that defines an extra "parameter" for the API request. The parameter is called `ml` and it is set equal to the value the user typed into the `phrase` input.
+
+The result of this configuration is that the API request has the parameters appended to it as query string parameters. If a user does a search for the word "logic", then the API request URL is:
+
+```
+https://api.datamuse.com/words/?ml=logic
+```
+If there user were to type in a different word, it would be appended to the URL instead of "logic". This allows the user to get the specific results they desire from our interface. 
+
+The same technique for appending parameters to a request can be used to append API keys, other static parameters that make results more useful for users, and much more. We can also use expanded configurations of the `axios` call to change the request method or add other elements like authorization headers to the API request.
 
 
 ## Promises
