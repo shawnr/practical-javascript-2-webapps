@@ -22,7 +22,7 @@ Please enjoy this self-check quiz to help you identify key concepts, points, and
     <question>
         <p>What does API stand for?</p>
         <answer>Automated Programming Interface</answer>
-        <answer>Asynchronous Power Instance</answer>
+        <answer>Asynchronous Protocol Instance</answer>
         <answer correct>Application Programming Interface</answer>
         <answer>Authority Program Interaction</answer>
         <explanation>API stands for "Application Programming Interface".</explanation>
