@@ -66,7 +66,52 @@ export default {
 }
 </script>
 ```
-Notice that `created ()` is defined in a very similar way to the `data ()` function.
+Notice that `created ()` is defined in a very similar way to the `data ()` function. Within the `created ()` function, we only make one JavaScript statement: a somewhat complex command using `axios`. Although this doesn't look much like the code we've been used to writing/reading, it's actually the most simple way to write an API request. Once we take a closer look, we should see that this is not as complex as it first appears.
+
+The first line of the command is: 
+```
+axios.get(`http://jsonplaceholder.typicode.com/posts`)
+```
+This invokes `axios` and supplies the URL for the API request. This command results in the creation of a "promise", which is a JavaScript object that works as a placeholder for some information or function that will take a moment to be resolved. (We can [read more about promises here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).) Because the request to the API cannot be resolved instantly (it takes some time to receive the data from the server, just like when we are downloading other information from a web server), we need this promise object to handle the receipt and transformation of the API data into something we can use in the application.
+
+The next clause of the `axios` command defines what happens after the promise is resolved:
+
+```js
+.then(response => {
+  this.posts = response.data
+})
+```
+This is a `then` clause, and it will be executed when the promise is completed, regardless of what the result of the API call was. The way we use Axios in our applications, we want to use the [JavaScript "arrow function"](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) to define the function that will be executed when the `then` clause is invoked (which will be when the API response is received). 
+
+Using the arrow function syntax, the argument for this function is named `response`. This argument will be passed to the code block defined between the curly braces. (The arrow is a reminder that the `response` value will be "injected" into the code that follows.) The `response` value is an object that represents the API request we made with `axios`. The actual information received from the server is stored in `response.data`. So the `then` clause executes an arrow function that sets `this.posts` equal to `response.data`. Our template has access to `this.posts`, so it can successfully parse that data and we can output the information using a loop.
+
+The final clause in this request is the `catch` clause:
+
+```js
+.catch(e => {
+  this.errors.push(e)
+})
+```
+
+The `catch` clause executed when there is an error in the request. It also uses the arrow function syntax to define the function that will be executed when an error is detected. The error is captured as the value `e`, and passed into the arrow function. We only have one line of code here, which will add this error to the array of `errors` we defined in the component's `data` object. Again, our templates will have access to these values, allowing us to present this information to our users.
+
+```html
+<ul v-if="posts && posts.length">
+  <li v-for="post of posts">
+    <p><strong>{{post.title}}</strong></p>
+    <p>{{post.body}}</p>
+  </li>
+</ul>
+
+<ul v-if="errors && errors.length">
+  <li v-for="error of errors">
+    {{error.message}}
+  </li>
+</ul>
+```
+We can see from this example code how the `posts` and `errors` values can be used in our templates to output useful information for our users. In this case, all of this code would combine to show the list of sample results provided by the JSON Placeholder API.
+
+### Requests with Parameters
 
 ## Promises
 
