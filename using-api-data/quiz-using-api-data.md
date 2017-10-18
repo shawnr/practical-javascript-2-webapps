@@ -65,13 +65,21 @@ Please enjoy this self-check quiz to help you identify key concepts, points, and
         <answer><code>init ()</code></answer>
         <explanation>The <code>created ()</code> function is executed when a Vue.js component is invoked.</explanation>
     </question>
-    <question multiple>
-        <p>What are the advantages of using named routes?</p>
-        <answer>Routes get sad without names.</answer>
-        <answer correct>We can alter the paths in our application without editing templates.</answer>
-        <answer correct>It's easier to remember names than convoluted paths.</answer>
-        <answer correct>It can be difficult to remember parameter ordering in the path.</answer>
-        <explanation>There are many reasons to use named routes over paths. These are just a few of them.</explanation>
+    <question>
+        <p>Axios uses which JavaScript concept to define an HTTP request in order to handle the time it takes for the request to complete without freezing the application while it waits?</p>
+        <answer>Await</answer>
+        <answer correct>Promises</answer>
+        <answer>Callbacks</answer>
+        <answer>Time Travel</answer>
+        <explanation>Axios uses Promises to allow the HTTP request to complete without holding up the execution of other parts of the application.</explanation>
+    </question>
+    <question>
+        <p>What other advanced JS concept can we use to handle the results and potential errors from an API request?</p>
+        <answer>Scoped Functions</answer>
+        <answer>Promises</answer>
+        <answer correct>Arrow Functions</answer>
+        <answer>Magic</answer>
+        <explanation>We can use Arrow Functions to handle the results and potential errors from an API request.</explanation>
     </question> 
 </quiz>
 
