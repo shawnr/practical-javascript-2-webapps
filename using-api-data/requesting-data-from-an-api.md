@@ -179,7 +179,10 @@ If there user were to type in a different word, it would be appended to the URL 
 
 The same technique for appending parameters to a request can be used to append API keys, other static parameters that make results more useful for users, and much more. We can also use expanded configurations of the `axios` call to change the request method or add other elements like authorization headers to the API request.
 
-
+<div class="tip-box">
+  <h3>Advanced JavaScript Concepts</h3>
+  <p>The concepts of <b>arrow functions</b> and <b>promises</b> are difficult to grasp at first. In this book we have only explained them far enough to use these concepts in relation to the API calls we're making. However, there are many ways that arrow functions and promises can be used to enhance our code. Both of these features were added to JavaScript to address weaknesses that have bothered developers for ages. In the early stages of our development careers it might be difficult to grasp just how valuable they are, but as we progress and grow as developers we will see these concepts used more often.</p>
+</div>
 
 
 
