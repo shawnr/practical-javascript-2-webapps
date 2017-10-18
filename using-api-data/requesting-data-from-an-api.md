@@ -96,14 +96,14 @@ The final clause in this request is the `catch` clause:
 The `catch` clause executed when there is an error in the request. It also uses the arrow function syntax to define the function that will be executed when an error is detected. The error is captured as the value `e`, and passed into the arrow function. We only have one line of code here, which will add this error to the array of `errors` we defined in the component's `data` object. Again, our templates will have access to these values, allowing us to present this information to our users.
 
 ```html
-<ul v-if="posts && posts.length">
+<ul v-if="posts.length > 0">
   <li v-for="post of posts">
     <p><strong>{{post.title}}</strong></p>
     <p>{{post.body}}</p>
   </li>
 </ul>
 
-<ul v-if="errors && errors.length">
+<ul v-if="errors.length > 0">
   <li v-for="error of errors">
     {{error.message}}
   </li>
@@ -112,6 +112,8 @@ The `catch` clause executed when there is an error in the request. It also uses 
 We can see from this example code how the `posts` and `errors` values can be used in our templates to output useful information for our users. In this case, all of this code would combine to show the list of sample results provided by the JSON Placeholder API.
 
 ### Requests with Parameters
+Axios actually lets us do quite a few different things to make
+
 
 ## Promises
 
