@@ -57,13 +57,13 @@ Please enjoy this self-check quiz to help you identify key concepts, points, and
         <answer correct><code>tags</code></answer>
         <explanation>The two querystring parameters in the API request are <code>authorId</code> and <code>tags</code>.</explanation>
     </question>
-    <question multiple>
-        <p>What do we need to do to add a new route to our application?</p>
-        <answer correct>Create the new component file.</answer>
-        <answer correct>Add the route to the routes Array.</answer>
-        <answer>Update all of the other component templates.</answer>
-        <answer correct>Provide links or logic to move users to the new location.</answer>
-        <explanation>To add a new route to our application we must create the component that will handle the route, add it to the route definition Array, and provide links or logic to allow our users to find the new location.</explanation>
+    <question>
+        <p>Which function will be executed when a Vue.js component is invoked?</p>
+        <answer><code>data ()</code></answer>
+        <answer correct><code>created ()</code></answer>
+        <answer><code>constructor ()</code></answer>
+        <answer><code>init ()</code></answer>
+        <explanation>The <code>created ()</code> function is executed when a Vue.js component is invoked.</explanation>
     </question>
     <question multiple>
         <p>What are the advantages of using named routes?</p>
