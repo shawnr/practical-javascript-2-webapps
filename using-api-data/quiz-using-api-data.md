@@ -27,37 +27,35 @@ Please enjoy this self-check quiz to help you identify key concepts, points, and
         <answer>Authority Program Interaction</answer>
         <explanation>API stands for "Application Programming Interface".</explanation>
     </question>
-    <question multiple>
-        <p>Which of the following properties of a route can be used with <code><router-link></code> or <code>router.push()</code>?</p>
-        <answer correct><code>name</code></answer>
-        <answer><code>children</code></answer>
-        <answer><code>component</code></answer>
-        <answer correct><code>path</code></answer>
-        <explanation>The <code>path</code> and <code>name</code> properties can be used to create a link with <code><router-link></code> or <code>router.push()</code>.</explanation>
+    <question>
+        <p>JSON stands for JavaScript Object Notation</p>
+        <answer correct>True</answer>
+        <answer>False</answer>
+        <explanation>True: JSON stands for JavaScript Object Notation.</explanation>
     </question>
     <question>
-        <p>In a module import statement using the default webpack configuration, what does the <code>@</code> symbol stand for?</p>
-        <answer><code>email</code></answer>
-        <answer><code>repository</code></answer>
-        <answer correct><code>src/</code></answer>
-        <answer><code>components</code></answer>
-        <explanation>The <code>@</code> symbol stands for <code>src/</code> in the path to a file.</explanation>
-    </question>
-    <question>
-        <p>Nested URLs are defined using which property of the route object?</p>
-        <answer><code>nested</code></answer>
-        <answer><code>babies</code></answer>
-        <answer correct><code>children</code></answer>
-        <answer><code>siblings</code></answer>
-        <explanation>The <code>children</code> property defines views nested in a parent view.</explanation>
+        <p>Postman is a tool used for what?</p>
+        <answer>Sending email.</answer>
+        <answer>Managing mailing lists.</answer>
+        <answer correct>Exploring API requests and responses.</answer>
+        <answer>Building fences.</answer>
+        <explanation>Postman is a tool used for exploring API requests and responses.</explanation>
     </question>
     <question multiple>
-        <p>Which parameters are defined in the following route path: <code>'/posts/:slug/page/:pageNum'</code></p>
-        <answer correct><code>slug</code></answer>
-        <answer><code>page</code></answer>
-        <answer correct><code>pageNum</code></answer>
+        <p>What module could be used for making API requests from our Vue.js applications?</p>
+        <answer><code>vue-router</code></answer>
+        <answer correct><code>axios</code></answer>
+        <answer correct><code>vue-resource</code></answer>
+        <answer><code>flux</code></answer>
+        <explanation>We can use either <code>axios</code> or <code>vue-router</code> to make HTTP requests from our Vue.js applications.</explanation>
+    </question>
+    <question multiple>
+        <p>Which querystring parameters are referenced in the following API request: <code>'https://example.com/api/v2/posts?authorId=2&tags=javascript'</code></p>
+        <answer><code>v2</code></answer>
         <answer><code>posts</code></answer>
-        <explanation>The two route parameters defined in this path are <code>slug</code> and <code>pageNum</code>.</explanation>
+        <answer correct><code>authorId</code></answer>
+        <answer correct><code>tags</code></answer>
+        <explanation>The two querystring parameters in the API request are <code>authorId</code> and <code>tags</code>.</explanation>
     </question>
     <question multiple>
         <p>What do we need to do to add a new route to our application?</p>
