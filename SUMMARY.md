@@ -87,7 +87,6 @@
 * [Core Concept: API Fundamentals](using-api-data/core-concept-using-third-party-data-apis.md)
 * [Exploring APIs](using-api-data/exploring-apis.md)
 * [Requesting Data from an API](using-api-data/requesting-data-from-an-api.md)
-* Using API Data in Templates
 * Quiz: Using API Data
 * Project: Using API Data
 
