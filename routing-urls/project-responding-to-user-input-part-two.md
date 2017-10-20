@@ -160,7 +160,7 @@ We have all of our choices available and everything should be all connected in t
 Adding the link for a user to click is very easy. Since we have used name routes, we can reference the name of the route. We only need to open the `src/components/Home.vue` file and add a single `<router-link>` tag inside the success message:
 
 ```html
-<p>Please take our new member survey. <router-link to="Survey">Click here</router-link></p>
+<p>Please take our new member survey. <router-link to="/survey">Click here</router-link></p>
 ```
 Once we have this, we can return to the home of our project (`http://localhost:8080/#/`) and fill in the sign up form. When we have successfully submitted valid data, we should see the link show up. Clicking the link should take us back to the Survey view. Here is what it looks like:
 
@@ -267,7 +267,7 @@ Full file contents:
     </div>
     <div class="success-message" v-show="!showForm">
       <h1>Thank you for signing up!</h1>
-      <p>Please take our new member survey. <router-link to="Survey">Click here</router-link></p>
+      <p>Please take our new member survey. <router-link to="/survey">Click here</router-link></p>
     </div>
   </div>
 </template>
