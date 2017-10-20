@@ -9,14 +9,14 @@ We create links to other routes by using the `<router-link>` tag in our template
 ```html
 <ul class="nav">
     <li>
-        <router-link to="Home">Home</router-link>
+        <router-link v-bind:to="{name: 'Home'}">Home</router-link>
     </li>
     <li>
-        <router-link to="NewComponent">New Component</router-link>
+        <router-link v-bind:to="{name: 'NewComponent'}">New Component</router-link>
     </li>
 </ul>
 ```
-When we use the `<router-link>` element to create links, we also use a `to` attribute instead of a typical `href` attribute. The `to` attribute accepts _either_ the `name` or the `path` property of the route. In the example above we have used the `name` property. But we could achieve the exact same result using the `path` property:
+When we use the `<router-link>` element to create links, we also use a `to` attribute instead of a typical `href` attribute. The `to` attribute accepts _either_ the `name` or the `path` property of the route. In the example above we have used the `name` property. But we could achieve the exact same result (with slightly less typing) using the `path` property:
 
 ```html
 <ul class="nav">
