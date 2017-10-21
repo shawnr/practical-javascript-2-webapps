@@ -57,9 +57,11 @@ Here are the Basic Requirements from the project's `README.md` file:
 * Allow the user to easily switch between the two pages in the application.
 
 ## Working the Project
-
+TODO
 
 ## Wrapping Up
+TODO
+
 
 ## Build and Deploy
 Once we've finished our work, we can build and deploy the project. This project has been configured to build to the `docs/` directory, so we can follow the same pattern we used before:
