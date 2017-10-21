@@ -88,16 +88,19 @@
 * [Exploring APIs](using-api-data/exploring-apis.md)
 * [Requesting Data from an API](using-api-data/requesting-data-from-an-api.md)
 * [Quiz: Using API Data](using-api-data/quiz-using-api-data.md)
-* Project: Using API Data
+* [Project: Using API Data](using-api-data/project-using-api-data.md)
 
 ## Application Architecture
 
 * [Introduction](application-architecture/README.md)
 * Core Concept: Web Components
 * Identifying Application Components for Improvement
+* Organizing Data and Configuration Code
 * Tips for Refactoring
+* Quiz: Application Architecture
+* Project: Application Architecture
 
-## Visual Feedback
+## Visual Feedback and Enhancement
 
 * [Introduction](visual-feedback/README.md)
 * Core Concept: Conventional Feedback
