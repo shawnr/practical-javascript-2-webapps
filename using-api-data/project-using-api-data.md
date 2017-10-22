@@ -104,7 +104,7 @@ This API request should return words that are synonymous with "test" and also rh
 
 Now that we have verified our API results using Postman, and we have set up our API call using `axios`, we can continue to edit the template.
 
-### Rhymesaurus Template
+### Rhymesaurus Form
 In the template we primarily need to set up the input form and then the output of the results and any potential errors. We also want to let our user know if the API request completed successfully, but no words were found. (If we don't let our user know that no words were found, then they are almost guaranteed to perceive that case as a breakage in our software.)
 
 To do this, we must first set up the event listener to handle the form submission event. This follows the same pattern we used in the previous project:
@@ -126,7 +126,49 @@ There is not much special about this implementation. We reference the `rhyme` an
   <p>It is possible to use HTML input fields and buttons to simulate a form experience using only a <code>v-on:click</code> directive on the button. This can work, but it only works when the button is clicked. By using the form, and tracking the form submission event instead of the button click event, we leverage the default behavior of forms in the web browser to allow users to press the <code>Enter/Return</code> button to submit the form. This is a nice enhancement that works better for users who prefer keyboard navigation of a website (often either users with accessibility needs or power users who want greater efficiency). Where possible, it's usually better to use a fully defined form to handle user-submitted data.</p>
 </div>
 
+Now that we have the form wired up to the proper component data values and the proper form submission handler, we can test our page in the browser. When we click search, we will not see any results (because we haven't written that part yet) but we will see the XHR request made by Axios in the devtools console:
 
+![XHR Request in Devtools Console](/img/project10-xhr-console.png)
+<br>XHR Request in Devtools Console
+
+We can also see the information in the Vue Devtools tab. After we have made the request we can see that the `results` value is populated as an Array with 3 items:
+
+![Vue Devtools Results](/img/project10-vuedevtools-test.png)
+<br>Vue Devtools Results
+
+Now we can set up the output of this information for the user to view.
+
+### Data Output in Template
+To output the data, we will create a list of items. The list will use the `.results` class to label it and control styling. We will make a loop using the `v-for` directive on each of the list items. In the end, it will look like this:
+
+```html
+<ul v-if="results && results.length > 0" class="results">
+  <li v-for="item of results">
+    <p><strong>{{item.word}}</strong></p>
+    <p>{{item.score}}</p>
+  </li>
+</ul>
+```
+We want to hide the list until we have results. We also want to hide the list if we have zero results returned from the API. We can notice that `results` is initialized to `null`, which means that until the user triggers a form submission event the results will not show. Once the `findWords` function is executed, `results` will be an Array. If it has any items in it (if `results.length` is greater than `0`), then the `.results` list will be shown.
+
+On the `li` element, we have created a `v-for` loop. We are using the somewhat generic term `item` to label each item in the `results` array as they are processed through the loop iterations. Each `item` is an object with `word` and `score` values (we can see all of the properties on each item returned by the API in Postman when we inspect our API call). We output the values of those properties for the user to view.
+
+Once we have this template code in place, we can run a test and we should see the results.
+
+![Testing the Data Output](/img/project10-test-ham.png)
+<br>Testing the Data Output
+
+### Handling No Data
+Sometimes the user will search for a rhyme and synonym that does not exist. In these cases, the API will return zero results. If we do not let the user know that the API returned zero results, then they are likely to believe our software is not working correctly. It's crucial to provide this message so the user can have a much better experience and understand that they should adjust their search to get better results.
+
+To accomplish this, we will use a `v-else-if` statement to control the display of a message that tells the user to adjust their search parameters. This is what it looks like:
+
+```html
+<div v-else-if="results && results.length==0" class="no-results">
+  <h2>No Words Found</h2>
+  <p>Please adjust your search to find more words.</p>
+</div>
+```
 
 ## Wrapping Up
 TODO
