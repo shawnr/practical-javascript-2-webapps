@@ -90,7 +90,7 @@ As we can see, `findWords` is a fairly simple method that uses `axios` to make a
 
 Notice that in addition to the URL for the API request, we have also supplied a configuration object in the `axios.get()` call. This configuration object only specifies `params` at the moment, but if we needed we could specify other types of configuration options (e.g. `headers`, `transformResponse` functions, etc.). It's critical that the `params` property names match the parameter names used by whatever API we are calling (in this case, the Datamuse API). Refer to the API documentation for the specific names an API uses and then use those in the `params` object when setting up `axios` requests.
 
-This is an example of the kind of unorthodox tool we can build by using discrete features of an API. There are plenty of tools and books to look up rhymes for words (we call them  "rhyming dictionaries"). And there are tools and books to look up synonymous words (we call that a "thesaurus"). But what we are creating here is a "rhyming thesaurus", which is a much more unusual type of tool. It's also the kind of cross-lookup that would be difficult to replicate in print, making it especially suitable for building as a software application.
+This is an example of the kind of unorthodox tool we can build by using discrete features of an API. There are plenty of tools and books to look up rhymes for words (we call them  "rhyming dictionaries"). And there are tools and books to look up synonymous words (we call that a "thesaurus"). But what we are creating here is a "rhyming thesaurus" (or "Rhymesaurus"), which is a much more unusual type of tool. It's also the kind of cross-lookup that would be difficult to replicate in print, making it especially suitable for building as a software application.
 
 If we are using Postman (which we should be using) to test our API queries, we can try something like this:
 
@@ -99,6 +99,32 @@ https://api.datamuse.com/words?ml=test&rel_rhy=ham
 ```
 This API request should return words that are synonymous with "test" and also rhyme with "ham". The list should include "exam" and variations on that word. If we test that query in Postman, we can see the results we hope for:
 
+![API Results in Postman](/img/project10-postman1.png)
+<br>API Results in Postman
+
+Now that we have verified our API results using Postman, and we have set up our API call using `axios`, we can continue to edit the template.
+
+### Rhymesaurus Template
+In the template we primarily need to set up the input form and then the output of the results and any potential errors. We also want to let our user know if the API request completed successfully, but no words were found. (If we don't let our user know that no words were found, then they are almost guaranteed to perceive that case as a breakage in our software.)
+
+To do this, we must first set up the event listener to handle the form submission event. This follows the same pattern we used in the previous project:
+
+```html
+<form v-on:submit.prevent="findWords">
+```
+Again, we are using the `v-on` directive, and we specify the `submit` event. We use the `.prevent` modifier to prevent all of the default event handlers from executing. Finally, we specify the `findWords` method to handle the form submission event. Whenever the form is submitted, `findWords` will be executed.
+
+Once we have set up the form submission handler, we must connect our form fields to our component data. As with the previous project, we will use the `v-model` directive to do that:
+
+```html
+<p>Find rhymes for <input type="text" v-model="rhyme"> related to <input type="text" v-model="phrase"> <button type="submit">Search</button></p>
+```
+There is not much special about this implementation. We reference the `rhyme` and `phrase` values in the data object. It's important to remember that these values must be initialized in the content data object in order to be used in the template like this.
+
+<div class="tip-box">
+  <h3>To Form or Not to Form</h3>
+  <p>It is possible to use HTML input fields and buttons to simulate a form experience using only a <code>v-on:click</code> directive on the button. This can work, but it only works when the button is clicked. By using the form, and tracking the form submission event instead of the button click event, we leverage the default behavior of forms in the web browser to allow users to press the <code>Enter/Return</code> button to submit the form. This is a nice enhancement that works better for users who prefer keyboard navigation of a website (often either users with accessibility needs or power users who want greater efficiency). Where possible, it's usually better to use a fully defined form to handle user-submitted data.</p>
+</div>
 
 
 
