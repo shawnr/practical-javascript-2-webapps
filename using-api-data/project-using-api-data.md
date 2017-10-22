@@ -170,6 +170,49 @@ To accomplish this, we will use a `v-else-if` statement to control the display o
 </div>
 ```
 
+Notice that in this conditional, we are once again checking to see that `results` exists. We do not want to show an error message right away when a user hits our page. We only want to show the error message if the `results` array has been created and if the length of the `results` array is zero. Once we've set this up, we can do a search that will not produce any results:
+
+![Orange and Taxes: No results](/img/project10-orangetaxes.png)
+<br>Orange and Taxes: No results
+
+In this example, we search for words that rhyme with `orange` and are related to `taxes`. There are "No Words Found," which makes perfect sense.
+
+### Handling Errors
+We handle the display of error conditions in much the same way that we handle the display of results and the "no words" message: We will create a conditional to see if the `error` value contains at least one error.
+
+```html
+<ul v-if="errors.length > 0" class="errors">
+  <li v-for="error of errors">
+    {{error.message}}
+  </li>
+</ul>
+```
+The conditional here is almost identical to the conditional we used to control the display of the `.results` list. We can test this display by forcing an error in our API request. The easiest way to do that is to alter the first line of our `axios` command:
+
+```js
+axios.get('https://api.dataTESTmuse.com/words', {
+```
+By inserting the word `TEST` into the domain name, we will trigger a domain error (because that domain does not exist). This comes across to the user like so:
+
+![Network Error](/img/project10-error.png)
+<br>Network Error
+
+We could also try to adjust our URL to trigger other errors within the API (e.g. 404 errors, 500 errors, etc.). Each of these errors should be displayed to the user with a somewhat helpful label. Although the error message might not allow the user to solve the problem, it at least indicates that something has gone wrong beyond their control.
+
+### Creating the New Component
+The remaining project requirements ask us to create a new component that will allow us to create a different kind of word-finding tool. This new component can essentially use the same setup as the `Rhymesaurus.vue`, and it would not be bad to start by simply copying the existing component file with a new name. To change the behavior, we only need to update the form, the data bindings, and the API call that is being formed in our `axios` call.
+
+Once we have created the new component, we are asked to link these two pages together using a standard router definition and the `<router-link>` element. Building this little navigation should be very similar to setting up routes and links in the previous project. Refer back to those pages for additional instruction.
+
+The toughest part of creating the new component is deciding on which features of the [Datamuse API](http://www.datamuse.com/api/) to combine. There are many possibilities, and we are encouraged to explore them to find something interesting to work with. If we're feeling uninspired, here are some ideas along with the URLs to make the API calls.
+
+* `https://api.datamuse.com/words?rel_jjb=car` &mdash; Find adjectives for a given noun
+* `https://api.datamuse.com/words?rel_jjb=car&rel_rhy=ham` &mdash; Find adjectives for a given noun that rhyme with another word
+* `https://api.datamuse.com/words?rel_bgb=statue` &mdash; Find words that frequently precede the given word
+* `https://api.datamuse.com/words?rel_bga=statue` &mdash; Find words that frequently follow the given word
+
+There are many other lookups available on the Datamuse API that can be combined to create interesting tools. Try out queries in Postman to get a feel for what sort of results can be achieved.
+
 ## Wrapping Up
 TODO
 
