@@ -17,6 +17,12 @@ The [Document Object Model ](https://developer.mozilla.org/en-US/docs/Web/API/Do
 ## frontend
 Having to do with the web browser. Frontend technologies include HTML, CSS, and JavaScript. The opposite of *backend*.
 
+## modifier
+An extra command that can be appended to a directive to alter its behavior. For example, the `.prevent` modifier can be used with the `v-on` directive to "prevent defaults" on event handlers.
+
+## mustache syntax
+The name for the Vue.js default template syntax, which uses double curly braces (`{{ }}`) to denote variable interpolation in the template. Mustache syntax is only used to output the value of a variable in a template, and never used with directives.
+
 ## router
 The component of an application that determines what view the user should see based on the URL they request.
 
