@@ -6,3 +6,4 @@ Making export/import data stuff
 ## Common Configuration Techniques
 Making common configs for axios etc.
 
+## Common Filters and Methods
