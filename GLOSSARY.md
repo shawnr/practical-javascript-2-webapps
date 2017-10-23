@@ -5,6 +5,9 @@ The terms listed here will be highlighted throughout the text. Hover over them t
 ## API (Application Programming Interface)
 A feature that allows for functions and data within one system to be accessed programmatically by another system. For example, we can use the Open Weather Map API to request weather data for thousands of cities around the world, and we can use that data within our own applications.
 
+## API end point
+The URL used by an API to indicate where a specific feature or data set exists. For example, `http://api.example.com/v1/users` could indicate the `users/` endpoint of the `example.com` API.
+
 ## backend
 Having to do with the server-side of a web-based project. Often used in phrases such as "backend programming languages", which would be languages that are executed on the server (Python, Java, Ruby, PHP, etc.). The opposite of *frontend*.
 
