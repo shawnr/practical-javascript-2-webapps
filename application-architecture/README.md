@@ -10,7 +10,7 @@ Refactoring can be a necessary task when we see potential to improve our overall
 Understanding what changes to make is a blend of adhering to some general principles of application architecture and software design, as well as bringing new knowledge of the specific problem domain and what the specific project requires. We can always find ways to improve our initial approaches in order to improve our ability to collaborate with others, grow new features, meet new requirements, and evolve alongside the web ecosystem.
 
 ## Refactoring Goals
-In this section we will explore techniques and methods for refactoring software in general, and Vue.js projects in detail. We will review some core concepts for software refactoring and improving the architecture of our applications. We will also look at the concepts and patterns Vue.js utilizes in order to better understand how to work within our chosen framework.
+In this section we will explore techniques and methods for refactoring software in general, and Vue.js projects in detail. We will review some core concepts for software refactoring and improving the architecture of our applications. We will also look at the concepts and patterns Vue.js utilizes in order to better understand how to work within our chosen framework. Finally, we will practice with a complete Vue.js application that can be improved in several ways.
 
 
 
