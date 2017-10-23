@@ -2,7 +2,7 @@
 
 The terms listed here will be highlighted throughout the text. Hover over them to see the definition as you are reading.
 
-## Application Programming Interface
+## API (Application Programming Interface)
 Also known as an API, this is a feature that allows for functions and data within one system to be accessed programmatically by another system. For example, we can use the Open Weather Map API to request weather data for thousands of cities around the world, and we can use that data within our own applications.
 
 ## backend
