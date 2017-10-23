@@ -93,10 +93,10 @@
 ## Application Architecture
 
 * [Introduction](application-architecture/README.md)
-* Core Concept: Web Components
-* Identifying Application Components for Improvement
-* Organizing Data and Configuration Code
+* Core Concept: Separation of Concerns
 * Tips for Refactoring
+* Composing Components
+* Organizing Data and Configuration Code
 * Quiz: Application Architecture
 * Project: Application Architecture
 
