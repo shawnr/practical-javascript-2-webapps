@@ -29,6 +29,9 @@ An extra command that can be appended to a directive to alter its behavior. For 
 ## mustache syntax
 The name for the Vue.js default template syntax, which uses double curly braces (`{{ }}`) to denote variable interpolation in the template. Mustache syntax is only used to output the value of a variable in a template, and never used with directives.
 
+## query string parameters
+Values appended to the URL using the `?` to denote the beginning of the parameters, and the `&` to denote each individual key/value pair. These values are often used with `GET` requests to an API endpoint. For example, in the URL `http://api.example.com/search?q=test&order_by=rating` the values `q` and `order_by` are the parameters.
+
 ## router
 The component of an application that determines what view the user should see based on the URL they request.
 
