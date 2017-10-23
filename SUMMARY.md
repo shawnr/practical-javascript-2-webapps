@@ -93,7 +93,7 @@
 ## Application Architecture
 
 * [Introduction](application-architecture/README.md)
-* Core Concept: Separation of Concerns
+* [Core Concept: Separation of Concerns](application-architecture/core-concept-separation-of-concerns.md)
 * Tips for Refactoring
 * Composing Components
 * Organizing Data and Configuration Code

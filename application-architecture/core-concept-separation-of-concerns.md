@@ -1,0 +1,2 @@
+# Core Concept: Separation of Concerns
+Much of our refactoring work will boil down to upholding the ["separation of concerns"](https://en.wikipedia.org/wiki/Separation_of_concerns)&mdash;the belief that software should be organized into distinct components, each of which handles a single "concern".
