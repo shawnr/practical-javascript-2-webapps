@@ -76,6 +76,8 @@ let fullDate = formatDate(date);
 ```
 This saves us from repetitive typing, and it also gathers everything we would use to format dates. There is no chance that if we change the way we want our dates formatted we will miss one case that results in a bad experience for the user. This also opens the door for making more complex date formats in the future because we can focus on writing the best logic for date formatting in this single location within our system.
 
+If we are working in an object oriented environment, we should also consider whether we have defined the proper class objects. Classes are templates for relating data and functionality together. We often create classes to model objects within the system, and we use the methods on the class to perform specific functions. If we're working with classes, then our refactoring will more likely lead to changes in which methods we specify than global functions. Nonetheless, the same concepts of grouping and re-organizing our logic still apply.
+
 ## Encapsulating Logic or Data
 Make sure to pull out specific logic into sensible components.
 
