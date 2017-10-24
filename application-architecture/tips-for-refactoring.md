@@ -54,7 +54,7 @@ Here are some tips for writing comments in our code:
 * Avoid putting personal information in comments (nobody needs to see your name, rank, serial number, or anything else in the comments)
 * Comments are not an art project; consider other developers and the ease of reading comments while working on code
 
-
+Spending a little extra time to improve comments in our code is something we should do each time we make an edit. If we pay attention to the tips above, we can provide a better experience for everyone working on the project.
 
 
 
