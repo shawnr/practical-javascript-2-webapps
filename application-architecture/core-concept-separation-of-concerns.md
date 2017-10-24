@@ -161,6 +161,8 @@ console.log( myCourse.title );
 ```
 In this case, rather than asking developers to constantly string together the subject code, course number, and course name to create the full display title, this functionality is provided as a getter and the developer is able to use the `Course` object without risking as many errors. This is a somewhat mundane example, but additional logic can be provided on getters and setters to enforce data validation rules, process requirements, and other necessary logic.
 
+## Concerning Separations
+It's important to remember that we do not so much "create" abstractions or separations of concerns in our applications. Rather, we recognize when we have opportunities to enhance the separation of concerns in our software, or to enhance our system by introducing an abstraction. Any of the techniques mentioned above can be used to do harm to a project as well as doing good. The process of refactoring is not without its own risks. By thinking rationally about our projects and always keeping vigilant for ways to improve the organization of our logic and data we can move towards continuous enhancements.
 
 
 
