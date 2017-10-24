@@ -78,14 +78,89 @@ This saves us from repetitive typing, and it also gathers everything we would us
 
 If we are working in an object oriented environment, we should also consider whether we have defined the proper class objects. Classes are templates for relating data and functionality together. We often create classes to model objects within the system, and we use the methods on the class to perform specific functions. If we're working with classes, then our refactoring will more likely lead to changes in which methods we specify than global functions. Nonetheless, the same concepts of grouping and re-organizing our logic still apply.
 
+### Breaking Apart Logic
+Although we have mostly discussed combining logic or data objects to create self-contained data objects or functions, sometimes it is just as important to break apart logic or separate data objects. It becomes much more difficult to understand very long sequences of logical instructions. When reading a lengthy blocks of code, it is easy to lose track of all the names and relationships being created. 
+
+It is preferred to break sequences of logical instructions into their smallest pieces. It's easy to read a function or method with 5-15 lines of code. Beyond that, things become less clear and it's much more difficult to actually parse each line as a reader. However, we often make methods or functions that start out as high-level instructions and refer to more and more detailed methods or functions.
+
+For example, it is possible to imagine writing a game where we need to initialize a game board for the players. If we imagine we have a `game` class defined, we might begin with a lengthy `setUpGame` method:
+
+```js
+setUpGame: function(){
+    // Clear existing board/content
+    // Reset score
+    // Gather player input for player names & tokens
+    // Create a new board
+    // Place pieces on board
+    // Randomly select which player goes first
+    // Initiate first move
+}
+```
+In the example above, we see a list of comments representing each of the major tasks that needs to be completed. But for each of these tasks there might be several lines of code required to accomplish the goal. This method could easily balloon to 50 or more lines of code, which would make it difficult to read through and understand. 
+
+Rather than writing each line of code, it would be better to write a series of statements that call other methods to perform each specific task:
+
+```js
+setUpGame: function(){
+    // Clear existing board/content
+    this.clearBoard();
+    // Reset score
+    this.resetScore();
+    // Gather player input for player names & tokens
+    this.setUpPlayers();
+    // Create a new board
+    this.createBoard();
+    // Place pieces on board
+    this.placePieces();
+    // Randomly select which player goes first
+    this.coinToss();
+    // Initiate first move
+    this.firstMove();
+}
+```
+In this updated version, we can see that this method has become a list of other methods that must be invoked. In each one of these other methods, there can be some combination of specific instructions and calls to other methods. A developer might need to trace functionality through several other components to really get the full sense of the application.
+
+It might seem difficult and unnecessary to separate the actual lines of code that do the work out of this method. However, there are some clear advantages. We've already discussed the fact that reading lengthy sequences of code is difficult. But there are other advantages, too.
+
+When we move functionality out into discrete components, we can more easily modify the application. In this case, if we altered the way the score worked we would only need to update those methods directly responsible for managing scores. Likewise, if we altered the way boards are drawn (perhaps to allow user-generated game boards), then we would only need to modify lines of code in the `createBoard` method. This allows us to make those changes with minimal risk of inadvertently altering the way the `setUpGame` method works. If we find a bug in the coin toss, we do not need to wonder if it is caused by code surrounding it in the `setUpGame` method; instead, we can focus our investigation in the `coinToss` method.
+
+We also create a modularity that allows the use of features in all the situations where we need to use them. For example, there may be other times when we need to perform a virtual coin toss. If we have separated that logic out into a standalone method, then we can use the coin toss feature whenever we wish. The ability to combine game logic in unique and interesting ways is a hallmark of what makes software games engaging.
+
 ## Encapsulating Logic or Data
-Make sure to pull out specific logic into sensible components.
+We might remember from previous experience with object oriented programming that "encapsulation" is often described as "information hiding." This seems like an odd concept: Why would we want to hide information from developers or users? But the reason this is done is to create a better "interface." All of our logic and data constitutes the interface of our system, and as developers we are often more concerned with the interface a system presents than the actual inner workings of the code. 
 
-## Breaking Apart Logic
-Large methods/functions are difficult to understand. Break them into smaller, specific structures.
+There is an old analogy of driving an automobile: We can get into a car and learn to use the steering wheel, gas, brake, gear shift, etc. We do not need to be able to build a vehicle of our own, and we do not need to know exactly how our car works. Understanding the interface allows us to gain the value of using a car while the inner workings of the vehicle remain hidden from us.
 
-## Combining Logic
-Too many objects/methods/functions can also be bad. We don't want to lose track of what is related and we do not want to duplicate functionality in different components.
+The information hiding concept extends to managing how we access the deep functions of a system. Encapsulation allows us to control access to data properties or features that might not be "safe" to access directly. This often is used to allow developers to provide validation checks to make sure nothing is going to break the system.
+
+In the vehicle analogy, this would be like systems to automatically slow us down or sound an alarm when an obstacle is detected. Although it feels like pushing the gas is directly engaging the vehicle to go forward, this input is actually being interpreted and applied through a buffer of features that are designed to prevent us from making a catastrophic mistake.
+
+In the coding world, this is often much more mundane. We use "getters" and "setters" to allow a developer to access and save data with the benefit of data validation, clean-up, and coordination. We also use private methods and properties to make features work "behind the scenes" to provide a better developer and/or user experience.
+
+Here is an example using a `Course` class that might exist in a learning management system:
+
+```js
+class Course {
+    constructor (subjectCode, number, name, description) {
+        this.subjectCode = subjectCode;
+        this.number = number;
+        this.name = name;
+        this.description = description;
+    }
+    get title () {
+        return `${ this.subjectCode } ${ this.number }&mdash;${ this.name }`;
+    }
+}
+```
+Given this class definition for a `Course`, we could use it in this way:
+
+```js
+let myCourse = new Course('WATS', 4000, 'Building JS Web Apps', 'Some longer description');
+console.log( myCourse.title );
+// Prints in console: WATS 4000: Building JS Web Apps
+```
+In this case, rather than asking developers to constantly string together the subject code, course number, and course name to create the full display title, this functionality is provided as a getter and the developer is able to use the `Course` object without risking as many errors. This is a somewhat mundane example, but additional logic can be provided on getters and setters to enforce data validation rules, process requirements, and other necessary logic.
+
 
 
 
