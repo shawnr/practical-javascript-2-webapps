@@ -172,8 +172,114 @@ Here is an example of what this looks like in action:
 In this case, what would have taken several extra lines of JavaScript, and a significant increase in complexity, without composing components has been accomplished in a much more straightforward way. It's easy to understand how the components work together when reading through the code, and we have successfully encapsulated the functionality of the show/hide answers inside the `Question` component. We could even use the `Question` component outside the scope of the FAQ page if we had the need. Essentially we have created a component that will accept content of a certain structure and handle displaying it according to our rules. This is a modular piece of our application that could be used anywhere.
 
 ## Using Events and Listeners
+The data flow in Vue.js is "one-way," which means that data is only allowed to be passed from parent component to child component. This works great for child components that are purely display-oriented, but we often need to trigger some kind of action in the parent component when an action takes place in the child element.
 
-## Syncing Properties
+In this situation, we can use custom events to trigger the action in the parent component. This is how the Vue.js information flow was designed to work:
+
+![Vue.js information flow](/img/vuejs-info-flow.png)
+<br>[Vue.js information flow](https://vuejs.org/v2/guide/components.html#Composing-Components)
+
+As we can see from the diagram, information is put into a child component via "properties" and the child component can signal back to the parent component when an event has occurred. Let's look at a simplified catalog and shopping cart setup to get a clearer picture of how this works.
+
+**Parent Component: `Catalog.vue`**
+```html
+<template>
+  <div>
+    <h1>Store</h1>
+    <p>Number of items in your cart: {{ numItems }}</p>
+    <ul class="items">
+      <li v-for="item in catalog">
+        <item v-on:addedItem="incrementItemCount" v-bind:name="item.name" v-bind:price="item.price"></item>
+      </li>
+    </ul>
+  </div>
+</template>
+
+<script>
+import Item from '@/components/Item';
+
+export default {
+  name: 'FAQ',
+  data () {
+    return {
+      catalog: [
+        {
+          name: 'Widget',
+          price: '12.43'
+        },
+        {
+          name: 'Gidget',
+          price: '74.98'
+        },
+        {
+          name: 'Fidget',
+          price: '3.47'
+        },
+
+      ],
+      numItems: 0
+    }
+  },
+  components: {
+    item: Item
+  },
+  methods: {
+    incrementItemCount: function () {
+      this.numItems++;
+    }
+  }
+}
+</script>
+```
+We can see that in the `Catalog` component, we have a `catalog` array defined and a `numItems` value. The `catalog` array provides the items for us to loop through and display. The `numItems` value shows how many items we have already added to our shopping cart. We can also see that the `Catalog` component uses the `Item` component in its template. This is defined in the `components` property, and it corresponds to the `<item>` element used in the template. Finally, there is an `incrementItemCount` method that is used to increase the item count whenever a new item is added to the shopping cart.
+
+The one thing that really makes this example different than the previous one is that we have added an event listener to that custom `<item>` element:
+
+```html
+v-on:addedItem="incrementItemCount"
+```
+That listener is waiting for the `addedItem` event to be triggered. When an `addedItem` event is detected, the `Catalog` component will execute the `incrementItemCount` method, which will increase the value of `numItems` and update the display for the user. Let's take a look at the `Item` component to see how that works.
+
+**Child Component: `Item.vue`**
+```html
+<template>
+  <div class="item">
+    <h2>{{ name }}</h2>
+    <p>Price: ${{ price }}</p>
+    <button v-on:click="addToShoppingCart">Add to Cart</button>
+  </div>
+</template>
+
+<script>
+
+export default {
+  name: 'item',
+  data () {
+    return {
+
+    }
+  },
+  props: [
+    'name',
+    'price'
+  ],
+  methods: {
+    addToShoppingCart: function () {
+      console.log(`Adding ${ this.name } to cart.`);
+      this.$emit('addedItem');
+    }
+  }
+}
+</script>
+```
+In the `Item` component, we have a simple template defined that shows some information and provides an "Add to cart" button. The button has a `v-on` directive applied to it, and it's looking for a `click` event. When the user clicks the button, it executes the `addToShoppingCart` function. In a real-world implementation, this method would probably perform an API request to record the user's data in a persistent database. For the sake of this example, it merely logs a message in the browser console. It also emits a custom event trigger, `addedItem`. 
+
+When all of this is put together, the result is a working counter that increments regardless of which item we add to the shopping cart:
+
+![Custom Event Example](/img/custom-event-example.gif)
+<br>Custom Event Example
+
+The parent `Catalog` component is managing the display of the number of items the user has added to their shopping cart. Each instance of the `Item` child component is only concerned with watching itself and triggering the `addedItem` event when the user clicks the "add to cart" button. Using the one-way data flow in Vue.js, we have been able to send data to the child component and then receive a signal back from the child component. In a real-world example, that event would probably trigger the parent component to refresh an API call or perform some other action to update the information about the shopping cart being shown to the user.
 
 
 
