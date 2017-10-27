@@ -78,6 +78,99 @@ As we can see in the image above, when we click each button it keeps its own tal
 
 ## Setting Properties on Child Components
 
+Components can define a property called `props` (properties), which is an array listing the names of any values that should be passed into the component. These properties can be referenced in the templates using the normal mustache syntax (`{{ propName }}`) or within the component logic like normal (`this.propName`). Properties passed to a child component are bound to the parent component logic, so if the value of the property changes in the parent component, that will refresh the value within the child component, too.
+
+This is very useful for writing child components to handle things like show/hide of individual items. Here is an example using an imaginary FAQ page:
+
+**Parent Component: `FAQ.vue`**
+```html
+<template>
+  <div>
+    <h1>FAQ</h1>
+    <ul class="faqs">
+      <li v-for="faq in faqs">
+        <question v-bind:question="faq.question" v-bind:answer="faq.answer"></question>
+      </li>
+    </ul>
+  </div>
+</template>
+
+<script>
+import Question from '@/components/Question';
+
+export default {
+  name: 'FAQ',
+  data () {
+    return {
+      faqs: [
+        {
+          question: 'Why does the sun shine?',
+          answer: 'The sun is a miasma of incandescent plasma.'
+        },
+        {
+          question: 'What is the meaning of life?',
+          answer: '42.'
+        },
+        {
+          question: 'How to become a web developer?',
+          answer: "Never gonna give you up, never gonna let you down"
+        },
+
+      ]
+    }
+  },
+  components: {
+    question: Question
+  }
+}
+</script>
+```
+Notice that this parent component controls the "Frequently Asked Questions" view. There is an array called `faqs` that contains the questions and answer we wish to show the user. We want to have these listed by questions, and then reveal the answer when the user clicks on the question. If we were to try to do this directly inside the `FAQ` component, we would need to coordinate a lot of information and add a data property to each of the question/answer sets in order to know which one should be shown or hidden when a user clicks. This logic would get overly complex and it is not necessary.
+
+Instead, we handle this component like we would handle any content presentation to the user, except we use a child component called `Question` to display the content. The `Question` component is imported at the top of the `FAQ` component logic, and then the `Question` component is listed under the `components` property.
+
+We can see that in the template for the `FAQ` component, we loop through each `faq` in the `faqs` array. Within the loop, we insert a `<question>` element and we bind the `question` and `answer` attributes to their corresponding values `faq.question` and `faq.answer`. These attributes will be translated into the properties that the `Question` component expects.
+
+Let's take a look at the child component to see how these are used to display the content to the user.
+
+**Child Component: `Question.vue`**
+```html
+<template>
+  <div class="question">
+    <h2><a v-on:click="toggleAnswer">{{ question }}</a></h2>
+    <p v-show="showAnswer" class="answer">{{ answer }}</p>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'FAQ',
+  data () {
+    return {
+      showAnswer: false
+    }
+  },
+  props: [
+    'question',
+    'answer'
+  ],
+  methods: {
+    toggleAnswer: function () {
+      this.showAnswer = !this.showAnswer;
+    }
+  }
+}
+</script>
+```
+In the `Question` component, we have a simple template defined: We output the `question` and `answer` properties in the template. In the component logic we define those two values in the `props` array, and we also define a simple `toggleAnswer` method that toggles the `showAnswer` value between `false` and `true`. The `showAnswer` value is used to control the `v-show` directive on the answer content.
+
+Here is an example of what this looks like in action:
+
+![FAQ Example in Action](/img/faq_example.gif)
+<br>FAQ Example in Action
+
+In this case, what would have taken several extra lines of JavaScript, and a significant increase in complexity, without composing components has been accomplished in a much more straightforward way. It's easy to understand how the components work together when reading through the code, and we have successfully encapsulated the functionality of the show/hide answers inside the `Question` component. We could even use the `Question` component outside the scope of the FAQ page if we had the need. Essentially we have created a component that will accept content of a certain structure and handle displaying it according to our rules. This is a modular piece of our application that could be used anywhere.
+
 ## Using Events and Listeners
 
 ## Syncing Properties
