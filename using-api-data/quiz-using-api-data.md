@@ -47,7 +47,7 @@ Please enjoy this self-check quiz to help you identify key concepts, points, and
         <answer correct><code>axios</code></answer>
         <answer correct><code>vue-resource</code></answer>
         <answer><code>flux</code></answer>
-        <explanation>We can use either <code>axios</code> or <code>vue-router</code> to make HTTP requests from our Vue.js applications.</explanation>
+        <explanation>We can use either <code>axios</code> or <code>vue-resource</code> to make HTTP requests from our Vue.js applications.</explanation>
     </question>
     <question multiple>
         <p>Which querystring parameters are referenced in the following API request: <code>'https://example.com/api/v2/posts?authorId=2&tags=javascript'</code></p>
