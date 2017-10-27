@@ -122,7 +122,58 @@ Not only is this a cleaner way of using the the same API service in multiple com
 
 ## Common Filters and Methods
 
+When working with components, we often find ourselves performing the same tasks over and over. For example, formatting dates, text, or monetary values is a common need in our templates. This formatting is best accomplished with a "filter", which can be applied to the output of a value in the template. Since most of the logic within a component is packaged as a JavaScript object, it is easy to define objects that can be imported and used within multiple components.
 
+Let's consider the example of a filter that capitalizes a String value. This is often needed when displaying user data in a template because we cannot be sure the user themselves capitalized the text. We can follow the same patterns we used above to accomplish this goal.
+
+First, let's make a file called `/src/common/filters.js`:
+
+```js
+export default {
+  capitalize: function (value) {
+    if (!value) return ''
+    value = value.toString()
+    return value.charAt(0).toUpperCase() + value.slice(1)
+  }
+}
+```
+This file defines an object that has one property: `capitalize`. That property is a function, that expects an argument called `value` and returns a modified form of the `value`. (This is the standard format for a Vue.js filter.)
+
+We can use this filter in a component by importing it in the component logic and then using it in the template.
+
+```html
+<template>
+  <div class="item">
+    <h2>{{ name }}</h2>
+    <p>Price: ${{ price }}</p>
+    <button v-on:click="addToShoppingCart">Add to Cart</button>
+  </div>
+</template>
+
+<script>
+import CommonFilters from `@/common/filters.js`;
+
+export default {
+  name: 'item',
+  data () {
+    return {
+
+    }
+  },
+  props: [
+    'name',
+    'price'
+  ],
+  methods: {
+    addToShoppingCart: function () {
+      console.log(`Adding ${ this.name } to cart.`);
+      this.$emit('addedItem');
+    }
+  },
+  filters: CommonFilters
+}
+</script>
+```
 
 
 
