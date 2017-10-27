@@ -74,7 +74,7 @@ In the template of the `Home` component, we can see that we have the child compo
 ![Counter Buttons](/img/child_component1.gif)
 <br>Counter Buttons
 
-
+As we can see in the image above, when we click each button it keeps its own tally using its own counter. Although these buttons are each a _copy_ of the `Counter` component, they are individual instances. The ability to isolate functionality and data into a child component can be useful in itself, but it's often necessary to pass some information to the child component in order to do something with it.
 
 ## Setting Properties on Child Components
 
