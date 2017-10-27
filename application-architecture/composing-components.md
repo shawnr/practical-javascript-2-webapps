@@ -71,6 +71,11 @@ In the `Home.vue` file, we can see that there is a new property in the component
 
 In the template of the `Home` component, we can see that we have the child component tag (`<counter></counter>`) used three times. Each of these uses will result in a button that we can click to increment the number it displays. When we view the `Home` component in the web browser, we can click the buttons and see a result that looks like this:
 
+![Counter Buttons](/img/child_component1.gif)
+<br>Counter Buttons
+
+
+
 ## Setting Properties on Child Components
 
 ## Using Events and Listeners
