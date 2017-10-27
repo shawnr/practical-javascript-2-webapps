@@ -281,6 +281,8 @@ When all of this is put together, the result is a working counter that increment
 
 The parent `Catalog` component is managing the display of the number of items the user has added to their shopping cart. Each instance of the `Item` child component is only concerned with watching itself and triggering the `addedItem` event when the user clicks the "add to cart" button. Using the one-way data flow in Vue.js, we have been able to send data to the child component and then receive a signal back from the child component. In a real-world example, that event would probably trigger the parent component to refresh an API call or perform some other action to update the information about the shopping cart being shown to the user.
 
+By creatively combining these two abilities, there are very few cases that cannot be handled. (And when those rare cases arise, Vue.js does provide some ways for us to create exceptions to these rules.)
+
 
 
 
