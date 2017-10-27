@@ -131,9 +131,11 @@ First, let's make a file called `/src/common/filters.js`:
 ```js
 export default {
   capitalize: function (value) {
-    if (!value) return ''
-    value = value.toString()
-    return value.charAt(0).toUpperCase() + value.slice(1)
+    if (!value){
+     return '';
+    }
+    value = value.toString();
+    return value.charAt(0).toUpperCase() + value.slice(1);
   }
 }
 ```
@@ -144,14 +146,14 @@ We can use this filter in a component by importing it in the component logic and
 ```html
 <template>
   <div class="item">
-    <h2>{{ name }}</h2>
+    <h2>{{ name|capitalize }}</h2>
     <p>Price: ${{ price }}</p>
     <button v-on:click="addToShoppingCart">Add to Cart</button>
   </div>
 </template>
 
 <script>
-import CommonFilters from `@/common/filters.js`;
+import CommonFilters from '@/common/filters.js';
 
 export default {
   name: 'item',
@@ -175,7 +177,9 @@ export default {
 </script>
 ```
 
+In this component, we have used the `capitalize` filter to make sure the name of each item is capitalized. We could define additional filter functions in the `/src/common/filters.js` file, and each of those would also become available to every component that makes use of this technique. It is much easier to maintain consistent formatting and functionality by consolidating filters in this way.
 
+This same technique can be used to consolidate other aspects of a component definition, too: If the same methods are used on multiple components, they can also be abstracted into a common file. Similar techniques can work for managing sets of `props` or other properties, too.
 
 
 
