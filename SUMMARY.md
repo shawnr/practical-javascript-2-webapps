@@ -97,7 +97,7 @@
 * [Tips for Refactoring](application-architecture/tips-for-refactoring.md)
 * [Composing Components](application-architecture/composing-components.md)
 * [Organizing Data and Configuration Code](application-architecture/organizing-data-and-configuration-code.md)
-* Quiz: Application Architecture
+* [Quiz: Application Architecture](application-architecture/quiz-application-architecture.md)
 * Project: Application Architecture
 
 ## Visual Feedback and Enhancement
