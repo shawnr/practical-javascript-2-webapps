@@ -52,12 +52,16 @@ This approach can work in many situations with JavaScript modules that rely on s
 import axios from 'axios';
 
 export const API = axios.create({
-  baseURL: `http://jsonplaceholder.typicode.com/`,
-  auth: {
-    username: 'janedoe',
-    password: 's00pers3cret'
-  }
+  baseURL: `http://api.openweathermap.org/data/2.5/`
 })
+API.interceptors.request.use(function (config) {
+    // Set APPID on each request
+    config.params.APPID = 'YOUR API KEY HERE';
+    return config;
+  }, function (error) {
+    // Do something with request error
+    return Promise.reject(error);
+  });
 ```
 In this example, we are imagining that the `jsonplaceholder` API uses basic HTTP Auth for authorization. Obviously, we would prefer not to repeat this configuration in every single `.vue` file where we make a call to a different API endpoint. As we may remember from our previous work with `jsonplaceholder`, there are several endpoints (`posts`, `users`, etc.) and if we were building a full app we would use each of those endpoints.
 
