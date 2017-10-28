@@ -20,12 +20,12 @@ Please enjoy this self-check quiz to help you identify key concepts, points, and
         <explanation>All of these are goals for refactoring except improving performance (which would be considered an enhancement of the codebase).</explanation>
     </question>
     <question>
-        <p>What does API stand for?</p>
-        <answer>Automated Programming Interface</answer>
-        <answer>Asynchronous Protocol Instance</answer>
-        <answer correct>Application Programming Interface</answer>
-        <answer>Authority Program Interaction</answer>
-        <explanation>API stands for "Application Programming Interface".</explanation>
+        <p>What can we do to organize related data values in our software?</p>
+        <answer>Name each variable with the same prefix (<code>prefix_valueName</code>).</answer>
+        <answer correct>Combine variables into a single object.</answer>
+        <answer>Put values in a Node module.</answer>
+        <answer>Fetch values from an API.</answer>
+        <explanation>JS Objects are well-suited for relating multiple data points.</explanation>
     </question>
     <question>
         <p>JSON stands for JavaScript Object Notation</p>
