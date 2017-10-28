@@ -181,6 +181,8 @@ In this component, we have used the `capitalize` filter to make sure the name of
 
 This same technique can be used to consolidate other aspects of a component definition, too: If the same methods are used on multiple components, they can also be abstracted into a common file. Similar techniques can work for managing sets of `props` or other properties, too.
 
+Each of the techniques described in this section revolve around creating common sources that can be accessed from anywhere in our application to provide consistent functionality. By organizing our application with these sorts of consolidations, we can provide a more understandable and less error-prone development environment for the team.
+
 
 
 
