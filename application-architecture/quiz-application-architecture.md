@@ -50,12 +50,13 @@ Please enjoy this self-check quiz to help you identify key concepts, points, and
         <explanation>Encapsulation affords us the ability to hide information in order to present a more friendly interface for the developer, and it gives us points where we can more easily insert processes for validation and optimization of data.</explanation>
     </question>
     <question multiple>
-        <p>Which querystring parameters are referenced in the following API request: <code>'https://example.com/api/v2/posts?authorId=2&tags=javascript'</code></p>
-        <answer><code>v2</code></answer>
-        <answer><code>posts</code></answer>
-        <answer correct><code>authorId</code></answer>
-        <answer correct><code>tags</code></answer>
-        <explanation>The two querystring parameters in the API request are <code>authorId</code> and <code>tags</code>.</explanation>
+        <p>What are additional methods of improving the structure of our code when refactoring?</p>
+        <answer correct>Remove unused and temporary files in the project repository</answer>
+        <answer>Improving conditionals so they execute more quickly</answer>
+        <answer>Switching to a better library that offers more features for a given component</answer>
+        <answer correct>Improving names used to identify elements in the system</answer>
+        <answer correct>Removing any commented code or TODO notes</answer>
+        <explanation>Remember that refactoring focuses on improving the organization and readability of the code, not improving performance or enhancing features.</explanation>
     </question>
     <question>
         <p>Which function will be executed when a Vue.js component is invoked?</p>
