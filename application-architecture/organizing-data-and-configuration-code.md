@@ -63,60 +63,73 @@ API.interceptors.request.use(function (config) {
     return Promise.reject(error);
   });
 ```
-In this example, we are imagining that the `jsonplaceholder` API uses basic HTTP Auth for authorization. Obviously, we would prefer not to repeat this configuration in every single `.vue` file where we make a call to a different API endpoint. As we may remember from our previous work with `jsonplaceholder`, there are several endpoints (`posts`, `users`, etc.) and if we were building a full app we would use each of those endpoints.
+In this example, we are using the Open Weather Map API, which requires an API Key (called `APPID` in the querystring parameters). Obviously, we would prefer not to repeat this configuration in every single `.vue` file where we make a call to a different API endpoint. There are several endpoints (`find`, `weather`, `forecast`, etc.) and if we were building a full app we would use each of those endpoints.
 
-Now that we have our basic API configuration abstracted into a standalone file, we can use it in another component. Let's imagine we have a component called `Posts.vue` that is pulling in the posts:
+Now that we have our basic API configuration abstracted into a standalone file, we can use it in another component. Let's imagine we have a component called `CitySearch.vue` that allows users to look up the weather summary for a city:
 
 ```html
 <script>
-import API from '@/common/api.js';
+import {API} from '@/common/api.js';
 
 export default {
-  data() {
+  name: 'CitySearch',
+  data () {
     return {
-      posts: [],
-      errors: []
+      results: null,
+      errors: [],
+      query: ''
     }
   },
-  created() {
-    API.get(`posts`)
-    .then(response => {
-      this.posts = response.data
-    })
-    .catch(error => {
-      this.errors.push(error)
-    })
+  methods: {
+    getCities: function () {
+      API.get('find', {
+        params: {
+            q: this.query,
+            units: 'imperial'
+        }
+      })
+      .then(response => {
+        this.results = response.data
+      })
+      .catch(error => {
+        this.errors.push(error)
+      });
+    }
   }
 }
 </script>
 ```
-Notice that in this example we don't need to specify anything beyond the endpoint path (`posts`). Our API call is much smaller than in previous examples. And if we used a different endpoint to get the photos for a post, the API call would look something like this:
+Notice that in this example we don't need to specify anything beyond the endpoint path (`weather`). Our API call is much smaller than in previous examples. And if we used a different endpoint to get the forecast for a post, the API call would look something like this:
 
 ```html
 <script>
-import API from '@/common/api.js';
+import {API} from '@/common/api.js';
 
 export default {
-  data() {
+  name: 'Forecast',
+  data () {
     return {
-      photos: [],
-      errors: []
+      weatherData: {},
+      errors: [],
+      query: ''
     }
   },
-  created() {
-    API.get(`photos`, {
-      params: {
-        albumId: this.albumId
-      }
-    })
-    .then(response => {
-      this.photos = response.data
-    })
-    .catch(error => {
-      this.errors.push(error)
-    })
-  },
-  props: ['albumId']
+  methods: {
+    getCities: function () {
+      API.get('forecast', {
+        params: {
+            id: this.$route.params.cityId,
+            units: 'imperial'
+        }
+      })
+      .then(response => {
+        this.weatherData = response.data
+      })
+      .catch(error => {
+        this.errors.push(error)
+      });
+    }
+  }
 }
 </script>
 ```
