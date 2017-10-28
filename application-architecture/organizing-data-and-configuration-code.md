@@ -109,12 +109,12 @@ export default {
   name: 'Forecast',
   data () {
     return {
-      weatherData: {},
+      weatherData: null,
       errors: [],
       query: ''
     }
   },
-  created: function () {
+  created () {
     API.get('forecast', {
       params: {
           id: this.$route.params.cityId,
