@@ -28,18 +28,18 @@ Please enjoy this self-check quiz to help you identify key concepts, points, and
         <explanation>JS Objects are well-suited for relating multiple data values.</explanation>
     </question>
     <question>
-        <p>JSON stands for JavaScript Object Notation</p>
+        <p>Longer blocks of code are prone to more errors and make it more difficult for developers to understand what is happening in a program.</p>
         <answer correct>True</answer>
         <answer>False</answer>
-        <explanation>True: JSON stands for JavaScript Object Notation.</explanation>
+        <explanation>True: We prefer shorter blocks of code that can be more easily understood and debugged.</explanation>
     </question>
     <question>
-        <p>Postman is a tool used for what?</p>
-        <answer>Sending email.</answer>
-        <answer>Managing mailing lists.</answer>
-        <answer correct>Exploring API requests and responses.</answer>
-        <answer>Building fences.</answer>
-        <explanation>Postman is a tool used for exploring API requests and responses.</explanation>
+        <p>What are two structures that can be used to break apart lengthy code sequences into smaller components?</p>
+        <answer>Array</answer>
+        <answer correct>Function</answer>
+        <answer correct>Method</answer>
+        <answer>Conditional</answer>
+        <explanation>Break apart lengthy code sequences by breaking them into functions and/or methods that can be referenced instead.</explanation>
     </question>
     <question multiple>
         <p>What module could be used for making API requests from our Vue.js applications?</p>
