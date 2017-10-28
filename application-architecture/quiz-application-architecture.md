@@ -25,7 +25,7 @@ Please enjoy this self-check quiz to help you identify key concepts, points, and
         <answer correct>Combine variables into a single object.</answer>
         <answer>Put values in a Node module.</answer>
         <answer>Fetch values from an API.</answer>
-        <explanation>JS Objects are well-suited for relating multiple data points.</explanation>
+        <explanation>JS Objects are well-suited for relating multiple data values.</explanation>
     </question>
     <question>
         <p>JSON stands for JavaScript Object Notation</p>
