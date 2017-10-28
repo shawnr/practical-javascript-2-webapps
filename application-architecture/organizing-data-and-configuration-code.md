@@ -131,7 +131,7 @@ export default {
 }
 </script>
 ```
-In this example, we have a component that expects to receive a `cityId` parameter as part of the URL. This component is going to make a request to get the forecast for a given city and display the results. The API request is once again formed by importing the `API` object, and the URL for the endpoint is `photos`. Some query string parameters are added to the request (setting the `albumId` value), but otherwise the request looks the same as the previous request. And once again we have not duplicated the basic configuration information.
+In this example, we have a component that expects to receive a `cityId` parameter as part of the URL. This component is going to make a request to get the forecast for a given city and display the results. The API request is once again formed by importing the `API` object, and the URL for the endpoint is `forecast`. Some query string parameters are added to the request (setting the `id` value), but otherwise the request looks the same as the previous request. And once again we have not duplicated the basic configuration information.
 
 Not only is this a cleaner way of using the the same API service in multiple components, but it also opens the door for us to provide a mechanism to switch between a "production" and "development" API server. Now that our configuration is abstracted into a single location, we could enhance that configuration to properly alter which API server the application should contact. This is a very common use case for developers, who must often work with new functionality or data that is unavailable on the production API service.
 
