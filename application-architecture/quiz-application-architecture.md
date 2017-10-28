@@ -75,12 +75,20 @@ Please enjoy this self-check quiz to help you identify key concepts, points, and
         <explanation>Child components define the data they need through the <code>props</code> ("properties") array.</explanation>
     </question>
     <question>
-        <p>What other advanced JS concept can we use to handle the results and potential errors from an API request?</p>
-        <answer>Scoped Functions</answer>
+        <p>How can a child component signal to the parent component that some action has taken place?</p>
+        <answer>Data syncing</answer>
         <answer>Promises</answer>
-        <answer correct>Arrow Functions</answer>
-        <answer>Magic</answer>
-        <explanation>We can use Arrow Functions to handle the results and potential errors from an API request.</explanation>
+        <answer correct>Trigger a custom event</answer>
+        <answer>Reactivity</answer>
+        <explanation>Child components can trigger a custom event, which can be picked up and handled by the parent component.</explanation>
+    </question> 
+    <question>
+        <p>How can we consolidate common data or functionality used in multiple components in a Vue.js application?</p>
+        <answer>Use code snippets in our IDE</answer>
+        <answer correct>Abstract data objects and functionality to common files and import those in components where they are needed</answer>
+        <answer>Define as a part of the core Vue.js instance</answer>
+        <answer>Use Angular</answer>
+        <explanation>Common data objects and functionality can be abstracted into common files and imported into components where required.</explanation>
     </question> 
 </quiz>
 
