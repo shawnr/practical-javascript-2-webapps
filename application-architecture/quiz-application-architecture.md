@@ -42,12 +42,12 @@ Please enjoy this self-check quiz to help you identify key concepts, points, and
         <explanation>Break apart lengthy code sequences by breaking them into functions and/or methods that can be referenced instead.</explanation>
     </question>
     <question multiple>
-        <p>What module could be used for making API requests from our Vue.js applications?</p>
-        <answer><code>vue-router</code></answer>
-        <answer correct><code>axios</code></answer>
-        <answer correct><code>vue-resource</code></answer>
-        <answer><code>flux</code></answer>
-        <explanation>We can use either <code>axios</code> or <code>vue-resource</code> to make HTTP requests from our Vue.js applications.</explanation>
+        <p>What are some of the advantages of encapsulation?</p>
+        <answer>Easier to swallow the code.</answer>
+        <answer correct>Information hiding allows us to present a more friendly interface to the developer</answer>
+        <answer correct>We gain the ability to enforce validation or optimization processes when getting or setting information</answer>
+        <answer>Other developers will think we are more professional</answer>
+        <explanation>Encapsulation affords us the ability to hide information in order to present a more friendly interface for the developer, and it gives us points where we can more easily insert processes for validation and optimization of data.</explanation>
     </question>
     <question multiple>
         <p>Which querystring parameters are referenced in the following API request: <code>'https://example.com/api/v2/posts?authorId=2&tags=javascript'</code></p>
