@@ -4,20 +4,20 @@ Please enjoy this self-check quiz to help you identify key concepts, points, and
 
 <quiz name="">
     <question>
-        <p>What does "REST" stand for?</p>
-        <answer>Re-Structured Text</answer>
-        <answer correct>Representational State Transfer</answer>
-        <answer>Remote Engagement System Technology</answer>
-        <answer>Registered Entity Synchronous Transfer</answer>
-        <explanation>REST stands for "Representational State Transfer".</explanation>
+        <p>What do we call the process of re-structuring code without altering functionality?</p>
+        <answer>revisions</answer>
+        <answer>code review</answer>
+        <answer correct>refactoring</answer>
+        <answer>abstraction</answer>
+        <explanation>Refactoring is the process of re-structuring code without altering functionality.</explanation>
     </question>
     <question multiple>
-        <p>What methods can be used in a REST API request?</p>
-        <answer correct>get</answer>
-        <answer correct>post</answer>
-        <answer correct>put</answer>
-        <answer correct>delete</answer>
-        <explanation>All of these methods can be used with REST APIs.</explanation>
+        <p>Which of the following are goals for refactoring?</p>
+        <answer correct>improve code readability for developers</answer>
+        <answer correct>consolidate repetitive code blocks</answer>
+        <answer>improve performance</answer>
+        <answer correct>maintain a separation of concerns</answer>
+        <explanation>All of these are goals for refactoring except improving performance (which would be considered an enhancement of the codebase).</explanation>
     </question>
     <question>
         <p>What does API stand for?</p>
