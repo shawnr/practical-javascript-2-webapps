@@ -59,20 +59,20 @@ Please enjoy this self-check quiz to help you identify key concepts, points, and
         <explanation>Remember that refactoring focuses on improving the organization and readability of the code, not improving performance or enhancing features.</explanation>
     </question>
     <question>
-        <p>Which function will be executed when a Vue.js component is invoked?</p>
-        <answer><code>data ()</code></answer>
-        <answer correct><code>created ()</code></answer>
-        <answer><code>constructor ()</code></answer>
-        <answer><code>init ()</code></answer>
-        <explanation>The <code>created ()</code> function is executed when a Vue.js component is invoked.</explanation>
+        <p>When we "compose" components in Vue.js, what relationship do we create?</p>
+        <answer>master/slave</answer>
+        <answer correct>parent/child</answer>
+        <answer>siblings</answer>
+        <answer>worker/agent</answer>
+        <explanation>In Vue.js components are "composed" using parent/child relationships.</explanation>
     </question>
     <question>
-        <p>Axios uses which JavaScript concept to define an HTTP request in order to handle the time it takes for the request to complete without freezing the application while it waits?</p>
-        <answer>Await</answer>
-        <answer correct>Promises</answer>
-        <answer>Callbacks</answer>
-        <answer>Time Travel</answer>
-        <explanation>Axios uses Promises to allow the HTTP request to complete without holding up the execution of other parts of the application.</explanation>
+        <p>In Vue.js, a child component defines the data it needs from the parent component using the _______________ array.</p>
+        <answer><code>data</code></answer>
+        <answer><code>params</code></answer>
+        <answer correct><code>props</code></answer>
+        <answer><code>args</code></answer>
+        <explanation>Child components define the data they need through the <code>props</code> ("properties") array.</explanation>
     </question>
     <question>
         <p>What other advanced JS concept can we use to handle the results and potential errors from an API request?</p>
