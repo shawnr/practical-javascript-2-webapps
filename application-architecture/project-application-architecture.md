@@ -752,3 +752,6 @@ Stretch goals are provided to gain extra practice and a higher degree of challen
 * Abstract the addition of the `&deg; F` formatting on temperatures to a filter used in a common file.
 * Abstract the `formatDate` filter to a common file.
 * Create a child component to provide navigation between city search, current weather, and forecast views. Implement this component on each URL.
+
+There may be other opportunities to improve this codebase that are not listed here. Feel free to explore and experiment with ways of rearranging the features in this application to get a better idea of what can be accomplished through refactoring.
+
