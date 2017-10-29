@@ -101,7 +101,115 @@ Notice that we have updated the import statement to import the `API` object inst
 Once we have made these changes, the component functions just as it did before. We can now make the changes in each of the remaining components and then we are done with the first portion of this refactoring project.
 
 ### Create Child Components to Display Weather Information
-TODO
+There are two places where it appears we have serious redundancy in our templates. These two locations can be isolated into child components that will accept data from their parent. They do not need to process any data or make any additional API requests, so they should be relatively lean components.
+
+#### Weather Summary
+First, we will break up the `weatherSummary` section into a child component. We can see that this code is repeated in each of the three main components:
+
+```html
+<div v-for="weatherSummary in city.weather" class="weatherSummary">
+    <img v-bind:src="'http://openweathermap.org/img/w/' + weatherSummary.icon + '.png'" v-bind:alt="weatherSummary.main">
+    <br>
+    <b>{{ weatherSummary.main }}</b>
+</div>
+```
+
+This summary area of the data is always an array that must be iterated through. It often only has one item in the array, but sometimes it will have more. For each item in the array we want to show the icon and the summary text. We can create a new component called `WeatherSummary` that will handle this HTML code:
+
+```html
+<template>
+  <div>
+    <div v-for="weatherSummary in weatherData" class="weatherSummary">
+      <img v-bind:src="'http://openweathermap.org/img/w/' + weatherSummary.icon + '.png'" v-bind:alt="weatherSummary.main">
+      <br>
+      <b>{{ weatherSummary.main }}</b>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'WeatherSummary',
+  data () {
+    return {
+
+    }
+  },
+  props: ['weatherData']
+}
+</script>
+
+<style scoped>
+  .weatherSummary {
+    display: inline-block;
+    width: 100px;
+  }
+</style>
+```
+As we can see, this new child component is completely dedicated to displaying these weather summary items. It does not have any terribly complex behavior. It simply expects an array of `weatherSummary` objects, and it will process those the same way each time. We can now add this component into our main components that control our views. Here is what it looks like when used in the `CitySearch` component:
+
+```html
+<template>
+  <div>
+    ... template code ...
+
+    <weather-summary v-bind:weatherData="city.weather"></weather-summary>
+
+    ... more template code ...
+  </div>
+</template>
+
+<script>
+import {API} from '@/common/api';
+import WeatherSummary from '@/components/WeatherSummary';
+
+export default {
+  name: 'CitySearch',
+  data () {
+    return {
+      results: null,
+      errors: [],
+      query: ''
+    }
+  },
+  methods: {
+    getCities: function () {
+      API.get('find', {
+        params: {
+            q: this.query
+        }
+      })
+      .then(response => {
+        this.results = response.data
+      })
+      .catch(error => {
+        this.errors.push(error)
+      });
+    }
+  },
+  components: {
+    'weather-summary': WeatherSummary
+  }
+}
+</script>
+```
+In this example, we can see that the `<weather-summary>` element is used. We have imported the `WeatherSummary` child component at the top of our component logic, and then we have defined a `components` object that indicates we will be using the `WeatherSummary` in our templates. We must use `v-bind` to pass the value of `city.weather` to the `WeatherSummary`, where it comes in as the `WeatherData` property.
+
+Now that we have this component in place in the `CitySearch` component we can test things out and then follow the same process to add the child component to our `CurrentWeather` and `Forecast` components. Note that the name of the value we pass to the `WeatherSummary` component changes in each instance where it is used:
+
+**`CurrentWeather.vue`**
+
+```html
+<weather-summary v-bind:weatherData="weatherData.weather"></weather-summary>
+```
+
+**`Forecast.vue`**
+```html
+<weather-summary v-bind:weatherData="forecast.weather"></weather-summary>
+```
+In each case, we pass in the proper `weather` array that can be processed by the `WeatherSummary` component.
+
+#### Weather Data
 
 ### Create `ErrorList` Child Component
 TODO
