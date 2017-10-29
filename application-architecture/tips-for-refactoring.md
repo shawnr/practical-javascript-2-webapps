@@ -42,7 +42,7 @@ It is possible to go overboard on comments. We do not want to write so many comm
 
 Here are some tips for writing comments in our code:
 
-* Do not leave old TODO comments laying around after completing the task (use the "find in files" or similar tool in an editor to help find comments across all files)
+* Do not leave old `TODO` comments laying around after completing the task (use the "find in files" or similar tool in an editor to help find comments across all files)
 * Do not leave outdated comments that describe functionality that has changed or in some other way become erroneous
 * Focus on describing "why" something is happening in the code; don't just describe "what" is happening
 * Be consistent in style and formatting of comments
