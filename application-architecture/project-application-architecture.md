@@ -35,7 +35,67 @@ To get the project running, we need to make an account on [OpenWeatherMap.org](h
 Once we've replaced that information the project should become operational. Run `npm run dev` and verify that the project works. Once we've made sure the project is working, we can begin refactoring.
 
 ### Abstract the Base API Configuration
-TODO
+The first thing we can do to make a major improvement in this application is to consolidate the base configuration for our API into a common module that can be imported into whatever component we need. We can do this using a few basic features available in `axios`, the module we are using to handle HTTP requests to our API services.
+
+Let's start by making a new directory under `src/` called `common/`. Then, we will create the file `src/common/api.js`. Inside that file, we will write the following code:
+
+```js
+import axios from 'axios';
+
+export const API = axios.create({
+  baseURL: `//api.openweathermap.org/data/2.5/`
+})
+API.interceptors.request.use(function (config) {
+    // Set common parameters on each request
+    config.params.APPID = 'YOUR_APPID_HERE';
+    config.params.units = 'imperial';
+    return config;
+  }, function (error) {
+    return Promise.reject(error);
+  });
+```
+
+The code above creates a new `const` variable called `API`. The `API` object is initialized with the `axios.create()` method, which returns an HTTP request object. We use the `export` keyword to declare the `API` value because we want to be able to import the `API` object wherever we need to use it. Notice that we set the `base_url` to `//api.openweathermap.org/data/2.5/`. We have omitted the `http:`, which is a common technique to allow the browser to fill in whatever the current protocol is. If our site is deployed on an `http` server, then it will prepend `http:`; if it is deployed on an `https` server, then the browser will prepend `https:`. This way we avoid any security warnings by using `http` or `https` at the wrong time.
+
+After we have created the `API` object, we set up an `interceptor` on the base configuration. The `interceptor` will watch for any request that is made using the `API` object. For each request it will "intercept" the data before it is sent, and it will add two properties to the `params` object: `APPID` and `units`. Since these values were the same in each request, we can safely include them in this interceptor and we do not need to repeat them in each component where we use the `API` object.
+
+Once we have this base configuration in place, we can update our components to make use of the new, leaner API object. We will need to update the API calls in all three of our components. Here is the first update for an example:
+
+**`CitySearch.vue`**
+```html
+<script>
+import {API} from '@/common/api';
+
+export default {
+  name: 'CitySearch',
+  data () {
+    return {
+      results: null,
+      errors: [],
+      query: ''
+    }
+  },
+  methods: {
+    getCities: function () {
+      API.get('find', {
+        params: {
+            q: this.query
+        }
+      })
+      .then(response => {
+        this.results = response.data
+      })
+      .catch(error => {
+        this.errors.push(error)
+      });
+    }
+  }
+}
+</script>
+```
+Notice that we have updated the import statement to import the `API` object instead of `axios` directly. We have simplified the API request in the `getCities` method, too: it is now several lines shorter. It only needs to provide the unique endpoint (in this case, `find`) and the unique params (in this case the `q` param is populated with the user's `query` value).
+
+Once we have made these changes, the component functions just as it did before. We can now make the changes in each of the remaining components and then we are done with the first portion of this refactoring project.
 
 ### Create Child Components to Display Weather Information
 TODO
