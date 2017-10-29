@@ -14,6 +14,7 @@ from each individual API call, and consolidate other HTML and CSS blocks to
 minimize the pain of maintenance.
 
 ## Review the Requirements
+In order to complete this project, we must fulfill the following Basic Requirements. These requirements are all focused around refactoring the application into a more organized structure that will make future maintenance and improvements easier. Remember that we are **not** trying to improve the performance or add any new features to the project. The goal here is purely around refactoring. The end result should appear to the user exactly like the current version.
 
 * Sign up to [OpenWeatherMap.org](https://openweathermap.org/) and generate an API Key.
 * Paste your API Key (which will be used as the `APPID` parameter) into the appropriate locations in the `CitySearch.vue`, `CurrentWeather.vue`, and `Forecast.vue` files.
