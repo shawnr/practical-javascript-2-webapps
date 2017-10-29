@@ -6,7 +6,7 @@ As we saw in previous sections, we will make our applications easier to maintain
 <div class="tip-box">
   <h3>ES6 Modules</h3>
   <p>The Vue CLI templates we have been using support ECMAScript 6 (ES6) and use a tool called Babel to provide some level of backwards compatibility for browsers that do not yet support ES6 features. Luckily, most of the browser market and related technologies now fully support ES6 features, which opens the door for us to improve how we write code. (For developers who are unaware, ECMAScript is the standard that governs JavaScript so the two names should be synonymous, although they often are not.)</p>
-  <p>One powerful feature of ES6 that we will make extensive use of in this section is the creation, export, and import of "modules." JavaScript has had a notion of modules for awhile now: 
+  <p>One powerful feature of ES6 that we will make extensive use of in this section is the creation, export, and import of "modules." JavaScript has had a notion of modules for awhile now: </p>
 </div>
 
 ## Common Data Techniques
