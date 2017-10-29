@@ -3,6 +3,12 @@ As we work on different parts of our applications, we often find that we have si
 
 As we saw in previous sections, we will make our applications easier to maintain, build, and enhance if we can adhere to a clean separation of concerns and utilize some common strategies for managing components that need to be reused throughout the application. In this section we will look at some techniques for organizing reusable pieces of our system.
 
+<div class="tip-box">
+  <h3>ES6 Modules</h3>
+  <p>The Vue CLI templates we have been using support ECMAScript 6 (ES6) and use a tool called Babel to provide some level of backwards compatibility for browsers that do not yet support ES6 features. Luckily, most of the browser market and related technologies now fully support ES6 features, which opens the door for us to improve how we write code. (For developers who are unaware, ECMAScript is the standard that governs JavaScript so the two names should be synonymous, although they often are not.)</p>
+  <p>One powerful feature of ES6 that we will make extensive use of in this section is the creation, export, and import of "modules." JavaScript has had a notion of modules for awhile now: 
+</div>
+
 ## Common Data Techniques
 A common case that often comes up is the need to store system-specific data that can be accessed from any component. This is often used for sets of static metadata that are specific to the project and which are not subject to change. These are usually considered "constants" in the system: They are not meant to be altered by the user or to change during the use of the application or site.
 
