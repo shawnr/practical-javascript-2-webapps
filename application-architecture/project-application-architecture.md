@@ -277,7 +277,13 @@ export default {
 This component can be passed the `main` object from any of our API responses and it will output the properly-formatted weather condition data: humidity, high temp, and low temp. This has removed almost 20 lines of CSS and 8 lines of HTML from each of the other components, and it has isolated this functionality into a single location where we could focus our work if we needed to enhance this output. We can use this child component in our other component templates just like we did with the `WeatherSummary` component (see the full file text below for an example of how to use this component inside of our other components).
 
 ### Create `ErrorList` Child Component
-TODO
+Now that we've done this twice, separating the errors list out into a child component should be a snap. This component will expect the `errors` array as a property, and then it will process and display those errors. Again, this child component only needs to receive and display data, so it will not need to implement any custom events.
+
+To accomplish this refactoring, we need to create a new file for the `ErrorList` component. This is what it should look like:
+
+```html
+
+```
 
 ### Clean Up Extraneous Files
 There are several files that appear to be remnants of previous development. Clean up the extra file in the `src/components/` directory and the extra experimental data file. Take another pass through all of the code files and remove any extraneous `TODO` comments or other irrelevant comments.
