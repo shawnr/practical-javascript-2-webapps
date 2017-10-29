@@ -282,8 +282,40 @@ Now that we've done this twice, separating the errors list out into a child comp
 To accomplish this refactoring, we need to create a new file for the `ErrorList` component. This is what it should look like:
 
 ```html
+<template>
+  <div>
+    <div v-if="errorList.length > 0">
+      <h2>There was an error fetching data.</h2>
+      <ul class="errors">
+        <li v-for="error in errorList">{{ error }}</li>
+      </ul>
+    </div>
+  </div>
+</template>
 
+<script>
+export default {
+  name: 'ErrorList',
+  data () {
+    return {
+
+    }
+  },
+  props: ['errorList']
+}
+</script>
+
+<style scoped>
+  .errors li {
+    color: red;
+    border: solid red 1px;
+    padding: 5px;
+  }
+</style>
 ```
+This new child component can be used in each of our main components and will allow us to eliminate another dozen or so lines of code in each of those main components. It will also consolidate the error listing feature, which allows us to more easily focus on improving that feature when we choose to do so (without risking unnecessary complications in our other components).
+
+We can implement this new child component using the same patterns we established before. See the example code below for details about how to implement this child component.
 
 ### Clean Up Extraneous Files
 There are several files that appear to be remnants of previous development. Clean up the extra file in the `src/components/` directory and the extra experimental data file. Take another pass through all of the code files and remove any extraneous `TODO` comments or other irrelevant comments.
@@ -294,7 +326,120 @@ If we haven't already been conscientious about commenting our changes so develop
 ## Wrapping Up
 
 ### Components
-TODO
+
+**`CitySearch.vue`**
+```html
+<template>
+  <div>
+    <h2>City Search</h2>
+    <form v-on:submit.prevent="getCities">
+        <p>Enter city name: <input type="text" v-model="query" placeholder="Paris, TX"> <button type="submit">Go</button></p>
+    </form>
+    <ul class="cities" v-if="results && results.list.length > 0">
+        <li v-for="city in results.list">
+            <h2>{{ city.name }}, {{ city.sys.country }}</h2>
+            <p><router-link v-bind:to="{ name: 'CurrentWeather', params: { cityId: city.id } }">View Current Weather</router-link></p>
+
+            <weather-summary v-bind:weatherData="city.weather"></weather-summary>
+
+            <weather-conditions v-bind:conditions="city.main"></weather-conditions>
+
+        </li>
+    </ul>
+    <error-list v-bind:errorList="errors"></error-list>
+
+  </div>
+</template>
+
+<script>
+import {API} from '@/common/api';
+import WeatherSummary from '@/components/WeatherSummary';
+import WeatherConditions from '@/components/WeatherConditions';
+import ErrorList from '@/components/ErrorList';
+
+export default {
+  name: 'CitySearch',
+  data () {
+    return {
+      results: null,
+      errors: [],
+      query: ''
+    }
+  },
+  methods: {
+    getCities: function () {
+      API.get('find', {
+        params: {
+            q: this.query
+        }
+      })
+      .then(response => {
+        this.results = response.data
+      })
+      .catch(error => {
+        this.errors.push(error)
+      });
+    }
+  },
+  components: {
+    'weather-summary': WeatherSummary,
+    'weather-conditions': WeatherConditions,
+    'error-list': ErrorList
+  }
+}
+</script>
+
+<style scoped>
+h1, h2 {
+  font-weight: normal;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  display: inline-block;
+  width: 300px;
+  min-height: 300px;
+  border: solid 1px #e8e8e8;
+  padding: 10px;
+  margin: 5px;
+}
+a {
+  color: #42b983;
+}
+</style>
+```
+
+**`CurrentWeather.vue`**
+```html
+
+```
+
+**`Forecast.vue`**
+```html
+
+```
+
+**`WeatherSummary.vue`**
+```html
+
+```
+
+**`WeatherConditions.vue`**
+```html
+
+```
+
+**`ErrorList.vue`**
+```html
+
+```
+
+
+
+
 
 ### Base API Configuration
 The contents of `src/common/api.js`:
