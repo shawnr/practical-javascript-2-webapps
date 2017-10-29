@@ -210,7 +210,26 @@ Now that we have this component in place in the `CitySearch` component we can te
 In each case, we pass in the proper `weather` array that can be processed by the `WeatherSummary` component.
 
 #### Weather Data
-TODO
+The other portion of the component templates that is repetitive is the weather data display. This structure is repeated almost verbatim in several places:
+
+```html
+<dl>
+    <dt>Humidity</dt>
+    <dd>{{ forecast.main.humidity }}%</dd>
+    <dt>High</dt>
+    <dd>{{ forecast.main.temp_max }}&deg;F</dd>
+    <dt>Low</dt>
+    <dd>{{ forecast.main.temp_min }}&deg;F</dd>
+</dl>
+```
+There are also several style definitions that target this HTML, and those are also duplicated in each component. If we allowed the code to remain so repetitive we would undoubtedly see the gradual evolution of these styles and this markup diverge as small tweaks were made to different components and developers unwittingly reproduced work that had already been done.
+
+Rather than living with this duplication, we can isolate this display into a single component that can be used whenever we need this structure. Let's call this component `WeatherConditions`. Here is a draft of what this component might look like:
+
+```html
+
+```
+
 
 ### Create `ErrorList` Child Component
 TODO
