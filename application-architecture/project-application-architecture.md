@@ -227,9 +227,54 @@ There are also several style definitions that target this HTML, and those are al
 Rather than living with this duplication, we can isolate this display into a single component that can be used whenever we need this structure. Let's call this component `WeatherConditions`. Here is a draft of what this component might look like:
 
 ```html
+<template>
+  <div>
+    <dl>
+      <dt>Humidity</dt>
+      <dd>{{ conditions.humidity }}%</dd>
+      <dt>High</dt>
+      <dd>{{ conditions.temp_max }}&deg;F</dd>
+      <dt>Low</dt>
+      <dd>{{ conditions.temp_min }}&deg;F</dd>
+    </dl>
+  </div>
+</template>
 
+<script>
+export default {
+  name: 'WeatherConditions',
+  data () {
+    return {
+
+    }
+  },
+  props: ['conditions']
+}
+</script>
+
+<style scoped>
+  dl {
+    padding: 5px;
+    background: #e8e8e8;
+  }
+  dt {
+    float: left;
+    clear: left;
+    width: 120px;
+    text-align: right;
+    font-weight: bold;
+    color: blue;
+  }
+  dd {
+    margin: 0 0 0 130px;
+    padding: 0 0 0.5em 0;
+  }
+  dt::after {
+    content: ":";
+  }
+</style>
 ```
-
+This component can be passed the `main` object from any of our API responses and it will output the properly-formatted weather condition data: humidity, high temp, and low temp. This has removed almost 20 lines of CSS and 8 lines of HTML from each of the other components, and it has isolated this functionality into a single location where we could focus our work if we needed to enhance this output. We can use this child component in our other component templates just like we did with the `WeatherSummary` component (see the full file text below for an example of how to use this component inside of our other components).
 
 ### Create `ErrorList` Child Component
 TODO
