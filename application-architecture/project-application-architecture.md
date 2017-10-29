@@ -27,8 +27,35 @@ In order to complete this project, we must fulfill the following Basic Requireme
 * Add comments where they would be helpful to improve the readability of the project.
 
 ## Working the Project
+In order to get this project working, we should first fork the repository from the main Refactoring Practice repo, then we should clone the files to our local development area. We will need to install the project dependencies by running `npm install` from the project root directory.
+
+### Make an OpenWeatherMap.org API Key
+To get the project running, we need to make an account on [OpenWeatherMap.org](https://openweathermap.org/) and generate an API key. Once we have created an account, the API Keys can be found under our Account page ([located here](https://home.openweathermap.org/api_keys)). Create a new API Key and then open the project repository in a preferred editor. We must find the `YOUR_APPID_HERE` placeholders in the `CitySearch.vue`, `CurrentWeather.vue` and `Forecast.vue` files and replace those placeholders with our actual API Key (called an `APPID` by OpenWeatherMap.org).
+
+Once we've replaced that information the project should become operational. Run `npm run dev` and verify that the project works. Once we've made sure the project is working, we can begin refactoring.
+
+### Abstract the Base API Configuration
+TODO
+
+### Create `WeatherDisplay` Child Component
+TODO
+
+### Create `ErrorList` Child Component
+TODO
+
+### Clean Up Extraneous Files
+There are several files that appear to be remnants of previous development. Clean up the extra file in the `src/components/` directory and the extra experimental data file. Take another pass through all of the code files and remove any extraneous `TODO` comments or other irrelevant comments.
+
+### Enhance Comments
+If we haven't already been conscientious about commenting our changes so developers reviewing our work will be able to tell how things work, then now is the time to go back through and do that work. We must leave comments that allow developers to more quickly understand non-obvious details about the code and how to use it.
 
 ## Wrapping Up
+
+### Components
+TODO
+
+### Base API Configuration
+TODO
 
 ## Build and Deploy
 Once we've finished our work, we can build and deploy the project. This project has been configured to build to the `docs/` directory, so we can follow the same pattern we used before:
@@ -42,7 +69,7 @@ The project should now be up and available to the public through GH Pages.
 
 ## Stretch Goals
 
-Stretch goals are provided to gain extra practice and a higher degree of challenge. If this work has been straightforward, then we are encouraged to keep pushing.
+Stretch goals are provided to gain extra practice and a higher degree of challenge. If this work has been straightforward, then we are encouraged to keep pushing. There are several more opportunities to improve the organization and structure of this project, so feel free to keep honing it until it is as lean and mean as possible.
 
 * Abstract the addition of the `&deg; F` formatting on temperatures to a filter used in a common file.
 * Abstract the `formatDate` filter to a common file.
