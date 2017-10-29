@@ -98,7 +98,7 @@
 * [Composing Components](application-architecture/composing-components.md)
 * [Organizing Data and Configuration Code](application-architecture/organizing-data-and-configuration-code.md)
 * [Quiz: Application Architecture](application-architecture/quiz-application-architecture.md)
-* Project: Application Architecture
+* [Project: Application Architecture](application-architecture/project-application-architecture.md)
 
 ## Visual Feedback and Enhancement
 

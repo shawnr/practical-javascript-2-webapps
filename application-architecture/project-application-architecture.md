@@ -1,0 +1,48 @@
+# Project: Application Architecture and Refactoring Practice
+This project provides you with a working weather application that can be improved through refactoring. 
+The weather app uses three major views: City Search, Current Weather, and 5 Day Forecast. Users
+can search for their city and then view weather data. The weather data is
+requested from the [OpenWeatherMap.org API](https://openweathermap.org/), which
+is free and available for any developer to use. (**NOTE:** You will need to
+sign up to get an OpenWeatherMap.org API Key to complete this project.)
+
+In the initial state, this application will work (once you insert your API key
+into the proper locations), but the structure of the application could be
+significantly improved. We will practice creating child components that can
+accept data from the parent component, abstract base API configurations away
+from each individual API call, and consolidate other HTML and CSS blocks to
+minimize the pain of maintenance.
+
+## Review the Requirements
+
+* Sign up to [OpenWeatherMap.org](https://openweathermap.org/) and generate an API Key.
+* Paste your API Key (which will be used as the `APPID` parameter) into the appropriate locations in the `CitySearch.vue`, `CurrentWeather.vue`, and `Forecast.vue` files.
+* Verify the site works with your key. You should be able to search for a city and see weather data.
+* Abstract the base configuration for the API requests to a common file to reduce duplication of the base URL and `APPID`.
+* Create a child component called `WeatherDisplay` that can accept weather information and produce a well-formatted display.
+* Use the child component in each of the views to eliminate the redundant HTML and CSS styles used.
+* Create a child component called `ErrorList` to handle display of error messages. Replace the error message handling in the templates of the three parent components with this child component.
+* Clean up any extraneous code, comments, or files that are unused.
+* Add comments where they would be helpful to improve the readability of the project.
+
+## Working the Project
+
+## Wrapping Up
+
+## Build and Deploy
+Once we've finished our work, we can build and deploy the project. This project has been configured to build to the `docs/` directory, so we can follow the same pattern we used before:
+
+1. Execute the `npm run build` command to build the files into the `docs/` directory.
+2. Commit all of our code.
+3. Push the code up to GitHub.
+4. Go into the repository settings and set the GH Pages section to publish from the `docs/` directory.
+
+The project should now be up and available to the public through GH Pages.
+
+## Stretch Goals
+
+Stretch goals are provided to gain extra practice and a higher degree of challenge. If this work has been straightforward, then we are encouraged to keep pushing.
+
+* Abstract the addition of the `&deg; F` formatting on temperatures to a filter used in a common file.
+* Abstract the `formatDate` filter to a common file.
+* Create a child component to provide navigation between city search, current weather, and forecast views. Implement this component on each URL.
