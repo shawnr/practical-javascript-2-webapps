@@ -32,6 +32,9 @@ In order to get this project working, we should first fork the repository from t
 ### Make an OpenWeatherMap.org API Key
 To get the project running, we need to make an account on [OpenWeatherMap.org](https://openweathermap.org/) and generate an API key. Once we have created an account, the API Keys can be found under our Account page ([located here](https://home.openweathermap.org/api_keys)). Create a new API Key and then open the project repository in a preferred editor. We must find the `YOUR_APPID_HERE` placeholders in the `CitySearch.vue`, `CurrentWeather.vue` and `Forecast.vue` files and replace those placeholders with our actual API Key (called an `APPID` by OpenWeatherMap.org).
 
+![Working home screen](/img/project11-home1.png)
+<br>Working home screen
+
 Once we've replaced that information the project should become operational. Run `npm run dev` and verify that the project works. Once we've made sure the project is working, we can begin refactoring.
 
 ### Abstract the Base API Configuration
