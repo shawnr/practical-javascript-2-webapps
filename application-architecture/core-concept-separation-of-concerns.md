@@ -161,6 +161,13 @@ console.log( myCourse.title );
 ```
 In this case, rather than asking developers to constantly string together the subject code, course number, and course name to create the full display title, this functionality is provided as a getter and the developer is able to use the `Course` object without risking as many errors. This is a somewhat mundane example, but additional logic can be provided on getters and setters to enforce data validation rules, process requirements, and other necessary logic.
 
+<div class="tip-box">
+    <h3>Avoiding Complications</h3>
+    <p>There is a difference between "complex" and "complicated." Many of the systems we deal with when creating software become _complex_ because they require the coordination of many data points or the use of very specific software tools or design patterns. We live in a complex world, so making software that is useful to us will necessarily be complex. Whenever we must deal with many details or components, the task will be complex.</p>
+    <p>Complication, however, arises from interactions with things that are non-essential (even if they are unavoidable). When recovering from a medical procedure, for example, we talk about "complications" as thing that will make it more difficult to achieve the goal of healing. Complications are things that prevent us from proceeding as we intend, and we generally hope to avoid them.</p>
+    <p>Although we might refactor to better deal with the _complexity_ of our goals, we should always work to avoid _complicated_ changes. We do not want to implement an abstraction or encapsulation that is unnecessary. Those changes to our code should always leave us in a better position to maintain and improve the system. It should be easier to direct our colleagues to the single source of knowledge or functionality for a given component.
+</div>
+
 ## Concerning Separations
 It's important to remember that we do not so much "create" abstractions or separations of concerns in our applications. Rather, we recognize when we have opportunities to enhance the separation of concerns in our software, or to enhance our system by introducing an abstraction. Any of the techniques mentioned above can be used to do harm to a project as well as doing good. The process of refactoring is not without its own risks. By thinking rationally about our projects and always keeping vigilant for ways to improve the organization of our logic and data we can move towards continuous enhancements.
 
