@@ -118,7 +118,24 @@ If we haven't already been conscientious about commenting our changes so develop
 TODO
 
 ### Base API Configuration
-TODO
+The contents of `src/common/api.js`:
+
+```js
+import axios from 'axios';
+
+export const API = axios.create({
+  baseURL: `//api.openweathermap.org/data/2.5/`
+})
+API.interceptors.request.use(function (config) {
+    // Set APPID on each request
+    config.params.APPID = 'd9947bfbe4d5f42fa39c0d5e08ff915f';
+    config.params.units = 'imperial';
+    return config;
+  }, function (error) {
+    // Do something with request error
+    return Promise.reject(error);
+  });
+```
 
 ## Build and Deploy
 Once we've finished our work, we can build and deploy the project. This project has been configured to build to the `docs/` directory, so we can follow the same pattern we used before:
