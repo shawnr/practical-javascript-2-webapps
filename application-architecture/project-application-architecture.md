@@ -1,5 +1,5 @@
 # Project: Application Architecture and Refactoring Practice
-This project provides you with a working weather application that can be improved through refactoring. 
+The [Refactoring Practice project repository](https://github.com/suwebdev/wats4000-refactoring) provides you with a working weather application that can be improved through refactoring. 
 The weather app uses three major views: City Search, Current Weather, and 5 Day Forecast. Users
 can search for their city and then view weather data. The weather data is
 requested from the [OpenWeatherMap.org API](https://openweathermap.org/), which
@@ -27,7 +27,7 @@ In order to complete this project, we must fulfill the following Basic Requireme
 * Add comments where they would be helpful to improve the readability of the project.
 
 ## Working the Project
-In order to get this project working, we should first fork the repository from the main Refactoring Practice repo, then we should clone the files to our local development area. We will need to install the project dependencies by running `npm install` from the project root directory.
+In order to get this project working, we should first fork the repository from the main [Refactoring Practice repository](https://github.com/suwebdev/wats4000-refactoring), then we should clone the files to our local development area. We will need to install the project dependencies by running `npm install` from the project root directory.
 
 ### Make an OpenWeatherMap.org API Key
 To get the project running, we need to make an account on [OpenWeatherMap.org](https://openweathermap.org/) and generate an API key. Once we have created an account, the API Keys can be found under our Account page ([located here](https://home.openweathermap.org/api_keys)). Create a new API Key and then open the project repository in a preferred editor. We must find the `YOUR_APPID_HERE` placeholders in the `CitySearch.vue`, `CurrentWeather.vue` and `Forecast.vue` files and replace those placeholders with our actual API Key (called an `APPID` by OpenWeatherMap.org).
