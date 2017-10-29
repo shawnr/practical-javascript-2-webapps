@@ -599,22 +599,121 @@ a {
 
 **`WeatherSummary.vue`**
 ```html
+<template>
+  <div>
+    <div v-for="weatherSummary in weatherData" class="weatherSummary">
+      <img v-bind:src="'http://openweathermap.org/img/w/' + weatherSummary.icon + '.png'" v-bind:alt="weatherSummary.main">
+      <br>
+      <b>{{ weatherSummary.main }}</b>
+    </div>
+  </div>
+</template>
 
+<script>
+export default {
+  name: 'WeatherSummary',
+  data () {
+    return {
+
+    }
+  },
+  props: ['weatherData']
+}
+</script>
+
+<style scoped>
+  .weatherSummary {
+    display: inline-block;
+    width: 100px;
+  }
+</style>
 ```
 
 **`WeatherConditions.vue`**
 ```html
+<template>
+  <div>
+    <dl>
+      <dt>Humidity</dt>
+      <dd>{{ conditions.humidity }}%</dd>
+      <dt>High</dt>
+      <dd>{{ conditions.temp_max }}&deg;F</dd>
+      <dt>Low</dt>
+      <dd>{{ conditions.temp_min }}&deg;F</dd>
+    </dl>
+  </div>
+</template>
 
+<script>
+export default {
+  name: 'WeatherConditions',
+  data () {
+    return {
+
+    }
+  },
+  props: ['conditions']
+}
+</script>
+
+<style scoped>
+  dl {
+    padding: 5px;
+    background: #e8e8e8;
+  }
+  dt {
+    float: left;
+    clear: left;
+    width: 120px;
+    text-align: right;
+    font-weight: bold;
+    color: blue;
+  }
+  dd {
+    margin: 0 0 0 130px;
+    padding: 0 0 0.5em 0;
+  }
+  dt::after {
+    content: ":";
+  }
+</style>
 ```
 
 **`ErrorList.vue`**
 ```html
+<template>
+  <div>
+    <div v-if="errorList.length > 0">
+      <h2>There was an error fetching data.</h2>
+      <ul class="errors">
+        <li v-for="error in errorList">{{ error }}</li>
+      </ul>
+    </div>
+  </div>
+</template>
 
+<script>
+export default {
+  name: 'ErrorList',
+  data () {
+    return {
+
+    }
+  },
+  props: ['errorList']
+}
+</script>
+
+<style scoped>
+  .errors li {
+    color: red;
+    border: solid red 1px;
+    padding: 5px;
+  }
+</style>
 ```
 
-
-
-
+There are also a couple of small clean-up tasks that should be completed as part of the steps above, but those have been left out of this summary of file changes to keep this section shorter.
 
 ### Base API Configuration
 The contents of `src/common/api.js`:
