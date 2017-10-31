@@ -103,10 +103,11 @@
 ## Visual Feedback and Enhancement
 
 * [Introduction](visual-feedback/README.md)
-* Core Concept: Conventional Feedback
+* Core Concept: Visual Feedback
 * Dynamic Classes
-* Binding Inline Styles
-* Creating and Using Transitions
+* Transitions and Animations
+* Quiz: Visual Feedback and Enhancement
+* Project: Visual Feedback and Enhancement
 
 ## Caching Data
 

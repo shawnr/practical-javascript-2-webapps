@@ -2,6 +2,9 @@
 
 The terms listed here will be highlighted throughout the text. Hover over them to see the definition as you are reading.
 
+## abstraction
+The process of moving or organizing segments of program logic or data into modular components that can be referenced from multiple locations in the code.
+
 ## API (Application Programming Interface)
 A feature that allows for functions and data within one system to be accessed programmatically by another system. For example, we can use the Open Weather Map API to request weather data for thousands of cities around the world, and we can use that data within our own applications.
 
@@ -16,6 +19,9 @@ An intentional stopping or pausing place in a program used for debugging purpose
 
 ## directive
 A function used in a template to invoke some special behavior (e.g. setting an event listener, invoking a loop, or creating a conditional) used to process the template. Custom directives may be created by developers, and frameworks often provide a selection of default directives.
+
+## encapsulation
+The process of hiding information or complex logic behind a developer-friendly interface.
 
 ## DOM
 The [Document Object Model ](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model)(DOM) is the JavaScript representation of the HTML structure and status in the browser software.
