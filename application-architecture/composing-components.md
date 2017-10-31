@@ -259,10 +259,10 @@ export default {
 
     }
   },
-  props: [
-    'name',
-    'price'
-  ],
+  props: {
+    name: String,
+    price: Number
+  },
   methods: {
     addToShoppingCart: function () {
       console.log(`Adding ${ this.name } to cart.`);
