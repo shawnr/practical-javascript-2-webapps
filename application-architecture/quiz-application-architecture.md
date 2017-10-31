@@ -72,7 +72,7 @@ Please enjoy this self-check quiz to help you identify key concepts, points, and
         <answer><code>params</code></answer>
         <answer correct><code>props</code></answer>
         <answer><code>args</code></answer>
-        <explanation>Child components define the data they need through the <code>props</code> ("properties") array.</explanation>
+        <explanation>Child components define the data they need through the <code>props</code> ("properties") object.</explanation>
     </question>
     <question>
         <p>How can a child component signal to the parent component that some action has taken place?</p>
