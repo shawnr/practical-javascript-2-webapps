@@ -135,7 +135,9 @@ export default {
 
     }
   },
-  props: ['weatherData']
+  props: {
+    weatherData: {}
+  }
 }
 </script>
 
@@ -248,7 +250,9 @@ export default {
 
     }
   },
-  props: ['conditions']
+  props: {
+    conditions: {}
+  }
 }
 </script>
 
@@ -301,7 +305,9 @@ export default {
 
     }
   },
-  props: ['errorList']
+  props: {
+    errorList: []
+  }
 }
 </script>
 
@@ -617,7 +623,9 @@ export default {
 
     }
   },
-  props: ['weatherData']
+  props: {
+    weatherData: {}
+  }
 }
 </script>
 
@@ -652,7 +660,9 @@ export default {
 
     }
   },
-  props: ['conditions']
+  props: {
+    conditions: {}
+  }
 }
 </script>
 
@@ -700,7 +710,9 @@ export default {
 
     }
   },
-  props: ['errorList']
+  props: {
+    errorList: []
+  }
 }
 </script>
 
