@@ -78,7 +78,7 @@ As we can see in the image above, when we click each button it keeps its own tal
 
 ## Setting Properties on Child Components
 
-Components can define a property called `props` (properties), which is an array listing the names of any values that should be passed into the component. These properties can be referenced in the templates using the normal mustache syntax (`{{ propName }}`) or within the component logic like normal (`this.propName`). Properties passed to a child component are bound to the parent component logic, so if the value of the property changes in the parent component, that will refresh the value within the child component, too.
+Components can define a property called `props` (properties), which is an object listing the names (and, possibly, additional details) of any values that should be passed into the component. These properties can be referenced in the templates using the normal mustache syntax (`{{ propName }}`) or within the component logic like normal (`this.propName`). Properties passed to a child component are bound to the parent component logic, so if the value of the property changes in the parent component, that will refresh the value within the child component, too.
 
 This is very useful for writing child components to handle things like show/hide of individual items. Here is an example using an imaginary FAQ page:
 
