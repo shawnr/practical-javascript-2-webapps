@@ -150,10 +150,10 @@ export default {
       showAnswer: false
     }
   },
-  props: [
-    'question',
-    'answer'
-  ],
+  props: {
+    question: String,
+    answer: String
+  },
   methods: {
     toggleAnswer: function () {
       this.showAnswer = !this.showAnswer;
@@ -162,7 +162,7 @@ export default {
 }
 </script>
 ```
-In the `Question` component, we have a simple template defined: We output the `question` and `answer` properties in the template. In the component logic we define those two values in the `props` array, and we also define a simple `toggleAnswer` method that toggles the `showAnswer` value between `false` and `true`. The `showAnswer` value is used to control the `v-show` directive on the answer content.
+In the `Question` component, we have a simple template defined: We output the `question` and `answer` properties in the template. In the component logic we define those two values in the `props` object, and we also define a simple `toggleAnswer` method that toggles the `showAnswer` value between `false` and `true`. The `showAnswer` value is used to control the `v-show` directive on the answer content.
 
 Here is an example of what this looks like in action:
 
