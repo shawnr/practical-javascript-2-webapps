@@ -115,6 +115,8 @@
 * [Core Concept: Methods of Storing User Data](caching-data/core-concept-methods-of-storing-user-data.md)
 * Saving User-Generated Data
 * Caching Data from APIs
+* Quiz: Caching Data
+* Project: Caching Data
 
 ---
 
