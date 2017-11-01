@@ -33,7 +33,7 @@ Please enjoy this self-check quiz to help you identify key concepts, points, and
         <answer>False</answer>
         <explanation>True: We prefer shorter blocks of code that can be more easily understood and debugged.</explanation>
     </question>
-    <question>
+    <question multiple>
         <p>What are two structures that can be used to break apart lengthy code sequences into smaller components?</p>
         <answer>Array</answer>
         <answer correct>Function</answer>
