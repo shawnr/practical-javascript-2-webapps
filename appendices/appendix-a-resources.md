@@ -4,6 +4,7 @@ This page lists additional resources for continuing our learning about web appli
 ## Vue.js Resources
 * [Vue.js Official Guide](https://vuejs.org/v2/guide/)
 * [Vue.js Feed](https://vuejsfeed.com/)
+* [Vue.js Style Guide](https://vuejs.org/v2/style-guide/)
 
 ## Helpful References
 * [Vue.js API Reference](https://vuejs.org/v2/api/)
