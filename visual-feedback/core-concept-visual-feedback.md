@@ -28,7 +28,7 @@ When generally thinking about messaging, the different varieties can be usefully
 ### Global Messages
 Global messages apply to everything the user is seeing. On Twitter, for example, as we read tweets in our timeline we may notice an alert that shows up at the top of the timeline telling us that there are a number of new tweets available to read. In many email clients, when we receive a new message, or when ew file a message away, we will see an alert at the top of the screen. 
 
-![New tweets!](img/new_tweets.png)
+![New tweets!](../img/new_tweets.png)
 <br>New tweets!
 
 Global messages are great for letting us know that things are happening that generally apply to what we're doing. Depending on how they are presented, they can be more or less effective. For example, the alert pictured above is only visible when we scroll to the top of the page. If we are lower on the page, we will never know how many tweets you have.
@@ -38,7 +38,7 @@ Local messages appear closer to "where the action is". This is commonly seen in 
 
 Here is an example from Twitter's signup form:
 
-![Twitter signup with error notifications](img/twitter_signup.png)
+![Twitter signup with error notifications](../img/twitter_signup.png)
 <br>Twitter signup with error notifications
 
 As we can see in the image above, as we fill in the form the Twitter website is checking to see if our information is valid. It indicates to us clearly if we have successfully filled in the field or if we must change our information. Twitter even goes so far as to suggest alternate usernames based on the data we've filled in when our chosen name is unavailable.
