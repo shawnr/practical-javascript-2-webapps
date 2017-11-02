@@ -15,5 +15,11 @@ Class Name | When Applied | When Removed | Definition
 `.v-leave-active` | During entire leave phase. | When transition finishes. | Active state for leave.
 `.v-leave-to` | One frame after leaving animation is triggered. | When transition finishes. | Ending state for leave.
 
+## Transitioning Single Elements
+
+## Transitioning Groups of Elements
+
+## Reusable Transitions
+
 
 
