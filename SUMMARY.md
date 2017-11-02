@@ -105,7 +105,7 @@
 * [Introduction](visual-feedback/README.md)
 * [Core Concept: Visual Feedback](visual-feedback/core-concept-visual-feedback.md)
 * [Dynamic Classes](visual-feedback/dynamic-classes.md)
-* Transitions and Animations
+* [Transitions and Animations](visual-feedback/transitions-and-animations.md)
 * Quiz: Visual Feedback and Enhancement
 * Project: Visual Feedback and Enhancement
 
