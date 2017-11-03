@@ -18,8 +18,64 @@ Class Name | When Applied | When Removed | Definition
 `.v-leave-to` | One frame after leaving animation is triggered. | When transition finishes. | Ending state for leave.
 wwwwwwwwwwwwwww|wwwww|wwww|wwww
 
+These are the default names of the classes that are applied as content is added to or removed from the display. It is possible when defining a transition to provide a unique prefix for these classes that will replace the `v-` part of the name. For example, if we named a transition `foo`, then we would write the styles `.foo-enter` and `.foo-leave` instead of `.v-enter` and `.v-leave`. 
+
+By defining different styles for each of these points, and setting up CSS transitions between these styles (or using CSS animations to provide more complex animations), we can create fade in and out effects. But in order to apply these styles, we must wrap content in our templates in a `<transition>` component in order to let Vue.js know we want to use these styles when elements are added and removed from the display.
 
 ## Transitioning Single Elements
+To transition a single element, we can use the `<transition>` component, which is provided by the Vue.js framework and can be used without importing it or adding it to our project. The `<transition>` component accepts a `name` attribute, and it should wrap a single HTML element. The `name` attribute will cause that name to be prepended to the transition class names applied by Vue.js. Transitions can be applied to any element that is controlled with a `v-show`, `v-if`, or any dynamic components or component root nodes. So we can always animate the display or removal of an entire component, but this is not the component that handles transitions for other elements (such as list items). (We will explore that other component shortly.)
+
+As an example, we can look at how we might animate the display of the FAQ answers from our old FAQ example. The FAQ display uses a `Question` component that handles the showing/hiding of the answer text. We can wrap the answer in a transition and make the display of that information more eye-catching:
+
+```html
+<template>
+  <div class="question">
+    <h2><a v-on:click="toggleAnswer">{{ question }}</a></h2>
+    <transition name="fade">
+      <p v-show="showAnswer" class="answer">{{ answer }}</p>
+    </transition>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'FAQ',
+  data () {
+    return {
+      showAnswer: false
+    }
+  },
+  props: [
+    'question',
+    'answer'
+  ],
+  methods: {
+    toggleAnswer: function () {
+      this.showAnswer = !this.showAnswer;
+    }
+  }
+}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0
+}
+h1, h2 {
+  font-weight: normal;
+}
+a {
+  color: #42b983;
+  cursor: pointer;
+}
+</style>
+```
+We can see that the `p.answer` element has been wrapped in a `<transition>` component with the name `fade`. This corresponds to the styles that have been defined: `.fade-enter-active`, `.fade-leave-active`, `.fade-enter`, and `.fade-leave-to`.
+
 
 ## Transitioning Groups of Elements
 
