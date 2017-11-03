@@ -1,5 +1,7 @@
 # Transitions and Animations
-When data changes on the screen, we often use transitions and animations to call the user's attention to what has just been added or removed. 
+When data changes on the screen, we often use transitions and animations to call the user's attention to what has just been added or removed. The movement we use often mimics the change that we are trying to illustrate. For example, a user might delete an item from a list, which might slide out and fade away. Or a refresh of data might cause items to enter a list, sliding in from the side and landing with a bounce.
+
+This movement makes our interfaces feel more lively and helps conceptually ground the action the user has taken. The addition of movement makes our software feel more real. Fortunately, Vue.js gives us a few powerful tools for animating transitions within our applications.
 
 ## Enter/Leave/List Transitions
 Whenever content enters or leaves the screen, or whenever information is added or removed from a list, Vue.js will automatically add some specific classes to the HTML elements. These classes can be defined by developers to trigger whatever animation or transition we wish.
