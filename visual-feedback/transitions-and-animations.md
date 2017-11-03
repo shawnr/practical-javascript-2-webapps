@@ -114,5 +114,5 @@ This effect creates a nice visual cue that information has been updated. In othe
 
 ## Pushing Further
 
-
+Although we have learned enough in this section to dramatically improve our interface, it is possible to do more with transitions than we have explored here. If we're feeling like a challenge, or more exploration, it's worthwhile to dig into the [Vue.js Guide](https://vuejs.org/v2/guide) and learn about [list move transitions](https://vuejs.org/v2/guide/transitions.html#List-Move-Transitions) and [reusable transitions](https://vuejs.org/v2/guide/transitions.html#Reusable-Transitions) among other fascinating details.
 
