@@ -232,8 +232,8 @@ Rather than living with this duplication, we can isolate this display into a sin
 <template>
   <div>
     <dl>
-      <dt v-if="conditions.temp">Current Temperature</dt>
-      <dd v-if="conditions.temp">{{ conditions.temp }}%</dd>
+      <dt v-if="conditions.temp != conditions.temp_min">Current Temperature</dt>
+      <dd v-if="conditions.temp != conditions.temp_min">{{ conditions.temp }}%</dd>
       <dt>Humidity</dt>
       <dd>{{ conditions.humidity }}%</dd>
       <dt>High</dt>
@@ -644,6 +644,8 @@ export default {
 <template>
   <div>
     <dl>
+      <dt v-if="conditions.temp != conditions.temp_min">Current Temperature</dt>
+      <dd v-if="conditions.temp != conditions.temp_min">{{ conditions.temp }}%</dd>
       <dt>Humidity</dt>
       <dd>{{ conditions.humidity }}%</dd>
       <dt>High</dt>
