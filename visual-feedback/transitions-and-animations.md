@@ -81,9 +81,38 @@ We can see that the `p.answer` element has been wrapped in a `<transition>` comp
 This single element transition is commonly found, but it is also common for us to want to animate items being added to or removed from other elements (or multiple elements together). In these cases, we must use the `<transition-group>` component.
 
 ## Transitioning Groups of Elements
+In order to transition groups of elements (list items or other things generated using a `v-for` directive), we can use the `<transition-group>` component. This component functions in a way similar to the single `<transition>` component. It also takes a name attribute to modify the names of the classes that are automatically added to the elements as they transition. We can also use the other attributes that are available on the `<transition>` element (such as the `appear` attribute, which makes an animation take place when the content appears on the page without being toggled by the user). 
 
+In order to use the `<transition-group>` component, we must label each item we want to transition with a key, which we can do by binding a unique value to the key as we process a `v-for` loop. We must also specify a tag that the transition will wrap around the group of elements included in the effect. The `<transition>` component defaults to using a `<span>` tag to wrap the elements. But we can modify that easily. Here is an example of how we add animations to list items using the `Forecast` screen from the previous project.
 
-## Reusable Transitions
+**template**
+```html
+<transition-group name="fade" tag="div" appear>
+  <li v-for="forecast in weatherData.list" v-bind:key="forecast">
+    <h3>{{ forecast.dt|formatDate }}</h3>
+    <weather-summary v-bind:weatherData="forecast.weather"></weather-summary>
+    <weather-data v-bind:weatherData="forecast.main"></weather-data>
+  </li>
+</transition-group>
+```
+
+**styles**
+```css
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 1s
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0
+}
+```
+We can see that we have specified a `<div>` element to wrap all of our list items. We have not modified our list output at all except for the addition of the `key` attribute on the `<li>` tag. We have bound the `forecast` value to the key, which gives us the unique identifier the transition group needs to operate. In the styles block, we have defined the same fade effects we used on the previous example. We could have defined any other transition effect if we preferred. 
+
+![Forecast Fade-In](/img/forecast-fade.gif)
+<br>Forecast Fade-In
+
+This effect creates a nice visual cue that information has been updated. In other situations, we could add effects to make it more obvious when data is removed from a list or added to the list. We can even explore more of the features of transition groups to animate the re-ordering of a list, which is a valuable effect in some situations.
+
+## Pushing Further
 
 
 
