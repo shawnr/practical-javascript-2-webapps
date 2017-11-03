@@ -73,10 +73,12 @@ a {
 }
 </style>
 ```
-We can see that the `p.answer` element has been wrapped in a `<transition>` component with the name `fade`. This corresponds to the styles that have been defined: `.fade-enter-active`, `.fade-leave-active`, `.fade-enter`, and `.fade-leave-to`.
+We can see that the `p.answer` element has been wrapped in a `<transition>` component with the name `fade`. This corresponds to the styles that have been defined: `.fade-enter-active`, `.fade-leave-active`, `.fade-enter`, and `.fade-leave-to`. Note that it is not required to define styles for every single class used in the transition. Using different classes will lead to different results, and the possibilities are incredibly diverse. We could just as easily be using other CSS animations to do fly-ins, bounce-outs, or whatever other effect we feel best serves our users.
 
+This single element transition is commonly found, but it is also common for us to want to animate items being added to or removed from other elements (or multiple elements together). In these cases, we must use the `<transition-group>` component.
 
 ## Transitioning Groups of Elements
+
 
 ## Reusable Transitions
 
