@@ -64,22 +64,6 @@ Please enjoy this self-check quiz to help you identify key concepts, points, and
         <answer correct><code>key</code></answer>
         <explanation>The <code>transition-group</code> component requires a <code>tag</code> attribute and each item included for transitioning must have a unique <code>key</code> attribute.</explanation>
     </question>
-    <question>
-        <p>How can a child component signal to the parent component that some action has taken place?</p>
-        <answer>Data syncing</answer>
-        <answer>Promises</answer>
-        <answer correct>Trigger a custom event</answer>
-        <answer>Reactivity</answer>
-        <explanation>Child components can trigger a custom event, which can be picked up and handled by the parent component.</explanation>
-    </question> 
-    <question>
-        <p>How can we consolidate common data or functionality used in multiple components in a Vue.js application?</p>
-        <answer>Use code snippets in our IDE</answer>
-        <answer correct>Abstract data objects and functionality to common files and import those in components where they are needed</answer>
-        <answer>Define as a part of the core Vue.js instance</answer>
-        <answer>Use Angular</answer>
-        <explanation>Common data objects and functionality can be abstracted into common files and imported into components where required.</explanation>
-    </question> 
 </quiz>
 
 <div class="no-quiz">
