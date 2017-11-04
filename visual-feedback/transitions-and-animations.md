@@ -116,3 +116,5 @@ This effect creates a nice visual cue that information has been updated. In othe
 
 Although we have learned enough in this section to dramatically improve our interface, it is possible to do more with transitions than we have explored here. If we're feeling like a challenge, or more exploration, it's worthwhile to dig into the [Vue.js Guide](https://vuejs.org/v2/guide) and learn about [list move transitions](https://vuejs.org/v2/guide/transitions.html#List-Move-Transitions) and [reusable transitions](https://vuejs.org/v2/guide/transitions.html#Reusable-Transitions) among other fascinating details.
 
+In addition to the built-in features of Vue.js, it is worthwhile to explore some of the other third-party modules that have been created to provide some great animation and transition experiences. [The Animation section on the Awesome Vue list](https://github.com/vuejs/awesome-vue#animation) is a great place to start. [The `vue2-animate` package](https://github.com/asika32764/vue2-animate) will be used in the project that goes with this section.
+
