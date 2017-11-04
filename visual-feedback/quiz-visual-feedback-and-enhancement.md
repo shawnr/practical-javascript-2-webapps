@@ -49,20 +49,20 @@ Please enjoy this self-check quiz to help you identify key concepts, points, and
         <explanation>There are many reasons to use bound classes and styles, but those do not include animating page transitions or showing/hiding content.</explanation>
     </question>
     <question>
-        <p>When we "compose" components in Vue.js, what relationship do we create?</p>
-        <answer>master/slave</answer>
-        <answer correct>parent/child</answer>
-        <answer>siblings</answer>
-        <answer>worker/agent</answer>
-        <explanation>In Vue.js components are "composed" using parent/child relationships.</explanation>
+        <p>What component do we use in Vue.js to transition a single element?</p>
+        <answer><code>App</code></answer>
+        <answer><code>router-link</code></answer>
+        <answer correct><code>transition</code></answer>
+        <answer><code>transition-group</code></answer>
+        <explanation>In Vue.js we use the <code>transition</code> component to transition single elements shown with <code>v-if</code>, <code>v-show</code>, or components.</explanation>
     </question>
-    <question>
-        <p>In Vue.js, a child component defines the data it needs from the parent component using the _______________ array.</p>
+    <question multiple>
+        <p>What extra attributes do <code>transition-group</code> components require to function?</p>
         <answer><code>data</code></answer>
         <answer><code>params</code></answer>
-        <answer correct><code>props</code></answer>
-        <answer><code>args</code></answer>
-        <explanation>Child components define the data they need through the <code>props</code> ("properties") object.</explanation>
+        <answer correct><code>tag</code></answer>
+        <answer correct><code>key</code></answer>
+        <explanation>The <code>transition-group</code> component requires a <code>tag</code> attribute and each item included for transitioning must have a unique <code>key</code> attribute.</explanation>
     </question>
     <question>
         <p>How can a child component signal to the parent component that some action has taken place?</p>
