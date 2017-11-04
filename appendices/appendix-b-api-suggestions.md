@@ -6,6 +6,7 @@ The following APIs have been reviewed for use with the kinds of code we cover in
 
 <h3>No API Key Required</h3>
 <ul>
+<li><a href="http://jsonplaceholder.typicode.com/">JSON Placeholder API</a></li>
 <li><a href="https://www.datamuse.com/api/">Datamuse Word API</a></li>
 <li><a href="https://swapi.co/">Star Wars API</a></li>
 <li><a href="http://www.pokeapi.co/">Pok&eacute;mon API</a></li>
