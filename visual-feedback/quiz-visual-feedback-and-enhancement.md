@@ -33,20 +33,20 @@ Please enjoy this self-check quiz to help you identify key concepts, points, and
     </question>
     <question multiple>
         <p>What are some reasons for using animations and transitions in our interfaces?</p>
-        <answer correct>They are cool.</answer>
-        <answer correct>Draw attention to changes on the screen.</answer>
-        <answer correct>Draw attention to data leaving the screen.</answer>
-        <answer correct>Illustrate the change in category or status of some information.</answer>
+        <answer correct>They are cool</answer>
+        <answer correct>Draw attention to changes on the screen</answer>
+        <answer correct>Draw attention to data leaving the screen</answer>
+        <answer correct>Illustrate the change in category or status of some information</answer>
         <explanation>All of these are reasons why we should use animations and transitions to enhance our interfaces.</explanation>
     </question>
     <question multiple>
-        <p>What are additional methods of improving the structure of our code when refactoring?</p>
-        <answer correct>Remove unused and temporary files in the project repository</answer>
-        <answer>Improving conditionals so they execute more quickly</answer>
-        <answer>Switching to a better library that offers more features for a given component</answer>
-        <answer correct>Improving names used to identify elements in the system</answer>
-        <answer correct>Removing any commented code or TODO notes</answer>
-        <explanation>Remember that refactoring focuses on improving the organization and readability of the code, not improving performance or enhancing features.</explanation>
+        <p>Why would we use bound classes or styles in our interfaces?</p>
+        <answer>Animate page transitions</answer>
+        <answer correct>Provide a visual response to a change in data</answer>
+        <answer correct>Apply different styles depending on data values</answer>
+        <answer correct>Apply dynamic data to style properties (such as background images)</answer>
+        <answer>Show/hide content</answer>
+        <explanation>There are many reasons to use bound classes and styles, but those do not include animating page transitions or showing/hiding content.</explanation>
     </question>
     <question>
         <p>When we "compose" components in Vue.js, what relationship do we create?</p>
