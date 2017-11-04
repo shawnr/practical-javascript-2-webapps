@@ -26,26 +26,18 @@ Please enjoy this self-check quiz to help you identify key concepts, points, and
         <explanation>Load throbbers are usually local messages.</explanation>
     </question>
     <question>
-        <p>Longer blocks of code are prone to more errors and make it more difficult for developers to understand what is happening in a program.</p>
-        <answer correct>True</answer>
-        <answer>False</answer>
-        <explanation>True: We prefer shorter blocks of code that can be more easily understood and debugged.</explanation>
+        <p>Errors are not counted as messages in web applications.</p>
+        <answer>True</answer>
+        <answer correct>False</answer>
+        <explanation>False: Errors are just another kind of message, and they can be either local or global.</explanation>
     </question>
     <question multiple>
-        <p>What are two structures that can be used to break apart lengthy code sequences into smaller components?</p>
-        <answer>Array</answer>
-        <answer correct>Function</answer>
-        <answer correct>Method</answer>
-        <answer>Conditional</answer>
-        <explanation>Break apart lengthy code sequences by breaking them into functions and/or methods that can be referenced instead.</explanation>
-    </question>
-    <question multiple>
-        <p>What are some of the advantages of encapsulation?</p>
-        <answer>Easier to swallow the code.</answer>
-        <answer correct>Information hiding allows us to present a more friendly interface to the developer</answer>
-        <answer correct>We gain the ability to enforce validation or optimization processes when getting or setting information</answer>
-        <answer>Other developers will think we are more professional</answer>
-        <explanation>Encapsulation affords us the ability to hide information in order to present a more friendly interface for the developer, and it gives us points where we can more easily insert processes for validation and optimization of data.</explanation>
+        <p>What are some reasons for using animations and transitions in our interfaces?</p>
+        <answer correct>They are cool.</answer>
+        <answer correct>Draw attention to changes on the screen.</answer>
+        <answer correct>Draw attention to data leaving the screen.</answer>
+        <answer correct>Illustrate the change in category or status of some information.</answer>
+        <explanation>All of these are reasons why we should use animations and transitions to enhance our interfaces.</explanation>
     </question>
     <question multiple>
         <p>What are additional methods of improving the structure of our code when refactoring?</p>
