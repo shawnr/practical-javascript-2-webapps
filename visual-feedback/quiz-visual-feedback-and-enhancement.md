@@ -12,20 +12,18 @@ Please enjoy this self-check quiz to help you identify key concepts, points, and
         <explanation>All good user experiences rely on solid interface design: proper grouping of information, solid organization, reduced clutter, etc.</explanation>
     </question>
     <question multiple>
-        <p>Which of the following are goals for refactoring?</p>
-        <answer correct>improve code readability for developers</answer>
-        <answer correct>consolidate repetitive code blocks</answer>
-        <answer>improve performance</answer>
-        <answer correct>maintain a separation of concerns</answer>
-        <explanation>All of these are goals for refactoring except improving performance (which would be considered an enhancement of the codebase).</explanation>
+        <p>What are two types of messages or notifications that can be used in an application?</p>
+        <answer>postal</answer>
+        <answer>animated</answer>
+        <answer correct>local</answer>
+        <answer correct>global</answer>
+        <explanation>Messages used in an application are either "local" (attached to a specific element in the DOM) or "global" (generally referencing the entire page content).</explanation>
     </question>
     <question>
-        <p>What can we do to organize related data values in our software?</p>
-        <answer>Name each variable with the same prefix (<code>prefix_valueName</code>).</answer>
-        <answer correct>Combine variables into a single object.</answer>
-        <answer>Put values in a Node module.</answer>
-        <answer>Fetch values from an API.</answer>
-        <explanation>JS Objects are well-suited for relating multiple data values.</explanation>
+        <p>What kind of message is a load throbber?</p>
+        <answer>global</answer>
+        <answer correct>local</answer>
+        <explanation>Load throbbers are usually local messages.</explanation>
     </question>
     <question>
         <p>Longer blocks of code are prone to more errors and make it more difficult for developers to understand what is happening in a program.</p>
