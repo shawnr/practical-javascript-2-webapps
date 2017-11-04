@@ -4,12 +4,12 @@ Please enjoy this self-check quiz to help you identify key concepts, points, and
 
 <quiz name="">
     <question>
-        <p>What do we call the process of re-structuring code without altering functionality?</p>
-        <answer>revisions</answer>
-        <answer>code review</answer>
-        <answer correct>refactoring</answer>
-        <answer>abstraction</answer>
-        <explanation>Refactoring is the process of re-structuring code without altering functionality.</explanation>
+        <p>The first step towards presenting a compelling visual experience for a user is what?</p>
+        <answer>refactoring</answer>
+        <answer>custom fonts</answer>
+        <answer correct>solid interface design</answer>
+        <answer>lots of effects</answer>
+        <explanation>All good user experiences rely on solid interface design: proper grouping of information, solid organization, reduced clutter, etc.</explanation>
     </question>
     <question multiple>
         <p>Which of the following are goals for refactoring?</p>
