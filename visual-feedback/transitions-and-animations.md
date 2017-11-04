@@ -105,7 +105,7 @@ In order to use the `<transition-group>` component, we must label each item we w
   opacity: 0
 }
 ```
-We can see that we have specified a `<div>` element to wrap all of our list items. We have not modified our list output at all except for the addition of the `key` attribute on the `<li>` tag. We have bound the `forecast` value to the key, which gives us the unique identifier the transition group needs to operate. In the styles block, we have defined the same fade effects we used on the previous example. We could have defined any other transition effect if we preferred. 
+We can see that we have specified a `<div>` element to wrap all of our list items. We have not modified our list output at all except for the addition of the `key` attribute on the `<li>` tag. We have bound the `forecast` value to the key, which gives us the unique identifier the transition group needs to operate. In the styles block, we have defined the same fade effects we used on the previous example. We could have defined any other transition effect if we preferred. We have also used the `appear` attribute on the `<transition-group>` component so the list items will be animated the first time they appear on the screen (without any change from the user).
 
 ![Forecast Fade-In](/img/forecast-fade.gif)
 <br>Forecast Fade-In
