@@ -16,7 +16,7 @@ Class Name | When Applied | When Removed | Definition
 `.v-leave` | Immediately when leaving animation is triggered. | One frame after leaving animation is triggered. | Starting state for leave.
 `.v-leave-active` | During entire leave phase. | When transition finishes. | Active state for leave.
 `.v-leave-to` | One frame after leaving animation is triggered. | When transition finishes. | Ending state for leave.
-wwwwwwwwwwwwwww|wwwww|wwww|wwww
+~~~~~~~~~~~~~~~|~~~~~~|~~~~~~|~~~~~~
 
 These are the default names of the classes that are applied as content is added to or removed from the display. It is possible when defining a transition to provide a unique prefix for these classes that will replace the `v-` part of the name. For example, if we named a transition `foo`, then we would write the styles `.foo-enter` and `.foo-leave` instead of `.v-enter` and `.v-leave`. 
 
