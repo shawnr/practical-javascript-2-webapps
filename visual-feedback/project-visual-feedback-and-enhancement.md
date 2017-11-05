@@ -81,6 +81,9 @@ findWords: function() {
 ```
 As we can see here, we can easily use the structure of the API request to turn on and off the spinner animation to indicate loading. Usually, the Datamuse API loads very quickly, but on slower connections or for more complex searches this loading spinner will help our users know exactly what is happening in the app. 
 
+![Load Spinner](/img/project-12-load-spinner.gif)
+<br>Load Spinner
+
 Now we should be able to test and see that we have a load spinner showing up whenever the application is requesting data from the server.
 
 ### Animate the Items in the Search Results
@@ -184,6 +187,11 @@ removeWord: function (word) {
 }
 ```
 We use the `splice()` method, which exists on every JavaScript Array, to remove the word we're after. Once we've done that, we alert the user. Once we get the hang of this, it becomes very easy to add messages to all the parts of our application.
+
+Now we should see pretty much all of these features at play in our application:
+
+![Add/Remove Words](/img/project-12-addremove-word.gif)
+<br>Add/Remove Words
 
 ### Display Errors with Messages
 The last place we need to add message display is to our possible API errors. We want the user to know if our application is malfunctioning because of the API; otherwise, they will assume that our application is broken and never realize that the API we depend upon is having troubles. It might be cold comfort, but it makes us feel better as developers to let our users know that we're still looking out for them even when things are going wrong beyond our control.
