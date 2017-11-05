@@ -1,4 +1,5 @@
 # Project: Visual Feedback and Enhancement
+This project uses the [Visual Enhancement starter repository](https://github.com/suwebdev/wats4000-visual-enhancement). Be sure to fork and clone this repository to get started.
 
 For this project, we will revisit the Datamuse API to enhance the search tools
 we worked with a few projects ago. We will present one search with multiple
