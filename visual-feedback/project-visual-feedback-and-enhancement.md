@@ -34,7 +34,7 @@ components. We will also use a load spinner from Spinkit.
 ## Working the Project
 
 ## Wrapping Up
-Now that we've completed the project, here are what each of our files look like in their entirety. We can reference these examples to check our own work.
+Now that we've completed the project, here are what each of our changed files look like in their entirety. We can reference these examples to check our own work.
 
 
 
