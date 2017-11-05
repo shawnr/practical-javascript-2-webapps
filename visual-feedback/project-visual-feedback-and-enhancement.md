@@ -434,6 +434,5 @@ The project should now be up and available to the public through GH Pages.
 If we crave more challenges, try tackling some of these suggestions.
 
 * Try making custom animations for everything, and don't use `vue2-animate` animations at all
-* Add animations to additional components to make the whole interface feel like jelly
 * Add a shuffle feature to the wordlist along with the accompanying animation
 * Make other layout or design improvements that help the application be more helpful to our users
