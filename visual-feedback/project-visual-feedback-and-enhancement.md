@@ -119,6 +119,28 @@ Notice that this time we have used the `slideRight` animation. We also have the 
 It's worthwhile to notice that when we remove a word from the list, the opposite animation happens. This is a feature of the way the `vue2-animate` styles have been defined. They combine animations to work for both entry and exit. Try different animations and see what it looks like when words are added to the list or removed.
 
 ### Add `MessageContainer` for Global Messages
+A `MessageContainer` component has been provided to handle display of messages. These components can be easy to create for basic purposes, but it's also very common to use third-party components to display messages in our applications. It all depends on our specific project needs.
+
+To use the `MessageContainer`, we need to import it into the `WordSearch` component and add it to the list of components used in `WordSearch`. This is very similar to how we previously imported and set up the `CubeSpinner` component.
+
+```html
+<script>
+import axios from 'axios';
+require('vue2-animate/dist/vue2-animate.min.css');
+
+import CubeSpinner from '@/components/CubeSpinner';
+import MessageContainer from '@/components/MessageContainer';
+
+export default {
+  name: 'WordSearch',
+  components: {
+    spinner: CubeSpinner,
+    'message-container': MessageContainer
+  },
+  // ... more script ... //
+</script>
+```
+
 
 ### Add Messages to `addWord` Method
 
