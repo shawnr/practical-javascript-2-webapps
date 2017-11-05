@@ -36,6 +36,49 @@ In order to complete this project, we will mainly be adding elements to enhance 
 The following guide offers a walkthrough of how to complete almost every aspect of the project. 
 
 ### Add `CubeSpinner` to Indicate Loading
+Like many of the tasks in this project, this one should be familiar based on the previous project. We will add the `import` statement for the `CubeSpinner` component, and then will add the component to the list of components. Once we have done that, we will add the `<spinner>` element to our template. We will use a regular `v-if` directive on the `<spinner>` element to determine whether or not to show the spinner. Here is what the basic implementation looks like:
+
+**template**
+```html
+<spinner v-if="showSpinner"></spinner>
+```
+
+**script**
+```html
+import CubeSpinner from '@/components/CubeSpinner';
+
+export default {
+  name: 'WordSearch',
+  components: {
+    spinner: CubeSpinner
+  },
+  // ... additional code ... //
+```
+This is just like how we added the child components in the previous project. Now we must modulate the value of `this.showSpinner` from within the `findWords` method in order to control the show of the loading spinner. Here is how we can do that:
+
+```js
+findWords: function() {
+  // Show spinner when API request begins here.
+  this.showSpinner = true;
+  this.results = null;
+  axios.get('https://api.datamuse.com/words', {
+    params: {
+      ml: this.phrase,
+      sl: this.soundsLike,
+      sp: `${this.startLetter}*${this.endLetter}`
+    }
+  })
+  .then( response => {
+    // Turn off spinner.
+    this.showSpinner = false;
+    this.results = response.data;
+  })
+  .catch( error => {
+    // Turn off spinner.
+    this.showSpinner = false;  
+  })
+}
+```
 
 ### Animate the Items in the Search Results
 
