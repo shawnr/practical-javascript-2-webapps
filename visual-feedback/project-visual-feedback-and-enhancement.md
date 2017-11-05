@@ -20,7 +20,7 @@ which makes a set of common animations available for use with Vue.js transition
 components. We will also use a load spinner from Spinkit.
 
 ## Review the Requirements
-In order to complete this project, we will mainly be adding elements to enhance the messaging and visual presentation of the application. We must complete the following requirements, which will have us editing several files in the project. (Each file contains `TODO` notes, so look for those.) Here are the basic requirements:
+In order to complete this project, we will mainly be adding elements to enhance the messaging and visual presentation of the application. We must complete the following requirements, which will have us editing the `src/components/WordSearch.vue` file. (Each requirement corresponds to the `TODO` notes, so look for those.) Here are the basic requirements:
 
 * Use the `showSpinner` value to modulate the display of the `CubeSpinner` component when appropriate
 * Add an animation to the items of the results list when a search is completed
@@ -141,12 +141,65 @@ export default {
 </script>
 ```
 
+Once we have added the child component to `WordSearch`, we can use it in the template:
+
+```html
+<message-container v-bind:messages="messages"></message-container>
+```
+The `MessageContainer` component looks for a property called `messages`, which we want to bind to the `messages` data value in the `WordSearch` component. Now we can cause messages to be displayed by adding or removing messages to the `messages` array inside of `WordSearch`.
 
 ### Add Messages to `addWord` Method
+Adding messages is just a matter of pushing a `message` object into the `messages` array. The `message` object expects two properties: `type` and `text`. This allows the `MessageContainer`, and the `MessageItem` child component it uses, to properly display each message. Here is how we can add a message to indicate that a word has been added to the Word List:
+
+```js
+addWord: function (word) {
+  if (this.wordList.indexOf(word) === -1) {
+    this.wordList.push(word);
+    this.messages.push({
+      type: 'success',
+      text: `${word} added to WordList.`
+    });
+  } else {
+    this.messages.push({
+      type: 'info',
+      text: `${word} is already on the WordList.`
+    });
+  }
+}
+```
+In the `addWord` method, we receive `word` as an argument. This `word` is compared to the existing `this.wordList` array to see if it already exists in the list. If the `word` is not found in the array, then it is a new word, and it is added to `this.wordList`. We also add a `message` object to the `this.messages` array with the `type` set to `"success"` and the `text` set to a helpful message.
+
+If the `word` already exists in the `this.messages` array, then we do not re-add the word, and we instead create an "info" message that lets the user know why the word was not added. This is a common situation when allowing users to add items to a list of things.
 
 ### Add Messages to `removeWord` Method
+Adding the message creation to the `removeWord` method is even easier than adding it to the `addWord` method because there is only one case. We can add it like so:
+
+```js
+removeWord: function (word) {
+  this.wordList.splice(this.wordList.indexOf(word), 1);
+  this.messages.push({
+    type: 'success',
+    text: `${word} removed from WordList.`
+  });
+}
+```
+We use the `splice()` method, which exists on every JavaScript Array, to remove the word we're after. Once we've done that, we alert the user. Once we get the hang of this, it becomes very easy to add messages to all the parts of our application.
 
 ### Display Errors with Messages
+The last place we need to add message display is to our possible API errors. We want the user to know if our application is malfunctioning because of the API; otherwise, they will assume that our application is broken and never realize that the API we depend upon is having troubles. It might be cold comfort, but it makes us feel better as developers to let our users know that we're still looking out for them even when things are going wrong beyond our control.
+
+Adding messages to the error clause of our API request is almost the same as adding them everywhere else:
+
+```js
+.catch( error => {
+  this.showSpinner = false;
+  this.messages.push({
+    type: 'error',
+    text: error.message
+  });
+})
+```
+
 
 ## Wrapping Up
 Now that we've completed the project, here are what each of our changed files look like in their entirety. We can reference these examples to check our own work.
