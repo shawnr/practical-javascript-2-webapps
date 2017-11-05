@@ -79,6 +79,8 @@ findWords: function() {
   })
 }
 ```
+As we can see here, we can easily use the structure of the API request to turn on and off the spinner animation to indicate loading. Usually, the Datamuse API loads very quickly, but on slower connections or for more complex searches this loading spinner will help our users know exactly what is happening in the app.
+
 
 ### Animate the Items in the Search Results
 
