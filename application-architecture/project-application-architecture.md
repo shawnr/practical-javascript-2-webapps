@@ -332,6 +332,7 @@ There are several files that appear to be remnants of previous development. Clea
 If we haven't already been conscientious about commenting our changes so developers reviewing our work will be able to tell how things work, then now is the time to go back through and do that work. We must leave comments that allow developers to more quickly understand non-obvious details about the code and how to use it.
 
 ## Wrapping Up
+Now that we've completed the project, here are what each of our files look like in their entirety. We can reference these examples to check our own work.
 
 ### Components
 
