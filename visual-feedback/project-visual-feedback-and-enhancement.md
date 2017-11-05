@@ -84,8 +84,30 @@ As we can see here, we can easily use the structure of the API request to turn o
 Now we should be able to test and see that we have a load spinner showing up whenever the application is requesting data from the server.
 
 ### Animate the Items in the Search Results
+To animate the items in the search results, we can wrap the list items in a `<transition-group>` element. We must also add a `key` attribute to each list item (`key` attributes are required whenever we use a `<transition-group>`).
+
+```html
+<transition-group name="fade" tag="div" appear>
+  <li v-for="item in results" class="item" v-bind:key="item.word">
+    <p class="result-word">{{ item.word }}</p>
+    <p><button v-on:click="addWord(item.word)" class="add-word">Add to WordList</button></p>
+  </li>
+</transition-group>
+```
+
+Here we are using the `item.word` value as the `key`, and we have set the `tag` attribute on the `<transition-group>` to `"div"`. This will wrap the set of list items in a `div` tag (as opposed to the default `<span>` tag that the `<transition-group>` uses).
+
+At this point, we should notice that this project has the `vue2-animate` module added. We can see the module listed in our `package.json` file. And we can notice at the top of the logic in our `WordSearch` component is a somewhat odd-looking line:
+
+```js
+require('vue2-animate/dist/vue2-animate.min.css');
+```
+The `vue2-animate` module is unusual because it is only a CSS file. It contains style classes that have been defined to work with the conventions of the `Vue.js` transition system. This means that we can access a large range of premade animations by simply naming our `<transition-group>` with the name of the animation. In the case above, we will see the items in the results list fade in. We can get a better idea of all the animations `vue2-animate` makes available by looking at [the `vue2-animate` Demo Page](http://about.asika.tw/vue2-animate/).
+
+Experiment with a different animation and see what it looks like. It is easy to switch between animations and trying different animations will help us get an idea for how the system works.
 
 ### Animate the items in the Word List
+Animating the items in the Word List works almost exactly the same way as the items in the results list. We can wrap the list items in a very similar `<transition-group>` element. We make the same changes to add a `key` to the list items and 
 
 ### Add `MessageContainer` for Global Messages
 
