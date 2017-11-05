@@ -107,7 +107,16 @@ The `vue2-animate` module is unusual because it is only a CSS file. It contains 
 Experiment with a different animation and see what it looks like. It is easy to switch between animations and trying different animations will help us get an idea for how the system works.
 
 ### Animate the items in the Word List
-Animating the items in the Word List works almost exactly the same way as the items in the results list. We can wrap the list items in a very similar `<transition-group>` element. We make the same changes to add a `key` to the list items and 
+Animating the items in the Word List works almost exactly the same way as the items in the results list. We can wrap the list items in a very similar `<transition-group>` element. We make the same changes to add a `key` to the list items and set the `name` and `tag` attributes of the `<transition-group>`.
+
+```html
+<transition-group name="slideRight" tag="div" appear>
+  <li v-for="word in wordList" v-bind:key="word">{{ word }}&nbsp;<button v-on:click="removeWord(word)" class="remove-word">x</button></li>
+</transition-group>
+```
+Notice that this time we have used the `slideRight` animation. We also have the `appear` attribute on the `<transition-group>` to make sure the animation will be shown even when the first item is added to the list. We are using the `word` value as the `key` for each list item. 
+
+It's worthwhile to notice that when we remove a word from the list, the opposite animation happens. This is a feature of the way the `vue2-animate` styles have been defined. They combine animations to work for both entry and exit. Try different animations and see what it looks like when words are added to the list or removed.
 
 ### Add `MessageContainer` for Global Messages
 
