@@ -199,7 +199,7 @@ Adding messages to the error clause of our API request is almost the same as add
   });
 })
 ```
-
+The only unique thing here is that we are using the `"error"` type of message, and our message content is coming from the `error` object returned by `axios` when a request goes wrong. If we want to test these messages we can do so by adding some bogus characters to the domain of our API server and then viewing our site. When we click "search" we should see a "Network Error" show up.
 
 ## Wrapping Up
 Now that we've completed the project, here are what each of our changed files look like in their entirety. We can reference these examples to check our own work.
