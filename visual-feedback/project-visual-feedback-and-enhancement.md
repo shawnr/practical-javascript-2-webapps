@@ -20,8 +20,10 @@ which makes a set of common animations available for use with Vue.js transition
 components. We will also use a load spinner from Spinkit.
 
 ## Review the Requirements
+In order to complete this project, we will mainly be adding elements to enhance the messaging and visual presentation of the application. We must complete the following requirements, which will have us editing several files in the project. (Each file contains `TODO` notes, so look for those.) Here are the basic requirements:
 
 * Use the `showSpinner` value to modulate the display of the `CubeSpinner` component when appropriate
+* Add `vue2-animate` to the project dependencies using `npm`
 * Add an animation to the items of the WordList for when new items are added and removed
 * Add an animation to the items of the results list when a search is completed
 * Add messaging to results display area let the user know when no results are found
@@ -32,6 +34,8 @@ components. We will also use a load spinner from Spinkit.
 * Add a global "error" message to display any errors from the API request (aside from "no results found")
 
 ## Working the Project
+As we get into the project, it's important to 
+###
 
 ## Wrapping Up
 Now that we've completed the project, here are what each of our changed files look like in their entirety. We can reference these examples to check our own work.
