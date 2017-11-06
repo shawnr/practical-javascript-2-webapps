@@ -29,6 +29,8 @@ Both forms of storage allow us to create "key/value pairs", which means that we 
 
 A variety of third-party tools allow us to move between `sessionStorage` and `localStorage` and give us built-in features to manage the manipulation of data into and out of String formats. These tools (such as [`vue-ls`](https://github.com/RobinCK/vue-ls)) can make it very easy to use these storage mechanisms in our applications to cache API data and store user-generated information. We can allow a lot of functionality in our applications even if the network is not available by caching information on behalf of our users. 
 
+We should keep in mind that these storage mechanisms are all susceptible to user manipulation. Users can clear their browser data at any time, which will wipe out any information stored in `localStorage` or `sessionStorage` (or cookies, for that matter). As developers, we must take care to provide mechanisms to detect and restore cached data when the user clears it, and we should never leave the user with a broken application because we assume too much about what data will exist in storage.
+
 ## IndexedDB
 
 Cookies are good for storing tiny bits of information: A 32-bit token, a handful of interface preferences, etc. The storage mechanisms are good for storing larger chunks of data in individual keys, which is useful for things like caching user profiles, individual API responses, or lists of data objects created by the user. But what about when we want to cache significant amounts of data in the browser for the user? What if we want to provide a quality experience for the user to browse their movie collection or email while they are offline? These other methods will not suffice.
