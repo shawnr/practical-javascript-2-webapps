@@ -45,7 +45,7 @@ removeItem: function (item) {
 // ... more code ... //
 ```
 
-The `vue-ls` module comes through as `Vue.ls` and we can use the `get` and `set` methods to work with the values in `localStorage`. In the example above, we see the methods for `addItem` and `removeItem` are using `Vue.ls.set` to set the updated values in `localStorage` at the same time as the value is set on the `this.shoppingCart` object.
+We use the `get` and `set` methods to work with the values in `localStorage`. In the example above, we see the methods for `addItem` and `removeItem` are using `Vue.ls.set` to set the updated values in `localStorage` at the same time as the value is set on the `this.shoppingCart` object.
 
 We can look at this next example to see how we can initialize the `shoppingCart` object when we load a component:
 
@@ -60,7 +60,7 @@ created () {
 ```
 In this example we can see that we have defined a `created` function on our component, which will be executed when the component is loaded. It will try to get the `shoppingCart` value from `localStorage`. If there is no `shoppingCart` value in `localStorage`, then the `Vue.ls` module will return `undefined`, which evaluates to `false`. So if there is no `shoppingCart` value in `localStorage`, then we initialize that value to the `this.shoppingCart` value. If there _is_ a value for `shoppingCart` in `localStorage`, then we use that value as our starting point.
 
-The `vue-ls` module handles converting any data objects into Strings and then rendering them back into data objects when we retrieve them. 
+The `vue-ls` module handles converting any data objects into Strings and then rendering them back into data objects when we retrieve them. This saves us several repetitive lines we would need to use whenever we saved/retrieved items from storage, and it allows us to have very simple statements to handle the `get` and `set` of data.
 
 ## Passing Values Between Components
 In Vue.js we have a one-way data flow: Properties are passed from parent components to child components. Child components can emit an event trigger, but they (normally) cannot sync data between values in the parent and child components. This setup seems clunky at first, but once we have a means of storing data in a single place that is accessible to all of the components in our application, we have an easier time.
