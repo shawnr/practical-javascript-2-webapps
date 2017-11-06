@@ -1,0 +1,4 @@
+# Caching Data from APIs
+When we work with APIs we often run up against API "rate limits." Most API providers do not want developer applications to hit their API endpoints more than necessary. Extra requests to an API create additional delay for our users, and they potentially impact the performance of the API server, causing delays for other users as well. It is both neighborly and pragmatic to do what we can to minimize the number of API requests that we make to a server.
+
+We can reduce the number of API calls we make to a server by caching responses. When working with RESTful APIs, each unique request can be cached. Depending on the API, we might not expect the data to change very often, so we can usually cache the data returned by the API for some period.
