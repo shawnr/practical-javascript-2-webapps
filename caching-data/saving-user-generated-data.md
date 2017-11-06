@@ -67,6 +67,10 @@ In Vue.js we have a one-way data flow: Properties are passed from parent compone
 
 We can imagine all kinds of situations where components could modify the same value in `localStorage` and then just emit the signal that the `localStorage` value has changed. This would prompt parent components to re-render their lists and allow everything to stay in sync across the system. 
 
+This can also be very helpful in other situations where, for example, we might have a component that handles the presentation of site "preferences" to the user. These preferences could be written into storage of some kind and then read by the other components that would use those preferences. For example, a user could select to always see english subtitles on videos, and the component responsible for embedding videos could check that preference value and properly modulate the display of the video for the user.
+
+Now that we have a readily available and easy way of passing data between parts of our application, we can explore all kinds of interface and workflow possibilities. We should never feel compelled to cram a bunch of features into a single component because we cannot figure out how to share data properly between more targeted components. We could improve several previous projects we've seen in this book by using these techniques to refactor and break apart large components. (Take a look back at [the `WordSearch` project in Section 12](/visual-feedback/project-visual-feedback-and-enhancement.md) for a good example of how this technique could allow us to have a nicer organization within that project.)
+
 
 
 
