@@ -19,19 +19,15 @@ let options = {
 Vue.use(VueLocalStorage, options);
 ```
 
-We import the `vue-ls` module for use in this component. Then we define an `options` object, which only contains one property: `namespace`. This is a name that will be prepended to any data we save in the object. In some very complex situations, it would be helpful to use this namespace to keep data properly delineated. Finally, the `Vue.use(VueLocalStorage, options)` command makes `vue-ls` available as `Vue.ls`. We can use it anywhere we import `Vue` into our components.
+We import the `vue-ls` module for use in this component. Then we define an `options` object, which only contains one property: `namespace`. This is a name that will be prepended to any data we save in the object. In some very complex situations, it would be helpful to use this namespace to keep data properly delineated. Finally, the `Vue.use(VueLocalStorage, options)` command makes `vue-ls` available as `this.$ls` in our components. We can use it in any of our components.
 
 Inside a component, we could have code like this to add items from the catalog into a shopping cart.
 
 ```js
-import Vue from 'vue';
-
-// ... more code ... //
-
 addItem: function (item) {
   if (this.shoppingCart.indexOf(item) === -1) {
     this.shoppingCart.push(word);
-    Vue.ls.set('shoppingCart', this.shoppingCart);
+    this.$ls.set('shoppingCart', this.shoppingCart);
     console.log(`Added ${item} to shoppingCart.`);
   } else {
     console.log('Item is already in shoppingCart.');
@@ -39,7 +35,7 @@ addItem: function (item) {
 },
 removeItem: function (item) {
   this.shoppingCart.splice(this.shoppingCart.indexOf(item), 1);
-  Vue.ls.set('shoppingCart', this.shoppingCart);
+  this.$ls.set('shoppingCart', this.shoppingCart);
 }
 
 // ... more code ... //
