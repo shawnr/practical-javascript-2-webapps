@@ -51,7 +51,15 @@ In order to successfully complete this project, we must fulfill the following re
 * Add logic to properly cache the API request in the `created` function (with proper label and expiry time).
 
 ## Working the Project
-In order to complete this project, we will edit several files in this repository. We begin with setting up `vue-ls` for use in our project.
+In order to complete this project, we will edit several files in this repository. We begin with getting an API key for use on this project.
+
+### Make an OpenWeatherMap.org API Key
+To get the project running, we need to make an account on [OpenWeatherMap.org](https://openweathermap.org/) and generate an API key. Once we have created an account, the API Keys can be found under our Account page ([located here](https://home.openweathermap.org/api_keys)). Create a new API Key and then open the project repository in a preferred editor. We must find the `YOUR_APPID_HERE` placeholder in the `src/common/api.js` file and update it.
+
+![Working home screen](/img/project11-home1.png)
+<br>Working home screen
+
+Once we've replaced that information the project should become operational. Run `npm run dev` and verify that the project works. Once we've made sure the project is working, we can configure Vue LocalStorage for use in our application.
 
 ### Configuring Vue LocalStorage
 To add the `vue-ls` module to our project, we must import it in our `src/main.js` file and tell our `Vue` instance that we want to use it. We do this with these lines of code:
