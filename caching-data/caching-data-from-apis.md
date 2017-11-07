@@ -87,8 +87,9 @@ fetchAPIResults: function() {
   })
 }
 ```
+We have separated the API call out of the `findWords` method, and moved it to the `fetchAPIResults` method. The `findWords` method now tries to load the data from the cache, and if it can find no cache then it will execute the `fetchAPIResults` method. The `fetchAPIResults` method now also saves the results into `localStorage` before it sets `this.results` equal to `response.data`. We are applying a 24 hour expiry to the information stored in `localStorage`. After 24 hours, the data will no longer be available in `localStorage`, and the API request will happen again.
 
-
+This kind of caching will greatly reduce the number of queries we send to the API server. Many API services require some form of request caching on the application side in order to minimize the load on the server itself. This not only helps the API server, but it also saves our users from repetitive waits as they move around inside our application.
 
 
 
