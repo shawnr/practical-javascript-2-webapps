@@ -8,6 +8,6 @@ Although we get a bit of a break in terms of designing data models and managing 
 
 Most API providers limit the frequency with which we can make API requests. If we have established a private API server to handle the functions of our product system, then we have a vested interest in minimizing the impact we put on that system in order to stretch our resources further and provide speedier responses. We want to provide a higher level of convenience for our users, so they do not have to re-configure the system or re-enter data required by the system. We also want to be smart about when we make a request to a remote API server, preferring to avoid those calls when possible.
 
-We can accomplish these goals using some basic tools provided in the browser and made available through JavaScript. We can even leverage some helpful modules to enhance those core features so we can more effectively work with the tools provided by the browser. 
+We can accomplish these goals using some basic tools provided in the browser and made available through JavaScript. We can even leverage some helpful modules to enhance those core features so we can more effectively work with the tools provided by the browser. These tools allow us to store data and retrieve it without making a network request.
 
 As with many aspects of web development, there are multiple ways of approaching the task of saving information about the user and/or caching API responses. In this section we will explore a couple of them.
