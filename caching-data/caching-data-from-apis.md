@@ -78,7 +78,7 @@ fetchAPIResults: function() {
     }
   })
   .then( response => {
-    Vue.ls.set(queryID, response.data, cacheExpiry); // Cache the API response for 24 hours
+    this.$ls.set(queryID, response.data, cacheExpiry); // Cache the API response for 24 hours
     console.log('Cache created for: ' + queryID);
     this.results = response.data;
   })
