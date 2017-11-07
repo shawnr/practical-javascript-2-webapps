@@ -116,7 +116,7 @@
 * [Core Concept: Methods of Storing Frontend Data](caching-data/core-concept-methods-of-storing-user-data.md)
 * [Saving User-Generated Data](caching-data/saving-user-generated-data.md)
 * [Caching Data from APIs](caching-data/caching-data-from-apis.md)
-* Quiz: Caching Data
+* [Quiz: Caching Data](caching-data/quiz-caching-data.md)
 * [Project: Caching Data](caching-data/project-caching-data.md)
 
 ---
