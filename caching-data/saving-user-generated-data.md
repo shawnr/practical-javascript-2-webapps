@@ -45,14 +45,14 @@ We can look at this next example to see how we can initialize the `shoppingCart`
 
 ```js
 created () {
-  if (Vue.ls.get('shoppingCart')){
-    this.shoppingCart = Vue.ls.get('shoppingCart');
+  if (this.$ls.get('shoppingCart')){
+    this.shoppingCart = this.$ls.get('shoppingCart');
   } else {
-    Vue.ls.set('shoppingCart', this.shoppingCart);
+    this.$ls.set('shoppingCart', this.shoppingCart);
   }
 }
 ```
-In this example we can see that we have defined a `created` function on our component, which will be executed when the component is loaded. It will try to get the `shoppingCart` value from `localStorage`. If there is no `shoppingCart` value in `localStorage`, then the `Vue.ls` module will return `undefined`, which evaluates to `false`. So if there is no `shoppingCart` value in `localStorage`, then we initialize that value to the `this.shoppingCart` value. If there _is_ a value for `shoppingCart` in `localStorage`, then we use that value as our starting point.
+In this example we can see that we have defined a `created` function on our component, which will be executed when the component is loaded. It will try to get the `shoppingCart` value from `localStorage`. If there is no `shoppingCart` value in `localStorage`, then the `this.$ls` module will return `undefined`, which evaluates to `false`. So if there is no `shoppingCart` value in `localStorage`, then we initialize that value to the `this.shoppingCart` value. If there _is_ a value for `shoppingCart` in `localStorage`, then we use that value as our starting point.
 
 The `vue-ls` module handles converting any data objects into Strings and then rendering them back into data objects when we retrieve them. This saves us several repetitive lines we would need to use whenever we saved/retrieved items from storage, and it allows us to have very simple statements to handle the `get` and `set` of data.
 
