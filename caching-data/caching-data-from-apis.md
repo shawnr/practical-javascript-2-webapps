@@ -60,7 +60,7 @@ findWords: function () {
   let cachedQuery = Vue.ls.get(queryID);
   if (cachedQuery) {
     console.log('Previous query cache detected.');
-    this.results = cachedQuery.results;
+    this.results = cachedQuery;
   } else {
     console.log('No cache detected for: ' + queryID);
     this.fetchAPIResults();
@@ -78,12 +78,7 @@ fetchAPIResults: function() {
     }
   })
   .then( response => {
-    // TODO: Turn off spinner.
-    let cacheData = {
-      timestamp: Date.now(),
-      results: response.data
-    }
-    Vue.ls.set(queryID, cacheData, cacheExpiry); // Cache the API response for 24 hours
+    Vue.ls.set(queryID, response.data, cacheExpiry); // Cache the API response for 24 hours
     console.log('Cache created for: ' + queryID);
     this.results = response.data;
   })
