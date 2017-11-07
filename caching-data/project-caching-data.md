@@ -1,4 +1,5 @@
 # Project: Caching Data
+This project uses the [Caching Data repository](https://github.com/suwebdev/wats4000-caching-data) as a starting point. Please fork and clone this repository to your preferred work environment.
 
 For this project, we will add some user information storage and caching to the weather application we refactored a couple sections ago. 
 
