@@ -28,6 +28,9 @@ our goals.
 ## Review the Requirements
 In order to successfully complete this project, we must fulfill the following requirements.
 
+* Sign up to [OpenWeatherMap.org](https://openweathermap.org/) and generate an API Key.
+* Paste your API Key (which will be used as the `APPID` parameter) into the appropriate locations in the `CitySearch.vue`, `CurrentWeather.vue`, and `Forecast.vue` files.
+
 **`main.js`**
 * Add the base configuration for `vue-ls`.
 
