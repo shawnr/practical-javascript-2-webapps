@@ -37,8 +37,6 @@ removeItem: function (item) {
   this.shoppingCart.splice(this.shoppingCart.indexOf(item), 1);
   this.$ls.set('shoppingCart', this.shoppingCart);
 }
-
-// ... more code ... //
 ```
 
 We use the `get` and `set` methods to work with the values in `localStorage`. In the example above, we see the methods for `addItem` and `removeItem` are using `Vue.ls.set` to set the updated values in `localStorage` at the same time as the value is set on the `this.shoppingCart` object.
