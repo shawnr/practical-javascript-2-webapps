@@ -23,6 +23,8 @@ In order to complete this project, we will edit several files in the repository.
 Look for the `TODO` notes in the project files for guidance and indications of how we can accomplish
 our goals.
 
+**NOTE:** Before we start work on this, it's crucial to obtain an APPID from [OpenWeatherMap.org](http://openweathermap.org).
+
 ## Review the Requirements
 In order to successfully complete this project, we must fulfill the following requirements.
 
@@ -65,9 +67,39 @@ First, we have our import statement. This module has already been added to our p
 Now we can access `this.$ls` in any component we use in our application. 
 
 ### Adding the `FavoriteCities` Component
-In the `src/components/CitySearch.vue` file, we 
+In the `src/components/CitySearch.vue` file, we must add the `FavoriteCities` component as a child component. This requires us to import the component, then to define it in the `components` object, and finally to add a tag to our template where the component should be displayed.
+
+The logic changes to add the `FavoriteCities` component look like this:
+
+```js
+// ... previous imports ... //
+import FavoriteCities from '@/components/FavoriteCities';
+
+
+export default {
+  name: 'CitySearch',
+  components: {
+    'weather-summary': WeatherSummary,
+    'weather-data': WeatherData,
+    'load-spinner': CubeSpinner,
+    'message-container': MessageContainer,
+    'favorite-cities': FavoriteCities
+  },
+  
+  // ... more code ... //
+```
+We can see how the `import` statement and the `components` object have been updated. In the template, the tag is straightforward to drop in:
+
+```html
+<favorite-cities v-bind:favoriteCities="favorites"></favorite-cities>
+```
+We use the tag and bind the `favorites` value from the `CitySearch` component to the `FavoriteCities` component. At this point, we should see our component show up with no cities listed.
+
+![Empty Favorites Listing](/img/project13-empty_favorites.png)
+<br>Empty Favorites Listing
 
 ### Make Favorite Cities Work in `CitySearch`
+In order to make our favorite cities listing work in our application, we must actually save data when the user clicks the "save city as favorite" button.
 
 ### Make Favorite Cities Removable
 
