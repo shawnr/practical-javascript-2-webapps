@@ -57,7 +57,7 @@ findWords: function () {
   let queryID = `${this.phrase}-${this.soundsLike}-${this.startLetter}-${this.endLetter}`;
   let cacheExpiry = 24 * 60 * 60 * 1000; // 24 hours cache duration
   console.log('queryID: ' + queryID);
-  let cachedQuery = Vue.ls.get(queryID);
+  let cachedQuery = this.$ls.get(queryID);
   if (cachedQuery) {
     console.log('Previous query cache detected.');
     this.results = cachedQuery;
