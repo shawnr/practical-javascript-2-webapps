@@ -49,10 +49,33 @@ In order to successfully complete this project, we must fulfill the following re
 In order to complete this project, we will edit several files in this repository. We begin with setting up `vue-ls` for use in our project.
 
 ### Configuring Vue LocalStorage
+To add the `vue-ls` module to our project, we must import it in our `src/main.js` file and tell our `Vue` instance that we want to use it. We do this with these lines of code:
+
+```js
+import VueLocalStorage from 'vue-ls';
+
+let options = {
+  namespace: 'weather__'
+};
+
+Vue.use(VueLocalStorage, options);
+```
+First, we have our import statement. This module has already been added to our project by running `npm install --save vue-ls`, so it can be imported like this. Then, we define an `options` object, which only has one property: `namespace`. We then execute a `Vue.use()` command to let our `Vue` instance know we are using the `VueLocalStorage` module (aka `vue-ls`).
+
+Now we can access `this.$ls` in any component we use in our application. 
 
 ### Adding the `FavoriteCities` Component
+In the `src/components/CitySearch.vue` file, we 
 
-### 
+### Make Favorite Cities Work in `CitySearch`
+
+### Make Favorite Cities Removable
+
+### Cache `CitySearch` API Requests
+
+### Cache `CurrentWeather` API Requests
+
+### Cache `Forecast` API Requests
 
 ## Wrapping Up
 
