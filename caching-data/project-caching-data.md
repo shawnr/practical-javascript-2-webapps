@@ -23,7 +23,7 @@ In order to complete this project, we will edit several files in the repository.
 Look for the `TODO` notes in the project files for guidance and indications of how we can accomplish
 our goals.
 
-**NOTE:** Before we start work on this, it's crucial to obtain an APPID from [OpenWeatherMap.org](http://openweathermap.org).
+**NOTE:** Before we start work on this, it's crucial to obtain an APPID from [OpenWeatherMap.org](https://openweathermap.org).
 
 ## Review the Requirements
 In order to successfully complete this project, we must fulfill the following requirements.
