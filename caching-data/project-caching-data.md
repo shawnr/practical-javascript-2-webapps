@@ -122,15 +122,118 @@ To save a city, we simply `push` the `city` object into the `this.favorites` arr
 
 Now we should be able to see our information updating on the screen and in our devtools. Open the "Application" tab in our devtools panel and select our `localhost` domain under `localStorage`. We should see all of the values updating in all the right places. 
 
+![Storing cities in localStorage](/img/project13-localstorage.gif)
+<br>Storing cities in localStorage
+
 ### Make Favorite Cities Removable
+Now that we have made it possible to save cities in both component data and localstorage, we should make it possible for our users to remove cities. Since we are syncing our data through the caching system using `localStorage`, we can remove cities in the `FavoriteCities` component, where it's easier to respond to the user's click action.
+
+A `removeCity` method is provided for us, so we will place our logic there:
+
+```js
+removeCity: function (city) {
+  let cityIndex = this.favoriteCities.indexOf(city);
+  this.favoriteCities.splice(cityIndex, 1);
+  this.$ls.set('favoriteCities', this.favoriteCities);
+}
+```
+In this example, we have used `indexOf` on the `favoriteCities` array to find the index of the city object. Once we have that index, we can use the `splice()` command to remove only that object from the `favoriteCities` array. Then, we can save the `favoriteCities` cache again. The next time the page loads, it will load the proper cache.
+
+Once we have that code in place, we can add and remove values at will.  
 
 ### Cache `CitySearch` API Requests
+Now that we've enhanced the application with the ability to save cities to a list of favorites, we can provide some performance enhancements by caching API requests so we do not make as many. In order to set up the caching of the API requests, we will tackle the same few tasks each time:
 
-### Cache `CurrentWeather` API Requests
+1. We will make a cache label (called `cacheLabel`) to represent the unique query. This label will allow us to cache individual queries.
+2. We will create an expiration time (called `cacheExpiry`) to tell the system how long it should store the query cache.
+3. We will wrap our API request in a conditional that will check for the existence of a cache. If it finds cached data, it will use that data. If the data has expired, or has never before been requested, then it will make the request.
+4. When a request is made, the data will be cached.
 
-### Cache `Forecast` API Requests
+For the next three sets of changes we are essentially implementing the same thing. This is what it looks like:
+
+```js
+getCities: function () {
+  this.results = null;
+  this.showLoading = true;
+
+  let cacheLabel = 'citySearch_' + this.query;
+  let cacheExpiry = 15 * 60 * 1000; // 15 minutes
+
+  if (this.$ls.get(cacheLabel)){
+    console.log('Cached query detected.');
+    this.results = this.$ls.get(cacheLabel);
+    this.showLoading = false;
+  } else {
+    console.log('No cache available. Making API request.');
+    API.get('find', {
+      params: {
+          q: this.query
+      }
+    })
+    .then(response => {
+      this.$ls.set(cacheLabel, response.data, cacheExpiry);
+      console.log('New query has been cached as: ' + cacheLabel);
+      this.results = response.data;
+      this.showLoading = false;
+    })
+    .catch(error => {
+      this.messages.push({
+        type: 'error',
+        text: error.message
+      });
+      this.showLoading = false;
+    });
+  }
+}
+```
+We can see that the `cacheLabel` and `cacheExpiry` values are assigned right away. These will be used in various conditions, so they are necessary and worthwhile to compute. (Remember that the `cacheExpiry` time needs to be in milliseconds.) Then, we see the first conditional. If a value does not exist in `localStorage` it will be returned as `undefined`. Since `undefined` is a `false` value, this conditional will be true only if valid data is stored in the cache that matches the `cacheLabel`.
+
+If data is found, we log a message to the console and then set the results equal to the cache data. These results can be processed just like the API results, so our application will show the information to the user properly.
+
+If no data is found (meaning the cache has either expired or the data has never been requested before), then we log a message to console to say that we need to make the API request. We execute the same API request as before, but in the `then` clause, we add a `this.$ls.set()` statement to save the response into the `localStorage` cache. The data is stored with the `cacheLabel` we specified, and the expiration time is set to the `cacheExpiry` value. Once we have cached the data, we log another statement to the console so we can track that everything has happened the way we expect. 
+
+We should now be able to repeat queries in our console and see that a new query causes a new API request, but a repeated query uses cached data. We can also verify that API requests are (or are not) happening by watching the "Network" tab of our devtools while we execute searches.
+
+The functionality of this page should be the same, with the only difference being the speed with which repeated searches are executed. Users will perceive our application as being much faster thanks to these caching changes.
+
+### Cache `CurrentWeather` and `Forecast` API Requests
+We will make the same changes to cache the API requests in the `src/components/CurrentWeather.vue` and `src/components/Forecast.vue` files. In each case we must create `cacheLabel` and `cacheExpiry` values, and then we will use the same kind of conditional to check for the value in `localStorage` and perform the API request if it is not found.
+
+Rather than repeating these same structures multiple times on the page, refer to the full file details below for more precise examples of what this process looks like in each file.
 
 ## Wrapping Up
+Once we have made all of our changes, we have an app that is more functional and faster for users. Most people would agree that makes any app better. The following files have been changed:
+
+**`main.js`**
+```html
+
+```
+
+
+**`CitySearch.vue`**
+```html
+
+```
+
+
+**`CurrentWeather.vue`**
+```html
+
+```
+
+
+**`Forecast.vue`**
+```html
+
+```
+
+
+**`FavoriteCities.vue`**
+```html
+
+```
+
+**Note:** We also need to add our `APPID` to the `src/common/api.js` file. Don't forget!
 
 ## Build and Deploy
 Once we've finished our work, we can build and deploy the project. This project has been configured to build to the `docs/` directory, so we can follow the same pattern we used before:
