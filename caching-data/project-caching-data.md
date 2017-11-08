@@ -110,7 +110,17 @@ We use the tag and bind the `favorites` value from the `CitySearch` component to
 <br>Empty Favorites Listing
 
 ### Make Favorite Cities Work in `CitySearch`
-In order to make our favorite cities listing work in our application, we must actually save data when the user clicks the "save city as favorite" button.
+In order to make our favorite cities listing work in our application, we must actually save data when the user clicks the "Save City to Favorites" button. In order to make it work, we must update two parts of our code. First, we need to allow users to save a city. There is a `saveCity` method defined for us, so we can fill in the logic there:
+
+```js
+saveCity: function (city) {
+  this.favorites.push(city);
+  this.$ls.set('favoriteCities', this.favorites);
+}
+```
+To save a city, we simply `push` the `city` object into the `this.favorites` array. We then cache these favorites using `this.$ls.set()`. Because we only have one list of `favoriteCities` we can just specify the name of the cache label directly, and we do not need to set a cache expiration time because we want this data to persist forever.
+
+Now we should be able to see our information updating on the screen and in our devtools. Open the "Application" tab in our devtools panel and select our `localhost` domain under `localStorage`. We should see all of the values updating in all the right places. 
 
 ### Make Favorite Cities Removable
 
