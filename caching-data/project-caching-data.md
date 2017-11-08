@@ -205,7 +205,26 @@ Rather than repeating these same structures multiple times on the page, refer to
 Once we have made all of our changes, we have an app that is more functional and faster for users. Most people would agree that makes any app better. The following files have been changed:
 
 **`main.js`**
-```html
+```js
+import Vue from 'vue'
+import App from './App'
+import router from './router'
+import VueLocalStorage from 'vue-ls';
+
+let options = {
+  namespace: 'weather__'
+};
+
+Vue.use(VueLocalStorage, options);
+
+Vue.config.productionTip = false
+
+new Vue({
+  el: '#app',
+  router,
+  template: '<App/>',
+  components: { App }
+})
 
 ```
 
