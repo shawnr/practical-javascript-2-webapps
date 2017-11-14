@@ -9,6 +9,12 @@ This is especially relevant when we put an API call on a `created ()` function i
 
 Of course, storing API data isn't our only problem. We also need to be able to know when our data was cached and clear it if it gets too old. This is often referred to as telling the difference between a "fresh" and "stale" cache. For user-generated data, we want to keep the information around forever. But for API data, we want to expire the cache when needed.
 
+<div class="tip-box">
+  <h3>Caching vs. Browser Cache</h3>
+  <p>It's worthwhile to note that when we discuss caching throughout this section, we are talking about the general concept of storing data that will be referenced again later. This is the definition of the term "caching" as we mean it. A "cache" is some store of data that can be referenced by an application. This is a general concept in computing, and we find caches of data stored all over our systems for use by all different software.</p>
+  <p>In the browser, we also have a "browser cache," which we think about often because we must "clear the cache" when we have issues with web pages. The reason we "clear" the cache is to delete the stored data, which in the case of web pages can sometimes cause problems (especially as we develop new features). This browser cache is used to speed up websites in a variety of ways, so it will do all kinds of things to try to store requests and avoid repeating them. This is helpful, but it's not what we are working with when we use cookies,  localStorage, sessionStorage, or IndexedDB.</p>
+</div>
+
 ## Determine How Often
 We must figure out how often our API needs to refresh. If we are making calls to create new data on a system (such as submitting a new blog post), then obviously that call needs to be made whenever the user clicks "save." But if we are making calls to retrieve weather data, we do not need to refresh any given API call for at least 15 minutes. 
 
