@@ -126,10 +126,10 @@ It's important to keep in mind that chained modifiers are possible with any modi
 It is possible that we have an event we only wish to trigger once. For example, submitting a payment form should only be done once, but it's common for users to double-click the submit button or click submit a second time after they wait for a moment. We might use the `.once` modifier to prevent that behavior:
 
 ```html
-<form v-on:submit.prevent.once="handleMyForm">
+<form v-on:submit.prevent v-on:submit.prevent.once="handleMyForm">
 ```
 
-We can see that we can also chain the `.once` modifier with the `.prevent` modifier to fully handle the form with our custom component method.
+We can see that we can also chain the `.once` modifier with the `.prevent` modifier to fully handle the form with our custom component method. Note however that in order to prevent a page refresh in the case of a double-click we need to add the `.prevent` modifier twice because the event listener `v-on:submit.prevent.once` will be removed after the first click.
 
 There are additional modifiers available, but these are the most commonly used. Refer to [the Vue.js Events Guide](https://vuejs.org/v2/guide/events.html) for more details about modifiers.
 
